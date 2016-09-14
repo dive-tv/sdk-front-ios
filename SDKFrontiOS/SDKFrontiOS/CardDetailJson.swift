@@ -33,28 +33,65 @@ public class CardDetailJson : BaseCardDetailBuilder{
      */
     public func loadDataConfig(json : JSON) -> CardDetailJson{
         
-        // TODO: need to build the dictSections with this json
+        
+        if (json["main"] != nil){
+            let mainJson = json["main"]
+            for module in mainJson["modules"].arrayValue{
+                if(module["type"] != nil){
+                    self.addSimpleType(module);
+                }
+            }
+        }
         return self;
     }
     
-    /*class func GetCarruselConfigLocal(){
-        ServicesManager.sharedInstance.getLocal({ (data) -> Void in
+    private func addSimpleType(module : JSON){
+        
+        switch module["type"].string!{
+        case JsonDatType.Actor.rawValue:
             
-            if(UIApplication.sharedApplication().applicationState == UIApplicationState.Active){
-                
-                if (data != nil) {
-                    let json = JSON(data: data!);
-                    completion(data: json);
-                    
-                } else {
-                    completion(data: nil);
-                }
-            }
-            else{
-                NSLog("RESPONSE OF A SERVICE IN BACKGROUND BLOKED");
-                completion(data: nil);
-            }
+            break;
+        case JsonDatType.Director.rawValue:
             
-            }, fileName: "CarruselConfig_v2");
-    }*/
+            break;
+        case JsonDatType.Title.rawValue:
+            
+            break;
+        case JsonDatType.Trailer.rawValue:
+            
+            break;
+        case JsonDatType.Image.rawValue:
+            
+            break;
+        case JsonDatType.Synopsis.rawValue:
+            
+            break;
+        case JsonDatType.Gallery.rawValue:
+            
+            break;
+        case JsonDatType.Rating.rawValue:
+            
+            break;
+        case JsonDatType.Video.rawValue:
+            
+            break;
+        case JsonDatType.Relation.rawValue:
+            
+            break;
+        case JsonDatType.Award.rawValue:
+            
+            break;
+        case JsonDatType.Product.rawValue:
+            
+            break;
+        case JsonDatType.Navigation.rawValue:
+            
+            break;
+        case JsonDatType.Tab.rawValue:
+            
+            break;
+        default:
+            break;
+        }
+    }
 }

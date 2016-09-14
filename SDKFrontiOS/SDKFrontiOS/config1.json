@@ -1,51 +1,51 @@
 {
-   "main": {
-       "modules": [
-           {
-               "type": "image"
-           },
-           {
-               "type": "title"
-           },
-           {
-               "type": "director"
-           },
-           {
-               "type": "rating"
-           },
-           {
-               "type": "synopsis"
-           },
-           {
-               "type": "navigation",
-               "section": "cast"
-           },
-           {
-               "type": "navigation",
-               "section": "awards"
-           },
-           {
-               "type": "product"
-           },
-           {
-               "type": "tab",
-               "section":"awards",
-		       "section":"cast"
-	       }
-       ]
-   },
-   "cast": {
-       "modules": [
-           {
-               "type": "actor"
-           }
-       ]
-   },
-   "awards": {
-       "modules": [
-           {
-               "type": "award"
-           }
-       ]
-   }
+	"main":
+	{
+		"modules":[
+			{
+				"type":"image"
+			},
+			{
+				"type":"title"
+			},
+			{
+				"type":"director"
+			},
+			{
+				"type":"rating"
+			},
+			{
+				"type":"synopsis"
+			},
+			{
+				"type":"navigation",
+				"section":"cast"
+			},
+			{
+				"type":"navigation",
+				"section":"awards"
+			},
+			{
+				"type":"product"
+			},
+			{
+				"type":"tab",
+				"section":["awards","cast"]
+			}
+		]
+	},
+	"cast":{
+		"modules":[
+			{
+				"type":"actor"
+			}
+		]
+	},
+	"awards":{
+		"modules":[
+			{
+				"type":"award"
+			}
+		]
+	}
 }
