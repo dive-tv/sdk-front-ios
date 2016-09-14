@@ -8,17 +8,20 @@
 
 import Foundation
 
-public enum JsonDatType : Int{
+public enum JsonDatType : String{
     
-    case    Title = 0,
-            Rating = 1,
-            Photo = 2,
-            Sinopsis = 3,
-            Trailer = 4,
-            BasicData = 5,
-            Gallery = 6,
-            Award = 7,
-            RelatedPosts = 8,
-            Video = 9,
-            Relation = 10
+    case    Title = "title",
+            Rating = "rating",
+            Image = "image",
+            Synopsis = "synopsis",
+            Trailer = "trailer",
+            Gallery = "gallery",
+            Award = "award",
+            Video = "video",
+            Relation = "relation",
+            Actor = "actor",
+            Director = "director",
+            Product = "product",
+            Navigation = "navigation",
+            Tab = "tab"
 }

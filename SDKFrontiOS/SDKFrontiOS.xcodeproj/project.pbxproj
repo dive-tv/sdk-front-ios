@@ -60,6 +60,9 @@
 		A15165251D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
 		A15165261D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
 		A15165271D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
+		A151652A1D898954008AEA14 /* config1.json in Resources */ = {isa = PBXBuildFile; fileRef = A15165291D898954008AEA14 /* config1.json */; };
+		A151652B1D898954008AEA14 /* config1.json in Resources */ = {isa = PBXBuildFile; fileRef = A15165291D898954008AEA14 /* config1.json */; };
+		A151652C1D898954008AEA14 /* config1.json in Resources */ = {isa = PBXBuildFile; fileRef = A15165291D898954008AEA14 /* config1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,7 @@
 		A151650D1D89852E008AEA14 /* CardDetailJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailJson.swift; sourceTree = "<group>"; };
 		A151650E1D89852E008AEA14 /* ConfigSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigSection.swift; sourceTree = "<group>"; };
 		A151650F1D89852E008AEA14 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		A15165291D898954008AEA14 /* config1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config1.json; sourceTree = "<group>"; };
 		B8772F96BE5E1DAD5227F167 /* Pods-SDKFrontiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOS/Pods-SDKFrontiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +176,7 @@
 				A15164C11D898402008AEA14 /* Assets.xcassets */,
 				A15164C31D898402008AEA14 /* LaunchScreen.storyboard */,
 				A15164C61D898402008AEA14 /* Info.plist */,
+				A15165281D898918008AEA14 /* samples */,
 			);
 			path = SDKFrontiOS;
 			sourceTree = "<group>";
@@ -237,6 +242,14 @@
 				A15164FE1D89851C008AEA14 /* PhotoModule.xib */,
 			);
 			name = Modules;
+			sourceTree = "<group>";
+		};
+		A15165281D898918008AEA14 /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				A15165291D898954008AEA14 /* config1.json */,
+			);
+			name = samples;
 			sourceTree = "<group>";
 		};
 		CE71B7D156362772ECDA3984 /* Pods */ = {
@@ -367,6 +380,7 @@
 				A15164C51D898402008AEA14 /* LaunchScreen.storyboard in Resources */,
 				A15164C21D898402008AEA14 /* Assets.xcassets in Resources */,
 				A15164C01D898402008AEA14 /* Main.storyboard in Resources */,
+				A151652A1D898954008AEA14 /* config1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15165061D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				A151652B1D898954008AEA14 /* config1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15165071D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				A151652C1D898954008AEA14 /* config1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
