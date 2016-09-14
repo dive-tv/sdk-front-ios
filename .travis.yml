@@ -2,10 +2,10 @@ language: objective-c
 
 osx_image: xcode7.3
 
-branches:
-  only:
-    - master
-    - develop
+#branches:
+  #only:
+  #  - master
+  #  - develop
 
 env:
   global:
