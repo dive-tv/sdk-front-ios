@@ -10,7 +10,7 @@ import Foundation
 
 public class ConfigSection : NSObject{
     
-    private var arrayModules = [DataModule]();
+    private var arrayModules = [ConfigModule]();
     
     public override init() {
         super.init();
@@ -23,8 +23,8 @@ public class ConfigSection : NSObject{
      - parameter targets: The targets with the id of the section and the name.
      */
     public func addModule(modType : ModuleType, targets : [Target]? = nil){
-        let data = DataModule(modType: modType, targets: targets);
-        self.arrayModules.append(data);
+        let configModule = ConfigModule(modType: modType, targets: targets);
+        self.arrayModules.append(configModule);
     }
     
     /**
@@ -32,7 +32,7 @@ public class ConfigSection : NSObject{
      
      - returns: The array of modules.
      */
-    public func getModules()->[DataModule]{
+    public func getModules()->[ConfigModule]{
         return self.arrayModules;
     }
 

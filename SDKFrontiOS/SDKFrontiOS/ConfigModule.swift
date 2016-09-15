@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DataModule: NSObject {
+public class ConfigModule: NSObject {
     
     private var modType : ModuleType?;
     private var targets : [Target]?;
