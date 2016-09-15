@@ -16,6 +16,7 @@ public class BaseCardDetailBuilder : NSObject{
     
     internal var styleConfig : JSON?;
     internal var dictSections = [String : ConfigSection]();
+    internal var keyMain : String?;
     
     // MARK: Init
     /**

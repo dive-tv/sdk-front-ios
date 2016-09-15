@@ -1,6 +1,8 @@
 {
-	"main":
+	"sections":[
 	{
+		"title":"main",
+        "main": true,
 		"modules":[
 			{
 				"type":"image"
@@ -33,19 +35,27 @@
 				"section":["awards","cast"]
 			}
 		]
+			
 	},
-	"cast":{
+	{
+		"title":"cast",
 		"modules":[
 			{
 				"type":"actor"
 			}
 		]
+		
 	},
-	"awards":{
+	{
+		"title":"awards",
 		"modules":[
 			{
 				"type":"award"
 			}
 		]
+		
 	}
+	
+	] 
+	
 }
