@@ -1,0 +1,80 @@
+{
+	"sections":[
+	{
+		"title":"main",
+        "main": true,
+		"modules":[
+			{
+				"type":"image"
+			},
+			{
+				"type":"title"
+			},
+			{
+				"type":"director"
+			},
+			{
+				"type":"rating"
+			},
+			{
+				"type":"synopsis"
+			},
+			{
+				"type":"navigation",
+				"targets":[
+                   {
+                      "section_id":"cast",
+                      "text":"Cast"
+                   }
+                ]
+			},
+			{
+				"type":"navigation",
+                "targets":[
+                    {
+                        "section_id":"awards",
+                        "text":"Awards"
+                    }
+                ]
+			},
+			{
+				"type":"product"
+			},
+			{
+				"type":"tab",
+                "targets":[
+                   {
+                        "section_id":"awards",
+                        "text":"Awards"
+                   },
+                   {
+                        "section_id":"cast",
+                        "text":"Cast"
+                   }
+                ]
+			}
+		]
+			
+	},
+	{
+		"title":"cast",
+		"modules":[
+			{
+				"type":"actor"
+			}
+		]
+		
+	},
+	{
+		"title":"awards",
+		"modules":[
+			{
+				"type":"award"
+			}
+		]
+		
+	}
+	
+	] 
+	
+}

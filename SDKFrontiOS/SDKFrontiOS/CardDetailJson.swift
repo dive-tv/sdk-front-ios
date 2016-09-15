@@ -33,28 +33,101 @@ public class CardDetailJson : BaseCardDetailBuilder{
      */
     public func loadDataConfig(json : JSON) -> CardDetailJson{
         
-        // TODO: need to build the dictSections with this json
+        
+        for section in json["sections"].arrayValue{
+            let configSection = ConfigSection();
+            for module in section["modules"].arrayValue{
+                self.addModuleType(module, configSection: configSection);
+            }
+            // This check if already exist the section, if exist don't do nothing
+            if(self.dictSections[section["title"].stringValue] == nil){
+                self.dictSections[section["title"].stringValue] = configSection;
+            }
+            // This is to get the main key
+            if(section["main"] != nil && section["main"].boolValue && self.keyMain == nil){
+                self.keyMain = section["title"].stringValue;
+            }
+        }
         return self;
     }
     
-    /*class func GetCarruselConfigLocal(){
-        ServicesManager.sharedInstance.getLocal({ (data) -> Void in
+    // MARK: Private Methods
+    
+    /**
+     This method check the type of module the user wants and add to ConfigSection.
+     
+     - parameter module:        The json with the type of module the user wants.
+     - parameter configSection: The object ConfigSection to add the modules.
+     */
+    private func addModuleType(module : JSON, configSection : ConfigSection){
+        
+        switch module["type"].string!{
+        case JsonDatType.Actor.rawValue:
+            configSection.addModule(ModuleType.Actor);
+            break;
+        case JsonDatType.Director.rawValue:
+            configSection.addModule(ModuleType.Director);
+            break;
+        case JsonDatType.Title.rawValue:
+            configSection.addModule(ModuleType.Title);
+            break;
+        case JsonDatType.Trailer.rawValue:
+            configSection.addModule(ModuleType.Trailer);
+            break;
+        case JsonDatType.Image.rawValue:
+            configSection.addModule(ModuleType.Image);
+            break;
+        case JsonDatType.Synopsis.rawValue:
+            configSection.addModule(ModuleType.Synopsis);
+            break;
+        case JsonDatType.Gallery.rawValue:
+            configSection.addModule(ModuleType.Gallery);
+            break;
+        case JsonDatType.Rating.rawValue:
+            configSection.addModule(ModuleType.Rating);
+            break;
+        case JsonDatType.Video.rawValue:
+            configSection.addModule(ModuleType.Video);
+            break;
+        case JsonDatType.Relation.rawValue:
+            configSection.addModule(ModuleType.Relation);
+            break;
+        case JsonDatType.Award.rawValue:
+            configSection.addModule(ModuleType.Award);
+            break;
+        case JsonDatType.Product.rawValue:
+            configSection.addModule(ModuleType.Product);
+            break;
+        case JsonDatType.Navigation.rawValue:
+            var targets : [Target]?;
             
-            if(UIApplication.sharedApplication().applicationState == UIApplicationState.Active){
-                
-                if (data != nil) {
-                    let json = JSON(data: data!);
-                    completion(data: json);
-                    
-                } else {
-                    completion(data: nil);
+            for target in module["targets"].arrayValue{
+                if(targets == nil){
+                    targets = [Target]();
+                }
+                if(target["section_id"] != nil && target["text"] != nil){
+                    let _target = Target(sectionId: target["section_id"].stringValue, text: target["text"].stringValue);
+                    targets?.append(_target);
                 }
             }
-            else{
-                NSLog("RESPONSE OF A SERVICE IN BACKGROUND BLOKED");
-                completion(data: nil);
-            }
+            configSection.addModule(ModuleType.Navigation, targets: targets);
+            break;
+        case JsonDatType.Tab.rawValue:
+            var targets : [Target]?;
             
-            }, fileName: "CarruselConfig_v2");
-    }*/
+            for target in module["targets"].arrayValue{
+                if(targets == nil){
+                    targets = [Target]();
+                }
+                if(target["section_id"] != nil && target["text"] != nil){
+                    let _target = Target(sectionId: target["section_id"].stringValue, text: target["text"].stringValue);
+                    targets?.append(_target);
+                }
+            }
+            configSection.addModule(ModuleType.Navigation, targets: targets);
+            break;
+        default:
+            break;
+        }
+    }
 }
