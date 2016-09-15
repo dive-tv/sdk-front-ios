@@ -8,10 +8,17 @@
 
 import UIKit
 
-public class Module : UITableViewCell{
+public class ModuleTableViewCell : UITableViewCell{
+    
+    internal var cardData : CardData!;
     
     public override func awakeFromNib() {
         super.awakeFromNib();
+    }
+    
+    func setCardData (_cardData : CardData) {
+        
+        self.cardData = _cardData;
     }
 
 }

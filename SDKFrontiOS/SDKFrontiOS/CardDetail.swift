@@ -11,22 +11,34 @@ import UIKit
 
 public class CardDetail : NSObject{
     
-    internal var sectionsData : [String:ConfigSection]!;
-    internal var navigationController : UINavigationController!;
+    private var sectionsData : [String:ConfigSection]!;
+    private var navigationController : UINavigationController!;
+    private var mainSectionKey : String!;
+    private var cardData : CardData!;
     
-    internal var sectionsViewControllers = [String:UIViewController]();
-    
-    init(_sectionsData : [String:ConfigSection], _navigationController : UINavigationController) {
+    init(_sectionsData : [String:ConfigSection], _mainSectionKey : String!, _cardData : CardData, _navigationController : UINavigationController) {
+        super.init();
         
         self.sectionsData = _sectionsData;
         self.navigationController = _navigationController;
+        self.mainSectionKey = _mainSectionKey;
+        self.cardData = _cardData;
     }
     
-    private func buildSections () {
+    private func pushMain() {
         
-        for sectionData in self.sectionsData {
-            
+        if (self.sectionsData[self.mainSectionKey] != nil) {
+            let controller = SectionViewController(nibName: "SectionViewController", bundle: nil, _configSection: self.sectionsData[self.mainSectionKey]!, _cardData: self.cardData);
+            self.navigationController.pushViewController(controller, animated: true);
         }
         
+    }
+    
+    private func pushSection (_keyForSection : String) {
+        
+        if (self.sectionsData[_keyForSection] != nil) {
+            let controller = SectionViewController(nibName: "SectionViewController", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardData: self.cardData);
+            self.navigationController.pushViewController(controller, animated: true);
+        }
     }
 }

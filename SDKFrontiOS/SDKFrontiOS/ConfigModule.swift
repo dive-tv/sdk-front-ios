@@ -16,6 +16,7 @@ public class ConfigModule: NSObject {
     
     init(modType : ModuleType, targets : [Target]? = nil){
         super.init();
+        
         self.modType = modType;
         self.targets = targets;
     }
