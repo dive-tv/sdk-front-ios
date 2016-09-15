@@ -21,18 +21,37 @@
 			},
 			{
 				"type":"navigation",
-				"section":"cast"
+				"targets":[
+                   {
+                      "section_id":"cast",
+                      "text":"Cast"
+                   }
+                ]
 			},
 			{
 				"type":"navigation",
-				"section":"awards"
+                "targets":[
+                    {
+                        "section_id":"awards",
+                        "text":"Awards"
+                    }
+                ]
 			},
 			{
 				"type":"product"
 			},
 			{
 				"type":"tab",
-				"section":["awards","cast"]
+                "targets":[
+                   {
+                        "section_id":"awards",
+                        "text":"Awards"
+                   },
+                   {
+                        "section_id":"cast",
+                        "text":"Cast"
+                   }
+                ]
 			}
 		]
 			

@@ -99,10 +99,32 @@ public class CardDetailJson : BaseCardDetailBuilder{
             configSection.addModule(ModuleType.Product);
             break;
         case JsonDatType.Navigation.rawValue:
-            // TODO: need to do the logic
+            var targets : [Target]?;
+            
+            for target in module["targets"].arrayValue{
+                if(targets == nil){
+                    targets = [Target]();
+                }
+                if(target["section_id"] != nil && target["text"] != nil){
+                    let _target = Target(sectionId: target["section_id"].stringValue, text: target["text"].stringValue);
+                    targets?.append(_target);
+                }
+            }
+            configSection.addModule(ModuleType.Navigation, targets: targets);
             break;
         case JsonDatType.Tab.rawValue:
-            // TODO: need to do the logic
+            var targets : [Target]?;
+            
+            for target in module["targets"].arrayValue{
+                if(targets == nil){
+                    targets = [Target]();
+                }
+                if(target["section_id"] != nil && target["text"] != nil){
+                    let _target = Target(sectionId: target["section_id"].stringValue, text: target["text"].stringValue);
+                    targets?.append(_target);
+                }
+            }
+            configSection.addModule(ModuleType.Navigation, targets: targets);
             break;
         default:
             break;

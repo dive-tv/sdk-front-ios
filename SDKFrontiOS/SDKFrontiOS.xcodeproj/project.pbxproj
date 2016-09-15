@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		62B091B75B6E0C250433BC83 /* Pods_SDKFrontiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */; };
+		A1478FD01D8AB1DB0039C1FE /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1478FCF1D8AB1DB0039C1FE /* Target.swift */; };
+		A1478FD11D8AB1DB0039C1FE /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1478FCF1D8AB1DB0039C1FE /* Target.swift */; };
+		A1478FD21D8AB1DB0039C1FE /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1478FCF1D8AB1DB0039C1FE /* Target.swift */; };
 		A15164BB1D898402008AEA14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15164BA1D898402008AEA14 /* AppDelegate.swift */; };
 		A15164BD1D898402008AEA14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15164BC1D898402008AEA14 /* ViewController.swift */; };
 		A15164C01D898402008AEA14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15164BE1D898402008AEA14 /* Main.storyboard */; };
@@ -63,6 +66,9 @@
 		A151652A1D898954008AEA14 /* config1.json in Resources */ = {isa = PBXBuildFile; fileRef = A15165291D898954008AEA14 /* config1.json */; };
 		A151652B1D898954008AEA14 /* config1.json in Resources */ = {isa = PBXBuildFile; fileRef = A15165291D898954008AEA14 /* config1.json */; };
 		A151652C1D898954008AEA14 /* config1.json in Resources */ = {isa = PBXBuildFile; fileRef = A15165291D898954008AEA14 /* config1.json */; };
+		A151652E1D8A9FCB008AEA14 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151652D1D8A9FCB008AEA14 /* DataModule.swift */; };
+		A151652F1D8A9FCB008AEA14 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151652D1D8A9FCB008AEA14 /* DataModule.swift */; };
+		A15165301D8A9FCB008AEA14 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151652D1D8A9FCB008AEA14 /* DataModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +91,7 @@
 /* Begin PBXFileReference section */
 		3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKFrontiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2323C59FED48C332BB3B4C /* Pods-SDKFrontiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOS/Pods-SDKFrontiOS.release.xcconfig"; sourceTree = "<group>"; };
+		A1478FCF1D8AB1DB0039C1FE /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		A15164B71D898402008AEA14 /* SDKFrontiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKFrontiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15164BA1D898402008AEA14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A15164BC1D898402008AEA14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +121,7 @@
 		A151650E1D89852E008AEA14 /* ConfigSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigSection.swift; sourceTree = "<group>"; };
 		A151650F1D89852E008AEA14 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		A15165291D898954008AEA14 /* config1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config1.json; sourceTree = "<group>"; };
+		A151652D1D8A9FCB008AEA14 /* DataModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
 		B8772F96BE5E1DAD5227F167 /* Pods-SDKFrontiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOS/Pods-SDKFrontiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +227,8 @@
 				A151650D1D89852E008AEA14 /* CardDetailJson.swift */,
 				A151650E1D89852E008AEA14 /* ConfigSection.swift */,
 				A151650F1D89852E008AEA14 /* Section.swift */,
+				A151652D1D8A9FCB008AEA14 /* DataModule.swift */,
+				A1478FCF1D8AB1DB0039C1FE /* Target.swift */,
 			);
 			name = CardDetail;
 			sourceTree = "<group>";
@@ -466,8 +476,10 @@
 				A15164BD1D898402008AEA14 /* ViewController.swift in Sources */,
 				A15165131D89852E008AEA14 /* CardData.swift in Sources */,
 				A15165021D89851C008AEA14 /* PhotoModule.swift in Sources */,
+				A151652E1D8A9FCB008AEA14 /* DataModule.swift in Sources */,
 				A151651F1D89852E008AEA14 /* CardDetailJson.swift in Sources */,
 				A15164FF1D89851C008AEA14 /* Module.swift in Sources */,
+				A1478FD01D8AB1DB0039C1FE /* Target.swift in Sources */,
 				A15165191D89852E008AEA14 /* CardDetail.swift in Sources */,
 				A15164BB1D898402008AEA14 /* AppDelegate.swift in Sources */,
 				A15165251D89852E008AEA14 /* Section.swift in Sources */,
@@ -486,11 +498,13 @@
 				A15164F71D898507008AEA14 /* NavigationType.swift in Sources */,
 				A15164F11D898507008AEA14 /* JsonDataType.swift in Sources */,
 				A15164F41D898507008AEA14 /* ModuleType.swift in Sources */,
+				A1478FD11D8AB1DB0039C1FE /* Target.swift in Sources */,
 				A15165031D89851C008AEA14 /* PhotoModule.swift in Sources */,
 				A151651D1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
 				A15165111D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165141D89852E008AEA14 /* CardData.swift in Sources */,
 				A15165171D89852E008AEA14 /* CardDataCarousel.swift in Sources */,
+				A151652F1D8A9FCB008AEA14 /* DataModule.swift in Sources */,
 				A15164FA1D898507008AEA14 /* TypeOfCard.swift in Sources */,
 				A15165001D89851C008AEA14 /* Module.swift in Sources */,
 				A15165201D89852E008AEA14 /* CardDetailJson.swift in Sources */,
@@ -508,11 +522,13 @@
 				A15164F81D898507008AEA14 /* NavigationType.swift in Sources */,
 				A15164F21D898507008AEA14 /* JsonDataType.swift in Sources */,
 				A15164F51D898507008AEA14 /* ModuleType.swift in Sources */,
+				A1478FD21D8AB1DB0039C1FE /* Target.swift in Sources */,
 				A15165041D89851C008AEA14 /* PhotoModule.swift in Sources */,
 				A151651E1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
 				A15165121D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165151D89852E008AEA14 /* CardData.swift in Sources */,
 				A15165181D89852E008AEA14 /* CardDataCarousel.swift in Sources */,
+				A15165301D8A9FCB008AEA14 /* DataModule.swift in Sources */,
 				A15164FB1D898507008AEA14 /* TypeOfCard.swift in Sources */,
 				A15165011D89851C008AEA14 /* Module.swift in Sources */,
 				A15165211D89852E008AEA14 /* CardDetailJson.swift in Sources */,

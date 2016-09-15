@@ -23,5 +23,7 @@ public enum ModuleType : Int{
             Actor = 11,
             Director = 12,
             Image = 13,
-            Product = 14
+            Product = 14,
+            Navigation = 15,
+            Tab = 16
 }
