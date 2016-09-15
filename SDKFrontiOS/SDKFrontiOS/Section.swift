@@ -7,7 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
-public class Section{
-
+public class Section : UIViewController{
+    
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        <#code#>
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
