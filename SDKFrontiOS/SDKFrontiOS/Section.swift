@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class SectionViewController : UIViewController{
+public class Section : UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     

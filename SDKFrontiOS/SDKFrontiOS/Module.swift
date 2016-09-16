@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ModuleTableViewCell : UITableViewCell{
+public class Module : UITableViewCell{
     
     internal var cardData : CardData!;
     

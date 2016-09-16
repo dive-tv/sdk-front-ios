@@ -28,7 +28,7 @@ public class CardDetail : NSObject{
     private func pushMain() {
         
         if (self.sectionsData[self.mainSectionKey] != nil) {
-            let controller = SectionViewController(nibName: "SectionViewController", bundle: nil, _configSection: self.sectionsData[self.mainSectionKey]!, _cardData: self.cardData);
+            let controller = Section(nibName: "SectionViewController", bundle: nil, _configSection: self.sectionsData[self.mainSectionKey]!, _cardData: self.cardData);
             self.navigationController.pushViewController(controller, animated: true);
         }
         
@@ -37,7 +37,7 @@ public class CardDetail : NSObject{
     private func pushSection (_keyForSection : String) {
         
         if (self.sectionsData[_keyForSection] != nil) {
-            let controller = SectionViewController(nibName: "SectionViewController", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardData: self.cardData);
+            let controller = Section(nibName: "SectionViewController", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardData: self.cardData);
             self.navigationController.pushViewController(controller, animated: true);
         }
     }

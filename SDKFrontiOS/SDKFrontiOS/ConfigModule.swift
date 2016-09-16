@@ -10,14 +10,14 @@ import UIKit
 
 public class ConfigModule: NSObject {
     
-    private var modType : ModuleType?;
-    private var targets : [Target]?;
+    private(set) var moduleName : String?;
+    private(set) var targets : [Target]?;
     
     
-    init(modType : ModuleType, targets : [Target]? = nil){
+    init(moduleName : String, targets : [Target]? = nil){
         super.init();
         
-        self.modType = modType;
+        self.moduleName = moduleName;
         self.targets = targets;
     }
 

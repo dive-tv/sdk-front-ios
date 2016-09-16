@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PhotoModuleTableViewCell: ModuleTableViewCell {
+public class PhotoModule: Module {
 
     override public func awakeFromNib() {
         super.awakeFromNib()
