@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 
-public class CardDetail : NSObject{
+protocol cardDetailDelegate {
+    func test();
+}
+
+public class CardDetail : NSObject, cardDetailDelegate{
     
     private var sectionsData : [String:ConfigSection]!;
     private var navigationController : UINavigationController!;
@@ -23,22 +27,34 @@ public class CardDetail : NSObject{
         self.navigationController = _navigationController;
         self.mainSectionKey = _mainSectionKey;
         self.cardData = _cardData;
+        
+        self.pushMain();
     }
+
+    deinit {
+        print("CardDetail Destroid")
+    }
+
     
     private func pushMain() {
         
         if (self.sectionsData[self.mainSectionKey] != nil) {
-            let controller = Section(nibName: "SectionViewController", bundle: nil, _configSection: self.sectionsData[self.mainSectionKey]!, _cardData: self.cardData);
+            let controller = Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[self.mainSectionKey]!.arrayModules, _cardData: self.cardData);
+            controller.delegate = self;
             self.navigationController.pushViewController(controller, animated: true);
         }
-        
     }
     
     private func pushSection (_keyForSection : String) {
         
         if (self.sectionsData[_keyForSection] != nil) {
-            let controller = Section(nibName: "SectionViewController", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardData: self.cardData);
+            let controller = Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[_keyForSection]!.arrayModules, _cardData: self.cardData);
             self.navigationController.pushViewController(controller, animated: true);
         }
     }
+    
+    func test() {
+        print("test")
+    }
+    
 }

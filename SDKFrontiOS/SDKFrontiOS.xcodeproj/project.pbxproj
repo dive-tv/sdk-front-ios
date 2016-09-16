@@ -12,6 +12,12 @@
 		3216872E1D8C0F780064460D /* PhotoModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3216872B1D8C0F780064460D /* PhotoModule.xib */; };
 		321687311D8C0F820064460D /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216872F1D8C0F820064460D /* Section.swift */; };
 		321687321D8C0F820064460D /* Section.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321687301D8C0F820064460D /* Section.xib */; };
+		327FF48E1D8C138B006C5BC6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216872F1D8C0F820064460D /* Section.swift */; };
+		327FF48F1D8C138C006C5BC6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216872F1D8C0F820064460D /* Section.swift */; };
+		327FF4901D8C1399006C5BC6 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321687291D8C0F780064460D /* Module.swift */; };
+		327FF4911D8C1399006C5BC6 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321687291D8C0F780064460D /* Module.swift */; };
+		327FF4921D8C13A0006C5BC6 /* PhotoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216872A1D8C0F780064460D /* PhotoModule.swift */; };
+		327FF4931D8C13A0006C5BC6 /* PhotoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216872A1D8C0F780064460D /* PhotoModule.swift */; };
 		62B091B75B6E0C250433BC83 /* Pods_SDKFrontiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */; };
 		A1478FD01D8AB1DB0039C1FE /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1478FCF1D8AB1DB0039C1FE /* Target.swift */; };
 		A1478FD11D8AB1DB0039C1FE /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1478FCF1D8AB1DB0039C1FE /* Target.swift */; };
@@ -597,11 +603,14 @@
 				A14790161D8BEC9B0039C1FE /* AwardModule.swift in Sources */,
 				A1478FDE1D8BEBD30039C1FE /* DirectorModule.swift in Sources */,
 				A15164D01D898402008AEA14 /* SDKFrontiOSTests.swift in Sources */,
+				327FF48E1D8C138B006C5BC6 /* Section.swift in Sources */,
 				A151651A1D89852E008AEA14 /* CardDetail.swift in Sources */,
+				327FF4921D8C13A0006C5BC6 /* PhotoModule.swift in Sources */,
 				A1478FF61D8BEC320039C1FE /* NavigationModule.swift in Sources */,
 				A1478FFE1D8BEC4C0039C1FE /* ProductModule.swift in Sources */,
 				A1478FD11D8AB1DB0039C1FE /* Target.swift in Sources */,
 				A151651D1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
+				327FF4901D8C1399006C5BC6 /* Module.swift in Sources */,
 				A147900E1D8BEC840039C1FE /* ActorModule.swift in Sources */,
 				A15165111D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165141D89852E008AEA14 /* CardData.swift in Sources */,
@@ -624,11 +633,14 @@
 				A14790171D8BEC9B0039C1FE /* AwardModule.swift in Sources */,
 				A1478FDF1D8BEBD30039C1FE /* DirectorModule.swift in Sources */,
 				A15164DB1D898402008AEA14 /* SDKFrontiOSUITests.swift in Sources */,
+				327FF48F1D8C138C006C5BC6 /* Section.swift in Sources */,
 				A151651B1D89852E008AEA14 /* CardDetail.swift in Sources */,
+				327FF4931D8C13A0006C5BC6 /* PhotoModule.swift in Sources */,
 				A1478FF71D8BEC320039C1FE /* NavigationModule.swift in Sources */,
 				A1478FFF1D8BEC4C0039C1FE /* ProductModule.swift in Sources */,
 				A1478FD21D8AB1DB0039C1FE /* Target.swift in Sources */,
 				A151651E1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
+				327FF4911D8C1399006C5BC6 /* Module.swift in Sources */,
 				A147900F1D8BEC840039C1FE /* ActorModule.swift in Sources */,
 				A15165121D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165151D89852E008AEA14 /* CardData.swift in Sources */,

@@ -9,27 +9,65 @@
 import Foundation
 import UIKit
 
-public class Section : UIViewController{
+class Section : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var configSection : ConfigSection!;
+    private var configModules : [ConfigModule]!;
     private var cardData : CardData!;
+    var delegate : cardDetailDelegate?;
     
+    //MARK: INIT
     
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, _configSection : ConfigSection, _cardData : CardData) {
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, _configModules : [ConfigModule], _cardData : CardData) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
         
-        self.configSection = _configSection;
+        self.configModules = _configModules;
         self.cardData = _cardData;
     }
     
-    public override func viewDidLoad() {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder);
+    }
+    
+    override func viewDidLoad() {
         
+        self.tableView.tableFooterView = UIView(frame: CGRectZero);
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension;
+        
+        // TEST LOGIC
+        let opc = self.configModules.first;
+        self.configModules.removeAll();
+        self.configModules.append(opc!);
+        //
+        
+        
+        for module in self.configModules {
+            self.tableView?.registerNib(UINib(nibName: module.moduleName!, bundle: nil), forCellReuseIdentifier: module.moduleName!);
+        }
+        
+        self.delegate?.test();
     }
     
+    //MARK: Private
+
     
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    // MARK: UITableViewDataSource
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.configModules.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCellWithIdentifier(self.configModules[indexPath.row].moduleName!) as! Module
+        cell.setCardData(self.cardData);
+        return cell;
+    }
+    
 }

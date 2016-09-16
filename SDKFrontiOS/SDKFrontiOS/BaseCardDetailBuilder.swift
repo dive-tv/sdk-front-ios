@@ -43,6 +43,8 @@ public class BaseCardDetailBuilder : NSObject{
     public func build(cardId : String, navigationController : UINavigationController){
         self.getCardData(cardId) { (cardData : CardData) in
             // TODO: need to do the logic
+            
+            CardDetail(_sectionsData: self.dictSections, _mainSectionKey: self.mainKeySection!, _cardData: cardData, _navigationController: navigationController);
         }
     }
     
@@ -55,6 +57,7 @@ public class BaseCardDetailBuilder : NSObject{
      */
     private func getCardData(cardId : String, completionBlock : completionBlockGetCard){
         // TODO: need to call the sdkclient and in the response call the completion
+        completionBlock(CardData());
     }
 
 }

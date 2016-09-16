@@ -10,6 +10,8 @@ import Foundation
 
 public class CardData{
     
-    
+    init() {
+        
+    }
     
 }

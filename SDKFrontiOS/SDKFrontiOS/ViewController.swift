@@ -19,7 +19,7 @@ class ViewController: UIViewController {
             if let data = NSData(contentsOfFile: path) {
                 let json = JSON(data: data);
                 if(json != nil && json.error == nil){
-                    CardDetailJson().loadDataConfig(json);
+                    CardDetailJson().loadDataConfig(json).build("", navigationController: self.navigationController!);
                 }
             }
         }
