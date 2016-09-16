@@ -44,8 +44,8 @@ public class CardDetailJson : BaseCardDetailBuilder{
                 self.dictSections[section["title"].stringValue] = configSection;
             }
             // This is to get the main key
-            if(section["main"] != nil && section["main"].boolValue && self.keyMain == nil){
-                self.keyMain = section["title"].stringValue;
+            if(section["main"] != nil && section["main"].boolValue && self.mainKeySection == nil){
+                self.mainKeySection = section["title"].stringValue;
             }
         }
         return self;
@@ -60,74 +60,25 @@ public class CardDetailJson : BaseCardDetailBuilder{
      - parameter configSection: The object ConfigSection to add the modules.
      */
     private func addModuleType(module : JSON, configSection : ConfigSection){
-        
-        switch module["type"].string!{
-        case JsonDatType.Actor.rawValue:
-            configSection.addModule(ModuleType.Actor);
-            break;
-        case JsonDatType.Director.rawValue:
-            configSection.addModule(ModuleType.Director);
-            break;
-        case JsonDatType.Title.rawValue:
-            configSection.addModule(ModuleType.Title);
-            break;
-        case JsonDatType.Trailer.rawValue:
-            configSection.addModule(ModuleType.Trailer);
-            break;
-        case JsonDatType.Image.rawValue:
-            configSection.addModule(ModuleType.Image);
-            break;
-        case JsonDatType.Synopsis.rawValue:
-            configSection.addModule(ModuleType.Synopsis);
-            break;
-        case JsonDatType.Gallery.rawValue:
-            configSection.addModule(ModuleType.Gallery);
-            break;
-        case JsonDatType.Rating.rawValue:
-            configSection.addModule(ModuleType.Rating);
-            break;
-        case JsonDatType.Video.rawValue:
-            configSection.addModule(ModuleType.Video);
-            break;
-        case JsonDatType.Relation.rawValue:
-            configSection.addModule(ModuleType.Relation);
-            break;
-        case JsonDatType.Award.rawValue:
-            configSection.addModule(ModuleType.Award);
-            break;
-        case JsonDatType.Product.rawValue:
-            configSection.addModule(ModuleType.Product);
-            break;
-        case JsonDatType.Navigation.rawValue:
-            var targets : [Target]?;
-            
-            for target in module["targets"].arrayValue{
-                if(targets == nil){
-                    targets = [Target]();
-                }
-                if(target["section_id"] != nil && target["text"] != nil){
-                    let _target = Target(sectionId: target["section_id"].stringValue, text: target["text"].stringValue);
-                    targets?.append(_target);
+        if(module["type"] != nil){
+            let moduleName = module["type"].stringValue;
+            if  let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String {
+                if(NSClassFromString("\(appName).\(moduleName)") as? NSObject.Type != nil){
+                    var targets : [Target]?;
+                    if (moduleName == "NavigationModule" || moduleName == "TabModule") {
+                        for target in module["targets"].arrayValue{
+                            if(targets == nil){
+                                targets = [Target]();
+                            }
+                            if(target["section_id"] != nil && target["text"] != nil){
+                                let _target = Target(sectionId: target["section_id"].stringValue, text: target["text"].stringValue);
+                                targets?.append(_target);
+                            }
+                        }
+                    }
+                    configSection.addModule(moduleName, targets: targets);
                 }
             }
-            configSection.addModule(ModuleType.Navigation, targets: targets);
-            break;
-        case JsonDatType.Tab.rawValue:
-            var targets : [Target]?;
-            
-            for target in module["targets"].arrayValue{
-                if(targets == nil){
-                    targets = [Target]();
-                }
-                if(target["section_id"] != nil && target["text"] != nil){
-                    let _target = Target(sectionId: target["section_id"].stringValue, text: target["text"].stringValue);
-                    targets?.append(_target);
-                }
-            }
-            configSection.addModule(ModuleType.Navigation, targets: targets);
-            break;
-        default:
-            break;
         }
     }
 }

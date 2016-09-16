@@ -5,22 +5,22 @@
         "main": true,
 		"modules":[
 			{
-				"type":"image"
+				"type":"PhotoModule"
 			},
 			{
-				"type":"title"
+				"type":"TitleModule"
 			},
 			{
-				"type":"director"
+				"type":"DirectorModule"
 			},
 			{
-				"type":"rating"
+				"type":"RatingModule"
 			},
 			{
-				"type":"synopsis"
+				"type":"SynopsisModule"
 			},
 			{
-				"type":"navigation",
+				"type":"NavigationModule",
 				"targets":[
                    {
                       "section_id":"cast",
@@ -29,7 +29,7 @@
                 ]
 			},
 			{
-				"type":"navigation",
+				"type":"NavigationModule",
                 "targets":[
                     {
                         "section_id":"awards",
@@ -38,10 +38,10 @@
                 ]
 			},
 			{
-				"type":"product"
+				"type":"ProductModule"
 			},
 			{
-				"type":"tab",
+				"type":"TabModule",
                 "targets":[
                    {
                         "section_id":"awards",
@@ -60,7 +60,7 @@
 		"title":"cast",
 		"modules":[
 			{
-				"type":"actor"
+				"type":"ActorModule"
 			}
 		]
 		
@@ -69,7 +69,7 @@
 		"title":"awards",
 		"modules":[
 			{
-				"type":"award"
+				"type":"AwardModule"
 			}
 		]
 		
