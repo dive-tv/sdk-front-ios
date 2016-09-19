@@ -70,7 +70,10 @@
 		"modules":[
 			{
 				"type":"AwardModule"
-			}
+			},
+            {
+                "type":"RatingModule"
+            }
 		]
 		
 	}

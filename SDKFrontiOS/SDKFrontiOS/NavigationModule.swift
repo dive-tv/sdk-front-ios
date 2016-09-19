@@ -38,6 +38,6 @@ class NavigationModule: Module {
     
     @IBAction func touchNavigationBtn(sender: UIButton) {
         
-        self.sectionDelegate?.touchInNavigation(self.navigationTarget.sectionId!)
+        self.cardDelegate?.newSection(self.navigationTarget.sectionId!)
     }
 }

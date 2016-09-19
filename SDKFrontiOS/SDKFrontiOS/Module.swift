@@ -14,6 +14,7 @@ public class Module : UITableViewCell{
     internal var configModule : ConfigModule!;
     
     weak var sectionDelegate : SectionDelegate?;
+    weak var cardDelegate : CardDetailDelegate?;
     
     public override func awakeFromNib() {
         super.awakeFromNib();

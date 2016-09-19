@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SectionDelegate : class {
-    func touchInNavigation (_keyForSection : String);
+    func reloadTable ();
 }
 
 class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableViewDataSource {
@@ -47,26 +47,25 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         
         self.tableView.tableFooterView = UIView(frame: CGRectZero);
         self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 150;
-        
-        // TEST LOGIC
-        /*let opc = self.configModules.first;
-        self.configModules.removeAll();
-        self.configModules.append(opc!);*/
-        //
-        
+        self.tableView.estimatedRowHeight = 100;
         
         for module in self.configModules {
             self.tableView?.registerNib(UINib(nibName: module.moduleName!, bundle: nil), forCellReuseIdentifier: module.moduleName!);
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated);
+        
+        self.tableView.reloadData();
+    }
+    
     //MARK: Private
 
     //MARK: Section delegate
     
-    func touchInNavigation(_keyForSection: String) {
-        self.cardDelegate?.newSection(_keyForSection);
+    func reloadTable() {
+        self.tableView.reloadData();
     }
     
     
@@ -85,9 +84,12 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier(self.configModules[indexPath.row].moduleName!) as! Module
-        cell.setCardData(self.configModules[indexPath.row], _cardData: self.cardData);
+
+        let cell = self.tableView.dequeueReusableCellWithIdentifier(self.configModules[indexPath.row].moduleName!) as! Module;
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.sectionDelegate = self;
+        cell.cardDelegate = self.cardDelegate;
+        cell.setCardData(self.configModules[indexPath.row], _cardData: self.cardData);
         return cell;
     }
     

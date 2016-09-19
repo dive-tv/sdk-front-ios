@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-protocol CardDetailDelegate {
+protocol CardDetailDelegate : class {
+    func createSection (_keyForSection : String) -> Section
+    func createSections (_keyForSections : [String]) -> [Section]
     func newSection(_keyForSection : String);
 }
 
@@ -46,7 +48,7 @@ public class CardDetail : NSObject, CardDetailDelegate{
         
         if (self.sectionsData[self.mainSectionKey] != nil) {
             
-            let controller = Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[self.mainSectionKey]!.arrayModules, _cardData: self.cardData);
+            let controller = self.createSection(self.mainSectionKey);
             controller.cardDelegate = self;
             self.navigationController.pushViewController(controller, animated: true);
         }
@@ -61,13 +63,32 @@ public class CardDetail : NSObject, CardDetailDelegate{
         
         if (self.mainSectionKey != _keyForSection && self.sectionsData[_keyForSection] != nil) {
             
-            let controller = Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[_keyForSection]!.arrayModules, _cardData: self.cardData);
+            let controller = self.createSection(_keyForSection);
             controller.cardDelegate = self;
             self.navigationController.pushViewController(controller, animated: true);
         }
     }
     
+    
     //MARK: Card detail delegate
+    
+    func createSection (_keyForSection : String) -> Section {
+        
+        return Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[_keyForSection]!.arrayModules, _cardData: self.cardData);
+    }
+    
+    func createSections (_keyForSections : [String]) -> [Section] {
+        
+        var sections = [Section]()
+        
+        for key in _keyForSections {
+            
+            sections.append(Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[key]!.arrayModules, _cardData: self.cardData));
+            
+        }
+        
+        return sections;
+    }
     
     func newSection(_keyForSection: String) {
         self.pushSection(_keyForSection);

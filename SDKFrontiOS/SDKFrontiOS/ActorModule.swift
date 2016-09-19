@@ -21,4 +21,10 @@ class ActorModule: Module {
         // Configure the view for the selected state
     }
     
+    override func setCardData(_configModule: ConfigModule, _cardData: CardData) {
+        super.setCardData(_configModule, _cardData: _cardData);
+        
+        self.contentView.backgroundColor = UIColor.redColor();
+    }
+    
 }
