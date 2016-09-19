@@ -65,6 +65,7 @@
                 <outlet property="scrollView" destination="rOx-75-WPL" id="zfo-ZH-j0H"/>
                 <outlet property="scrollViewContainer" destination="9cf-RQ-6zN" id="tvr-YS-f7X"/>
                 <outlet property="scrollViewHeight" destination="KlM-qe-Tgy" id="UOe-h6-c2F"/>
+                <outlet property="tabBtnContainer" destination="Ul1-sZ-BvE" id="lPJ-0o-Hpr"/>
             </connections>
             <point key="canvasLocation" x="508" y="351.5"/>
         </tableViewCell>
