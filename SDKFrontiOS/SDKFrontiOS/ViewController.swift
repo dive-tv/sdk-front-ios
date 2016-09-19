@@ -15,11 +15,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
         if let path = NSBundle.mainBundle().pathForResource("config1", ofType: "json") {
             if let data = NSData(contentsOfFile: path) {
                 let json = JSON(data: data);
                 if(json != nil && json.error == nil){
-                    CardDetailJson().loadDataConfig(json);
+                    let cardDetailJSON = CardDetailJson(styleConfig: nil, customValidator: JSON(dictionaryLiteral: ("CustomModule",["title"])));
+                    cardDetailJSON.loadDataConfig(json);
                 }
             }
         }
