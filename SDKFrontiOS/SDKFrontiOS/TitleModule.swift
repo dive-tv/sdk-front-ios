@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TitleModule: UITableViewCell {
+class TitleModule: Module {
 
     override func awakeFromNib() {
         super.awakeFromNib()

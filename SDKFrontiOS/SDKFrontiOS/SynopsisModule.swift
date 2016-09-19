@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SynopsisModule: UITableViewCell {
+class SynopsisModule: Module {
 
     override func awakeFromNib() {
         super.awakeFromNib()

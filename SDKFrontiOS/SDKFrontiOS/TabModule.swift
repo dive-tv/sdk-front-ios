@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabModule: UITableViewCell {
+class TabModule: Module {
 
     override func awakeFromNib() {
         super.awakeFromNib()

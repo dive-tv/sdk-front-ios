@@ -9,13 +9,17 @@
 import Foundation
 import UIKit
 
-class Section : UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol SectionDelegate : class {
+    func touchInNavigation (_keyForSection : String);
+}
+
+class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
     private var configModules : [ConfigModule]!;
     private var cardData : CardData!;
-    var delegate : cardDetailDelegate?;
+    var cardDelegate : CardDetailDelegate?;
     
     //MARK: INIT
     
@@ -30,28 +34,40 @@ class Section : UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.init(coder: aDecoder);
     }
     
+    deinit {
+        print("Section destroid")
+    }
+    
+    //MARK: UIViewController methods
+    
+    /**
+     Configures tableView and register tableViewCells
+     */
     override func viewDidLoad() {
         
         self.tableView.tableFooterView = UIView(frame: CGRectZero);
         self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 150;
         
         // TEST LOGIC
-        let opc = self.configModules.first;
+        /*let opc = self.configModules.first;
         self.configModules.removeAll();
-        self.configModules.append(opc!);
+        self.configModules.append(opc!);*/
         //
         
         
         for module in self.configModules {
             self.tableView?.registerNib(UINib(nibName: module.moduleName!, bundle: nil), forCellReuseIdentifier: module.moduleName!);
         }
-        
-        self.delegate?.test();
     }
     
     //MARK: Private
 
+    //MARK: Section delegate
+    
+    func touchInNavigation(_keyForSection: String) {
+        self.cardDelegate?.newSection(_keyForSection);
+    }
     
     
     // MARK: UITableViewDataSource
@@ -64,9 +80,14 @@ class Section : UIViewController, UITableViewDelegate, UITableViewDataSource {
         return self.configModules.count;
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension;
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier(self.configModules[indexPath.row].moduleName!) as! Module
-        cell.setCardData(self.cardData);
+        cell.setCardData(self.configModules[indexPath.row], _cardData: self.cardData);
+        cell.sectionDelegate = self;
         return cell;
     }
     

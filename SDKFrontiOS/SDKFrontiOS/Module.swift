@@ -11,14 +11,18 @@ import UIKit
 public class Module : UITableViewCell{
     
     internal var cardData : CardData!;
+    internal var configModule : ConfigModule!;
+    
+    weak var sectionDelegate : SectionDelegate?;
     
     public override func awakeFromNib() {
         super.awakeFromNib();
     }
     
-    func setCardData (_cardData : CardData) {
+    func setCardData (_configModule : ConfigModule, _cardData : CardData) {
         
         self.cardData = _cardData;
+        self.configModule = _configModule;
     }
 
 }

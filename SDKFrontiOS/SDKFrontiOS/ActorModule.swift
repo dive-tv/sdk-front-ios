@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActorModule: UITableViewCell {
+class ActorModule: Module {
 
     override func awakeFromNib() {
         super.awakeFromNib()

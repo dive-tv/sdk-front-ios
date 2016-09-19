@@ -8,8 +8,12 @@
 
 import UIKit
 
-class NavigationModule: UITableViewCell {
+class NavigationModule: Module {
 
+    @IBOutlet weak var navigationBtn: UIButton!
+    
+    var navigationTarget : Target!;
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,8 +21,23 @@ class NavigationModule: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
+    override func setCardData(_configModule: ConfigModule, _cardData: CardData) {
+        super.setCardData(_configModule, _cardData: _cardData);
+        if (self.configModule.targets != nil && !self.configModule.targets!.isEmpty &&
+            self.configModule.targets!.first!.sectionId != nil && !self.configModule.targets!.first!.sectionId!.isEmpty &&
+            self.configModule.targets!.first!.text != nil && !self.configModule.targets!.first!.text!.isEmpty) {
+        
+            self.navigationTarget = self.configModule.targets?.first!;
+        }
+        
+        self.navigationBtn.setTitle(self.navigationTarget.text, forState: .Normal);
+    }
+    
+    @IBAction func touchNavigationBtn(sender: UIButton) {
+        
+        self.sectionDelegate?.touchInNavigation(self.navigationTarget.sectionId!)
+    }
 }

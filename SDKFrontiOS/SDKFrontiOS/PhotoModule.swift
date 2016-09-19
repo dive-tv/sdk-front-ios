@@ -21,10 +21,9 @@ public class PhotoModule: Module {
         // Configure the view for the selected state
     }
     
-    override func setCardData(_cardData: CardData) {
-        super.setCardData(_cardData);
-        
-        self.contentView.backgroundColor = UIColor.redColor();
+    override func setCardData(_configModule : ConfigModule, _cardData: CardData) {
+        super.setCardData(_configModule, _cardData: _cardData);
     }
+    
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductModule: UITableViewCell {
+class ProductModule: Module {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DirectorModule: UITableViewCell {
+class DirectorModule: Module {
 
     override func awakeFromNib() {
         super.awakeFromNib()

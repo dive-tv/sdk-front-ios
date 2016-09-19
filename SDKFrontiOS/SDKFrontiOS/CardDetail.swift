@@ -9,16 +9,18 @@
 import Foundation
 import UIKit
 
-protocol cardDetailDelegate {
-    func test();
+protocol CardDetailDelegate {
+    func newSection(_keyForSection : String);
 }
 
-public class CardDetail : NSObject, cardDetailDelegate{
+public class CardDetail : NSObject, CardDetailDelegate{
     
     private var sectionsData : [String:ConfigSection]!;
     private var navigationController : UINavigationController!;
     private var mainSectionKey : String!;
     private var cardData : CardData!;
+    
+    //MARK: INIT
     
     init(_sectionsData : [String:ConfigSection], _mainSectionKey : String!, _cardData : CardData, _navigationController : UINavigationController) {
         super.init();
@@ -32,29 +34,43 @@ public class CardDetail : NSObject, cardDetailDelegate{
     }
 
     deinit {
-        print("CardDetail Destroid")
+        print("CardDetail destroid")
     }
-
     
+    //MARK: Private methods
+
+    /**
+     Pushes to the clients UINavigationViewController the main section especified by the client
+     */
     private func pushMain() {
         
         if (self.sectionsData[self.mainSectionKey] != nil) {
+            
             let controller = Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[self.mainSectionKey]!.arrayModules, _cardData: self.cardData);
-            controller.delegate = self;
+            controller.cardDelegate = self;
             self.navigationController.pushViewController(controller, animated: true);
         }
     }
     
+    /**
+     Pushes to the clients UINavigationViewController the selected section especified by the client
+     
+     - parameter _keyForSection: the key string of teh section
+     */
     private func pushSection (_keyForSection : String) {
         
-        if (self.sectionsData[_keyForSection] != nil) {
+        if (self.mainSectionKey != _keyForSection && self.sectionsData[_keyForSection] != nil) {
+            
             let controller = Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[_keyForSection]!.arrayModules, _cardData: self.cardData);
+            controller.cardDelegate = self;
             self.navigationController.pushViewController(controller, animated: true);
         }
     }
     
-    func test() {
-        print("test")
+    //MARK: Card detail delegate
+    
+    func newSection(_keyForSection: String) {
+        self.pushSection(_keyForSection);
     }
     
 }

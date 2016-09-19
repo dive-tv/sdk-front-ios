@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RatingModule: UITableViewCell {
+class RatingModule: Module {
 
     override func awakeFromNib() {
         super.awakeFromNib()
