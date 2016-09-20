@@ -72,9 +72,6 @@
                 ]
             },
             {
-                "type":"PhotoModule"
-            },
-            {
                 "type":"TitleModule"
             }
                    
@@ -94,12 +91,16 @@
                 "type":"TabModule",
                 "targets":[
                     {
-                        "section_id":"cast",
-                        "text":"Cast"
+                        "section_id":"Peliculas",
+                        "text":"films"
                     },
                     {
-                        "section_id":"test",
-                        "text":"test"
+                        "section_id":"Series",
+                        "text":"TV Shows"
+                    },
+                    {
+                        "section_id":"Anuncios",
+                        "text":"Commercials"
                     }
                 ]
             }
@@ -107,7 +108,7 @@
 		
 	},
     {
-        "title":"test",
+        "title":"Series",
         "modules":[
             {
                 "type":"AwardModule"
@@ -122,8 +123,36 @@
                               ]
                    }
         ]
-    }
-	
+    },
+    {
+        "title":"Peliculas",
+        "modules":[
+                    {
+                        "type":"AwardModule"
+                    },
+                    {
+                        "type":"NavigationModule",
+                        "targets":[
+                            {
+                                "section_id":"awards",
+                                "text":"Awards"
+                            }
+                        ]
+                    },
+                    {
+                        "type":"AwardModule"
+                    }
+                ]
+                },
+                {
+                "title":"Anuncios",
+                "modules":[
+                           {
+                           "type":"AwardModule"
+                           }
+                           ]
+                }
+                
 	] 
 	
 }

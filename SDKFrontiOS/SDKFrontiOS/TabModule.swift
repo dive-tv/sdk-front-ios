@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TabModuleDelegate : class {
-    func refreshTableViewHeight ();
+    func refreshScrollView ();
 }
 
 class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
@@ -22,21 +22,24 @@ class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
     private var tabTargets : [Target]!;
     private var sections = [Section]();
     private var scrollViewConstraints = [[String:NSLayoutConstraint]]();
-    
+    private var lastPage = 0;
     private var actualPage:Int {
         get{
             return Int(floor((self.scrollView.contentOffset.x * 2.0 + self.scrollView.frame.size.width) / (self.scrollView.frame.size.width * 2.0)));
         }
     }
     
+    
+    
     //MARK: INIT
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
-    
+    /**
+     sets the data and configure and adds the sections inside the scrollView. The tabs buttons are added in the head of the cell
+     
+     - parameter _configModule: the module configuration and sections of the tab
+     - parameter _cardData:     the data to display in the sections
+     */
     override func setCardData(_configModule: ConfigModule, _cardData: CardData) {
         super.setCardData(_configModule, _cardData: _cardData);
         
@@ -64,14 +67,18 @@ class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
             }
             
             self.layoutIfNeeded();
-            self.refreshScrollViewConstraints();
-            self.refreshHeight();
-            
+            self.refreshScrollView();
         }
     }
     
+    
+    
     //MARK: Private methods
     
+    
+    /**
+     Configure and add the sections inside the scrollView with constraints. The constraints are seved to modify them if needed.
+     */
     private func setScrollView (){
         
         self.scrollView.contentSize = CGSizeMake((self.frame.width * CGFloat(self.sections.count)), self.scrollView.frame.height);
@@ -97,15 +104,27 @@ class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
         }
     }
     
+    
+    /**
+     Refresh the height of the cell to the scrollView content size height.
+     */
     private func refreshHeight () {
         
+        self.scrollView.layoutIfNeeded();
         self.sections[self.actualPage].tableView!.layoutIfNeeded();
+        
         if (self.scrollViewHeight.constant != self.sections[self.actualPage].tableView.contentSize.height) {
+            
+            self.scrollView.contentSize = CGSizeMake((self.frame.width * CGFloat(self.sections.count)), 0);
             self.scrollViewHeight.constant = self.sections[self.actualPage].tableView.contentSize.height;
             self.sectionDelegate?.reloadTable();
         }
     }
     
+    
+    /**
+     Refresh the constraints of the scrollView to the correct display
+     */
     private func refreshScrollViewConstraints () {
         
         for idx in 0..<self.sections.count {
@@ -115,10 +134,12 @@ class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
             self.scrollViewConstraints[idx]["width"]!.constant = self.frame.width;
             self.scrollViewConstraints[idx]["left"]!.constant = self.frame.width * CGFloat(idx);
         }
-        
-        self.scrollView.contentSize = CGSizeMake((self.frame.width * CGFloat(self.sections.count)), self.scrollView.frame.height);
     }
     
+    
+    /**
+     Add the tab buttons with constraints at the head of the cell.
+     */
     private func setTabButtons () {
         
         var buttons = [UIButton]();
@@ -165,24 +186,48 @@ class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
         
     }
     
+    
+    
     //MARK: ScrollView delegate
     
+    
+    /**
+     This is called when the scrollView scroll. This is used for detect the change of section shown.
+     
+     - parameter scrollView: the scrollView that is scrolling
+     */
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
-        self.refreshHeight();
-        self.refreshScrollViewConstraints();
+        if (self.lastPage != self.actualPage) {
+            self.refreshScrollView();
+            self.lastPage = self.actualPage;
+        }
     }
+    
+    
     
     //MARK: Tab module delegate
     
-    func refreshTableViewHeight() {
+    
+    /**
+     Set the new height for the cell and refresh the constraints of the scrollView
+     */
+    func refreshScrollView() {
         
-        self.refreshHeight();
         self.refreshScrollViewConstraints();
+        self.refreshHeight();
     }
+    
+    
     
     //MARK: Tabs Navigation
     
+    
+    /**
+     Change the scrollView offset to show the section selected
+     
+     - parameter sender: UIButton touch, need this to get the tag, that is the index of the section.
+     */
     func goToPage (sender : UIButton) {
         
         self.scrollView.setContentOffset(CGPoint(x: CGFloat(sender.tag) * self.frame.width, y: 0), animated: true)

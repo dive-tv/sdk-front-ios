@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="myg-WM-qVV" firstAttribute="centerY" secondItem="Hm9-Zt-jrl" secondAttribute="centerY" id="QNH-A0-4mQ"/>
                             <constraint firstItem="myg-WM-qVV" firstAttribute="leading" secondItem="Hm9-Zt-jrl" secondAttribute="leading" constant="25" id="nVZ-4s-385"/>

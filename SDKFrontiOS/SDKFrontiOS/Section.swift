@@ -22,7 +22,11 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     var cardDelegate : CardDetailDelegate?;
     weak var tabModuleDelegate : TabModuleDelegate?;
     
+    
+    
+    
     //MARK: INIT
+    
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, _configSection : ConfigSection, _cardData : CardData) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
@@ -41,12 +45,14 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     
     //MARK: UIViewController methods
     
+    
     /**
      Configures tableView and register tableViewCells
      */
     override func viewDidLoad() {
         
         self.tableView.tableFooterView = UIView(frame: CGRectZero);
+        self.tableView.separatorStyle = .None;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 100;
         
@@ -55,23 +61,45 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated);
-        
-        self.tableView.reloadData();
-    }
+    
     
     //MARK: Private
 
-    //MARK: Section delegate
     
-    func reloadTable() {
-        self.tableView.reloadData();
-        self.tabModuleDelegate?.refreshTableViewHeight();
+    
+    private func getScrollViewOffset (_offset : CGFloat) -> CGFloat {
+        
+        var offset = _offset;
+        
+        if (_offset != 0 && _offset + self.tableView.frame.height > self.tableView.contentSize.height) {
+            offset -= abs(self.tableView.contentSize.height - (offset + self.tableView.frame.height))
+        }
+        
+        return offset;
     }
     
     
+    //MARK: Section delegate
+    
+    
+    /**
+     Reload tableview and calls tab menu to refresh if exists.
+     */
+    func reloadTable() {
+        
+        let offset = self.tableView.contentOffset.y;
+        self.tableView.reloadData();
+        self.tabModuleDelegate?.refreshScrollView();
+        if (self.tabModuleDelegate == nil) {
+            self.tableView.layoutIfNeeded();
+            self.tableView.contentOffset.y = self.getScrollViewOffset(offset);
+        }
+    }
+    
+    
+    
     // MARK: UITableViewDataSource
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;

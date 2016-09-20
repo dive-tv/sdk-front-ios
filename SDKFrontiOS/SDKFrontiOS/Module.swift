@@ -16,11 +16,24 @@ public class Module : UITableViewCell{
     weak var sectionDelegate : SectionDelegate?;
     weak var cardDelegate : CardDetailDelegate?;
     
-    public override func awakeFromNib() {
-        super.awakeFromNib();
-    }
-    
+    /**
+     sets the data for the cell and configures the cell.
+     
+     - parameter _configModule: the configuration of the module
+     - parameter _cardData:     the data to display in the cell
+     */
     func setCardData (_configModule : ConfigModule, _cardData : CardData) {
+        
+        if (self.cardData == nil) {
+            
+            let randomRed:CGFloat = CGFloat(drand48()) - 0.10;
+            
+            let randomGreen:CGFloat = CGFloat(drand48()) - 0.10;
+            
+            let randomBlue:CGFloat = CGFloat(drand48()) - 0.10;
+            
+            self.contentView.backgroundColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+        }
         
         self.cardData = _cardData;
         self.configModule = _configModule;
