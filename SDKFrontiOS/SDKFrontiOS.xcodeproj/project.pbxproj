@@ -8,6 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		62B091B75B6E0C250433BC83 /* Pods_SDKFrontiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */; };
+		6D763BF11D916500007B3E6C /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF01D916500007B3E6C /* Carousel.swift */; };
+		6D763BF21D916500007B3E6C /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF01D916500007B3E6C /* Carousel.swift */; };
+		6D763BF31D916500007B3E6C /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF01D916500007B3E6C /* Carousel.swift */; };
+		6D763BF51D916543007B3E6C /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF41D916543007B3E6C /* CarouselView.swift */; };
+		6D763BF61D916543007B3E6C /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF41D916543007B3E6C /* CarouselView.swift */; };
+		6D763BF71D916543007B3E6C /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF41D916543007B3E6C /* CarouselView.swift */; };
+		6D763BF91D916590007B3E6C /* ScenesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF81D916590007B3E6C /* ScenesManager.swift */; };
+		6D763BFA1D916590007B3E6C /* ScenesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF81D916590007B3E6C /* ScenesManager.swift */; };
+		6D763BFB1D916590007B3E6C /* ScenesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF81D916590007B3E6C /* ScenesManager.swift */; };
+		6D763BFD1D9165ED007B3E6C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BFC1D9165ED007B3E6C /* Scene.swift */; };
+		6D763BFE1D9165ED007B3E6C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BFC1D9165ED007B3E6C /* Scene.swift */; };
+		6D763BFF1D9165ED007B3E6C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BFC1D9165ED007B3E6C /* Scene.swift */; };
+		6D763C011D916604007B3E6C /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C001D916604007B3E6C /* CarouselCard.swift */; };
+		6D763C021D916604007B3E6C /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C001D916604007B3E6C /* CarouselCard.swift */; };
+		6D763C031D916604007B3E6C /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C001D916604007B3E6C /* CarouselCard.swift */; };
+		6D763C051D916617007B3E6C /* RelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C041D916617007B3E6C /* RelationData.swift */; };
+		6D763C061D916617007B3E6C /* RelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C041D916617007B3E6C /* RelationData.swift */; };
+		6D763C071D916617007B3E6C /* RelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C041D916617007B3E6C /* RelationData.swift */; };
+		6D763C091D916632007B3E6C /* MiniCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C081D916632007B3E6C /* MiniCardData.swift */; };
+		6D763C0A1D916632007B3E6C /* MiniCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C081D916632007B3E6C /* MiniCardData.swift */; };
+		6D763C0B1D916632007B3E6C /* MiniCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C081D916632007B3E6C /* MiniCardData.swift */; };
 		7EB5EDCD58301A9A539735FB /* Pods_SDKFrontiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0092F26BADD7C6F8BBEB3A3E /* Pods_SDKFrontiOSTests.framework */; };
 		A15164BB1D898402008AEA14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15164BA1D898402008AEA14 /* AppDelegate.swift */; };
 		A15164BD1D898402008AEA14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15164BC1D898402008AEA14 /* ViewController.swift */; };
@@ -87,6 +108,13 @@
 		1A2547668D66FA2921D9668F /* Pods-SDKFrontiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOSUITests/Pods-SDKFrontiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKFrontiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB6C73B8104C236AA0D61D1 /* Pods-SDKFrontiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOSTests/Pods-SDKFrontiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D763BF01D916500007B3E6C /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
+		6D763BF41D916543007B3E6C /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		6D763BF81D916590007B3E6C /* ScenesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenesManager.swift; sourceTree = "<group>"; };
+		6D763BFC1D9165ED007B3E6C /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		6D763C001D916604007B3E6C /* CarouselCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
+		6D763C041D916617007B3E6C /* RelationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationData.swift; sourceTree = "<group>"; };
+		6D763C081D916632007B3E6C /* MiniCardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniCardData.swift; sourceTree = "<group>"; };
 		7B2323C59FED48C332BB3B4C /* Pods-SDKFrontiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOS/Pods-SDKFrontiOS.release.xcconfig"; sourceTree = "<group>"; };
 		8DA2EA1464E2AC606C5E483C /* Pods_SDKFrontiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKFrontiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15164B71D898402008AEA14 /* SDKFrontiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKFrontiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +177,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D763BEF1D915E63007B3E6C /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				6D763BF01D916500007B3E6C /* Carousel.swift */,
+				6D763BF41D916543007B3E6C /* CarouselView.swift */,
+				6D763BF81D916590007B3E6C /* ScenesManager.swift */,
+				6D763BFC1D9165ED007B3E6C /* Scene.swift */,
+				6D763C001D916604007B3E6C /* CarouselCard.swift */,
+				6D763C041D916617007B3E6C /* RelationData.swift */,
+				6D763C081D916632007B3E6C /* MiniCardData.swift */,
+			);
+			name = Carousel;
+			sourceTree = "<group>";
+		};
 		A15164AE1D898402008AEA14 = {
 			isa = PBXGroup;
 			children = (
@@ -174,8 +216,9 @@
 		A15164B91D898402008AEA14 /* SDKFrontiOS */ = {
 			isa = PBXGroup;
 			children = (
+				A15164EA1D898474008AEA14 /* Enum */,
+				6D763BEF1D915E63007B3E6C /* Carousel */,
 				A15164E91D898441008AEA14 /* CardDetail */,
-				A15164E81D898409008AEA14 /* Carousel */,
 				A15164BA1D898402008AEA14 /* AppDelegate.swift */,
 				A15164BC1D898402008AEA14 /* ViewController.swift */,
 				A15164BE1D898402008AEA14 /* Main.storyboard */,
@@ -204,17 +247,9 @@
 			path = SDKFrontiOSUITests;
 			sourceTree = "<group>";
 		};
-		A15164E81D898409008AEA14 /* Carousel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Carousel;
-			sourceTree = "<group>";
-		};
 		A15164E91D898441008AEA14 /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
-				A15164EA1D898474008AEA14 /* Enum */,
 				A15164EB1D89847D008AEA14 /* Modules */,
 				A15165081D89852E008AEA14 /* BaseCardDetailBuilder.swift */,
 				A15165091D89852E008AEA14 /* CardData.swift */,
@@ -538,20 +573,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15165101D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
+				6D763BF11D916500007B3E6C /* Carousel.swift in Sources */,
 				A15164F91D898507008AEA14 /* TypeOfCard.swift in Sources */,
+				6D763C091D916632007B3E6C /* MiniCardData.swift in Sources */,
 				A151651C1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
+				6D763BF51D916543007B3E6C /* CarouselView.swift in Sources */,
 				A15164F61D898507008AEA14 /* NavigationType.swift in Sources */,
 				A15164F01D898507008AEA14 /* JsonDataType.swift in Sources */,
 				A15165221D89852E008AEA14 /* ConfigSection.swift in Sources */,
+				6D763BF91D916590007B3E6C /* ScenesManager.swift in Sources */,
 				A15164BD1D898402008AEA14 /* ViewController.swift in Sources */,
 				A15165131D89852E008AEA14 /* CardData.swift in Sources */,
 				A15165021D89851C008AEA14 /* PhotoModule.swift in Sources */,
+				6D763BFD1D9165ED007B3E6C /* Scene.swift in Sources */,
 				A151651F1D89852E008AEA14 /* CardDetailJson.swift in Sources */,
 				A15164FF1D89851C008AEA14 /* Module.swift in Sources */,
 				A15165191D89852E008AEA14 /* CardDetail.swift in Sources */,
 				A15164BB1D898402008AEA14 /* AppDelegate.swift in Sources */,
+				6D763C051D916617007B3E6C /* RelationData.swift in Sources */,
 				A15165251D89852E008AEA14 /* Section.swift in Sources */,
 				A15165161D89852E008AEA14 /* CardDataCarousel.swift in Sources */,
+				6D763C011D916604007B3E6C /* CarouselCard.swift in Sources */,
 				A15164F31D898507008AEA14 /* ModuleType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,17 +603,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15165261D89852E008AEA14 /* Section.swift in Sources */,
+				6D763C021D916604007B3E6C /* CarouselCard.swift in Sources */,
 				A15164D01D898402008AEA14 /* SDKFrontiOSTests.swift in Sources */,
 				A151651A1D89852E008AEA14 /* CardDetail.swift in Sources */,
+				6D763BFE1D9165ED007B3E6C /* Scene.swift in Sources */,
 				A15164F71D898507008AEA14 /* NavigationType.swift in Sources */,
+				6D763C0A1D916632007B3E6C /* MiniCardData.swift in Sources */,
+				6D763BFA1D916590007B3E6C /* ScenesManager.swift in Sources */,
 				A15164F11D898507008AEA14 /* JsonDataType.swift in Sources */,
 				A15164F41D898507008AEA14 /* ModuleType.swift in Sources */,
 				A15165031D89851C008AEA14 /* PhotoModule.swift in Sources */,
+				6D763BF61D916543007B3E6C /* CarouselView.swift in Sources */,
+				6D763BF21D916500007B3E6C /* Carousel.swift in Sources */,
 				A151651D1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
 				A15165111D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165141D89852E008AEA14 /* CardData.swift in Sources */,
 				A15165171D89852E008AEA14 /* CardDataCarousel.swift in Sources */,
 				A15164FA1D898507008AEA14 /* TypeOfCard.swift in Sources */,
+				6D763C061D916617007B3E6C /* RelationData.swift in Sources */,
 				A15165001D89851C008AEA14 /* Module.swift in Sources */,
 				A15165201D89852E008AEA14 /* CardDetailJson.swift in Sources */,
 				A15165231D89852E008AEA14 /* ConfigSection.swift in Sources */,
@@ -583,17 +632,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15165271D89852E008AEA14 /* Section.swift in Sources */,
+				6D763C031D916604007B3E6C /* CarouselCard.swift in Sources */,
 				A15164DB1D898402008AEA14 /* SDKFrontiOSUITests.swift in Sources */,
 				A151651B1D89852E008AEA14 /* CardDetail.swift in Sources */,
+				6D763BFF1D9165ED007B3E6C /* Scene.swift in Sources */,
 				A15164F81D898507008AEA14 /* NavigationType.swift in Sources */,
+				6D763C0B1D916632007B3E6C /* MiniCardData.swift in Sources */,
+				6D763BFB1D916590007B3E6C /* ScenesManager.swift in Sources */,
 				A15164F21D898507008AEA14 /* JsonDataType.swift in Sources */,
 				A15164F51D898507008AEA14 /* ModuleType.swift in Sources */,
 				A15165041D89851C008AEA14 /* PhotoModule.swift in Sources */,
+				6D763BF71D916543007B3E6C /* CarouselView.swift in Sources */,
+				6D763BF31D916500007B3E6C /* Carousel.swift in Sources */,
 				A151651E1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
 				A15165121D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165151D89852E008AEA14 /* CardData.swift in Sources */,
 				A15165181D89852E008AEA14 /* CardDataCarousel.swift in Sources */,
 				A15164FB1D898507008AEA14 /* TypeOfCard.swift in Sources */,
+				6D763C071D916617007B3E6C /* RelationData.swift in Sources */,
 				A15165011D89851C008AEA14 /* Module.swift in Sources */,
 				A15165211D89852E008AEA14 /* CardDetailJson.swift in Sources */,
 				A15165241D89852E008AEA14 /* ConfigSection.swift in Sources */,
