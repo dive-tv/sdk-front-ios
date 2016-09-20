@@ -11,7 +11,7 @@ import SwiftyJSON
 
 public class ModuleValidator : NSObject{
     
-    private var validatorData = [String : [String]]();
+    private var validatorData = [String : [String: [String]]]();
     
     init(customValidator : JSON? = nil){
         super.init();
@@ -31,8 +31,8 @@ public class ModuleValidator : NSObject{
      - returns: Return true if the data have the information the module needs or false if not
      */
     func validate(data : CardData, moduleName : String)->Bool{
-        if let attributes = self.validatorData[moduleName]{
-            for attribute in attributes{
+        if let modules = self.validatorData[moduleName]{
+            for module in modules{
                 // TODO: need to the logic
             }
         }
@@ -46,8 +46,8 @@ public class ModuleValidator : NSObject{
      This add default validators to the data.
      */
     private func createDefaultValidators(){
-        self.validatorData["PhotoModule"] = ["image"];
-        self.validatorData["TitleModule"] = ["title"];
+        self.validatorData["PhotoModule"] = ["Gallery" : ["title"]];
+        self.validatorData["TitleModule"] = ["Title": ["title"]];
     }
     
     /**
@@ -59,7 +59,11 @@ public class ModuleValidator : NSObject{
         for (key, subJson) in data{
             // Only add to the validator data if don't exist
             if(self.validatorData[key] == nil){
-                self.validatorData[key] = subJson.arrayValue.map{$0.string!};
+                var modules = [String : [String]]();
+                for(keyModules, subJsonModules) in subJson{
+                    modules[keyModules] = subJsonModules.arrayValue.map{$0.string!};
+                }
+                self.validatorData[key] = modules;
             }
         }
     }

@@ -117,6 +117,9 @@
 		A151652E1D8A9FCB008AEA14 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151652D1D8A9FCB008AEA14 /* ConfigModule.swift */; };
 		A151652F1D8A9FCB008AEA14 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151652D1D8A9FCB008AEA14 /* ConfigModule.swift */; };
 		A15165301D8A9FCB008AEA14 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151652D1D8A9FCB008AEA14 /* ConfigModule.swift */; };
+		A160AEAD1D90386600D84008 /* customValidator.json in Resources */ = {isa = PBXBuildFile; fileRef = A160AEAC1D90386600D84008 /* customValidator.json */; };
+		A160AEAE1D90386600D84008 /* customValidator.json in Resources */ = {isa = PBXBuildFile; fileRef = A160AEAC1D90386600D84008 /* customValidator.json */; };
+		A160AEAF1D90386600D84008 /* customValidator.json in Resources */ = {isa = PBXBuildFile; fileRef = A160AEAC1D90386600D84008 /* customValidator.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +189,7 @@
 		A151650F1D89852E008AEA14 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		A15165291D898954008AEA14 /* config1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config1.json; sourceTree = "<group>"; };
 		A151652D1D8A9FCB008AEA14 /* ConfigModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigModule.swift; sourceTree = "<group>"; };
+		A160AEAC1D90386600D84008 /* customValidator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customValidator.json; sourceTree = "<group>"; };
 		B8772F96BE5E1DAD5227F167 /* Pods-SDKFrontiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOS/Pods-SDKFrontiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -337,6 +341,7 @@
 		A15165281D898918008AEA14 /* samples */ = {
 			isa = PBXGroup;
 			children = (
+				A160AEAC1D90386600D84008 /* customValidator.json */,
 				A15165291D898954008AEA14 /* config1.json */,
 			);
 			name = samples;
@@ -479,6 +484,7 @@
 				A15164C01D898402008AEA14 /* Main.storyboard in Resources */,
 				A1478FD81D8BEBAF0039C1FE /* TitleModule.xib in Resources */,
 				A14790101D8BEC840039C1FE /* ActorModule.xib in Resources */,
+				A160AEAD1D90386600D84008 /* customValidator.json in Resources */,
 				A151652A1D898954008AEA14 /* config1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15165061D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				A160AEAE1D90386600D84008 /* customValidator.json in Resources */,
 				A14790191D8BEC9B0039C1FE /* AwardModule.xib in Resources */,
 				A14790011D8BEC4C0039C1FE /* ProductModule.xib in Resources */,
 				A1478FF11D8BEC0B0039C1FE /* SynopsisModule.xib in Resources */,
@@ -506,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15165071D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				A160AEAF1D90386600D84008 /* customValidator.json in Resources */,
 				A147901A1D8BEC9B0039C1FE /* AwardModule.xib in Resources */,
 				A14790021D8BEC4C0039C1FE /* ProductModule.xib in Resources */,
 				A1478FF21D8BEC0B0039C1FE /* SynopsisModule.xib in Resources */,

@@ -21,8 +21,15 @@ class ViewController: UIViewController {
             if let data = NSData(contentsOfFile: path) {
                 let json = JSON(data: data);
                 if(json != nil && json.error == nil){
-                    let cardDetailJSON = CardDetailJson(styleConfig: nil, customValidator: JSON(dictionaryLiteral: ("CustomModule",["title"])));
-                    cardDetailJSON.loadDataConfig(json);
+                    if let pathCustomJSON = NSBundle.mainBundle().pathForResource("customValidator", ofType: "json") {
+                        if let dataCustom = NSData(contentsOfFile: pathCustomJSON) {
+                            let jsonCustom = JSON(data: dataCustom);
+                            if(jsonCustom != nil && jsonCustom.error == nil){
+                                let cardDetailJSON = CardDetailJson(styleConfig: nil, customValidator: jsonCustom);
+                                cardDetailJSON.loadDataConfig(json);
+                            }
+                        }
+                    }
                 }
             }
         }
