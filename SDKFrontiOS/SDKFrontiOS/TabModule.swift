@@ -8,7 +8,11 @@
 
 import UIKit
 
-class TabModule: Module, UIScrollViewDelegate {
+protocol TabModuleDelegate : class {
+    func refreshTableViewHeight ();
+}
+
+class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
 
     @IBOutlet weak var tabBtnContainer: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -43,46 +47,55 @@ class TabModule: Module, UIScrollViewDelegate {
             self.tabTargets = self.configModule.targets!;
             
             if (self.sections.isEmpty) {
+                self.layoutIfNeeded();
                 
                 self.setTabButtons();
                 
-                var keys = [String]();
                 for target in self.tabTargets {
                     if (target.sectionId != nil) {
-                        keys.append(target.sectionId!);
+                        let section = self.cardDelegate!.createSection(target.sectionId!);
+                        section.tabModuleDelegate = self;
+                        self.sections.append(section);
                     }
                 }
                 
-                self.sections = self.cardDelegate!.createSections(keys);
-                self.scrollView.contentSize = CGSizeMake((self.frame.width * CGFloat(self.sections.count)), self.scrollView.frame.height);
+                self.setScrollView();
                 
-                for idx in 0..<self.sections.count {
-                    
-                    self.scrollViewConstraints.append([String:NSLayoutConstraint]());
-                    
-                    self.scrollViewConstraints[idx]["top"] = NSLayoutConstraint(item: self.sections[idx].view, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.scrollViewContainer, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0);
-                    
-                    self.scrollViewConstraints[idx]["bottom"] = NSLayoutConstraint(item: self.sections[idx].view, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.scrollViewContainer, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0);
-                    
-                    self.scrollViewConstraints[idx]["width"] = NSLayoutConstraint(item: self.sections[idx].view, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: self.frame.width);
-                    
-                    self.scrollViewConstraints[idx]["left"] = NSLayoutConstraint(item: self.sections[idx].view, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.scrollView, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: self.frame.width * CGFloat(idx));
-                    
-                    self.sections[idx].view.translatesAutoresizingMaskIntoConstraints = false;
-                    
-                    self.scrollView.addSubview(self.sections[idx].view);
-                    self.scrollViewContainer.addConstraints([self.scrollViewConstraints[idx]["top"]!, self.scrollViewConstraints[idx]["bottom"]!, self.scrollViewConstraints[idx]["width"]!, self.scrollViewConstraints[idx]["left"]!]);
-                    
-                    self.sections[idx].tableView!.scrollEnabled = false;
-                }
             }
             
+            self.layoutIfNeeded();
             self.refreshScrollViewConstraints();
             self.refreshHeight();
+            
         }
     }
     
     //MARK: Private methods
+    
+    private func setScrollView (){
+        
+        self.scrollView.contentSize = CGSizeMake((self.frame.width * CGFloat(self.sections.count)), self.scrollView.frame.height);
+        
+        for idx in 0..<self.sections.count {
+            
+            self.sections[idx].view.translatesAutoresizingMaskIntoConstraints = false;
+            self.scrollView.addSubview(self.sections[idx].view);
+            self.sections[idx].tableView!.scrollEnabled = false;
+            
+            
+            self.scrollViewConstraints.append([String:NSLayoutConstraint]());
+            
+            self.scrollViewConstraints[idx]["top"] = NSLayoutConstraint(item: self.sections[idx].view, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.scrollViewContainer, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0);
+            
+            self.scrollViewConstraints[idx]["bottom"] = NSLayoutConstraint(item: self.sections[idx].view, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.scrollViewContainer, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0);
+            
+            self.scrollViewConstraints[idx]["width"] = NSLayoutConstraint(item: self.sections[idx].view, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: self.frame.width);
+            
+            self.scrollViewConstraints[idx]["left"] = NSLayoutConstraint(item: self.sections[idx].view, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.scrollView, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: self.frame.width * CGFloat(idx));
+            
+            self.scrollViewContainer.addConstraints([self.scrollViewConstraints[idx]["top"]!, self.scrollViewConstraints[idx]["bottom"]!, self.scrollViewConstraints[idx]["width"]!, self.scrollViewConstraints[idx]["left"]!]);
+        }
+    }
     
     private func refreshHeight () {
         
@@ -98,13 +111,9 @@ class TabModule: Module, UIScrollViewDelegate {
         for idx in 0..<self.sections.count {
             
             self.scrollViewConstraints[idx]["top"]!.constant = 0;
-            
             self.scrollViewConstraints[idx]["bottom"]!.constant = 0;
-            
             self.scrollViewConstraints[idx]["width"]!.constant = self.frame.width;
-            
             self.scrollViewConstraints[idx]["left"]!.constant = self.frame.width * CGFloat(idx);
-            
         }
         
         self.scrollView.contentSize = CGSizeMake((self.frame.width * CGFloat(self.sections.count)), self.scrollView.frame.height);
@@ -152,7 +161,6 @@ class TabModule: Module, UIScrollViewDelegate {
             }
             
             self.tabBtnContainer.addConstraints([left, top, bottom]);
-            
         }
         
     }
@@ -160,6 +168,15 @@ class TabModule: Module, UIScrollViewDelegate {
     //MARK: ScrollView delegate
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        self.refreshHeight();
+        self.refreshScrollViewConstraints();
+    }
+    
+    //MARK: Tab module delegate
+    
+    func refreshTableViewHeight() {
+        
         self.refreshHeight();
         self.refreshScrollViewConstraints();
     }
@@ -167,6 +184,7 @@ class TabModule: Module, UIScrollViewDelegate {
     //MARK: Tabs Navigation
     
     func goToPage (sender : UIButton) {
+        
         self.scrollView.setContentOffset(CGPoint(x: CGFloat(sender.tag) * self.frame.width, y: 0), animated: true)
     }
     

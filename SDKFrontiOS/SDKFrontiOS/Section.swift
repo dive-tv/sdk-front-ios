@@ -17,16 +17,17 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var configModules : [ConfigModule]!;
+    private var configSection : ConfigSection!;
     private var cardData : CardData!;
     var cardDelegate : CardDetailDelegate?;
+    weak var tabModuleDelegate : TabModuleDelegate?;
     
     //MARK: INIT
     
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, _configModules : [ConfigModule], _cardData : CardData) {
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, _configSection : ConfigSection, _cardData : CardData) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
         
-        self.configModules = _configModules;
+        self.configSection = _configSection;
         self.cardData = _cardData;
     }
     
@@ -35,7 +36,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     }
     
     deinit {
-        print("Section destroid")
+        print("Section destroid ------->")
     }
     
     //MARK: UIViewController methods
@@ -49,7 +50,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 100;
         
-        for module in self.configModules {
+        for module in self.configSection.arrayModules {
             self.tableView?.registerNib(UINib(nibName: module.moduleName!, bundle: nil), forCellReuseIdentifier: module.moduleName!);
         }
     }
@@ -66,6 +67,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     
     func reloadTable() {
         self.tableView.reloadData();
+        self.tabModuleDelegate?.refreshTableViewHeight();
     }
     
     
@@ -76,7 +78,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.configModules.count;
+        return self.configSection.arrayModules.count;
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -85,11 +87,11 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        let cell = self.tableView.dequeueReusableCellWithIdentifier(self.configModules[indexPath.row].moduleName!) as! Module;
+        let cell = self.tableView.dequeueReusableCellWithIdentifier(self.configSection.arrayModules[indexPath.row].moduleName!) as! Module;
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.sectionDelegate = self;
         cell.cardDelegate = self.cardDelegate;
-        cell.setCardData(self.configModules[indexPath.row], _cardData: self.cardData);
+        cell.setCardData(self.configSection.arrayModules[indexPath.row], _cardData: self.cardData);
         return cell;
     }
     

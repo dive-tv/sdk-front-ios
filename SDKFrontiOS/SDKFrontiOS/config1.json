@@ -61,7 +61,23 @@
 		"modules":[
 			{
 				"type":"ActorModule"
-			}
+			},
+            {
+                "type":"NavigationModule",
+                "targets":[
+                    {
+                        "section_id":"awards",
+                        "text":"Awards"
+                    }
+                ]
+            },
+            {
+                "type":"PhotoModule"
+            },
+            {
+                "type":"TitleModule"
+            }
+                   
 		]
 		
 	},
@@ -73,10 +89,40 @@
 			},
             {
                 "type":"RatingModule"
+            },
+            {
+                "type":"TabModule",
+                "targets":[
+                    {
+                        "section_id":"cast",
+                        "text":"Cast"
+                    },
+                    {
+                        "section_id":"test",
+                        "text":"test"
+                    }
+                ]
             }
 		]
 		
-	}
+	},
+    {
+        "title":"test",
+        "modules":[
+            {
+                "type":"AwardModule"
+            },
+                   {
+                   "type":"NavigationModule",
+                   "targets":[
+                              {
+                              "section_id":"awards",
+                              "text":"Awards"
+                              }
+                              ]
+                   }
+        ]
+    }
 	
 	] 
 	

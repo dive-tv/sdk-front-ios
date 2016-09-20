@@ -13,6 +13,8 @@ protocol CardDetailDelegate : class {
     func createSection (_keyForSection : String) -> Section
     func createSections (_keyForSections : [String]) -> [Section]
     func newSection(_keyForSection : String);
+    
+    func newCard(_key : String, _type: Int)
 }
 
 public class CardDetail : NSObject, CardDetailDelegate{
@@ -73,8 +75,9 @@ public class CardDetail : NSObject, CardDetailDelegate{
     //MARK: Card detail delegate
     
     func createSection (_keyForSection : String) -> Section {
-        
-        return Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[_keyForSection]!.arrayModules, _cardData: self.cardData);
+        let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardData: self.cardData)
+        section.cardDelegate = self;
+        return section;
     }
     
     func createSections (_keyForSections : [String]) -> [Section] {
@@ -82,8 +85,9 @@ public class CardDetail : NSObject, CardDetailDelegate{
         var sections = [Section]()
         
         for key in _keyForSections {
-            
-            sections.append(Section(nibName: "Section", bundle: nil, _configModules: self.sectionsData[key]!.arrayModules, _cardData: self.cardData));
+            let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[key]!, _cardData: self.cardData)
+            section.cardDelegate = self;
+            sections.append(section);
             
         }
         
@@ -92,6 +96,10 @@ public class CardDetail : NSObject, CardDetailDelegate{
     
     func newSection(_keyForSection: String) {
         self.pushSection(_keyForSection);
+    }
+    
+    func newCard(_key: String, _type: Int) {
+        
     }
     
 }
