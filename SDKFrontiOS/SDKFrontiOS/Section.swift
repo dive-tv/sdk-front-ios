@@ -72,10 +72,10 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         var offset = _offset;
         
         if (_offset != 0 && _offset + self.tableView.frame.height > self.tableView.contentSize.height) {
-            offset -= abs(self.tableView.contentSize.height - (offset + self.tableView.frame.height))
+            offset -= abs(self.tableView.contentSize.height - (offset + self.tableView.frame.height));
         }
         
-        return offset;
+        return offset < 0.0 ? _offset : offset;
     }
     
     
@@ -90,7 +90,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         let offset = self.tableView.contentOffset.y;
         self.tableView.reloadData();
         self.tabModuleDelegate?.refreshScrollView();
-        if (self.tabModuleDelegate == nil) {
+        if (self.tabModuleDelegate == nil && self.tableView.contentSize.height > self.tableView.frame.height) {
             self.tableView.layoutIfNeeded();
             self.tableView.contentOffset.y = self.getScrollViewOffset(offset);
         }
