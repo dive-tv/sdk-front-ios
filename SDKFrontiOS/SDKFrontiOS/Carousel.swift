@@ -7,11 +7,14 @@
 //
 
 import UIKit
+
 internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
     private var data = [[[String]]]();
+    private var sceneManager : SceneManager!;
+    
     
     
     
@@ -21,6 +24,7 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
         
+        self.sceneManager = SceneManager();
         
         //This is for testing
         for _ in 0..<3 {
@@ -38,6 +42,10 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
             
             self.data.append(opc);
         }
+    }
+    
+    deinit {
+        print("CAROUSEL DEINIT")
     }
     
     required init?(coder aDecoder: NSCoder) {

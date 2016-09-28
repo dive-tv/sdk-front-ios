@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+internal class CarouselCard : NSObject {
+    
+    var data : CardData!;
+    var relations : [RelationData]?;
+    
+    init(_data : CardData!, _relations : [RelationData]? = nil) {
+        
+        self.data = _data;
+        self.relations = _relations;
+    }
+}

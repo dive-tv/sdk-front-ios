@@ -17,6 +17,10 @@ class CarouselCell: UITableViewCell {
     //private var carouselViews = [CarouselView]();
     
     
+    deinit {
+        print("cell removed");
+    }
+    
     
     //MARK: Cell configuration
     
@@ -24,7 +28,10 @@ class CarouselCell: UITableViewCell {
     func setCarouselCell (_cards : [String]) {
         self.cards = _cards;
         
-        self.cleanCellForReuse();
+        if (!self.sections.isEmpty) {
+            self.cleanCellForReuse();
+        }
+        
         self.createSectionsForCards();
         self.addViewToSection();
         

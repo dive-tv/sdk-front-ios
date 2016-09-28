@@ -13,9 +13,6 @@ class PhotoAndTitleView: CarouselView {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    deinit {
-        print("view removed");
-    }
     
     //This is for testing
     override func setView(_data : String) {

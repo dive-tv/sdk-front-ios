@@ -10,6 +10,12 @@ import UIKit
 
 class CarouselView: UIView {
 
+    
+    deinit {
+        print("view removed");
+    }
+    
+    
     // this is for testing
     func setView (_data : String ) {
         // NEED TO DO THE ANIMATION
