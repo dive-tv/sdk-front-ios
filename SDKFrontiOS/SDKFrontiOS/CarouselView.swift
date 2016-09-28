@@ -2,8 +2,27 @@
 //  CarouselView.swift
 //  SDKFrontiOS
 //
-//  Created by Jonathan Castro Miguel on 20/09/16.
+//  Created by Carlos Bailon Perez on 27/9/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class CarouselView: UIView {
+
+    // this is for testing
+    func setView (_data : String ) {
+        // NEED TO DO THE ANIMATION
+    }
+
+}
+
+
+extension CarouselView {
+    class func loadFromNibNamed(type: CarouselViewType, bundle : NSBundle? = nil) -> UIView? {
+        return UINib(
+            nibName: type.rawValue,
+            bundle: bundle
+            ).instantiateWithOwner(nil, options: nil)[0] as? UIView
+    }
+}
