@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class CarouselCard : NSObject {
+public class CarouselCard : NSObject {
     
     var data : CardData!;
     var relations : [RelationData]?;

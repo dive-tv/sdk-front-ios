@@ -14,17 +14,18 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
     
     private var data = [[[String]]]();
     private var sceneManager : SceneManager!;
-    
+    weak var sceneManagerDelegate : CarouselCardDelegate?;
     
     
     
     //MARK: INIT
     
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, inout _delegate : CarouselCardDelegate?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
         
         self.sceneManager = SceneManager();
+        _delegate = self.sceneManager;
         
         //This is for testing
         for _ in 0..<3 {

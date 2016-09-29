@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3258C85C1D9D11BD00D61062 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 3258C85B1D9D11BD00D61062 /* cards.json */; };
+		3258C85D1D9D11BD00D61062 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 3258C85B1D9D11BD00D61062 /* cards.json */; };
+		3258C85E1D9D11BD00D61062 /* cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 3258C85B1D9D11BD00D61062 /* cards.json */; };
 		328E27741D9AB42200FF439A /* CuriosityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E27731D9AB42200FF439A /* CuriosityView.swift */; };
 		328E27751D9AB42200FF439A /* CuriosityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E27731D9AB42200FF439A /* CuriosityView.swift */; };
 		328E27761D9AB42200FF439A /* CuriosityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328E27731D9AB42200FF439A /* CuriosityView.swift */; };
@@ -130,6 +133,7 @@
 		0092F26BADD7C6F8BBEB3A3E /* Pods_SDKFrontiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKFrontiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A79008658CD0BA3533C1B5 /* Pods-SDKFrontiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOSTests/Pods-SDKFrontiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		1A2547668D66FA2921D9668F /* Pods-SDKFrontiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOSUITests/Pods-SDKFrontiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3258C85B1D9D11BD00D61062 /* cards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cards.json; sourceTree = "<group>"; };
 		328E27731D9AB42200FF439A /* CuriosityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuriosityView.swift; sourceTree = "<group>"; };
 		328E27771D9AB43400FF439A /* CuriosityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CuriosityView.xib; sourceTree = "<group>"; };
 		328EAC1A1D9BBF3800A4042F /* CarouselViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewType.swift; sourceTree = "<group>"; };
@@ -209,6 +213,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3258C85A1D9D11A300D61062 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				3258C85B1D9D11BD00D61062 /* cards.json */,
+			);
+			name = Json;
+			sourceTree = "<group>";
+		};
 		328EAC1E1D9BD6B600A4042F /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +292,7 @@
 		A15164B91D898402008AEA14 /* SDKFrontiOS */ = {
 			isa = PBXGroup;
 			children = (
+				3258C85A1D9D11A300D61062 /* Json */,
 				A15164EA1D898474008AEA14 /* Enum */,
 				6D763BEF1D915E63007B3E6C /* Carousel */,
 				A15164E91D898441008AEA14 /* CardDetail */,
@@ -484,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				328E27781D9AB43400FF439A /* CuriosityView.xib in Resources */,
+				3258C85C1D9D11BD00D61062 /* cards.json in Resources */,
 				329670DF1D9A7D0A003674D8 /* PhotoAndTitleView.xib in Resources */,
 				A15165051D89851C008AEA14 /* PhotoModule.xib in Resources */,
 				A15164C51D898402008AEA14 /* LaunchScreen.storyboard in Resources */,
@@ -499,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				329670E01D9A7D0A003674D8 /* PhotoAndTitleView.xib in Resources */,
+				3258C85D1D9D11BD00D61062 /* cards.json in Resources */,
 				328E27791D9AB43400FF439A /* CuriosityView.xib in Resources */,
 				A15165061D89851C008AEA14 /* PhotoModule.xib in Resources */,
 				329670CE1D9A70DD003674D8 /* Carousel.xib in Resources */,
@@ -511,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				329670E11D9A7D0A003674D8 /* PhotoAndTitleView.xib in Resources */,
+				3258C85E1D9D11BD00D61062 /* cards.json in Resources */,
 				328E277A1D9AB43400FF439A /* CuriosityView.xib in Resources */,
 				A15165071D89851C008AEA14 /* PhotoModule.xib in Resources */,
 				329670CF1D9A70DD003674D8 /* Carousel.xib in Resources */,

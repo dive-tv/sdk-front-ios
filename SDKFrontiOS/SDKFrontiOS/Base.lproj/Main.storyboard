@@ -17,21 +17,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgz-ik-MlG">
-                                <rect key="frame" x="254" y="285" width="92" height="30"/>
-                                <state key="normal" title="Add Carousel"/>
-                                <connections>
-                                    <action selector="addCarousel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4To-1y-41W"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKu-kh-xcY">
+                                <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgz-ik-MlG">
+                                        <rect key="frame" x="25" y="10" width="92" height="30"/>
+                                        <state key="normal" title="Add Carousel"/>
+                                        <connections>
+                                            <action selector="addCarousel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4To-1y-41W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKf-GQ-cLT">
+                                        <rect key="frame" x="469" y="10" width="106" height="30"/>
+                                        <state key="normal" title="Add Card detail"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="EKf-GQ-cLT" firstAttribute="centerY" secondItem="pKu-kh-xcY" secondAttribute="centerY" id="94u-0e-rXQ"/>
+                                    <constraint firstItem="Qgz-ik-MlG" firstAttribute="leading" secondItem="pKu-kh-xcY" secondAttribute="leading" constant="25" id="Suj-cY-78O"/>
+                                    <constraint firstItem="Qgz-ik-MlG" firstAttribute="centerY" secondItem="pKu-kh-xcY" secondAttribute="centerY" id="gI4-vG-gbv"/>
+                                    <constraint firstAttribute="trailing" secondItem="EKf-GQ-cLT" secondAttribute="trailing" constant="25" id="n22-o1-SJD"/>
+                                    <constraint firstAttribute="height" constant="50" id="sG1-ft-HeA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="se0-8o-Yxp">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZQ-m4-fce">
+                                        <rect key="frame" x="545" y="10" width="30" height="30"/>
+                                        <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="addCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gU5-rP-e8U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD4-1k-wQr">
+                                        <rect key="frame" x="18" y="10" width="46" height="30"/>
+                                        <state key="normal" title="New section"/>
+                                        <connections>
+                                            <action selector="newSection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="py3-jg-png"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cZQ-m4-fce" secondAttribute="trailing" constant="25" id="JId-mS-2Vj"/>
+                                    <constraint firstItem="bD4-1k-wQr" firstAttribute="centerY" secondItem="se0-8o-Yxp" secondAttribute="centerY" id="JJN-0f-ytM"/>
+                                    <constraint firstItem="bD4-1k-wQr" firstAttribute="leading" secondItem="se0-8o-Yxp" secondAttribute="leading" constant="25" id="YOt-jO-CUU"/>
+                                    <constraint firstItem="cZQ-m4-fce" firstAttribute="centerY" secondItem="se0-8o-Yxp" secondAttribute="centerY" id="yb4-5g-i4H"/>
+                                    <constraint firstAttribute="height" constant="50" id="z7E-hZ-DgC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E59-3O-j4C">
+                                <rect key="frame" x="0.0" y="114" width="600" height="436"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qgz-ik-MlG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="59k-g1-lN2"/>
-                            <constraint firstItem="Qgz-ik-MlG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zb3-dI-E5U"/>
+                            <constraint firstItem="se0-8o-Yxp" firstAttribute="top" secondItem="E59-3O-j4C" secondAttribute="bottom" id="CfP-SS-jhz"/>
+                            <constraint firstAttribute="trailing" secondItem="pKu-kh-xcY" secondAttribute="trailing" id="NrP-6W-UGW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="se0-8o-Yxp" secondAttribute="bottom" id="PN3-Lj-rhr"/>
+                            <constraint firstItem="E59-3O-j4C" firstAttribute="top" secondItem="pKu-kh-xcY" secondAttribute="bottom" id="QG6-hQ-xRb"/>
+                            <constraint firstAttribute="trailing" secondItem="E59-3O-j4C" secondAttribute="trailing" id="eve-E4-Aez"/>
+                            <constraint firstItem="pKu-kh-xcY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="f1m-R6-aaf"/>
+                            <constraint firstItem="E59-3O-j4C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gjj-sV-x9k"/>
+                            <constraint firstAttribute="trailing" secondItem="se0-8o-Yxp" secondAttribute="trailing" id="iWx-x6-gyt"/>
+                            <constraint firstItem="se0-8o-Yxp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n6r-HR-39a"/>
+                            <constraint firstItem="pKu-kh-xcY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u5f-bj-fS8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dh2-1Z-mCU"/>
+                    <connections>
+                        <outlet property="addCardBtn" destination="cZQ-m4-fce" id="Y2w-8C-eCM"/>
+                        <outlet property="carouselContainer" destination="E59-3O-j4C" id="JoZ-2w-Df2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
