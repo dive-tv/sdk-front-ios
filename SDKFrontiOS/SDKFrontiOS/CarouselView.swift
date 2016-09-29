@@ -16,8 +16,12 @@ class CarouselView: UIView {
     }
     
     
-    // this is for testing
-    func setView (_data : String ) {
+    /**
+     sets the view info
+     
+     - parameter _data: data of the card
+     */
+    func setView (_data : CarouselCard ) {
         // NEED TO DO THE ANIMATION
     }
 

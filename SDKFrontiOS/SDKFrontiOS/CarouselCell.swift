@@ -12,7 +12,7 @@ class CarouselCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
     
-    private var cards = [String]();
+    private var cellData : CarouselCellData!;
     private var sections = [UIView]();
     //private var carouselViews = [CarouselView]();
     
@@ -25,8 +25,13 @@ class CarouselCell: UITableViewCell {
     //MARK: Cell configuration
     
     
-    func setCarouselCell (_cards : [String]) {
-        self.cards = _cards;
+    /**
+     Sets the cell information for create the sections and the cards
+     
+     - parameter _cards: <#_cards description#>
+     */
+    func setCarouselCell (_cards : CarouselCellData) {
+        self.cellData = _cards;
         
         if (!self.sections.isEmpty) {
             self.cleanCellForReuse();
@@ -60,7 +65,7 @@ class CarouselCell: UITableViewCell {
      */
     private func createSectionsForCards () {
         
-        for idx in 0..<self.cards.count {
+        for idx in 0..<self.cellData.cards.count {
             
             let sectionView = UIView();
             sectionView.backgroundColor = UIColor.clearColor();
@@ -88,7 +93,7 @@ class CarouselCell: UITableViewCell {
             let bottom = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.containerView, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0);
             
             
-            if (idx == self.cards.count - 1) {
+            if (idx == self.cellData.cards.count - 1) {
                 
                 let right = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.containerView, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0);
                 self.containerView.addConstraint(right);
@@ -108,7 +113,7 @@ class CarouselCell: UITableViewCell {
             
             var carouselView = CarouselView();
             
-            switch self.cards[idx] {
+            switch self.cellData.cards[idx] {
             case "Image_4":
                 carouselView = CarouselView.loadFromNibNamed(.Curiosity)! as! CarouselView;
             default:
@@ -127,7 +132,7 @@ class CarouselCell: UITableViewCell {
             self.sections[idx].addSubview(carouselView);
             self.sections[idx].addConstraints([top, bottom, left, right]);
             
-            carouselView.setView(self.cards[idx]);
+            carouselView.setView(self.cellData.cards[idx]);
         }
     }
     

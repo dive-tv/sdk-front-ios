@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var carouselContainer: UIView!
     var carouselDelegate : CarouselCardDelegate?;
     var timer : NSTimer?;
-    var actualSection = 0;
+    var actualSection = -1;
     
     var batchCards = [CarouselCard]();
     var readycards = [CarouselCard]();
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
                 self.readycards.removeLast();
             }
             
-            self.carouselDelegate!.onCardsForPaintReceived!(pushCards);
+            self.carouselDelegate?.onCardsForPaintReceived!(pushCards);
             
             self.addCardBtn.setTitle("\(self.readycards.count) +", forState: .Normal)
         } else {
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
 
     @IBAction func newSection(sender: UIButton) {
         self.actualSection += 1;
-        self.carouselDelegate!.onSectionStartReceived!(self.actualSection);
+        self.carouselDelegate?.onSectionStartReceived!(self.actualSection);
     }
     
     
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
                 self.batchCards.removeLast();
             }
             
-            self.carouselDelegate!.onCardsForPreloadReceived!(preloadArray);
+            self.carouselDelegate?.onCardsForPreloadReceived!(preloadArray);
             self.addCardBtn.setTitle("\(self.readycards.count) +", forState: .Normal)
             
             
@@ -129,7 +129,7 @@ class ViewController: UIViewController {
         
         for card in json {
             
-            let cardData = CardData(_cardId: card.1["card_id"].stringValue, _title: card.1["title"].stringValue, _type: TypeOfCard(rawValue: card.1["type"].stringValue)!);
+            let cardData = CardData(_cardId: card.1["card_id"].stringValue, _title: card.1["title"].stringValue, _type: TypeOfCard(rawValue: card.1["type"].stringValue)!, _image : card.1["image"].stringValue);
             let carouselCard = CarouselCard(_data: cardData);
             self.batchCards.append(carouselCard);
         }
