@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Carousel" customModule="SDKFrontiOS" customModuleProvider="target">
             <connections>
+                <outlet property="sectionToastText" destination="OiR-wz-6Cw" id="Lou-vS-AAj"/>
+                <outlet property="sectionsToast" destination="Zm4-zX-RxO" id="Zdf-md-weO"/>
                 <outlet property="tableView" destination="aes-bg-WQK" id="aR0-0q-WZU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,12 +29,34 @@
                                 <outlet property="delegate" destination="-1" id="ni5-kS-qks"/>
                             </connections>
                         </tableView>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-zX-RxO">
+                            <rect key="frame" x="250" y="280" width="100" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiR-wz-6Cw">
+                                    <rect key="frame" x="29" y="10" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.2981493794326241" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OiR-wz-6Cw" secondAttribute="trailing" constant="5" id="7js-HG-pLO"/>
+                                <constraint firstAttribute="height" constant="40" id="EKv-Gx-Spd"/>
+                                <constraint firstAttribute="width" constant="100" id="F1Q-9y-xxJ"/>
+                                <constraint firstItem="OiR-wz-6Cw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zm4-zX-RxO" secondAttribute="leading" constant="5" id="TIg-TT-x3t"/>
+                                <constraint firstItem="OiR-wz-6Cw" firstAttribute="centerY" secondItem="Zm4-zX-RxO" secondAttribute="centerY" id="e3i-Wa-PE6"/>
+                                <constraint firstItem="OiR-wz-6Cw" firstAttribute="centerX" secondItem="Zm4-zX-RxO" secondAttribute="centerX" id="p19-5F-ztx"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="aes-bg-WQK" secondAttribute="trailing" id="F7j-us-PDz"/>
                         <constraint firstAttribute="bottom" secondItem="aes-bg-WQK" secondAttribute="bottom" id="UiD-3W-wlu"/>
+                        <constraint firstItem="Zm4-zX-RxO" firstAttribute="centerX" secondItem="bnj-0h-h2t" secondAttribute="centerX" id="dLx-Dg-g8L"/>
                         <constraint firstItem="aes-bg-WQK" firstAttribute="leading" secondItem="bnj-0h-h2t" secondAttribute="leading" id="rHg-YR-hNw"/>
+                        <constraint firstItem="Zm4-zX-RxO" firstAttribute="centerY" secondItem="bnj-0h-h2t" secondAttribute="centerY" id="ujS-kz-9yR"/>
                         <constraint firstItem="aes-bg-WQK" firstAttribute="top" secondItem="bnj-0h-h2t" secondAttribute="top" id="xWt-wU-oDm"/>
                     </constraints>
                 </view>

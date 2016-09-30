@@ -14,6 +14,8 @@ protocol CarouselTableViewDelegate : class {
 internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataSource, CarouselTableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sectionsToast: UIView!
+    @IBOutlet weak var sectionToastText: UILabel!
     
     private var data = [[CarouselCellData]]();
     private var sceneManager : SceneManager!;
@@ -57,6 +59,9 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
         self.tableView.sectionIndexBackgroundColor = UIColor.clearColor();
         self.tableView.sectionIndexTrackingBackgroundColor = UIColor.blackColor();
         self.tableView.sectionIndexColor = UIColor.whiteColor();
+        
+        self.sectionsToast.hidden = true;
+        self.sectionToastText.text = "0";
     }
 
     override func didReceiveMemoryWarning() {
@@ -141,6 +146,12 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
         }
         return indexArray;
     }
+    
+    /*func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
+        self.sectionsToast.hidden = false;
+        self.sectionToastText.text = title;
+        return index;
+    }*/
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("carouselCell")! as! CarouselCell;

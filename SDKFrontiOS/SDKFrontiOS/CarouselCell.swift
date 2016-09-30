@@ -111,14 +111,7 @@ class CarouselCell: UITableViewCell {
         
         for idx in 0..<self.sections.count {
             
-            var carouselView = CarouselView();
-            
-            switch self.cellData.cards[idx] {
-            case "Image_4":
-                carouselView = CarouselView.loadFromNibNamed(.Curiosity)! as! CarouselView;
-            default:
-                carouselView = CarouselView.loadFromNibNamed(.PhotoAndTitle)! as! CarouselView;
-            }
+            let carouselView = self.getViewForType(self.cellData.cards[idx].data.type!);
             
             let top = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0);
             
@@ -134,6 +127,19 @@ class CarouselCell: UITableViewCell {
             
             carouselView.setView(self.cellData.cards[idx]);
         }
+    }
+    
+    private func getViewForType (_type : TypeOfCard) -> CarouselView! {
+        
+        switch _type {
+            
+        case TypeOfCard.CuriosityCard:
+            return CarouselView.loadFromNibNamed(.Curiosity)! as! CarouselView;
+            
+        default:
+            return CarouselView.loadFromNibNamed(.PhotoAndTitle)! as! CarouselView;
+        }
+        
     }
     
 }

@@ -18,7 +18,7 @@ class PhotoAndTitleView: CarouselView {
         super.setView(_data);
         
         self.title.text = _data.data.title;
-        
+        self.imageView.image = nil;
         
         if (_data.data.image != nil && !_data.data.image!.isEmpty) {
             

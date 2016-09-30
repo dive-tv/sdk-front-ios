@@ -10,12 +10,13 @@ import UIKit
 
 class CuriosityView: CarouselView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var titleCell: UILabel!
+    
+    override func setView(_data: CarouselCard) {
+        super.setView(_data);
+        
+        self.titleCell.text = _data.data.title;
+        
     }
-    */
 
 }

@@ -25,6 +25,9 @@
                 <constraint firstItem="vjP-OK-r3J" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ay7-BY-EzD"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vjP-OK-r3J" secondAttribute="trailing" constant="25" id="tKS-Vk-DzS"/>
             </constraints>
+            <connections>
+                <outlet property="titleCell" destination="vjP-OK-r3J" id="quk-JD-t22"/>
+            </connections>
         </view>
     </objects>
 </document>
