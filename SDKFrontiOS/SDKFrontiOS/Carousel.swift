@@ -76,14 +76,24 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
      */
     func addCellsToTableView(_cells: [CarouselCellData]) {
         
-        let section = abs(_cells.first!.sceneId - self.data.count + 1);
-        
-        for cell in _cells {
+        if (!self.data.isEmpty && self.data.count > _cells.first!.sceneId) {
             
-            self.data[section].insert(cell, atIndex: 0);
+            let section = abs((self.data.count - 1) - _cells.first!.sceneId);
+
+            for cell in _cells {
+                
+                self.data[section].insert(cell, atIndex: 0);
+            }
+            
+            self.tableView.reloadSections(NSIndexSet(index: section) , withRowAnimation: .Bottom);
+            
+        } else {
+            
+            self.data.insert([CarouselCellData](), atIndex: 0);
+            self.tableView.reloadData();
+            
+            self.addCellsToTableView(_cells);
         }
-        
-        self.tableView.reloadSections(NSIndexSet(index: section) , withRowAnimation: .Bottom);
     }
     
     

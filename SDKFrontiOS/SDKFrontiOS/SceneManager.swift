@@ -21,7 +21,6 @@ internal class SceneManager : NSObject, CarouselCardDelegate {
     private var cards = [String : CarouselCard]();
     private var cardsByScene = [Int : [CarouselCard]]();
     private var carruselLogic : CarouselLogic!;
-    private var actualSection = 0;
     
     weak var carouselTableViewDelegate : CarouselTableViewDelegate?;
     
@@ -44,14 +43,12 @@ internal class SceneManager : NSObject, CarouselCardDelegate {
     /**
      This is called when a new scene starts. A new section is created in the tableView
      
-     - parameter _sectionId: <#_sectionId description#>
+     - parameter _sectionId: the scene number
      */
     func onSectionStartReceived(_sectionId: Int) {
         print("Carousel Manager --------> start section \(_sectionId)");
         
-        self.actualSection = _sectionId;
-        
-        self.carouselTableViewDelegate?.startNewScene(self.actualSection);
+        self.carouselTableViewDelegate?.startNewScene(_sectionId);
     }
     
     
@@ -92,7 +89,7 @@ internal class SceneManager : NSObject, CarouselCardDelegate {
             
             if (self.cards[card] != nil) {
                 let carouselCard = self.cards[card]!;
-                let cellData = CarouselCellData(_sceneId: self.actualSection, _cards: [carouselCard]);
+                let cellData = CarouselCellData(_sceneId: carouselCard.scene_id, _cards: [carouselCard]);
                 carouselCells.append(cellData);
             }
         }

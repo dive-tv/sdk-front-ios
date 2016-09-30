@@ -68,11 +68,14 @@ class ViewController: UIViewController {
             }
             
             var pushCards = [String]();
+            let lastSceneId = self.readycards.last!.scene_id;
             
-            for idx in (0..<numberOfCards).reverse() {
+            for idx in ((self.readycards.count - numberOfCards)..<self.readycards.count).reverse() {
                 
-                pushCards.append(self.readycards[idx].data!.cardId);
-                self.readycards.removeLast();
+                if lastSceneId == self.readycards[idx].scene_id {
+                    pushCards.append(self.readycards[idx].data!.cardId);
+                    self.readycards.removeLast();
+                }
             }
             
             self.carouselDelegate?.onCardsForPaintReceived!(pushCards);
@@ -126,13 +129,15 @@ class ViewController: UIViewController {
         let jsonData:NSData = NSData.dataWithContentsOfMappedFile(jsonFilePath as String) as! NSData;
         let json = JSON(data: jsonData);
         
-        
         for card in json {
             
             let cardData = CardData(_cardId: card.1["card_id"].stringValue, _title: card.1["title"].stringValue, _type: TypeOfCard(rawValue: card.1["type"].stringValue)!, _image : card.1["image"].stringValue);
-            let carouselCard = CarouselCard(_data: cardData);
-            self.batchCards.append(carouselCard);
+            let carouselCard = CarouselCard(_scene_id: Int(self.batchCards.count / 5) , _data: cardData);
+            self.batchCards.insert(carouselCard, atIndex: 0);
+            //self.batchCards.append(carouselCard);
         }
+        
+        
     }
 }
 

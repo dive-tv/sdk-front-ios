@@ -19,6 +19,25 @@ class PhotoAndTitleView: CarouselView {
         
         self.title.text = _data.data.title;
         
+        
+        if (_data.data.image != nil && !_data.data.image!.isEmpty) {
+            
+            var urlArray = _data.data.image!.componentsSeparatedByString(".");
+            urlArray[0] += "_s_@3x"
+            
+            let touchvieUrl = "https://card.touchvie.com/" + urlArray[0] + "." + urlArray[1];
+            
+            let url = NSURL(string: touchvieUrl)
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                if let data = NSData(contentsOfURL: url!) {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.imageView.image = UIImage(data: data);
+                    });
+                }
+            }
+            
+        }
     }
     
 }
