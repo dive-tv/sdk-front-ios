@@ -75,7 +75,7 @@ public class BaseCardDetailBuilder : NSObject{
      */
     private func getCardData(cardId : String, completionBlock : completionBlockGetCard){
         // TODO: need to call the sdkclient and in the response call the completion
-        completionBlock(CardData());
+        completionBlock(CardData(_cardId : "ID", _title : "Title", _type : TypeOfCard.Person));
     }
     
     /**
