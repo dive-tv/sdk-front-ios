@@ -1,0 +1,17 @@
+{
+	
+	"CustomModule":
+					{
+						"Gallery" : ["title","image"],
+						"Description" : ["description"]
+					},
+
+	"CustomModule2": 
+					{
+						"Photo" : ["image"],
+						"Title" : ["title"]
+
+					}
+
+
+}

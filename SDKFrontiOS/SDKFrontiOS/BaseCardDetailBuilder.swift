@@ -19,17 +19,22 @@ public class BaseCardDetailBuilder : NSObject{
     internal var dictSections = [String : ConfigSection]();
     internal var mainKeySection : String?;
     
+    private var moduleValidator : ModuleValidator!;
+    
     // MARK: Init
     /**
      The initializer.
      
      - parameter styleConfig: This is optional, by default is nil. If the user wants a style for the CardDetail need to pass a json.
      
+     - parameter customValidator: This is optional, by default is nil. If the user wants a custom module for the CardDetail need to pass a json with the kind of the module he wants and the information that module needs.
+     
      - returns: self
      */
-    init(styleConfig : JSON? = nil){
+    init(styleConfig : JSON? = nil, customValidator : JSON? = nil){
         super.init();
         self.styleConfig = styleConfig;
+        self.moduleValidator = ModuleValidator(customValidator: customValidator);
     }
     
     // MARK: Public Methods
@@ -42,8 +47,21 @@ public class BaseCardDetailBuilder : NSObject{
      */
     public func build(cardId : String, navigationController : UINavigationController){
         self.getCardData(cardId) { (cardData : CardData) in
-            // TODO: need to do the logic
             
+            self.validateSectionsAndModules(cardData);
+            
+            var validSections = [String : ConfigSection]();
+            for key in self.dictSections.keys{
+                let configSection = self.dictSections[key]!;
+                if(configSection.isValidSection){
+                    let newConfigSection = self.createConfigSection(configSection.arrayModules);
+                    if(newConfigSection.arrayModules.count > 0){
+                        validSections[key] = newConfigSection;
+                    }
+                }
+            }
+            
+            // TODO: need to do the logic
             CardDetail(_sectionsData: self.dictSections, _mainSectionKey: self.mainKeySection!, _cardData: cardData, _navigationController: navigationController);
         }
     }
@@ -59,5 +77,64 @@ public class BaseCardDetailBuilder : NSObject{
         // TODO: need to call the sdkclient and in the response call the completion
         completionBlock(CardData());
     }
+    
+    /**
+     This method validate sections and modules.
+     
+     - parameter cardData: The data with all the info
+     */
+    private func validateSectionsAndModules(cardData : CardData){
+        for key in self.dictSections.keys{
+            let configSection = self.dictSections[key]!;
+            for configModule in configSection.arrayModules{
+                if(configModule.targets == nil){
+                    if(self.moduleValidator.validate(cardData, moduleName: configModule.moduleName!)){
+                        configModule.isValid = true;
+                        if(!configSection.isValidSection){
+                            configSection.isValidSection = true;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /**
+     This method create a new ConfigSection with valid modules.
+     
+     - parameter arrayModules: The array of modules
+     
+     - returns: Return a ConfigSection
+     */
+    private func createConfigSection(arrayModules : [ConfigModule])->ConfigSection{
+        // Create a new ConfigSection
+        let newConfigSection = ConfigSection();
+        for configModule in arrayModules{
+            // Check if is a normal module
+            if(configModule.targets == nil){
+                // Check if is valid and add to the new ConfigSection
+                if(configModule.isValid){
+                    newConfigSection.addModule(configModule.moduleName!, targets: configModule.targets);
+                }
+            }
+            else{
+                var newTargets = [Target]();
+                for target in configModule.targets!{
+                    // Check if the target is valid and add to the array
+                    if(target.sectionId != nil && self.dictSections[target.sectionId!] != nil && self.dictSections[target.sectionId!]!.isValidSection){
+                        newTargets.append(target);
+                    }
+                }
+                // Only add the module if we have more than one target
+                if(newTargets.count > 0){
+                    newConfigSection.addModule(configModule.moduleName!, targets: newTargets);
+                }
+                
+            }
+        }
+        return newConfigSection;
+    }
+    
+    
 
 }

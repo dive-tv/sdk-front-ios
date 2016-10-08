@@ -76,6 +76,9 @@
 		A14790181D8BEC9B0039C1FE /* AwardModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14790141D8BEC9B0039C1FE /* AwardModule.xib */; };
 		A14790191D8BEC9B0039C1FE /* AwardModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14790141D8BEC9B0039C1FE /* AwardModule.xib */; };
 		A147901A1D8BEC9B0039C1FE /* AwardModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14790141D8BEC9B0039C1FE /* AwardModule.xib */; };
+		A147901C1D8C200D0039C1FE /* ModuleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147901B1D8C200D0039C1FE /* ModuleValidator.swift */; };
+		A147901D1D8C200D0039C1FE /* ModuleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147901B1D8C200D0039C1FE /* ModuleValidator.swift */; };
+		A147901E1D8C200D0039C1FE /* ModuleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147901B1D8C200D0039C1FE /* ModuleValidator.swift */; };
 		A15164BB1D898402008AEA14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15164BA1D898402008AEA14 /* AppDelegate.swift */; };
 		A15164BD1D898402008AEA14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15164BC1D898402008AEA14 /* ViewController.swift */; };
 		A15164C01D898402008AEA14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15164BE1D898402008AEA14 /* Main.storyboard */; };
@@ -113,6 +116,9 @@
 		A151652E1D8A9FCB008AEA14 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151652D1D8A9FCB008AEA14 /* ConfigModule.swift */; };
 		A151652F1D8A9FCB008AEA14 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151652D1D8A9FCB008AEA14 /* ConfigModule.swift */; };
 		A15165301D8A9FCB008AEA14 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151652D1D8A9FCB008AEA14 /* ConfigModule.swift */; };
+		A160AEAD1D90386600D84008 /* customValidator.json in Resources */ = {isa = PBXBuildFile; fileRef = A160AEAC1D90386600D84008 /* customValidator.json */; };
+		A160AEAE1D90386600D84008 /* customValidator.json in Resources */ = {isa = PBXBuildFile; fileRef = A160AEAC1D90386600D84008 /* customValidator.json */; };
+		A160AEAF1D90386600D84008 /* customValidator.json in Resources */ = {isa = PBXBuildFile; fileRef = A160AEAC1D90386600D84008 /* customValidator.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +165,7 @@
 		A147900C1D8BEC840039C1FE /* ActorModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActorModule.xib; sourceTree = "<group>"; };
 		A14790131D8BEC9B0039C1FE /* AwardModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardModule.swift; sourceTree = "<group>"; };
 		A14790141D8BEC9B0039C1FE /* AwardModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AwardModule.xib; sourceTree = "<group>"; };
+		A147901B1D8C200D0039C1FE /* ModuleValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleValidator.swift; sourceTree = "<group>"; };
 		A15164B71D898402008AEA14 /* SDKFrontiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKFrontiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15164BA1D898402008AEA14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A15164BC1D898402008AEA14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +189,7 @@
 		A151650E1D89852E008AEA14 /* ConfigSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigSection.swift; sourceTree = "<group>"; };
 		A15165291D898954008AEA14 /* config1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config1.json; sourceTree = "<group>"; };
 		A151652D1D8A9FCB008AEA14 /* ConfigModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigModule.swift; sourceTree = "<group>"; };
+		A160AEAC1D90386600D84008 /* customValidator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customValidator.json; sourceTree = "<group>"; };
 		B8772F96BE5E1DAD5227F167 /* Pods-SDKFrontiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOS/Pods-SDKFrontiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,6 +298,7 @@
 				A1478FCF1D8AB1DB0039C1FE /* Target.swift */,
 				3216872F1D8C0F820064460D /* Section.swift */,
 				321687301D8C0F820064460D /* Section.xib */,
+				A147901B1D8C200D0039C1FE /* ModuleValidator.swift */,
 			);
 			name = CardDetail;
 			sourceTree = "<group>";
@@ -333,6 +342,7 @@
 		A15165281D898918008AEA14 /* samples */ = {
 			isa = PBXGroup;
 			children = (
+				A160AEAC1D90386600D84008 /* customValidator.json */,
 				A15165291D898954008AEA14 /* config1.json */,
 			);
 			name = samples;
@@ -476,6 +486,7 @@
 				A1478FD81D8BEBAF0039C1FE /* TitleModule.xib in Resources */,
 				A14790101D8BEC840039C1FE /* ActorModule.xib in Resources */,
 				3216872E1D8C0F780064460D /* PhotoModule.xib in Resources */,
+				A160AEAD1D90386600D84008 /* customValidator.json in Resources */,
 				A151652A1D898954008AEA14 /* config1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +495,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15165061D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				A160AEAE1D90386600D84008 /* customValidator.json in Resources */,
 				A14790191D8BEC9B0039C1FE /* AwardModule.xib in Resources */,
 				A14790011D8BEC4C0039C1FE /* ProductModule.xib in Resources */,
 				A1478FF11D8BEC0B0039C1FE /* SynopsisModule.xib in Resources */,
@@ -501,6 +514,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15165071D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				A160AEAF1D90386600D84008 /* customValidator.json in Resources */,
 				A147901A1D8BEC9B0039C1FE /* AwardModule.xib in Resources */,
 				A14790021D8BEC4C0039C1FE /* ProductModule.xib in Resources */,
 				A1478FF21D8BEC0B0039C1FE /* SynopsisModule.xib in Resources */,
@@ -569,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A147901C1D8C200D0039C1FE /* ModuleValidator.swift in Sources */,
 				A15165101D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A14790151D8BEC9B0039C1FE /* AwardModule.swift in Sources */,
 				A15164F91D898507008AEA14 /* TypeOfCard.swift in Sources */,
@@ -621,6 +637,8 @@
 				A1478FEE1D8BEC0B0039C1FE /* SynopsisModule.swift in Sources */,
 				A1478FE61D8BEBF00039C1FE /* RatingModule.swift in Sources */,
 				A14790061D8BEC630039C1FE /* TabModule.swift in Sources */,
+				A147901D1D8C200D0039C1FE /* ModuleValidator.swift in Sources */,
+				A15165001D89851C008AEA14 /* Module.swift in Sources */,
 				A15165201D89852E008AEA14 /* CardDetailJson.swift in Sources */,
 				A15165231D89852E008AEA14 /* ConfigSection.swift in Sources */,
 			);
@@ -651,6 +669,8 @@
 				A1478FEF1D8BEC0B0039C1FE /* SynopsisModule.swift in Sources */,
 				A1478FE71D8BEBF00039C1FE /* RatingModule.swift in Sources */,
 				A14790071D8BEC630039C1FE /* TabModule.swift in Sources */,
+				A147901E1D8C200D0039C1FE /* ModuleValidator.swift in Sources */,
+				A15165011D89851C008AEA14 /* Module.swift in Sources */,
 				A15165211D89852E008AEA14 /* CardDetailJson.swift in Sources */,
 				A15165241D89852E008AEA14 /* ConfigSection.swift in Sources */,
 			);

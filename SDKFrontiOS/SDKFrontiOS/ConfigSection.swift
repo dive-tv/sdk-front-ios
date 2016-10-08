@@ -11,6 +11,7 @@ import Foundation
 public class ConfigSection : NSObject{
     
     private(set) var arrayModules = [ConfigModule]();
+    var isValidSection : Bool = false;
     
     public override init() {
         super.init();

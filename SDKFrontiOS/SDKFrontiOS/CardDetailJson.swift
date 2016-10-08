@@ -17,10 +17,12 @@ public class CardDetailJson : BaseCardDetailBuilder{
      
      - parameter styleConfig: This is optional, by default is nil. If the user wants a style for the CardDetail need to pass a json.
      
+     - parameter customValidator: This is optional, by default is nil. If the user wants a custom module for the CardDetail need to pass a json with the kind of the module he wants and the information that module needs.
+     
      - returns: self
      */
-    override init( styleConfig : JSON? = nil) {
-        super.init(styleConfig: styleConfig);
+    override init( styleConfig : JSON? = nil, customValidator : JSON? = nil) {
+        super.init(styleConfig: styleConfig, customValidator : customValidator);
     }
     
     // MARK: Public Methods
