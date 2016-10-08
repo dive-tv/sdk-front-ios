@@ -26,7 +26,7 @@ class ViewController: UIViewController {
                             let jsonCustom = JSON(data: dataCustom);
                             if(jsonCustom != nil && jsonCustom.error == nil){
                                 let cardDetailJSON = CardDetailJson(styleConfig: nil, customValidator: jsonCustom);
-                                cardDetailJSON.loadDataConfig(json)     //.build("", navigationController: self.navigationController!);
+                                cardDetailJSON.loadDataConfig(json).build("", navigationController: self.navigationController!);
                             }
                         }
                     }
