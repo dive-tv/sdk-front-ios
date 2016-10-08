@@ -133,7 +133,7 @@ class CarouselCell: UITableViewCell {
         
         switch _type {
             
-        case TypeOfCard.CuriosityCard:
+        case TypeOfCard.Trivia:
             return CarouselView.loadFromNibNamed(.Curiosity)! as! CarouselView;
             
         default:
