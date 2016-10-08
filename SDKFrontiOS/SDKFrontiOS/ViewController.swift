@@ -37,6 +37,23 @@ class ViewController: UIViewController {
     
     @IBAction func createCardDetail(sender: UIButton) {
         
+        
+        if let path = NSBundle.mainBundle().pathForResource("config1", ofType: "json") {
+            if let data = NSData(contentsOfFile: path) {
+                let json = JSON(data: data);
+                if(json != nil && json.error == nil){
+                    if let pathCustomJSON = NSBundle.mainBundle().pathForResource("customValidator", ofType: "json") {
+                        if let dataCustom = NSData(contentsOfFile: pathCustomJSON) {
+                            let jsonCustom = JSON(data: dataCustom);
+                            if(jsonCustom != nil && jsonCustom.error == nil){
+                                let cardDetailJSON = CardDetailJson(styleConfig: nil, customValidator: jsonCustom);
+                                cardDetailJSON.loadDataConfig(json).build("", navigationController: self.navigationController!);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func addCarousel(sender: UIButton) {
