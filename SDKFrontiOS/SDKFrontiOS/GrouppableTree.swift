@@ -27,8 +27,12 @@ internal class GrouppableTree : JSONValidatable{
                 try GrouppableTree.validate(child)
                 self.children.append(GrouppableTree(data: child));
             }
-            catch{
+            catch CarruselErrors.GrouppableTreeErrors.invalidData{
+                CarruselErrors.ShowError(CarruselErrors.GrouppableTreeErrors.invalidData);
                 //Some recover error coding
+            }
+            catch{
+                CarruselErrors.UnreconigzedError();
             }
         }
     }

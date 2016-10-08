@@ -37,16 +37,12 @@ internal class CarouselLogic : NSObject, JSONValidatable {
         let jsonData:NSData = NSData.dataWithContentsOfMappedFile(jsonFilePath as String) as! NSData;
         let json = JSON(data: jsonData);
         
-        let i = json["trees"].array![0]["type"].object as! String;
-        
         //Validate the Json
         do{
             try CarouselLogic.validate(json);
             
             //Create the grouppable Trees
             for tree in json["trees"].array! {
-                
-                print(tree["type"].object as! String);
                 
                 do{
                     try GrouppableTree.validate(tree)

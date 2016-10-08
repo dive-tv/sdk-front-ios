@@ -194,13 +194,13 @@
                ]
                }]
   }, {
-  "type": "deco",
+  "type": "home",
   "children": [
                {
-               "type": "deco",
+               "type": "home",
                "children": [
                             {
-                            "type": "deco",
+                            "type": "home",
                             "children": []
                             }
                ]
