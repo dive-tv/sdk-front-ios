@@ -589,13 +589,17 @@
 				TargetAttributes = {
 					A15164B61D898402008AEA14 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6TRWRL4V99;
+						LastSwiftMigration = 0800;
 					};
 					A15164CA1D898402008AEA14 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = A15164B61D898402008AEA14;
 					};
 					A15164D51D898402008AEA14 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = A15164B61D898402008AEA14;
 					};
 				};
@@ -1085,10 +1089,12 @@
 			baseConfigurationReference = B8772F96BE5E1DAD5227F167 /* Pods-SDKFrontiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6TRWRL4V99;
 				INFOPLIST_FILE = SDKFrontiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1097,10 +1103,12 @@
 			baseConfigurationReference = 7B2323C59FED48C332BB3B4C /* Pods-SDKFrontiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6TRWRL4V99;
 				INFOPLIST_FILE = SDKFrontiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -1113,6 +1121,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS.SDKFrontiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKFrontiOS.app/SDKFrontiOS";
 			};
 			name = Debug;
@@ -1126,6 +1135,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS.SDKFrontiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKFrontiOS.app/SDKFrontiOS";
 			};
 			name = Release;
@@ -1138,6 +1148,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS.SDKFrontiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = SDKFrontiOS;
 			};
 			name = Debug;
@@ -1150,6 +1161,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS.SDKFrontiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = SDKFrontiOS;
 			};
 			name = Release;
