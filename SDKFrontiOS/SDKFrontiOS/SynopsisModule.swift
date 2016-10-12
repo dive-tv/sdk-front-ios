@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SynopsisModule: Module {
+class SynopsisModule: TextModule {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +19,14 @@ class SynopsisModule: Module {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override class func validate(data: CardData) throws -> Bool{
+       
+        try super.validate(data);
+        
+        print("VALIDATE: SYNOPSIS MODULE");
+        return true;
     }
     
 }

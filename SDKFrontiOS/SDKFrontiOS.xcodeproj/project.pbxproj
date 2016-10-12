@@ -108,6 +108,12 @@
 		6D763C051D916617007B3E6C /* RelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C041D916617007B3E6C /* RelationData.swift */; };
 		6D763C061D916617007B3E6C /* RelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C041D916617007B3E6C /* RelationData.swift */; };
 		6D763C071D916617007B3E6C /* RelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C041D916617007B3E6C /* RelationData.swift */; };
+		6D9956781DAE4548007A8440 /* TypeOfModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956771DAE4548007A8440 /* TypeOfModule.swift */; };
+		6D99567A1DAE46AB007A8440 /* TextModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956791DAE46AB007A8440 /* TextModule.swift */; };
+		6D99567B1DAE46AB007A8440 /* TextModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956791DAE46AB007A8440 /* TextModule.swift */; };
+		6D99567C1DAE46AB007A8440 /* TextModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956791DAE46AB007A8440 /* TextModule.swift */; };
+		6D99567D1DAE46AE007A8440 /* TypeOfModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956771DAE4548007A8440 /* TypeOfModule.swift */; };
+		6D99567E1DAE46AF007A8440 /* TypeOfModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956771DAE4548007A8440 /* TypeOfModule.swift */; };
 		6DE011D91D9D2F6800279CDA /* GrouppableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */; };
 		6DE011DA1D9D2F6800279CDA /* GrouppableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */; };
 		6DE011DB1D9D2F6800279CDA /* GrouppableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */; };
@@ -230,6 +236,8 @@
 		6D763BF81D916590007B3E6C /* SceneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		6D763C001D916604007B3E6C /* CarouselCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
 		6D763C041D916617007B3E6C /* RelationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationData.swift; sourceTree = "<group>"; };
+		6D9956771DAE4548007A8440 /* TypeOfModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeOfModule.swift; sourceTree = "<group>"; };
+		6D9956791DAE46AB007A8440 /* TextModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModule.swift; sourceTree = "<group>"; };
 		6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrouppableTree.swift; sourceTree = "<group>"; };
 		6DE011DD1D9E8AF800279CDA /* CarruselErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarruselErrors.swift; sourceTree = "<group>"; };
 		6DE011E21D9E96D800279CDA /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
@@ -460,6 +468,7 @@
 			children = (
 				A15164EF1D898507008AEA14 /* TypeOfCard.swift */,
 				328EAC1A1D9BBF3800A4042F /* CarouselViewType.swift */,
+				6D9956771DAE4548007A8440 /* TypeOfModule.swift */,
 			);
 			name = Enum;
 			sourceTree = "<group>";
@@ -486,6 +495,7 @@
 				A15164FC1D89851C008AEA14 /* Module.swift */,
 				A15164FD1D89851C008AEA14 /* PhotoModule.swift */,
 				A15164FE1D89851C008AEA14 /* PhotoModule.xib */,
+				6D9956791DAE46AB007A8440 /* TextModule.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -823,6 +833,7 @@
 				A151651C1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
 				6D262B951DA9641700779B57 /* TitleModule.swift in Sources */,
 				329670EB1D9A8157003674D8 /* CarouselView.swift in Sources */,
+				6D99567A1DAE46AB007A8440 /* TextModule.swift in Sources */,
 				6D262B941DA9641700779B57 /* Target.swift in Sources */,
 				A15165221D89852E008AEA14 /* ConfigSection.swift in Sources */,
 				329670F41D9A84DB003674D8 /* CarouselCell.swift in Sources */,
@@ -843,6 +854,7 @@
 				329670CA1D9A70DD003674D8 /* Carousel.swift in Sources */,
 				328EAC241D9C0F5400A4042F /* CarouselLogic.swift in Sources */,
 				6D262B921DA9641700779B57 /* TabModule.swift in Sources */,
+				6D9956781DAE4548007A8440 /* TypeOfModule.swift in Sources */,
 				328EAC1B1D9BBF3800A4042F /* CarouselViewType.swift in Sources */,
 				A15165191D89852E008AEA14 /* CardDetail.swift in Sources */,
 				328EAC201D9C075100A4042F /* CarouselCellData.swift in Sources */,
@@ -895,6 +907,8 @@
 				6D262BAB1DA9657D00779B57 /* AwardModule.swift in Sources */,
 				328E27751D9AB42200FF439A /* CuriosityView.swift in Sources */,
 				6D262B971DA9650C00779B57 /* ModuleValidator.swift in Sources */,
+				6D99567B1DAE46AB007A8440 /* TextModule.swift in Sources */,
+				6D99567D1DAE46AE007A8440 /* TypeOfModule.swift in Sources */,
 				6D262BA71DA9657200779B57 /* ProductModule.swift in Sources */,
 				6D262B9D1DA9655200779B57 /* TitleModule.swift in Sources */,
 				A15165001D89851C008AEA14 /* Module.swift in Sources */,
@@ -940,6 +954,8 @@
 				6D262BAC1DA9657D00779B57 /* AwardModule.swift in Sources */,
 				328E27761D9AB42200FF439A /* CuriosityView.swift in Sources */,
 				6D262B981DA9650D00779B57 /* ModuleValidator.swift in Sources */,
+				6D99567C1DAE46AB007A8440 /* TextModule.swift in Sources */,
+				6D99567E1DAE46AF007A8440 /* TypeOfModule.swift in Sources */,
 				6D262BA81DA9657200779B57 /* ProductModule.swift in Sources */,
 				6D262B9E1DA9655200779B57 /* TitleModule.swift in Sources */,
 				A15165011D89851C008AEA14 /* Module.swift in Sources */,

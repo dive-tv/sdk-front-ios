@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Module : UITableViewCell{
+public class Module : UITableViewCell, Validatable{
     
     internal var cardData : CardData!;
     internal var configModule : ConfigModule!;
@@ -37,6 +37,10 @@ public class Module : UITableViewCell{
         
         self.cardData = _cardData;
         self.configModule = _configModule;
+    }
+    
+    class func validate(data: CardData) throws -> Bool {
+        return true;
     }
 
 }
