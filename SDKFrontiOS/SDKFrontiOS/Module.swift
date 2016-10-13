@@ -39,8 +39,15 @@ public class Module : UITableViewCell, Validatable{
         self.configModule = _configModule;
     }
     
-    class func validate(data: CardData) throws -> Bool {
-        return true;
+    class func validate(data: CardData) throws {
+        
+        guard case let (trees as [JSON]) = (data["trees"].array)
+            where trees.count > 0 else {
+                
+                //ThrowError
+                try CardDetailErrors.ThrowError(CardDetailErrors.CreateCardDetailErrors.invalidData);
+                return;
+        }
     }
 
 }

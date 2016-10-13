@@ -24,7 +24,7 @@ class SynopsisModule: TextModule {
     override class func validate(data: CardData) throws -> Bool{
        
         try super.validate(data);
-        
+   
         print("VALIDATE: SYNOPSIS MODULE");
         return true;
     }

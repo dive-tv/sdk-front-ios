@@ -34,11 +34,11 @@ public class ModuleValidator : NSObject{
         
         do{
             try moduleClass.validate(cardData);
+            return true;
         }
         catch{
             print("An Error Ocurred");
+            return false;
         }
-        
-        return true;
     }
 }

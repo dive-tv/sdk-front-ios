@@ -27,8 +27,8 @@ internal class GrouppableTree : JSONValidatable{
                 try GrouppableTree.validate(child)
                 self.children.append(GrouppableTree(data: child));
             }
-            catch CarruselErrors.GrouppableTreeErrors.invalidData{
-                CarruselErrors.ShowError(CarruselErrors.GrouppableTreeErrors.invalidData);
+            catch CarruselErrors.CreateGrouppableTreeErrors.invalidData{
+                CarruselErrors.ShowError(CarruselErrors.CreateGrouppableTreeErrors.invalidData);
                 //Some recover error coding
             }
             catch{
@@ -43,7 +43,7 @@ internal class GrouppableTree : JSONValidatable{
             where _type != "" else {
                 
                 //ThrowError
-                try CarruselErrors.ThrowError(CarruselErrors.GrouppableTreeErrors.invalidData);
+                try CarruselErrors.ThrowError(CarruselErrors.CreateGrouppableTreeErrors.invalidData);
                 return;
         }
     }
