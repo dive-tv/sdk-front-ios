@@ -11,14 +11,8 @@ import SwiftyJSON
 
 public class ModuleValidator : NSObject{
     
-    private var validatorData = [String : [String: [String]]]();
-    
     init(customValidator : JSON? = nil){
         super.init();
-        self.createDefaultValidators();
-        if customValidator != nil{
-            self.addCustomValidatorData(customValidator!);
-        }
     }
     
     
@@ -30,43 +24,21 @@ public class ModuleValidator : NSObject{
      
      - returns: Return true if the data have the information the module needs or false if not
      */
-    func validate(data : CardData, moduleName : String)->Bool{
-        if let modules = self.validatorData[moduleName]{
-            for module in modules{
-                // TODO: need to the logic
-            }
-        }
+    func validate(data : CardData, moduleType : String)->Bool{
+       
+        //For Testing
+        let cardData = CardData(_cardId: "ID", _title: "title", _type: TypeOfCard.Movie);
         
-        return true;
-    }
-    
-    
-    // MARK: Private Methods
-    /**
-     This add default validators to the data.
-     */
-    private func createDefaultValidators(){
-        self.validatorData["PhotoModule"] = ["Gallery" : ["title"]];
-        self.validatorData["TitleModule"] = ["Title": ["title"]];
-    }
-    
-    /**
-     This method add to the validator the custom modules and the information of the custom modules needs.
-     
-     - parameter data: A JSON with all the custom modules and the information of the custom modules needs
-     */
-    private func addCustomValidatorData(data : JSON){
-        for (key, subJson) in data{
-            // Only add to the validator data if don't exist
-            if(self.validatorData[key] == nil){
-                var modules = [String : [String]]();
-                for(keyModules, subJsonModules) in subJson{
-                    modules[keyModules] = subJsonModules.arrayValue.map{$0.string!};
-                }
-                self.validatorData[key] = modules;
-            }
+        let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
+        let moduleClass = NSClassFromString(appName + "." + moduleType) as! Module.Type
+        
+        do{
+            try moduleClass.validate(cardData);
+            return true;
+        }
+        catch{
+            print("An Error Ocurred");
+            return false;
         }
     }
-    
-    
 }

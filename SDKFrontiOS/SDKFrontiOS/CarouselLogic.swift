@@ -51,16 +51,16 @@ internal class CarouselLogic : NSObject, JSONValidatable {
                     //self.trees.append(GrouppableTree(data: self));
                     
                 }
-                catch CarruselErrors.GrouppableTreeErrors.invalidData{
-                    CarruselErrors.ShowError(CarruselErrors.GrouppableTreeErrors.invalidData);
+                catch CarruselErrors.CreateGrouppableTreeErrors.invalidData{
+                    CarruselErrors.ShowError(CarruselErrors.CreateGrouppableTreeErrors.invalidData);
                 }
                 catch{
                     CarruselErrors.UnreconigzedError();
                 }
             }
         }
-        catch CarruselErrors.GrouppableTreeErrors.emptyData{
-            CarruselErrors.ShowError(CarruselErrors.GrouppableTreeErrors.emptyData);
+        catch CarruselErrors.CreateGrouppableTreeErrors.emptyData{
+            CarruselErrors.ShowError(CarruselErrors.CreateGrouppableTreeErrors.emptyData);
             //Some recover error code
         }
         catch{
@@ -75,8 +75,9 @@ internal class CarouselLogic : NSObject, JSONValidatable {
             where trees.count > 0 else {
                 
                 //ThrowError
-                try CarruselErrors.ThrowError(CarruselErrors.GrouppableTreeErrors.emptyData);
+                try CarruselErrors.ThrowError(CarruselErrors.CreateGrouppableTreeErrors.emptyData);
                 return;
         }
+        
     }
 }

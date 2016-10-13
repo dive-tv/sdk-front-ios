@@ -1,14 +1,14 @@
 //
-//  CarruselErrors.swift
+//  CardDetailErrors.swift
 //  SDKFrontiOS
 //
-//  Created by Jonathan Castro Miguel on 30/09/16.
+//  Created by Jonathan Castro Miguel on 13/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import Foundation
 
-internal class CarruselErrors : ErrorManager{
+internal class CardDetailErrors : ErrorManager{
     
     private static var ErrorMessages : [String : String] = [
         "UnrecognizableError" : "ERROR: an unrecognizable error has occurredr",
@@ -16,14 +16,13 @@ internal class CarruselErrors : ErrorManager{
         "GrouppableTreeJSONEmptyError" : "ERROR: The GrouppableTree JSON is Empty!!"
     ]
     
-    internal enum CreateGrouppableTreeErrors : ErrorType{
+    internal enum CreateCardDetailErrors : ErrorType{
         case emptyData
         case invalidData
     }
-    
+
     internal class func ThrowError(errorType : ErrorType) throws{
         throw errorType;
-        
     }
     
     internal class func ShowError(errorType : ErrorType){

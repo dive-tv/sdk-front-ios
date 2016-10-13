@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Module : UITableViewCell{
+public class Module : UITableViewCell, Validatable{
     
     internal var cardData : CardData!;
     internal var configModule : ConfigModule!;
@@ -37,6 +37,17 @@ public class Module : UITableViewCell{
         
         self.cardData = _cardData;
         self.configModule = _configModule;
+    }
+    
+    class func validate(data: CardData) throws {
+        
+        guard case let (trees as [JSON]) = (data["trees"].array)
+            where trees.count > 0 else {
+                
+                //ThrowError
+                try CardDetailErrors.ThrowError(CardDetailErrors.CreateCardDetailErrors.invalidData);
+                return;
+        }
     }
 
 }

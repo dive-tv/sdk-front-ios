@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     var batchCards = [CarouselCard]();
     var readycards = [CarouselCard]();
     
+    var carousel : Carousel?;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,28 +35,74 @@ class ViewController: UIViewController {
     }
 
     
+    @IBAction func createCardDetail(sender: UIButton) {
+        
+        
+        if let path = NSBundle.mainBundle().pathForResource("config1", ofType: "json") {
+            if let data = NSData(contentsOfFile: path) {
+                let json = JSON(data: data);
+                if(json != nil && json.error == nil){
+                    if let pathCustomJSON = NSBundle.mainBundle().pathForResource("customValidator", ofType: "json") {
+                        if let dataCustom = NSData(contentsOfFile: pathCustomJSON) {
+                            let jsonCustom = JSON(data: dataCustom);
+                            if(jsonCustom != nil && jsonCustom.error == nil){
+                                let cardDetailJSON = CardDetailJson(styleConfig: nil, customValidator: jsonCustom);
+                                cardDetailJSON.loadDataConfig(json).build("", navigationController: self.navigationController!);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     @IBAction func addCarousel(sender: UIButton) {
         
-        let controller = Carousel(nibName: "Carousel", bundle: nil, _delegate: &self.carouselDelegate);
+        if self.carousel != nil {
+            
+            sender.setTitle("Create carousel", forState: .Normal);
+            
+            self.addCardBtn.setTitle("+", forState: .Normal);
+            self.carouselDelegate = nil;
+            self.timer?.invalidate();
+            self.timer = nil;
+            self.actualSection = -1;
+            
+            self.batchCards.removeAll();
+            self.readycards.removeAll();
+            
+            self.carousel?.removeFromParentViewController();
+            self.carousel?.view.removeFromSuperview();
+            self.carousel = nil;
+            
+            self.parseJson();
+            
+        } else {
+            
+            sender.setTitle("Destroy carousel", forState: .Normal);
+            
+            self.carousel = Carousel(nibName: "Carousel", bundle: nil, _delegate: &self.carouselDelegate);
+            
+            //self.navigationController?.pushViewController(controller, animated: true);
+            
+            let top = NSLayoutConstraint(item: self.carousel!.view, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.carouselContainer, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0);
+            
+            let bottom = NSLayoutConstraint(item: self.carousel!.view, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.carouselContainer, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0);
+            
+            let left = NSLayoutConstraint(item: self.carousel!.view, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.carouselContainer, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0);
+            
+            let right = NSLayoutConstraint(item: self.carousel!.view, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.carouselContainer, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0);
+            
+            self.carousel!.view.translatesAutoresizingMaskIntoConstraints = false;
+            
+            self.addChildViewController(self.carousel!);
+            self.carouselContainer.addSubview(self.carousel!.view);
+            self.carouselContainer.addConstraints([top, bottom, left, right]);
+            
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
+        }
         
-        //self.navigationController?.pushViewController(controller, animated: true);
         
-        let top = NSLayoutConstraint(item: controller.view, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.carouselContainer, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0);
-        
-        let bottom = NSLayoutConstraint(item: controller.view, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.carouselContainer, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0);
-        
-        let left = NSLayoutConstraint(item: controller.view, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.carouselContainer, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0);
-        
-        let right = NSLayoutConstraint(item: controller.view, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.carouselContainer, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0);
-        
-        controller.view.translatesAutoresizingMaskIntoConstraints = false;
-        
-        self.addChildViewController(controller);
-        self.carouselContainer.addSubview(controller.view);
-        self.carouselContainer.addConstraints([top, bottom, left, right]);
-        
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
     }
     
     @IBAction func addCards(sender: UIButton) {
@@ -84,6 +132,7 @@ class ViewController: UIViewController {
         } else {
             
             self.timer?.invalidate();
+            self.timer = nil;
         }
         
     }
@@ -119,6 +168,7 @@ class ViewController: UIViewController {
         } else {
             
             self.timer?.invalidate();
+            self.timer = nil;
         }
         
     }

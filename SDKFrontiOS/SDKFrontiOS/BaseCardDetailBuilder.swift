@@ -62,7 +62,7 @@ public class BaseCardDetailBuilder : NSObject{
             }
             
             // TODO: need to do the logic
-            CardDetail(_sectionsData: self.dictSections, _mainSectionKey: self.mainKeySection!, _cardData: cardData, _navigationController: navigationController);
+            CardDetail(_sectionsData: validSections, _mainSectionKey: self.mainKeySection!, _cardData: cardData, _navigationController: navigationController);
         }
     }
     
@@ -88,7 +88,7 @@ public class BaseCardDetailBuilder : NSObject{
             let configSection = self.dictSections[key]!;
             for configModule in configSection.arrayModules{
                 if(configModule.targets == nil){
-                    if(self.moduleValidator.validate(cardData, moduleName: configModule.moduleName!)){
+                    if(self.moduleValidator.validate(cardData, moduleType: configModule.moduleName!)){
                         configModule.isValid = true;
                         if(!configSection.isValidSection){
                             configSection.isValidSection = true;

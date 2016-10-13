@@ -53,7 +53,6 @@
 		6D262B821DA9641700779B57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B691DA9641700779B57 /* Main.storyboard */; };
 		6D262B831DA9641700779B57 /* config1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B6B1DA9641700779B57 /* config1.json */; };
 		6D262B841DA9641700779B57 /* ConfigModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D262B6C1DA9641700779B57 /* ConfigModule.swift */; };
-		6D262B851DA9641700779B57 /* customValidator.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B6D1DA9641700779B57 /* customValidator.json */; };
 		6D262B861DA9641700779B57 /* DirectorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D262B6E1DA9641700779B57 /* DirectorModule.swift */; };
 		6D262B871DA9641700779B57 /* DirectorModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B6F1DA9641700779B57 /* DirectorModule.xib */; };
 		6D262B881DA9641700779B57 /* ModuleValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D262B701DA9641700779B57 /* ModuleValidator.swift */; };
@@ -97,8 +96,6 @@
 		6D262BAE1DA9659500779B57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15164BA1D898402008AEA14 /* AppDelegate.swift */; };
 		6D262BAF1DA965A400779B57 /* config1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B6B1DA9641700779B57 /* config1.json */; };
 		6D262BB01DA965A500779B57 /* config1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B6B1DA9641700779B57 /* config1.json */; };
-		6D262BB11DA965AA00779B57 /* customValidator.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B6D1DA9641700779B57 /* customValidator.json */; };
-		6D262BB21DA965AB00779B57 /* customValidator.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B6D1DA9641700779B57 /* customValidator.json */; };
 		6D763BF91D916590007B3E6C /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF81D916590007B3E6C /* SceneManager.swift */; };
 		6D763BFA1D916590007B3E6C /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF81D916590007B3E6C /* SceneManager.swift */; };
 		6D763BFB1D916590007B3E6C /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763BF81D916590007B3E6C /* SceneManager.swift */; };
@@ -108,6 +105,18 @@
 		6D763C051D916617007B3E6C /* RelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C041D916617007B3E6C /* RelationData.swift */; };
 		6D763C061D916617007B3E6C /* RelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C041D916617007B3E6C /* RelationData.swift */; };
 		6D763C071D916617007B3E6C /* RelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D763C041D916617007B3E6C /* RelationData.swift */; };
+		6D9956781DAE4548007A8440 /* TypeOfModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956771DAE4548007A8440 /* TypeOfModule.swift */; };
+		6D99567A1DAE46AB007A8440 /* TextModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956791DAE46AB007A8440 /* TextModule.swift */; };
+		6D99567B1DAE46AB007A8440 /* TextModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956791DAE46AB007A8440 /* TextModule.swift */; };
+		6D99567C1DAE46AB007A8440 /* TextModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956791DAE46AB007A8440 /* TextModule.swift */; };
+		6D99567D1DAE46AE007A8440 /* TypeOfModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956771DAE4548007A8440 /* TypeOfModule.swift */; };
+		6D99567E1DAE46AF007A8440 /* TypeOfModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956771DAE4548007A8440 /* TypeOfModule.swift */; };
+		6D9956801DAFA1B2007A8440 /* CardDetailErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99567F1DAFA1B2007A8440 /* CardDetailErrors.swift */; };
+		6D9956811DAFA1B2007A8440 /* CardDetailErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99567F1DAFA1B2007A8440 /* CardDetailErrors.swift */; };
+		6D9956821DAFA1B2007A8440 /* CardDetailErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D99567F1DAFA1B2007A8440 /* CardDetailErrors.swift */; };
+		6D9956841DAFA1DA007A8440 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956831DAFA1DA007A8440 /* ErrorManager.swift */; };
+		6D9956851DAFA1DA007A8440 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956831DAFA1DA007A8440 /* ErrorManager.swift */; };
+		6D9956861DAFA1DA007A8440 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956831DAFA1DA007A8440 /* ErrorManager.swift */; };
 		6DE011D91D9D2F6800279CDA /* GrouppableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */; };
 		6DE011DA1D9D2F6800279CDA /* GrouppableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */; };
 		6DE011DB1D9D2F6800279CDA /* GrouppableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */; };
@@ -209,7 +218,6 @@
 		6D262B6A1DA9641700779B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		6D262B6B1DA9641700779B57 /* config1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config1.json; sourceTree = "<group>"; };
 		6D262B6C1DA9641700779B57 /* ConfigModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigModule.swift; sourceTree = "<group>"; };
-		6D262B6D1DA9641700779B57 /* customValidator.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customValidator.json; sourceTree = "<group>"; };
 		6D262B6E1DA9641700779B57 /* DirectorModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorModule.swift; sourceTree = "<group>"; };
 		6D262B6F1DA9641700779B57 /* DirectorModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectorModule.xib; sourceTree = "<group>"; };
 		6D262B701DA9641700779B57 /* ModuleValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleValidator.swift; sourceTree = "<group>"; };
@@ -230,6 +238,10 @@
 		6D763BF81D916590007B3E6C /* SceneManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
 		6D763C001D916604007B3E6C /* CarouselCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
 		6D763C041D916617007B3E6C /* RelationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationData.swift; sourceTree = "<group>"; };
+		6D9956771DAE4548007A8440 /* TypeOfModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeOfModule.swift; sourceTree = "<group>"; };
+		6D9956791DAE46AB007A8440 /* TextModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextModule.swift; sourceTree = "<group>"; };
+		6D99567F1DAFA1B2007A8440 /* CardDetailErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailErrors.swift; sourceTree = "<group>"; };
+		6D9956831DAFA1DA007A8440 /* ErrorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrouppableTree.swift; sourceTree = "<group>"; };
 		6DE011DD1D9E8AF800279CDA /* CarruselErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarruselErrors.swift; sourceTree = "<group>"; };
 		6DE011E21D9E96D800279CDA /* Validatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validatable.swift; sourceTree = "<group>"; };
@@ -297,7 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				6D262B6B1DA9641700779B57 /* config1.json */,
-				6D262B6D1DA9641700779B57 /* customValidator.json */,
 				6DE011E61D9FCFBC00279CDA /* groupabletree.json */,
 				3258C85B1D9D11BD00D61062 /* cards.json */,
 			);
@@ -364,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				6DE011DD1D9E8AF800279CDA /* CarruselErrors.swift */,
+				6D99567F1DAFA1B2007A8440 /* CardDetailErrors.swift */,
 			);
 			name = ErrorHandling;
 			sourceTree = "<group>";
@@ -371,6 +383,7 @@
 		6DE011E11D9E968E00279CDA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				6D9956831DAFA1DA007A8440 /* ErrorManager.swift */,
 				6DE011E21D9E96D800279CDA /* Validatable.swift */,
 			);
 			name = Protocols;
@@ -460,6 +473,7 @@
 			children = (
 				A15164EF1D898507008AEA14 /* TypeOfCard.swift */,
 				328EAC1A1D9BBF3800A4042F /* CarouselViewType.swift */,
+				6D9956771DAE4548007A8440 /* TypeOfModule.swift */,
 			);
 			name = Enum;
 			sourceTree = "<group>";
@@ -486,6 +500,7 @@
 				A15164FC1D89851C008AEA14 /* Module.swift */,
 				A15164FD1D89851C008AEA14 /* PhotoModule.swift */,
 				A15164FE1D89851C008AEA14 /* PhotoModule.xib */,
+				6D9956791DAE46AB007A8440 /* TextModule.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -589,13 +604,17 @@
 				TargetAttributes = {
 					A15164B61D898402008AEA14 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6TRWRL4V99;
+						LastSwiftMigration = 0800;
 					};
 					A15164CA1D898402008AEA14 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = A15164B61D898402008AEA14;
 					};
 					A15164D51D898402008AEA14 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = A15164B61D898402008AEA14;
 					};
 				};
@@ -645,7 +664,6 @@
 				6D262B8C1DA9641700779B57 /* ProductModule.xib in Resources */,
 				6D262B811DA9641700779B57 /* LaunchScreen.storyboard in Resources */,
 				329670CD1D9A70DD003674D8 /* Carousel.xib in Resources */,
-				6D262B851DA9641700779B57 /* customValidator.json in Resources */,
 				6D262B911DA9641700779B57 /* SynopsisModule.xib in Resources */,
 				A15164C01D898402008AEA14 /* Main.storyboard in Resources */,
 			);
@@ -662,7 +680,6 @@
 				A15165061D89851C008AEA14 /* PhotoModule.xib in Resources */,
 				329670CE1D9A70DD003674D8 /* Carousel.xib in Resources */,
 				329670F81D9A84DB003674D8 /* CarouselCell.xib in Resources */,
-				6D262BB11DA965AA00779B57 /* customValidator.json in Resources */,
 				6DE011E81D9FCFBC00279CDA /* groupabletree.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,7 +695,6 @@
 				A15165071D89851C008AEA14 /* PhotoModule.xib in Resources */,
 				329670CF1D9A70DD003674D8 /* Carousel.xib in Resources */,
 				329670F91D9A84DB003674D8 /* CarouselCell.xib in Resources */,
-				6D262BB21DA965AB00779B57 /* customValidator.json in Resources */,
 				6DE011E91D9FCFBC00279CDA /* groupabletree.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -819,6 +835,7 @@
 				A151651C1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
 				6D262B951DA9641700779B57 /* TitleModule.swift in Sources */,
 				329670EB1D9A8157003674D8 /* CarouselView.swift in Sources */,
+				6D99567A1DAE46AB007A8440 /* TextModule.swift in Sources */,
 				6D262B941DA9641700779B57 /* Target.swift in Sources */,
 				A15165221D89852E008AEA14 /* ConfigSection.swift in Sources */,
 				329670F41D9A84DB003674D8 /* CarouselCell.swift in Sources */,
@@ -839,11 +856,14 @@
 				329670CA1D9A70DD003674D8 /* Carousel.swift in Sources */,
 				328EAC241D9C0F5400A4042F /* CarouselLogic.swift in Sources */,
 				6D262B921DA9641700779B57 /* TabModule.swift in Sources */,
+				6D9956781DAE4548007A8440 /* TypeOfModule.swift in Sources */,
 				328EAC1B1D9BBF3800A4042F /* CarouselViewType.swift in Sources */,
+				6D9956801DAFA1B2007A8440 /* CardDetailErrors.swift in Sources */,
 				A15165191D89852E008AEA14 /* CardDetail.swift in Sources */,
 				328EAC201D9C075100A4042F /* CarouselCellData.swift in Sources */,
 				6D262B881DA9641700779B57 /* ModuleValidator.swift in Sources */,
 				A15164BB1D898402008AEA14 /* AppDelegate.swift in Sources */,
+				6D9956841DAFA1DA007A8440 /* ErrorManager.swift in Sources */,
 				6D262B841DA9641700779B57 /* ConfigModule.swift in Sources */,
 				6D763C051D916617007B3E6C /* RelationData.swift in Sources */,
 				6DE011E31D9E96D800279CDA /* Validatable.swift in Sources */,
@@ -887,10 +907,14 @@
 				A15165171D89852E008AEA14 /* CardDataCarousel.swift in Sources */,
 				A15164FA1D898507008AEA14 /* TypeOfCard.swift in Sources */,
 				6DE011DA1D9D2F6800279CDA /* GrouppableTree.swift in Sources */,
+				6D9956811DAFA1B2007A8440 /* CardDetailErrors.swift in Sources */,
 				6D763C061D916617007B3E6C /* RelationData.swift in Sources */,
 				6D262BAB1DA9657D00779B57 /* AwardModule.swift in Sources */,
 				328E27751D9AB42200FF439A /* CuriosityView.swift in Sources */,
 				6D262B971DA9650C00779B57 /* ModuleValidator.swift in Sources */,
+				6D9956851DAFA1DA007A8440 /* ErrorManager.swift in Sources */,
+				6D99567B1DAE46AB007A8440 /* TextModule.swift in Sources */,
+				6D99567D1DAE46AE007A8440 /* TypeOfModule.swift in Sources */,
 				6D262BA71DA9657200779B57 /* ProductModule.swift in Sources */,
 				6D262B9D1DA9655200779B57 /* TitleModule.swift in Sources */,
 				A15165001D89851C008AEA14 /* Module.swift in Sources */,
@@ -932,10 +956,14 @@
 				A15165181D89852E008AEA14 /* CardDataCarousel.swift in Sources */,
 				A15164FB1D898507008AEA14 /* TypeOfCard.swift in Sources */,
 				6DE011DB1D9D2F6800279CDA /* GrouppableTree.swift in Sources */,
+				6D9956821DAFA1B2007A8440 /* CardDetailErrors.swift in Sources */,
 				6D763C071D916617007B3E6C /* RelationData.swift in Sources */,
 				6D262BAC1DA9657D00779B57 /* AwardModule.swift in Sources */,
 				328E27761D9AB42200FF439A /* CuriosityView.swift in Sources */,
 				6D262B981DA9650D00779B57 /* ModuleValidator.swift in Sources */,
+				6D9956861DAFA1DA007A8440 /* ErrorManager.swift in Sources */,
+				6D99567C1DAE46AB007A8440 /* TextModule.swift in Sources */,
+				6D99567E1DAE46AF007A8440 /* TypeOfModule.swift in Sources */,
 				6D262BA81DA9657200779B57 /* ProductModule.swift in Sources */,
 				6D262B9E1DA9655200779B57 /* TitleModule.swift in Sources */,
 				A15165011D89851C008AEA14 /* Module.swift in Sources */,
@@ -1085,10 +1113,12 @@
 			baseConfigurationReference = B8772F96BE5E1DAD5227F167 /* Pods-SDKFrontiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6TRWRL4V99;
 				INFOPLIST_FILE = SDKFrontiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -1097,10 +1127,12 @@
 			baseConfigurationReference = 7B2323C59FED48C332BB3B4C /* Pods-SDKFrontiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6TRWRL4V99;
 				INFOPLIST_FILE = SDKFrontiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -1113,6 +1145,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS.SDKFrontiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKFrontiOS.app/SDKFrontiOS";
 			};
 			name = Debug;
@@ -1126,6 +1159,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS.SDKFrontiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKFrontiOS.app/SDKFrontiOS";
 			};
 			name = Release;
@@ -1138,6 +1172,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS.SDKFrontiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = SDKFrontiOS;
 			};
 			name = Debug;
@@ -1150,6 +1185,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tagsonomy.sdkfrontios.SDKFrontiOS.SDKFrontiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = SDKFrontiOS;
 			};
 			name = Release;
