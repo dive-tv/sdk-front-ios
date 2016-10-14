@@ -8,8 +8,12 @@
 
 import UIKit
 
-public class Module : UITableViewCell, Validatable{
+public class Module : UITableViewCell{
     
+<<<<<<< Updated upstream
+    public override func awakeFromNib() {
+        super.awakeFromNib();
+=======
     internal var cardData : CardData!;
     internal var configModule : ConfigModule!;
     
@@ -41,13 +45,14 @@ public class Module : UITableViewCell, Validatable{
     
     class func validate(data: CardData) throws {
         
-        guard case let (trees as [JSON]) = (data["trees"].array)
+        /*guard case let (trees as [JSON]) = (data["trees"].array)
             where trees.count > 0 else {
                 
                 //ThrowError
                 try CardDetailErrors.ThrowError(CardDetailErrors.CreateCardDetailErrors.invalidData);
                 return;
-        }
+        }*/
+>>>>>>> Stashed changes
     }
 
 }
