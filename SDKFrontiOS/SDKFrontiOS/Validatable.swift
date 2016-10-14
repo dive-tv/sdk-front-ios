@@ -11,7 +11,8 @@ import SwiftyJSON
 
 protocol Validatable {
     associatedtype T;
-    static func validate(data : T) throws
+    associatedtype R;
+    static func validate(data : T) throws -> R
 }
 
 protocol JSONValidatable{

@@ -117,6 +117,30 @@
 		6D9956841DAFA1DA007A8440 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956831DAFA1DA007A8440 /* ErrorManager.swift */; };
 		6D9956851DAFA1DA007A8440 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956831DAFA1DA007A8440 /* ErrorManager.swift */; };
 		6D9956861DAFA1DA007A8440 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9956831DAFA1DA007A8440 /* ErrorManager.swift */; };
+		6D9956871DB0F9AF007A8440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15164BE1D898402008AEA14 /* Main.storyboard */; };
+		6D9956881DB0F9B1007A8440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15164BE1D898402008AEA14 /* Main.storyboard */; };
+		6D9956891DB0F9C4007A8440 /* TabModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B7B1DA9641700779B57 /* TabModule.xib */; };
+		6D99568A1DB0F9C5007A8440 /* TabModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B7B1DA9641700779B57 /* TabModule.xib */; };
+		6D99568B1DB0FA11007A8440 /* Section.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B771DA9641700779B57 /* Section.xib */; };
+		6D99568C1DB0FA12007A8440 /* Section.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B771DA9641700779B57 /* Section.xib */; };
+		6D99568D1DB0FA2A007A8440 /* TitleModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B7E1DA9641700779B57 /* TitleModule.xib */; };
+		6D99568E1DB0FA2A007A8440 /* SynopsisModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B791DA9641700779B57 /* SynopsisModule.xib */; };
+		6D99568F1DB0FA2A007A8440 /* DirectorModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B6F1DA9641700779B57 /* DirectorModule.xib */; };
+		6D9956901DB0FA2A007A8440 /* NavigationModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B721DA9641700779B57 /* NavigationModule.xib */; };
+		6D9956911DB0FA2A007A8440 /* ProductModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B741DA9641700779B57 /* ProductModule.xib */; };
+		6D9956921DB0FA2A007A8440 /* RatingModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B761DA9641700779B57 /* RatingModule.xib */; };
+		6D9956931DB0FA2A007A8440 /* AwardModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B651DA9641700779B57 /* AwardModule.xib */; };
+		6D9956941DB0FA2B007A8440 /* TitleModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B7E1DA9641700779B57 /* TitleModule.xib */; };
+		6D9956951DB0FA2B007A8440 /* SynopsisModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B791DA9641700779B57 /* SynopsisModule.xib */; };
+		6D9956961DB0FA2B007A8440 /* DirectorModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B6F1DA9641700779B57 /* DirectorModule.xib */; };
+		6D9956971DB0FA2B007A8440 /* NavigationModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B721DA9641700779B57 /* NavigationModule.xib */; };
+		6D9956981DB0FA2B007A8440 /* ProductModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B741DA9641700779B57 /* ProductModule.xib */; };
+		6D9956991DB0FA2B007A8440 /* RatingModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B761DA9641700779B57 /* RatingModule.xib */; };
+		6D99569A1DB0FA2B007A8440 /* AwardModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B651DA9641700779B57 /* AwardModule.xib */; };
+		6D99569B1DB0FA40007A8440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15164BC1D898402008AEA14 /* ViewController.swift */; };
+		6D99569C1DB0FA41007A8440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15164BC1D898402008AEA14 /* ViewController.swift */; };
+		6D99569D1DB0FA4E007A8440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15164C31D898402008AEA14 /* LaunchScreen.storyboard */; };
+		6D99569E1DB0FA4F007A8440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15164C31D898402008AEA14 /* LaunchScreen.storyboard */; };
 		6DE011D91D9D2F6800279CDA /* GrouppableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */; };
 		6DE011DA1D9D2F6800279CDA /* GrouppableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */; };
 		6DE011DB1D9D2F6800279CDA /* GrouppableTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE011D81D9D2F6800279CDA /* GrouppableTree.swift */; };
@@ -676,11 +700,22 @@
 				329670E01D9A7D0A003674D8 /* PhotoAndTitleView.xib in Resources */,
 				3258C85D1D9D11BD00D61062 /* cards.json in Resources */,
 				328E27791D9AB43400FF439A /* CuriosityView.xib in Resources */,
+				6D9956931DB0FA2A007A8440 /* AwardModule.xib in Resources */,
+				6D9956901DB0FA2A007A8440 /* NavigationModule.xib in Resources */,
+				6D99568F1DB0FA2A007A8440 /* DirectorModule.xib in Resources */,
+				6D99569D1DB0FA4E007A8440 /* LaunchScreen.storyboard in Resources */,
+				6D99568E1DB0FA2A007A8440 /* SynopsisModule.xib in Resources */,
 				6D262BAF1DA965A400779B57 /* config1.json in Resources */,
+				6D99568D1DB0FA2A007A8440 /* TitleModule.xib in Resources */,
 				A15165061D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				6D9956911DB0FA2A007A8440 /* ProductModule.xib in Resources */,
 				329670CE1D9A70DD003674D8 /* Carousel.xib in Resources */,
+				6D9956871DB0F9AF007A8440 /* Main.storyboard in Resources */,
+				6D9956891DB0F9C4007A8440 /* TabModule.xib in Resources */,
+				6D99568B1DB0FA11007A8440 /* Section.xib in Resources */,
 				329670F81D9A84DB003674D8 /* CarouselCell.xib in Resources */,
 				6DE011E81D9FCFBC00279CDA /* groupabletree.json in Resources */,
+				6D9956921DB0FA2A007A8440 /* RatingModule.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,11 +726,22 @@
 				329670E11D9A7D0A003674D8 /* PhotoAndTitleView.xib in Resources */,
 				3258C85E1D9D11BD00D61062 /* cards.json in Resources */,
 				328E277A1D9AB43400FF439A /* CuriosityView.xib in Resources */,
+				6D99569A1DB0FA2B007A8440 /* AwardModule.xib in Resources */,
+				6D9956971DB0FA2B007A8440 /* NavigationModule.xib in Resources */,
+				6D9956961DB0FA2B007A8440 /* DirectorModule.xib in Resources */,
+				6D99569E1DB0FA4F007A8440 /* LaunchScreen.storyboard in Resources */,
+				6D9956951DB0FA2B007A8440 /* SynopsisModule.xib in Resources */,
 				6D262BB01DA965A500779B57 /* config1.json in Resources */,
+				6D9956941DB0FA2B007A8440 /* TitleModule.xib in Resources */,
 				A15165071D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				6D9956981DB0FA2B007A8440 /* ProductModule.xib in Resources */,
 				329670CF1D9A70DD003674D8 /* Carousel.xib in Resources */,
+				6D9956881DB0F9B1007A8440 /* Main.storyboard in Resources */,
+				6D99568A1DB0F9C5007A8440 /* TabModule.xib in Resources */,
+				6D99568C1DB0FA12007A8440 /* Section.xib in Resources */,
 				329670F91D9A84DB003674D8 /* CarouselCell.xib in Resources */,
 				6DE011E91D9FCFBC00279CDA /* groupabletree.json in Resources */,
+				6D9956991DB0FA2B007A8440 /* RatingModule.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +925,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15165261D89852E008AEA14 /* Section.swift in Sources */,
+				6D99569B1DB0FA40007A8440 /* ViewController.swift in Sources */,
 				6D262B991DA9652800779B57 /* ConfigModule.swift in Sources */,
 				6D262BAD1DA9659500779B57 /* AppDelegate.swift in Sources */,
 				6D763C021D916604007B3E6C /* CarouselCard.swift in Sources */,
@@ -928,6 +975,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A15165271D89852E008AEA14 /* Section.swift in Sources */,
+				6D99569C1DB0FA41007A8440 /* ViewController.swift in Sources */,
 				6D262B9A1DA9652800779B57 /* ConfigModule.swift in Sources */,
 				6D262BAE1DA9659500779B57 /* AppDelegate.swift in Sources */,
 				6D763C031D916604007B3E6C /* CarouselCard.swift in Sources */,
