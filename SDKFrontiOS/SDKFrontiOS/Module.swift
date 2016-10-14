@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Module : UITableViewCell{
+public class Module : UITableViewCell, Validatable{
     
     internal var cardData : CardData!;
     internal var configModule : ConfigModule!;
