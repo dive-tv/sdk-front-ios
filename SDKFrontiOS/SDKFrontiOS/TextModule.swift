@@ -9,8 +9,7 @@
 import Foundation
 
 public class TextModule : Module{
-    override class func validate(data: CardData) throws -> Bool {
+    override class func validate(data: CardData) throws {
         print("VALIDATE: TEXTMODULE");
-        return true;
     }
 }

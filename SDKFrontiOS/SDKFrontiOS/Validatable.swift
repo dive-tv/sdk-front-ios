@@ -10,7 +10,6 @@ import Foundation
 import SwiftyJSON
 
 protocol Validatable {
-    
     associatedtype T;
     associatedtype R;
     static func validate(data : T) throws -> R
