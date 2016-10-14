@@ -10,10 +10,6 @@ import UIKit
 
 public class Module : UITableViewCell{
     
-<<<<<<< Updated upstream
-    public override func awakeFromNib() {
-        super.awakeFromNib();
-=======
     internal var cardData : CardData!;
     internal var configModule : ConfigModule!;
     
@@ -52,7 +48,6 @@ public class Module : UITableViewCell{
                 try CardDetailErrors.ThrowError(CardDetailErrors.CreateCardDetailErrors.invalidData);
                 return;
         }*/
->>>>>>> Stashed changes
     }
 
 }
