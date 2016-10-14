@@ -24,16 +24,16 @@ public class ModuleValidator : NSObject{
      
      - returns: Return true if the data have the information the module needs or false if not
      */
-    func validate(data : CardData, moduleType : String)->Bool{
+    func validate(data : CardDetailData, moduleType : String)->Bool{
        
         //For Testing
-        let cardData = CardData(_cardId: "ID", _title: "title", _type: TypeOfCard.Movie);
+        let cardDetailData = CardDetailData(_cardId: "ID", _title: "title", _type: TypeOfCard.Movie);
         
         let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
         let moduleClass = NSClassFromString(appName + "." + moduleType) as! Module.Type
         
         do{
-            try moduleClass.validate(cardData);
+            try moduleClass.validate(cardDetailData);
             return true;
         }
         catch{

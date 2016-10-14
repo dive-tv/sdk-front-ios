@@ -11,10 +11,11 @@ import Foundation
 public class CarouselCard : NSObject {
     
     var scene_id : Int!;
-    var data : CardData!;
+    var data : MiniCardData!;
     var relations : [RelationData]?;
     
-    init(_scene_id : Int, _data : CardData!, _relations : [RelationData]? = nil) {
+    //TODO: Change To carruselCardData
+    init(_scene_id : Int, _data : MiniCardData!, _relations : [RelationData]? = nil) {
         
         self.scene_id = _scene_id;
         self.data = _data;

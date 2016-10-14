@@ -10,7 +10,7 @@ import UIKit
 
 public class Module : UITableViewCell, Validatable{
     
-    internal var cardData : CardData!;
+    internal var cardDetailData : CardDetailData!;
     internal var configModule : ConfigModule!;
     
     weak var sectionDelegate : SectionDelegate?;
@@ -22,9 +22,9 @@ public class Module : UITableViewCell, Validatable{
      - parameter _configModule: the configuration of the module
      - parameter _cardData:     the data to display in the cell
      */
-    func setCardData (_configModule : ConfigModule, _cardData : CardData) {
+    func setCardDetailData (_configModule : ConfigModule, _cardDetailData : CardDetailData) {
         
-        if (self.cardData == nil) {
+        if (self.cardDetailData == nil) {
             
             let randomRed:CGFloat = CGFloat(drand48()) - 0.10;
             
@@ -35,11 +35,11 @@ public class Module : UITableViewCell, Validatable{
             self.contentView.backgroundColor = UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
         }
         
-        self.cardData = _cardData;
+        self.cardDetailData = _cardDetailData;
         self.configModule = _configModule;
     }
     
-    class func validate(data: CardData) throws {
+    class func validate(data: CardDetailData) throws {
         
         /*guard case let (trees as [JSON]) = (data["trees"].array)
             where trees.count > 0 else {

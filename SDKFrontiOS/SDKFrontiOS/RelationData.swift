@@ -11,9 +11,9 @@ import Foundation
 internal class RelationData : NSObject {
     
     var relType : Int!;
-    var cards : CardData!;
+    var cards : CardDetailData!;
     
-    init(_relType : Int, _cards : CardData!) {
+    init(_relType : Int, _cards : CardDetailData!) {
         
         self.relType = _relType;
         self.cards = _cards;

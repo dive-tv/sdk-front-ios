@@ -24,8 +24,8 @@ class NavigationModule: Module {
         // Configure the view for the selected state
     }
     
-    override func setCardData(_configModule: ConfigModule, _cardData: CardData) {
-        super.setCardData(_configModule, _cardData: _cardData);
+    override func setCardDetailData(_configModule: ConfigModule, _cardDetailData: CardDetailData) {
+        super.setCardDetailData(_configModule, _cardDetailData: _cardDetailData);
         if (self.configModule.targets != nil && !self.configModule.targets!.isEmpty &&
             self.configModule.targets!.first!.sectionId != nil && !self.configModule.targets!.first!.sectionId!.isEmpty &&
             self.configModule.targets!.first!.text != nil && !self.configModule.targets!.first!.text!.isEmpty) {

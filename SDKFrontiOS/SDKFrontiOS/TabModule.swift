@@ -40,8 +40,8 @@ class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
      - parameter _configModule: the module configuration and sections of the tab
      - parameter _cardData:     the data to display in the sections
      */
-    override func setCardData(_configModule: ConfigModule, _cardData: CardData) {
-        super.setCardData(_configModule, _cardData: _cardData);
+    override func setCardDetailData(_configModule: ConfigModule, _cardDetailData: CardDetailData) {
+        super.setCardDetailData(_configModule, _cardDetailData: _cardDetailData);
         
         self.scrollView.delegate = self;
         

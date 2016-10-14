@@ -22,19 +22,19 @@ public class CardDetail : NSObject, CardDetailDelegate{
     private var sectionsData : [String:ConfigSection]!;
     private var navigationController : UINavigationController!;
     private var mainSectionKey : String!;
-    private var cardData : CardData!;
+    private var cardDetailData : CardDetailData!;
     
     
     
     //MARK: INIT
     
-    init(_sectionsData : [String:ConfigSection], _mainSectionKey : String!, _cardData : CardData, _navigationController : UINavigationController) {
+    init(_sectionsData : [String:ConfigSection], _mainSectionKey : String!, _cardDetailData : CardDetailData, _navigationController : UINavigationController) {
         super.init();
         
         self.sectionsData = _sectionsData;
         self.navigationController = _navigationController;
         self.mainSectionKey = _mainSectionKey;
-        self.cardData = _cardData;
+        self.cardDetailData = _cardDetailData;
         
         self.pushMain();
     }
@@ -91,7 +91,7 @@ public class CardDetail : NSObject, CardDetailDelegate{
      - returns: the section created with the delegate assigned
      */
     func createSection (_keyForSection : String) -> Section {
-        let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardData: self.cardData)
+        let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardDetailData: self.cardDetailData)
         section.cardDelegate = self;
         return section;
     }
@@ -109,7 +109,7 @@ public class CardDetail : NSObject, CardDetailDelegate{
         var sections = [Section]()
         
         for key in _keyForSections {
-            let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[key]!, _cardData: self.cardData)
+            let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[key]!, _cardDetailData: self.cardDetailData)
             section.cardDelegate = self;
             sections.append(section);
             

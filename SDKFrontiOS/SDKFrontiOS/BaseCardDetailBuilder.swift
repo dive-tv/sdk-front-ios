@@ -11,7 +11,7 @@ import UIKit
 import SwiftyJSON
 
 
-private typealias completionBlockGetCard = (CardData)->Void;
+private typealias completionBlockGetCard = (CardDetailData)->Void;
 
 public class BaseCardDetailBuilder : NSObject{
     
@@ -46,7 +46,7 @@ public class BaseCardDetailBuilder : NSObject{
      - parameter navigationController: The navigation controller of the user.
      */
     public func build(cardId : String, navigationController : UINavigationController){
-        self.getCardData(cardId) { (cardData : CardData) in
+        self.getCardDetailData(cardId) { (cardData : CardDetailData) in
             
             self.validateSectionsAndModules(cardData);
             
@@ -62,7 +62,7 @@ public class BaseCardDetailBuilder : NSObject{
             }
             
             // TODO: need to do the logic
-            CardDetail(_sectionsData: validSections, _mainSectionKey: self.mainKeySection!, _cardData: cardData, _navigationController: navigationController);
+            CardDetail(_sectionsData: validSections, _mainSectionKey: self.mainKeySection!, _cardDetailData: cardData, _navigationController: navigationController);
         }
     }
     
@@ -73,9 +73,9 @@ public class BaseCardDetailBuilder : NSObject{
      - parameter cardId:          The cardId to get the information of the card
      - parameter completionBlock: The completion with the CardData.
      */
-    private func getCardData(cardId : String, completionBlock : completionBlockGetCard){
+    private func getCardDetailData(cardId : String, completionBlock : completionBlockGetCard){
         // TODO: need to call the sdkclient and in the response call the completion
-        completionBlock(CardData(_cardId : "ID", _title : "Title", _type : TypeOfCard.Person));
+        completionBlock(CardDetailData(_cardId : "ID", _title : "Title", _type : TypeOfCard.Person));
     }
     
     /**
@@ -83,7 +83,7 @@ public class BaseCardDetailBuilder : NSObject{
      
      - parameter cardData: The data with all the info
      */
-    private func validateSectionsAndModules(cardData : CardData){
+    private func validateSectionsAndModules(cardData : CardDetailData){
         for key in self.dictSections.keys{
             let configSection = self.dictSections[key]!;
             for configModule in configSection.arrayModules{

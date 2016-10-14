@@ -18,7 +18,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     private var configSection : ConfigSection!;
-    private var cardData : CardData!;
+    private var cardDetailData : CardDetailData!;
     var cardDelegate : CardDetailDelegate?;
     weak var tabModuleDelegate : TabModuleDelegate?;
     
@@ -28,11 +28,11 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     //MARK: INIT
     
     
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, _configSection : ConfigSection, _cardData : CardData) {
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, _configSection : ConfigSection, _cardDetailData : CardDetailData) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
         
         self.configSection = _configSection;
-        self.cardData = _cardData;
+        self.cardDetailData = _cardDetailData;
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -119,7 +119,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.sectionDelegate = self;
         cell.cardDelegate = self.cardDelegate;
-        cell.setCardData(self.configSection.arrayModules[indexPath.row], _cardData: self.cardData);
+        cell.setCardDetailData(self.configSection.arrayModules[indexPath.row], _cardDetailData: self.cardDetailData);
         return cell;
     }
     

@@ -21,7 +21,7 @@ class SynopsisModule: TextModule {
         // Configure the view for the selected state
     }
     
-    override class func validate(data: CardData) throws{
+    override class func validate(data: CardDetailData) throws{
        
         try super.validate(data);
    
