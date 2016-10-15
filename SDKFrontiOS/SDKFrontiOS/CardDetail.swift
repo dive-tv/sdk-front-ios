@@ -1,5 +1,5 @@
 //
-//  CardDetail.swift
+//  CardData.swift
 //  SDKFrontiOS
 //
 //  Created by Jonathan Castro Miguel on 13/09/16.
@@ -7,136 +7,42 @@
 //
 
 import Foundation
-import UIKit
+import SwiftyJSON
 
-protocol CardDetailDelegate : class {
-    func createSection (_keyForSection : String) -> Section
-    func createSections (_keyForSections : [String]) -> [Section]
-    func newSection(_keyForSection : String);
+internal class CardDetail : NSObject, Validatable{
     
-    func newCard(_key : String, _type: Int)
-}
-
-public class CardDetail : NSObject, CardDetailDelegate{
-    
-    private var sectionsData : [String:ConfigSection]!;
-    private var navigationController : UINavigationController!;
-    private var mainSectionKey : String!;
-    private var cardDetailData : CardDetailData!;
+    var cardId : String;
+    var type : TypeOfCard;
+    var locale : String;
+    var title : String;
+    var subtitle : String?;
+    var image : Image?;
+    var matchProduct : Product?;
+    var products : [Product]?;
+    var containers = Dictionary<ContainerContentType, ContainerData>();
+    var relations = Dictionary<ContainerContentType, ContainerData>();
     
     
-    
-    //MARK: INIT
-    
-    init(_sectionsData : [String:ConfigSection], _mainSectionKey : String!, _cardDetailData : CardDetailData, _navigationController : UINavigationController) {
-        super.init();
+    init(_cardId : String, _type : String, _locale : String, _title : String, _image : Image? = nil) {
         
-        self.sectionsData = _sectionsData;
-        self.navigationController = _navigationController;
-        self.mainSectionKey = _mainSectionKey;
-        self.cardDetailData = _cardDetailData;
+        self.cardId = _cardId;
+        self.type = TypeOfCard(rawValue: _type)!;
+        self.locale = _locale;
+        self.title = _title;
         
-        self.pushMain();
-    }
-
-    deinit {
-        print("CardDetail destroid")
-    }
-    
-    
-    
-    
-    //MARK: Private methods
-
-    
-    /**
-     Pushes to the clients UINavigationViewController the main section especified by the client
-     */
-    private func pushMain() {
-        
-        if (self.sectionsData[self.mainSectionKey] != nil) {
-            
-            let controller = self.createSection(self.mainSectionKey);
-            controller.cardDelegate = self;
-            self.navigationController.pushViewController(controller, animated: true);
+        if(_image != nil){
+            self.image = _image;
         }
     }
     
-    
-    /**
-     Pushes to the clients UINavigationViewController the selected section especified by the client
-     
-     - parameter _keyForSection: the key string of teh section
-     */
-    private func pushSection (_keyForSection : String) {
-        
-        if (self.mainSectionKey != _keyForSection && self.sectionsData[_keyForSection] != nil) {
-            
-            let controller = self.createSection(_keyForSection);
-            controller.cardDelegate = self;
-            self.navigationController.pushViewController(controller, animated: true);
-        }
+    init(data:JSON){
+        //TODO: creación del objeto con el JSON
     }
     
-    
-    
-    //MARK: Card detail delegate
-    
-    
-    /**
-     Create the section and returns it
-     
-     - parameter _keyForSection: the key of the section to create
-     
-     - returns: the section created with the delegate assigned
-     */
-    func createSection (_keyForSection : String) -> Section {
-        let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardDetailData: self.cardDetailData)
-        section.cardDelegate = self;
-        return section;
-    }
-    
-    
-    /**
-     Create x sections and returns them.
-     
-     - parameter _keyForSections: array of strings with the keys of the sections
-     
-     - returns: array of sections created
-     */
-    func createSections (_keyForSections : [String]) -> [Section] {
+    class func validate(data: JSON) throws -> Bool {
         
-        var sections = [Section]()
-        
-        for key in _keyForSections {
-            let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[key]!, _cardDetailData: self.cardDetailData)
-            section.cardDelegate = self;
-            sections.append(section);
-            
-        }
-        
-        return sections;
-    }
-    
-    
-    /**
-     Push a new section
-     
-     - parameter _keyForSection: the key of the section to push
-     */
-    func newSection(_keyForSection: String) {
-        self.pushSection(_keyForSection);
-    }
-    
-    
-    /**
-     Create a new card detail
-     
-     - parameter _key:  the id of the card to create
-     - parameter _type: the type of the card to create
-     */
-    func newCard(_key: String, _type: Int) {
-        //NEED TO DO THE LOGIC
+        //TODO: validar al menos card id, type y que sea un tipo conocido, locale y title. El resto es opcional
+        return true;
     }
     
 }

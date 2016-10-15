@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal class MiniCardData : NSObject{
+internal class MiniCard : NSObject{
 
     var cardId : String!;
     var title : String!;

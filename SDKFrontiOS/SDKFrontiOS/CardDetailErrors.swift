@@ -11,12 +11,10 @@ import Foundation
 internal class CardDetailErrors : ErrorManager{
     
     private static var ErrorMessages : [String : String] = [
-        "UnrecognizableError" : "ERROR: an unrecognizable error has occurredr",
-        "CreateGrouppableTreeError" : "ERROR: GrouppableTree data is invalid!!",
-        "GrouppableTreeJSONEmptyError" : "ERROR: The GrouppableTree JSON is Empty!!"
+        "UnrecognizableError" : "ERROR: an unrecognizable error has occurredr"
     ]
     
-    internal enum CreateCardDetailErrors : ErrorType{
+    internal enum CreateCardDetailRenderErrors : ErrorType{
         case emptyData
         case invalidData
     }

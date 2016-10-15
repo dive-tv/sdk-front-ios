@@ -1,28 +1,26 @@
 //
-//  CarruselErrors.swift
+//  DataModelErrors.swift
 //  SDKFrontiOS
 //
-//  Created by Jonathan Castro Miguel on 30/09/16.
+//  Created by Jonathan Castro Miguel on 15/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import Foundation
 
-internal class CarruselErrors : ErrorManager{
+internal class DataModelErrors : ErrorManager{
     
     private static var ErrorMessages : [String : String] = [
-        "UnrecognizableError" : "ERROR: an unrecognizable error has occurredr",
-        "CreateGrouppableTreeError" : "ERROR: GrouppableTree data is invalid or empty!!",
+        "UnrecognizableError" : "ERROR: an unrecognizable error has occurred"
     ]
     
-    internal enum CreateGrouppableTreeErrors : ErrorType{
+    internal enum CreateCardDetailErrors : ErrorType{
         case emptyData
         case invalidData
     }
     
     internal class func ThrowError(errorType : ErrorType) throws{
         throw errorType;
-        
     }
     
     internal class func ShowError(errorType : ErrorType){

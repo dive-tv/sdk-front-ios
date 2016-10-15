@@ -1,5 +1,5 @@
 //
-//  RelationData.swift
+//  ContainerDataData.swift
 //  SDKFrontiOS
 //
 //  Created by Jonathan Castro Miguel on 15/10/16.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-internal class RelationData{
-
+internal class ContainerData{
+    
 }

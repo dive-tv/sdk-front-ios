@@ -1,5 +1,5 @@
 //
-//  RelationData.swift
+//  SourceData.swift
 //  SDKFrontiOS
 //
 //  Created by Jonathan Castro Miguel on 15/10/16.
@@ -8,6 +8,9 @@
 
 import Foundation
 
-internal class RelationData{
-
+internal class Source{
+    var name : String?;
+    var url : String?;
+    var disclaimer : String?;
+    var image : String?;
 }
