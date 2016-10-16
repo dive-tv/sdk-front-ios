@@ -1,5 +1,5 @@
 //
-//  SquareImageItems.swift
+//  InterpretedBy.swift
 //  SDKFrontiOS
 //
 //  Created by Sergio Girao on 16/10/16.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SquareImageItems: HorizontalListModule {
-    
+class InterpretedBy: SquareImageItems {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
