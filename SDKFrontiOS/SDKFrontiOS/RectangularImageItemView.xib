@@ -17,7 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RectangularImageItemView" customModule="SDKFrontiOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="110" height="230"/>
+            <rect key="frame" x="0.0" y="0.0" width="110" height="231"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sXi-05-yZY">
@@ -52,7 +52,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="sXi-05-yZY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="71r-pS-OEU"/>
-                <constraint firstItem="7O7-b3-yQ4" firstAttribute="top" secondItem="sXi-05-yZY" secondAttribute="bottom" constant="10" id="Au4-6V-h3p"/>
+                <constraint firstItem="7O7-b3-yQ4" firstAttribute="top" secondItem="sXi-05-yZY" secondAttribute="bottom" constant="11" id="Au4-6V-h3p"/>
                 <constraint firstAttribute="trailing" secondItem="7O7-b3-yQ4" secondAttribute="trailing" id="KNv-7a-vaa"/>
                 <constraint firstItem="7O7-b3-yQ4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QV5-yY-LtJ"/>
                 <constraint firstAttribute="bottom" secondItem="7O7-b3-yQ4" secondAttribute="bottom" id="km1-oI-23Z"/>
