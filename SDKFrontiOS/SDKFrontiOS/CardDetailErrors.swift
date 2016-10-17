@@ -18,13 +18,16 @@ internal class CardDetailErrors : ErrorManager{
         case emptyData
         case invalidData
     }
-
+    
+    
+    //MARK: ERROR MANAGER PROTOCOL IMPLEMENTATION
     internal class func ThrowError(errorType : ErrorType) throws{
         throw errorType;
     }
     
     internal class func ShowError(errorType : ErrorType){
         print(ErrorMessages[String(errorType.self)]);
+        print(errorType);
     }
     
     internal class func UnreconigzedError(){
