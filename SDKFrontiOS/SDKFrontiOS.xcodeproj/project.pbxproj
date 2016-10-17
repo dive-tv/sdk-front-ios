@@ -446,6 +446,12 @@
 		A1CCBEFC1DB5299C00A0DAE0 /* ButtonHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBEF81DB5299C00A0DAE0 /* ButtonHeader.xib */; };
 		A1CCBEFD1DB5299C00A0DAE0 /* ButtonHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBEF81DB5299C00A0DAE0 /* ButtonHeader.xib */; };
 		A1CCBEFE1DB5299C00A0DAE0 /* ButtonHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBEF81DB5299C00A0DAE0 /* ButtonHeader.xib */; };
+		A1CCBF011DB52DC400A0DAE0 /* MovieHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBEFF1DB52DC400A0DAE0 /* MovieHeader.swift */; };
+		A1CCBF021DB52DC400A0DAE0 /* MovieHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBEFF1DB52DC400A0DAE0 /* MovieHeader.swift */; };
+		A1CCBF031DB52DC400A0DAE0 /* MovieHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBEFF1DB52DC400A0DAE0 /* MovieHeader.swift */; };
+		A1CCBF041DB52DC400A0DAE0 /* MovieHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF001DB52DC400A0DAE0 /* MovieHeader.xib */; };
+		A1CCBF051DB52DC400A0DAE0 /* MovieHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF001DB52DC400A0DAE0 /* MovieHeader.xib */; };
+		A1CCBF061DB52DC400A0DAE0 /* MovieHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF001DB52DC400A0DAE0 /* MovieHeader.xib */; };
 		B7A2F8F6C78E941A0C77973A /* Pods_SDKFrontiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA2EA1464E2AC606C5E483C /* Pods_SDKFrontiOSUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -629,6 +635,8 @@
 		A1CCBEF01DB524A100A0DAE0 /* Header.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
 		A1CCBEF71DB5299C00A0DAE0 /* ButtonHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonHeader.swift; sourceTree = "<group>"; };
 		A1CCBEF81DB5299C00A0DAE0 /* ButtonHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonHeader.xib; sourceTree = "<group>"; };
+		A1CCBEFF1DB52DC400A0DAE0 /* MovieHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHeader.swift; sourceTree = "<group>"; };
+		A1CCBF001DB52DC400A0DAE0 /* MovieHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieHeader.xib; sourceTree = "<group>"; };
 		AEABBF57AAD4050B83453C21 /* Pods-SDKFrontiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOSUITests/Pods-SDKFrontiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8772F96BE5E1DAD5227F167 /* Pods-SDKFrontiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOS/Pods-SDKFrontiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -922,6 +930,8 @@
 				32D5C4981DB50F2C004FD460 /* BasicInfo.xib */,
 				32D5C49F1DB50F64004FD460 /* Specifications.swift */,
 				32D5C4A01DB50F64004FD460 /* Specifications.xib */,
+				A1CCBEFF1DB52DC400A0DAE0 /* MovieHeader.swift */,
+				A1CCBF001DB52DC400A0DAE0 /* MovieHeader.xib */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -1189,6 +1199,7 @@
 				A1CCBE7B1DB4B4E900A0DAE0 /* SeasonsView.xib in Resources */,
 				A1CCBEAB1DB4CA5200A0DAE0 /* CastView.xib in Resources */,
 				A1CCBE051DB36D6600A0DAE0 /* Lato-LightItalic.ttf in Resources */,
+				A1CCBF041DB52DC400A0DAE0 /* MovieHeader.xib in Resources */,
 				A1CCBEF41DB524A100A0DAE0 /* Header.xib in Resources */,
 				6D262B8C1DA9641700779B57 /* ProductModule.xib in Resources */,
 				A1CCBE531DB3933800A0DAE0 /* RectangularImageItems.xib in Resources */,
@@ -1267,6 +1278,7 @@
 				329670CE1D9A70DD003674D8 /* Carousel.xib in Resources */,
 				A1CCBE441DB3916D00A0DAE0 /* PlacesShown.xib in Resources */,
 				6D9956871DB0F9AF007A8440 /* Main.storyboard in Resources */,
+				A1CCBF051DB52DC400A0DAE0 /* MovieHeader.xib in Resources */,
 				A1CCBDF71DB36D6600A0DAE0 /* Lato-HairlineItalic.ttf in Resources */,
 				6D9956891DB0F9C4007A8440 /* TabModule.xib in Resources */,
 				A1CCBE5C1DB3938800A0DAE0 /* AppearsInLocation.xib in Resources */,
@@ -1343,6 +1355,7 @@
 				329670CF1D9A70DD003674D8 /* Carousel.xib in Resources */,
 				A1CCBE451DB3916D00A0DAE0 /* PlacesShown.xib in Resources */,
 				6D9956881DB0F9B1007A8440 /* Main.storyboard in Resources */,
+				A1CCBF061DB52DC400A0DAE0 /* MovieHeader.xib in Resources */,
 				A1CCBDF81DB36D6600A0DAE0 /* Lato-HairlineItalic.ttf in Resources */,
 				6D99568A1DB0F9C5007A8440 /* TabModule.xib in Resources */,
 				A1CCBE5D1DB3938800A0DAE0 /* AppearsInLocation.xib in Resources */,
@@ -1501,6 +1514,7 @@
 				6D262B951DA9641700779B57 /* TitleModule.swift in Sources */,
 				A1CCBEF11DB524A100A0DAE0 /* Header.swift in Sources */,
 				329670EB1D9A8157003674D8 /* CarouselView.swift in Sources */,
+				A1CCBF011DB52DC400A0DAE0 /* MovieHeader.swift in Sources */,
 				A1CCBEF91DB5299C00A0DAE0 /* ButtonHeader.swift in Sources */,
 				6D99567A1DAE46AB007A8440 /* TextModule.swift in Sources */,
 				6D262B941DA9641700779B57 /* Target.swift in Sources */,
@@ -1612,6 +1626,7 @@
 				A1CCBE591DB3938800A0DAE0 /* AppearsInLocation.swift in Sources */,
 				A15165111D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165141D89852E008AEA14 /* CardDetailData.swift in Sources */,
+				A1CCBF021DB52DC400A0DAE0 /* MovieHeader.swift in Sources */,
 				6D262B9F1DA9655B00779B57 /* SynopsisModule.swift in Sources */,
 				A1CCBDCE1DB3680000A0DAE0 /* HorizontalListModule.swift in Sources */,
 				A1CCBEC11DB4FBA800A0DAE0 /* AppearsIn.swift in Sources */,
@@ -1695,6 +1710,7 @@
 				A1CCBE5A1DB3938800A0DAE0 /* AppearsInLocation.swift in Sources */,
 				A15165121D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165151D89852E008AEA14 /* CardDetailData.swift in Sources */,
+				A1CCBF031DB52DC400A0DAE0 /* MovieHeader.swift in Sources */,
 				6D262BA01DA9655B00779B57 /* SynopsisModule.swift in Sources */,
 				A1CCBDCF1DB3680000A0DAE0 /* HorizontalListModule.swift in Sources */,
 				A1CCBEC21DB4FBA800A0DAE0 /* AppearsIn.swift in Sources */,
