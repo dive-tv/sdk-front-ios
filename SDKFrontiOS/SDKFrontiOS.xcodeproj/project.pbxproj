@@ -46,6 +46,30 @@
 		329670F71D9A84DB003674D8 /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 329670F31D9A84DB003674D8 /* CarouselCell.xib */; };
 		329670F81D9A84DB003674D8 /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 329670F31D9A84DB003674D8 /* CarouselCell.xib */; };
 		329670F91D9A84DB003674D8 /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 329670F31D9A84DB003674D8 /* CarouselCell.xib */; };
+		32D5C4901DB50C53004FD460 /* TwoColsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C48E1DB50C53004FD460 /* TwoColsModule.swift */; };
+		32D5C4911DB50C53004FD460 /* TwoColsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C48E1DB50C53004FD460 /* TwoColsModule.swift */; };
+		32D5C4921DB50C53004FD460 /* TwoColsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C48E1DB50C53004FD460 /* TwoColsModule.swift */; };
+		32D5C4931DB50C53004FD460 /* TwoColsModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C48F1DB50C53004FD460 /* TwoColsModule.xib */; };
+		32D5C4941DB50C53004FD460 /* TwoColsModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C48F1DB50C53004FD460 /* TwoColsModule.xib */; };
+		32D5C4951DB50C53004FD460 /* TwoColsModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C48F1DB50C53004FD460 /* TwoColsModule.xib */; };
+		32D5C4991DB50F2C004FD460 /* BasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C4971DB50F2C004FD460 /* BasicInfo.swift */; };
+		32D5C49A1DB50F2C004FD460 /* BasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C4971DB50F2C004FD460 /* BasicInfo.swift */; };
+		32D5C49B1DB50F2C004FD460 /* BasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C4971DB50F2C004FD460 /* BasicInfo.swift */; };
+		32D5C49C1DB50F2C004FD460 /* BasicInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4981DB50F2C004FD460 /* BasicInfo.xib */; };
+		32D5C49D1DB50F2C004FD460 /* BasicInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4981DB50F2C004FD460 /* BasicInfo.xib */; };
+		32D5C49E1DB50F2C004FD460 /* BasicInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4981DB50F2C004FD460 /* BasicInfo.xib */; };
+		32D5C4A11DB50F64004FD460 /* Specifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C49F1DB50F64004FD460 /* Specifications.swift */; };
+		32D5C4A21DB50F64004FD460 /* Specifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C49F1DB50F64004FD460 /* Specifications.swift */; };
+		32D5C4A31DB50F64004FD460 /* Specifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C49F1DB50F64004FD460 /* Specifications.swift */; };
+		32D5C4A41DB50F64004FD460 /* Specifications.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4A01DB50F64004FD460 /* Specifications.xib */; };
+		32D5C4A51DB50F64004FD460 /* Specifications.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4A01DB50F64004FD460 /* Specifications.xib */; };
+		32D5C4A61DB50F64004FD460 /* Specifications.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4A01DB50F64004FD460 /* Specifications.xib */; };
+		32D5C4A91DB50FD3004FD460 /* TwoColsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C4A71DB50FD3004FD460 /* TwoColsCell.swift */; };
+		32D5C4AA1DB50FD3004FD460 /* TwoColsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C4A71DB50FD3004FD460 /* TwoColsCell.swift */; };
+		32D5C4AB1DB50FD3004FD460 /* TwoColsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C4A71DB50FD3004FD460 /* TwoColsCell.swift */; };
+		32D5C4AC1DB50FD3004FD460 /* TwoColsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4A81DB50FD3004FD460 /* TwoColsCell.xib */; };
+		32D5C4AD1DB50FD3004FD460 /* TwoColsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4A81DB50FD3004FD460 /* TwoColsCell.xib */; };
+		32D5C4AE1DB50FD3004FD460 /* TwoColsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4A81DB50FD3004FD460 /* TwoColsCell.xib */; };
 		62B091B75B6E0C250433BC83 /* Pods_SDKFrontiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */; };
 		6D262B7F1DA9641700779B57 /* AwardModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D262B641DA9641700779B57 /* AwardModule.swift */; };
 		6D262B801DA9641700779B57 /* AwardModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B651DA9641700779B57 /* AwardModule.xib */; };
@@ -417,6 +441,14 @@
 		329670EA1D9A8157003674D8 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		329670F21D9A84DB003674D8 /* CarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		329670F31D9A84DB003674D8 /* CarouselCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
+		32D5C48E1DB50C53004FD460 /* TwoColsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoColsModule.swift; sourceTree = "<group>"; };
+		32D5C48F1DB50C53004FD460 /* TwoColsModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoColsModule.xib; sourceTree = "<group>"; };
+		32D5C4971DB50F2C004FD460 /* BasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicInfo.swift; sourceTree = "<group>"; };
+		32D5C4981DB50F2C004FD460 /* BasicInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicInfo.xib; sourceTree = "<group>"; };
+		32D5C49F1DB50F64004FD460 /* Specifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Specifications.swift; sourceTree = "<group>"; };
+		32D5C4A01DB50F64004FD460 /* Specifications.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Specifications.xib; sourceTree = "<group>"; };
+		32D5C4A71DB50FD3004FD460 /* TwoColsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoColsCell.swift; sourceTree = "<group>"; };
+		32D5C4A81DB50FD3004FD460 /* TwoColsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoColsCell.xib; sourceTree = "<group>"; };
 		3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKFrontiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB6C73B8104C236AA0D61D1 /* Pods-SDKFrontiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOSTests/Pods-SDKFrontiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D262B641DA9641700779B57 /* AwardModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardModule.swift; sourceTree = "<group>"; };
@@ -614,6 +646,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		32D5C4961DB50ECC004FD460 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				32D5C4A71DB50FD3004FD460 /* TwoColsCell.swift */,
+				32D5C4A81DB50FD3004FD460 /* TwoColsCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		6D262B661DA9641700779B57 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +770,7 @@
 		A15164E91D898441008AEA14 /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
+				32D5C4961DB50ECC004FD460 /* Cells */,
 				A1CCBE291DB38C5500A0DAE0 /* Views */,
 				6D262B6C1DA9641700779B57 /* ConfigModule.swift */,
 				6D262B701DA9641700779B57 /* ModuleValidator.swift */,
@@ -807,6 +849,12 @@
 				A1CCBE9F1DB4C9E400A0DAE0 /* Cast.xib */,
 				A1CCBEAE1DB4D8E000A0DAE0 /* Curiosities.swift */,
 				A1CCBEAF1DB4D8E000A0DAE0 /* Curiosities.xib */,
+				32D5C48E1DB50C53004FD460 /* TwoColsModule.swift */,
+				32D5C48F1DB50C53004FD460 /* TwoColsModule.xib */,
+				32D5C4971DB50F2C004FD460 /* BasicInfo.swift */,
+				32D5C4981DB50F2C004FD460 /* BasicInfo.xib */,
+				32D5C49F1DB50F64004FD460 /* Specifications.swift */,
+				32D5C4A01DB50F64004FD460 /* Specifications.xib */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -1014,6 +1062,7 @@
 				6D262B801DA9641700779B57 /* AwardModule.xib in Resources */,
 				A1CCBEB31DB4D8E000A0DAE0 /* Curiosities.xib in Resources */,
 				A1CCBE081DB36D6600A0DAE0 /* Lato-Medium.ttf in Resources */,
+				32D5C4931DB50C53004FD460 /* TwoColsModule.xib in Resources */,
 				3258C85C1D9D11BD00D61062 /* cards.json in Resources */,
 				A1CCBE331DB390CC00A0DAE0 /* InterpretedBy.xib in Resources */,
 				A1CCBDFC1DB36D6600A0DAE0 /* Lato-HeavyItalic.ttf in Resources */,
@@ -1028,6 +1077,7 @@
 				6D262B8A1DA9641700779B57 /* NavigationModule.xib in Resources */,
 				A15165051D89851C008AEA14 /* PhotoModule.xib in Resources */,
 				6D262B871DA9641700779B57 /* DirectorModule.xib in Resources */,
+				32D5C4AC1DB50FD3004FD460 /* TwoColsCell.xib in Resources */,
 				A1CCBE171DB36D6600A0DAE0 /* Lato-Thin.ttf in Resources */,
 				6D262B831DA9641700779B57 /* config1.json in Resources */,
 				A1CCBEA31DB4C9E400A0DAE0 /* Cast.xib in Resources */,
@@ -1041,6 +1091,7 @@
 				6D262B821DA9641700779B57 /* Main.storyboard in Resources */,
 				A1CCBE4B1DB391AB00A0DAE0 /* Vehicles.xib in Resources */,
 				A1CCBE831DB4B7F200A0DAE0 /* Shop.xib in Resources */,
+				32D5C49C1DB50F2C004FD460 /* BasicInfo.xib in Resources */,
 				6D262B961DA9641700779B57 /* TitleModule.xib in Resources */,
 				A1CCBE8B1DB4B96F00A0DAE0 /* ShopView.xib in Resources */,
 				A1CCBE5B1DB3938800A0DAE0 /* AppearsInLocation.xib in Resources */,
@@ -1058,6 +1109,7 @@
 				6D262B8C1DA9641700779B57 /* ProductModule.xib in Resources */,
 				A1CCBE531DB3933800A0DAE0 /* RectangularImageItems.xib in Resources */,
 				6D262B811DA9641700779B57 /* LaunchScreen.storyboard in Resources */,
+				32D5C4A41DB50F64004FD460 /* Specifications.xib in Resources */,
 				329670CD1D9A70DD003674D8 /* Carousel.xib in Resources */,
 				A1CCBE221DB3729300A0DAE0 /* SquareImageItems.xib in Resources */,
 				6D262B911DA9641700779B57 /* SynopsisModule.xib in Resources */,
@@ -1073,6 +1125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D5C4A51DB50F64004FD460 /* Specifications.xib in Resources */,
 				A1CCBE541DB3933800A0DAE0 /* RectangularImageItems.xib in Resources */,
 				A1CCBE741DB4B2A600A0DAE0 /* Seasons.xib in Resources */,
 				A1CCBE121DB36D6600A0DAE0 /* Lato-Semibold.ttf in Resources */,
@@ -1085,6 +1138,7 @@
 				A1CCBE2C1DB38C7C00A0DAE0 /* SquareImageItemView.xib in Resources */,
 				A1CCBDF11DB36D6600A0DAE0 /* Lato-BoldItalic.ttf in Resources */,
 				A1CCBEAC1DB4CA5200A0DAE0 /* CastView.xib in Resources */,
+				32D5C4941DB50C53004FD460 /* TwoColsModule.xib in Resources */,
 				A1CCBEBC1DB4D96200A0DAE0 /* CuriositiesView.xib in Resources */,
 				6D9956931DB0FA2A007A8440 /* AwardModule.xib in Resources */,
 				A1CCBDEB1DB36D6600A0DAE0 /* Lato-BlackItalic.ttf in Resources */,
@@ -1112,7 +1166,9 @@
 				A1CCBE341DB390CC00A0DAE0 /* InterpretedBy.xib in Resources */,
 				6D262BAF1DA965A400779B57 /* config1.json in Resources */,
 				6D99568D1DB0FA2A007A8440 /* TitleModule.xib in Resources */,
+				32D5C49D1DB50F2C004FD460 /* BasicInfo.xib in Resources */,
 				A15165061D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				32D5C4AD1DB50FD3004FD460 /* TwoColsCell.xib in Resources */,
 				A1CCBE841DB4B7F200A0DAE0 /* Shop.xib in Resources */,
 				A1CCBDF41DB36D6600A0DAE0 /* Lato-Hairline.ttf in Resources */,
 				A1CCBE1B1DB36D6600A0DAE0 /* Lato-ThinItalic.ttf in Resources */,
@@ -1138,6 +1194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D5C4A61DB50F64004FD460 /* Specifications.xib in Resources */,
 				A1CCBE551DB3933800A0DAE0 /* RectangularImageItems.xib in Resources */,
 				A1CCBE751DB4B2A600A0DAE0 /* Seasons.xib in Resources */,
 				A1CCBE131DB36D6600A0DAE0 /* Lato-Semibold.ttf in Resources */,
@@ -1150,6 +1207,7 @@
 				A1CCBE2D1DB38C7C00A0DAE0 /* SquareImageItemView.xib in Resources */,
 				A1CCBDF21DB36D6600A0DAE0 /* Lato-BoldItalic.ttf in Resources */,
 				A1CCBEAD1DB4CA5200A0DAE0 /* CastView.xib in Resources */,
+				32D5C4951DB50C53004FD460 /* TwoColsModule.xib in Resources */,
 				A1CCBEBD1DB4D96200A0DAE0 /* CuriositiesView.xib in Resources */,
 				6D99569A1DB0FA2B007A8440 /* AwardModule.xib in Resources */,
 				A1CCBDEC1DB36D6600A0DAE0 /* Lato-BlackItalic.ttf in Resources */,
@@ -1177,7 +1235,9 @@
 				A1CCBE351DB390CC00A0DAE0 /* InterpretedBy.xib in Resources */,
 				6D262BB01DA965A500779B57 /* config1.json in Resources */,
 				6D9956941DB0FA2B007A8440 /* TitleModule.xib in Resources */,
+				32D5C49E1DB50F2C004FD460 /* BasicInfo.xib in Resources */,
 				A15165071D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				32D5C4AE1DB50FD3004FD460 /* TwoColsCell.xib in Resources */,
 				A1CCBE851DB4B7F200A0DAE0 /* Shop.xib in Resources */,
 				A1CCBDF51DB36D6600A0DAE0 /* Lato-Hairline.ttf in Resources */,
 				A1CCBE1C1DB36D6600A0DAE0 /* Lato-ThinItalic.ttf in Resources */,
@@ -1335,6 +1395,7 @@
 				A15164F91D898507008AEA14 /* TypeOfCard.swift in Sources */,
 				A1CCBE771DB4B4D400A0DAE0 /* SeasonsView.swift in Sources */,
 				329670E31D9A7DE0003674D8 /* PhotoAndTitleView.swift in Sources */,
+				32D5C4991DB50F2C004FD460 /* BasicInfo.swift in Sources */,
 				A151651C1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
 				6D262B951DA9641700779B57 /* TitleModule.swift in Sources */,
 				329670EB1D9A8157003674D8 /* CarouselView.swift in Sources */,
@@ -1351,6 +1412,7 @@
 				A15164BD1D898402008AEA14 /* ViewController.swift in Sources */,
 				6D262B8B1DA9641700779B57 /* ProductModule.swift in Sources */,
 				A1CCBE1F1DB3729300A0DAE0 /* SquareImageItems.swift in Sources */,
+				32D5C4A91DB50FD3004FD460 /* TwoColsCell.swift in Sources */,
 				6D262B901DA9641700779B57 /* SynopsisModule.swift in Sources */,
 				A15165131D89852E008AEA14 /* CardDetailData.swift in Sources */,
 				A15165021D89851C008AEA14 /* PhotoModule.swift in Sources */,
@@ -1359,6 +1421,7 @@
 				6D262B7F1DA9641700779B57 /* AwardModule.swift in Sources */,
 				A151651F1D89852E008AEA14 /* CardDetailJson.swift in Sources */,
 				A15164FF1D89851C008AEA14 /* Module.swift in Sources */,
+				32D5C4901DB50C53004FD460 /* TwoColsModule.swift in Sources */,
 				A1CCBEB71DB4D95200A0DAE0 /* CuriositiesView.swift in Sources */,
 				6DE011D91D9D2F6800279CDA /* GrouppableTree.swift in Sources */,
 				329670CA1D9A70DD003674D8 /* Carousel.swift in Sources */,
@@ -1384,6 +1447,7 @@
 				6D9956841DAFA1DA007A8440 /* ErrorManager.swift in Sources */,
 				A1CCBE501DB3933800A0DAE0 /* RectangularImageItems.swift in Sources */,
 				6D262B841DA9641700779B57 /* ConfigModule.swift in Sources */,
+				32D5C4A11DB50F64004FD460 /* Specifications.swift in Sources */,
 				6D763C051D916617007B3E6C /* RelationData.swift in Sources */,
 				A1CCBE401DB3916D00A0DAE0 /* PlacesShown.swift in Sources */,
 				6DE011E31D9E96D800279CDA /* Validatable.swift in Sources */,
@@ -1408,9 +1472,11 @@
 				6D262BAD1DA9659500779B57 /* AppDelegate.swift in Sources */,
 				6D763C021D916604007B3E6C /* CarouselCard.swift in Sources */,
 				6D262BA51DA9656C00779B57 /* NavigationModule.swift in Sources */,
+				32D5C49A1DB50F2C004FD460 /* BasicInfo.swift in Sources */,
 				328EAC251D9C0F5400A4042F /* CarouselLogic.swift in Sources */,
 				A1CCBE411DB3916D00A0DAE0 /* PlacesShown.swift in Sources */,
 				A1CCBE911DB4C53800A0DAE0 /* SoundTrack.swift in Sources */,
+				32D5C4AA1DB50FD3004FD460 /* TwoColsCell.swift in Sources */,
 				A15164D01D898402008AEA14 /* SDKFrontiOSTests.swift in Sources */,
 				329670F51D9A84DB003674D8 /* CarouselCell.swift in Sources */,
 				A151651A1D89852E008AEA14 /* CardDetail.swift in Sources */,
@@ -1449,6 +1515,7 @@
 				A1CCBE611DB393CA00A0DAE0 /* Filmography.swift in Sources */,
 				A1CCBEB81DB4D95200A0DAE0 /* CuriositiesView.swift in Sources */,
 				A1CCBE511DB3933800A0DAE0 /* RectangularImageItems.swift in Sources */,
+				32D5C4911DB50C53004FD460 /* TwoColsModule.swift in Sources */,
 				A1CCBEA81DB4CA4500A0DAE0 /* CastView.swift in Sources */,
 				328E27751D9AB42200FF439A /* CuriosityView.swift in Sources */,
 				A1CCBE881DB4B90C00A0DAE0 /* ShopView.swift in Sources */,
@@ -1465,6 +1532,7 @@
 				A1CCBE391DB3911200A0DAE0 /* Highlights.swift in Sources */,
 				A1CCBE311DB390CC00A0DAE0 /* InterpretedBy.swift in Sources */,
 				A1CCBEB11DB4D8E000A0DAE0 /* Curiosities.swift in Sources */,
+				32D5C4A21DB50F64004FD460 /* Specifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1480,9 +1548,11 @@
 				6D262BAE1DA9659500779B57 /* AppDelegate.swift in Sources */,
 				6D763C031D916604007B3E6C /* CarouselCard.swift in Sources */,
 				6D262BA61DA9656C00779B57 /* NavigationModule.swift in Sources */,
+				32D5C49B1DB50F2C004FD460 /* BasicInfo.swift in Sources */,
 				328EAC261D9C0F5400A4042F /* CarouselLogic.swift in Sources */,
 				A1CCBE421DB3916D00A0DAE0 /* PlacesShown.swift in Sources */,
 				A1CCBE921DB4C53800A0DAE0 /* SoundTrack.swift in Sources */,
+				32D5C4AB1DB50FD3004FD460 /* TwoColsCell.swift in Sources */,
 				A15164DB1D898402008AEA14 /* SDKFrontiOSUITests.swift in Sources */,
 				329670F61D9A84DB003674D8 /* CarouselCell.swift in Sources */,
 				A151651B1D89852E008AEA14 /* CardDetail.swift in Sources */,
@@ -1521,6 +1591,7 @@
 				A1CCBE621DB393CA00A0DAE0 /* Filmography.swift in Sources */,
 				A1CCBEB91DB4D95200A0DAE0 /* CuriositiesView.swift in Sources */,
 				A1CCBE521DB3933800A0DAE0 /* RectangularImageItems.swift in Sources */,
+				32D5C4921DB50C53004FD460 /* TwoColsModule.swift in Sources */,
 				A1CCBEA91DB4CA4500A0DAE0 /* CastView.swift in Sources */,
 				328E27761D9AB42200FF439A /* CuriosityView.swift in Sources */,
 				A1CCBE891DB4B90C00A0DAE0 /* ShopView.swift in Sources */,
@@ -1537,6 +1608,7 @@
 				A1CCBE3A1DB3911200A0DAE0 /* Highlights.swift in Sources */,
 				A1CCBE321DB390CC00A0DAE0 /* InterpretedBy.swift in Sources */,
 				A1CCBEB21DB4D8E000A0DAE0 /* Curiosities.swift in Sources */,
+				32D5C4A31DB50F64004FD460 /* Specifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
