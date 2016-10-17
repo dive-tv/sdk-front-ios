@@ -112,6 +112,12 @@
 		32D5C4E41DB52D4A004FD460 /* OverviewNavigation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4E01DB52D4A004FD460 /* OverviewNavigation.xib */; };
 		32D5C4E51DB52D4A004FD460 /* OverviewNavigation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4E01DB52D4A004FD460 /* OverviewNavigation.xib */; };
 		32D5C4E61DB52D4A004FD460 /* OverviewNavigation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4E01DB52D4A004FD460 /* OverviewNavigation.xib */; };
+		32D5C4E91DB52E94004FD460 /* MovieHeaderSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C4E71DB52E94004FD460 /* MovieHeaderSmall.swift */; };
+		32D5C4EA1DB52E94004FD460 /* MovieHeaderSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C4E71DB52E94004FD460 /* MovieHeaderSmall.swift */; };
+		32D5C4EB1DB52E94004FD460 /* MovieHeaderSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D5C4E71DB52E94004FD460 /* MovieHeaderSmall.swift */; };
+		32D5C4EC1DB52E94004FD460 /* MovieHeaderSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4E81DB52E94004FD460 /* MovieHeaderSmall.xib */; };
+		32D5C4ED1DB52E94004FD460 /* MovieHeaderSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4E81DB52E94004FD460 /* MovieHeaderSmall.xib */; };
+		32D5C4EE1DB52E94004FD460 /* MovieHeaderSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32D5C4E81DB52E94004FD460 /* MovieHeaderSmall.xib */; };
 		62B091B75B6E0C250433BC83 /* Pods_SDKFrontiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */; };
 		6D262B7F1DA9641700779B57 /* AwardModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D262B641DA9641700779B57 /* AwardModule.swift */; };
 		6D262B801DA9641700779B57 /* AwardModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D262B651DA9641700779B57 /* AwardModule.xib */; };
@@ -544,6 +550,8 @@
 		32D5C4D81DB52CD2004FD460 /* Sinopsis.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Sinopsis.xib; sourceTree = "<group>"; };
 		32D5C4DF1DB52D4A004FD460 /* OverviewNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewNavigation.swift; sourceTree = "<group>"; };
 		32D5C4E01DB52D4A004FD460 /* OverviewNavigation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverviewNavigation.xib; sourceTree = "<group>"; };
+		32D5C4E71DB52E94004FD460 /* MovieHeaderSmall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHeaderSmall.swift; sourceTree = "<group>"; };
+		32D5C4E81DB52E94004FD460 /* MovieHeaderSmall.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieHeaderSmall.xib; sourceTree = "<group>"; };
 		3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKFrontiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB6C73B8104C236AA0D61D1 /* Pods-SDKFrontiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOSTests/Pods-SDKFrontiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D262B641DA9641700779B57 /* AwardModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardModule.swift; sourceTree = "<group>"; };
@@ -987,6 +995,8 @@
 				32D5C4D81DB52CD2004FD460 /* Sinopsis.xib */,
 				32D5C4DF1DB52D4A004FD460 /* OverviewNavigation.swift */,
 				32D5C4E01DB52D4A004FD460 /* OverviewNavigation.xib */,
+				32D5C4E71DB52E94004FD460 /* MovieHeaderSmall.swift */,
+				32D5C4E81DB52E94004FD460 /* MovieHeaderSmall.xib */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -1203,6 +1213,7 @@
 				A1CCBE9B1DB4C67C00A0DAE0 /* SoundTrackView.xib in Resources */,
 				6D262B8E1DA9641700779B57 /* RatingModule.xib in Resources */,
 				A1CCBE021DB36D6600A0DAE0 /* Lato-Light.ttf in Resources */,
+				32D5C4EC1DB52E94004FD460 /* MovieHeaderSmall.xib in Resources */,
 				6D262B801DA9641700779B57 /* AwardModule.xib in Resources */,
 				A1CCBEB31DB4D8E000A0DAE0 /* Curiosities.xib in Resources */,
 				A1CCBE081DB36D6600A0DAE0 /* Lato-Medium.ttf in Resources */,
@@ -1311,6 +1322,7 @@
 				A1CCBE181DB36D6600A0DAE0 /* Lato-Thin.ttf in Resources */,
 				A1CCBE9C1DB4C67C00A0DAE0 /* SoundTrackView.xib in Resources */,
 				A1CCBE091DB36D6600A0DAE0 /* Lato-Medium.ttf in Resources */,
+				32D5C4ED1DB52E94004FD460 /* MovieHeaderSmall.xib in Resources */,
 				A1CCBEB41DB4D8E000A0DAE0 /* Curiosities.xib in Resources */,
 				A1CCBE7C1DB4B4E900A0DAE0 /* SeasonsView.xib in Resources */,
 				A1CCBE6C1DB3954D00A0DAE0 /* RectangularImageItemView.xib in Resources */,
@@ -1394,6 +1406,7 @@
 				A1CCBE191DB36D6600A0DAE0 /* Lato-Thin.ttf in Resources */,
 				A1CCBE9D1DB4C67C00A0DAE0 /* SoundTrackView.xib in Resources */,
 				A1CCBE0A1DB36D6600A0DAE0 /* Lato-Medium.ttf in Resources */,
+				32D5C4EE1DB52E94004FD460 /* MovieHeaderSmall.xib in Resources */,
 				A1CCBEB51DB4D8E000A0DAE0 /* Curiosities.xib in Resources */,
 				A1CCBE7D1DB4B4E900A0DAE0 /* SeasonsView.xib in Resources */,
 				A1CCBE6D1DB3954D00A0DAE0 /* RectangularImageItemView.xib in Resources */,
@@ -1590,7 +1603,6 @@
 				A1CCBEF11DB524A100A0DAE0 /* Header.swift in Sources */,
 				329670EB1D9A8157003674D8 /* CarouselView.swift in Sources */,
 				A1CCBEF91DB5299C00A0DAE0 /* ButtonHeader.swift in Sources */,
-				6D99567A1DAE46AB007A8440 /* TextModule.swift in Sources */,
 				6D262B941DA9641700779B57 /* Target.swift in Sources */,
 				A15165221D89852E008AEA14 /* ConfigSection.swift in Sources */,
 				329670F41D9A84DB003674D8 /* CarouselCell.swift in Sources */,
@@ -1622,6 +1634,7 @@
 				6DE011D91D9D2F6800279CDA /* GrouppableTree.swift in Sources */,
 				329670CA1D9A70DD003674D8 /* Carousel.swift in Sources */,
 				A1CCBEC01DB4FBA800A0DAE0 /* AppearsIn.swift in Sources */,
+				32D5C4E91DB52E94004FD460 /* MovieHeaderSmall.swift in Sources */,
 				328EAC241D9C0F5400A4042F /* CarouselLogic.swift in Sources */,
 				6D262B921DA9641700779B57 /* TabModule.swift in Sources */,
 				A1CCBE801DB4B7F200A0DAE0 /* Shop.swift in Sources */,
@@ -1689,6 +1702,7 @@
 				329670E41D9A7DE0003674D8 /* PhotoAndTitleView.swift in Sources */,
 				A1CCBEA11DB4C9E400A0DAE0 /* Cast.swift in Sources */,
 				329670CB1D9A70DD003674D8 /* Carousel.swift in Sources */,
+				32D5C4EA1DB52E94004FD460 /* MovieHeaderSmall.swift in Sources */,
 				32D5C4E21DB52D4A004FD460 /* OverviewNavigation.swift in Sources */,
 				32D5C4CA1DB52C93004FD460 /* Description.swift in Sources */,
 				32D5C4D21DB52CBC004FD460 /* Reference.swift in Sources */,
@@ -1778,6 +1792,7 @@
 				329670E51D9A7DE0003674D8 /* PhotoAndTitleView.swift in Sources */,
 				A1CCBEA21DB4C9E400A0DAE0 /* Cast.swift in Sources */,
 				329670CC1D9A70DD003674D8 /* Carousel.swift in Sources */,
+				32D5C4EB1DB52E94004FD460 /* MovieHeaderSmall.swift in Sources */,
 				32D5C4E31DB52D4A004FD460 /* OverviewNavigation.swift in Sources */,
 				32D5C4CB1DB52C93004FD460 /* Description.swift in Sources */,
 				32D5C4D31DB52CBC004FD460 /* Reference.swift in Sources */,
