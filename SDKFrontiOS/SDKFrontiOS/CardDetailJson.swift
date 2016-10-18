@@ -17,10 +17,12 @@ public class CardDetailJson : BaseCardDetailBuilder{
      
      - parameter styleConfig: This is optional, by default is nil. If the user wants a style for the CardDetail need to pass a json.
      
+     - parameter customValidator: This is optional, by default is nil. If the user wants a custom module for the CardDetail need to pass a json with the kind of the module he wants and the information that module needs.
+     
      - returns: self
      */
-    override init( styleConfig : JSON? = nil) {
-        super.init(styleConfig: styleConfig);
+    override init( styleConfig : JSON? = nil, customValidator : JSON? = nil) {
+        super.init(styleConfig: styleConfig, customValidator : customValidator);
     }
     
     // MARK: Public Methods
@@ -33,28 +35,52 @@ public class CardDetailJson : BaseCardDetailBuilder{
      */
     public func loadDataConfig(json : JSON) -> CardDetailJson{
         
-        // TODO: need to build the dictSections with this json
+        
+        for section in json["sections"].arrayValue{
+            let configSection = ConfigSection();
+            for module in section["modules"].arrayValue{
+                self.addModuleType(module, configSection: configSection);
+            }
+            // This check if already exist the section, if exist don't do nothing
+            if(self.dictSections[section["title"].stringValue] == nil){
+                self.dictSections[section["title"].stringValue] = configSection;
+            }
+            // This is to get the main key
+            if(section["main"] != nil && section["main"].boolValue && self.mainKeySection == nil){
+                self.mainKeySection = section["title"].stringValue;
+            }
+        }
         return self;
     }
     
-    /*class func GetCarruselConfigLocal(){
-        ServicesManager.sharedInstance.getLocal({ (data) -> Void in
-            
-            if(UIApplication.sharedApplication().applicationState == UIApplicationState.Active){
-                
-                if (data != nil) {
-                    let json = JSON(data: data!);
-                    completion(data: json);
-                    
-                } else {
-                    completion(data: nil);
+    // MARK: Private Methods
+    
+    /**
+     This method check the type of module the user wants and add to ConfigSection.
+     
+     - parameter module:        The json with the type of module the user wants.
+     - parameter configSection: The object ConfigSection to add the modules.
+     */
+    private func addModuleType(module : JSON, configSection : ConfigSection){
+        if(module["type"] != nil){
+            let moduleName = module["type"].stringValue;
+            if  let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String {
+                if(NSClassFromString("\(appName).\(moduleName)") as? NSObject.Type != nil){
+                    var targets : [Target]?;
+                    if (moduleName == "NavigationModule" || moduleName == "TabModule") {
+                        for target in module["targets"].arrayValue{
+                            if(targets == nil){
+                                targets = [Target]();
+                            }
+                            if(target["section_id"] != nil && target["text"] != nil){
+                                let _target = Target(sectionId: target["section_id"].stringValue, text: target["text"].stringValue);
+                                targets?.append(_target);
+                            }
+                        }
+                    }
+                    configSection.addModule(moduleName, targets: targets);
                 }
             }
-            else{
-                NSLog("RESPONSE OF A SERVICE IN BACKGROUND BLOKED");
-                completion(data: nil);
-            }
-            
-            }, fileName: "CarruselConfig_v2");
-    }*/
+        }
+    }
 }
