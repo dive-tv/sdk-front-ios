@@ -269,6 +269,30 @@
 		A15165251D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
 		A15165261D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
 		A15165271D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
+		A1917E791DB63D430035CA2C /* VerticalListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E771DB63D430035CA2C /* VerticalListModule.swift */; };
+		A1917E7A1DB63D430035CA2C /* VerticalListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E771DB63D430035CA2C /* VerticalListModule.swift */; };
+		A1917E7B1DB63D430035CA2C /* VerticalListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E771DB63D430035CA2C /* VerticalListModule.swift */; };
+		A1917E7C1DB63D430035CA2C /* VerticalListModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E781DB63D430035CA2C /* VerticalListModule.xib */; };
+		A1917E7D1DB63D430035CA2C /* VerticalListModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E781DB63D430035CA2C /* VerticalListModule.xib */; };
+		A1917E7E1DB63D430035CA2C /* VerticalListModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E781DB63D430035CA2C /* VerticalListModule.xib */; };
+		A1917E811DB643470035CA2C /* Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E7F1DB643470035CA2C /* Awards.swift */; };
+		A1917E821DB643470035CA2C /* Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E7F1DB643470035CA2C /* Awards.swift */; };
+		A1917E831DB643470035CA2C /* Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E7F1DB643470035CA2C /* Awards.swift */; };
+		A1917E841DB643470035CA2C /* Awards.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E801DB643470035CA2C /* Awards.xib */; };
+		A1917E851DB643470035CA2C /* Awards.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E801DB643470035CA2C /* Awards.xib */; };
+		A1917E861DB643470035CA2C /* Awards.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E801DB643470035CA2C /* Awards.xib */; };
+		A1917E891DB6438A0035CA2C /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E871DB6438A0035CA2C /* Songs.swift */; };
+		A1917E8A1DB6438A0035CA2C /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E871DB6438A0035CA2C /* Songs.swift */; };
+		A1917E8B1DB6438A0035CA2C /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E871DB6438A0035CA2C /* Songs.swift */; };
+		A1917E8C1DB6438A0035CA2C /* Songs.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E881DB6438A0035CA2C /* Songs.xib */; };
+		A1917E8D1DB6438A0035CA2C /* Songs.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E881DB6438A0035CA2C /* Songs.xib */; };
+		A1917E8E1DB6438A0035CA2C /* Songs.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E881DB6438A0035CA2C /* Songs.xib */; };
+		A1917E911DB644560035CA2C /* MusicShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E8F1DB644560035CA2C /* MusicShops.swift */; };
+		A1917E921DB644560035CA2C /* MusicShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E8F1DB644560035CA2C /* MusicShops.swift */; };
+		A1917E931DB644560035CA2C /* MusicShops.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E8F1DB644560035CA2C /* MusicShops.swift */; };
+		A1917E941DB644560035CA2C /* MusicShops.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E901DB644560035CA2C /* MusicShops.xib */; };
+		A1917E951DB644560035CA2C /* MusicShops.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E901DB644560035CA2C /* MusicShops.xib */; };
+		A1917E961DB644560035CA2C /* MusicShops.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1917E901DB644560035CA2C /* MusicShops.xib */; };
 		A1CCBDCD1DB3680000A0DAE0 /* HorizontalListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBDCB1DB3680000A0DAE0 /* HorizontalListModule.swift */; };
 		A1CCBDCE1DB3680000A0DAE0 /* HorizontalListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBDCB1DB3680000A0DAE0 /* HorizontalListModule.swift */; };
 		A1CCBDCF1DB3680000A0DAE0 /* HorizontalListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBDCB1DB3680000A0DAE0 /* HorizontalListModule.swift */; };
@@ -497,6 +521,30 @@
 		A1CCBF041DB52DC400A0DAE0 /* MovieHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF001DB52DC400A0DAE0 /* MovieHeader.xib */; };
 		A1CCBF051DB52DC400A0DAE0 /* MovieHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF001DB52DC400A0DAE0 /* MovieHeader.xib */; };
 		A1CCBF061DB52DC400A0DAE0 /* MovieHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF001DB52DC400A0DAE0 /* MovieHeader.xib */; };
+		A1CCBF091DB61C2400A0DAE0 /* MainCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF071DB61C2400A0DAE0 /* MainCast.swift */; };
+		A1CCBF0A1DB61C2400A0DAE0 /* MainCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF071DB61C2400A0DAE0 /* MainCast.swift */; };
+		A1CCBF0B1DB61C2400A0DAE0 /* MainCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF071DB61C2400A0DAE0 /* MainCast.swift */; };
+		A1CCBF0C1DB61C2400A0DAE0 /* MainCast.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF081DB61C2400A0DAE0 /* MainCast.xib */; };
+		A1CCBF0D1DB61C2400A0DAE0 /* MainCast.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF081DB61C2400A0DAE0 /* MainCast.xib */; };
+		A1CCBF0E1DB61C2400A0DAE0 /* MainCast.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF081DB61C2400A0DAE0 /* MainCast.xib */; };
+		A1CCBF111DB61E2500A0DAE0 /* InterpretedBySingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF0F1DB61E2500A0DAE0 /* InterpretedBySingle.swift */; };
+		A1CCBF121DB61E2500A0DAE0 /* InterpretedBySingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF0F1DB61E2500A0DAE0 /* InterpretedBySingle.swift */; };
+		A1CCBF131DB61E2500A0DAE0 /* InterpretedBySingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF0F1DB61E2500A0DAE0 /* InterpretedBySingle.swift */; };
+		A1CCBF141DB61E2500A0DAE0 /* InterpretedBySingle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF101DB61E2500A0DAE0 /* InterpretedBySingle.xib */; };
+		A1CCBF151DB61E2500A0DAE0 /* InterpretedBySingle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF101DB61E2500A0DAE0 /* InterpretedBySingle.xib */; };
+		A1CCBF161DB61E2500A0DAE0 /* InterpretedBySingle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF101DB61E2500A0DAE0 /* InterpretedBySingle.xib */; };
+		A1CCBF191DB61E3E00A0DAE0 /* AppearsInSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF171DB61E3E00A0DAE0 /* AppearsInSingle.swift */; };
+		A1CCBF1A1DB61E3E00A0DAE0 /* AppearsInSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF171DB61E3E00A0DAE0 /* AppearsInSingle.swift */; };
+		A1CCBF1B1DB61E3E00A0DAE0 /* AppearsInSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF171DB61E3E00A0DAE0 /* AppearsInSingle.swift */; };
+		A1CCBF1C1DB61E3E00A0DAE0 /* AppearsInSingle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF181DB61E3E00A0DAE0 /* AppearsInSingle.xib */; };
+		A1CCBF1D1DB61E3E00A0DAE0 /* AppearsInSingle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF181DB61E3E00A0DAE0 /* AppearsInSingle.xib */; };
+		A1CCBF1E1DB61E3E00A0DAE0 /* AppearsInSingle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF181DB61E3E00A0DAE0 /* AppearsInSingle.xib */; };
+		A1CCBF211DB626F900A0DAE0 /* SingleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF1F1DB626F900A0DAE0 /* SingleModule.swift */; };
+		A1CCBF221DB626F900A0DAE0 /* SingleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF1F1DB626F900A0DAE0 /* SingleModule.swift */; };
+		A1CCBF231DB626F900A0DAE0 /* SingleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCBF1F1DB626F900A0DAE0 /* SingleModule.swift */; };
+		A1CCBF241DB626F900A0DAE0 /* SingleModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF201DB626F900A0DAE0 /* SingleModule.xib */; };
+		A1CCBF251DB626F900A0DAE0 /* SingleModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF201DB626F900A0DAE0 /* SingleModule.xib */; };
+		A1CCBF261DB626F900A0DAE0 /* SingleModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF201DB626F900A0DAE0 /* SingleModule.xib */; };
 		B7A2F8F6C78E941A0C77973A /* Pods_SDKFrontiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA2EA1464E2AC606C5E483C /* Pods_SDKFrontiOSUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -621,6 +669,14 @@
 		A151650D1D89852E008AEA14 /* CardDetailJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailJson.swift; sourceTree = "<group>"; };
 		A151650E1D89852E008AEA14 /* ConfigSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigSection.swift; sourceTree = "<group>"; };
 		A151650F1D89852E008AEA14 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		A1917E771DB63D430035CA2C /* VerticalListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalListModule.swift; sourceTree = "<group>"; };
+		A1917E781DB63D430035CA2C /* VerticalListModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerticalListModule.xib; sourceTree = "<group>"; };
+		A1917E7F1DB643470035CA2C /* Awards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Awards.swift; sourceTree = "<group>"; };
+		A1917E801DB643470035CA2C /* Awards.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Awards.xib; sourceTree = "<group>"; };
+		A1917E871DB6438A0035CA2C /* Songs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
+		A1917E881DB6438A0035CA2C /* Songs.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Songs.xib; sourceTree = "<group>"; };
+		A1917E8F1DB644560035CA2C /* MusicShops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicShops.swift; sourceTree = "<group>"; };
+		A1917E901DB644560035CA2C /* MusicShops.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicShops.xib; sourceTree = "<group>"; };
 		A1CCBDCB1DB3680000A0DAE0 /* HorizontalListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalListModule.swift; sourceTree = "<group>"; };
 		A1CCBDCC1DB3680000A0DAE0 /* HorizontalListModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HorizontalListModule.xib; sourceTree = "<group>"; };
 		A1CCBDD51DB36D6600A0DAE0 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
@@ -697,6 +753,14 @@
 		A1CCBEF81DB5299C00A0DAE0 /* ButtonHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonHeader.xib; sourceTree = "<group>"; };
 		A1CCBEFF1DB52DC400A0DAE0 /* MovieHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieHeader.swift; sourceTree = "<group>"; };
 		A1CCBF001DB52DC400A0DAE0 /* MovieHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieHeader.xib; sourceTree = "<group>"; };
+		A1CCBF071DB61C2400A0DAE0 /* MainCast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCast.swift; sourceTree = "<group>"; };
+		A1CCBF081DB61C2400A0DAE0 /* MainCast.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCast.xib; sourceTree = "<group>"; };
+		A1CCBF0F1DB61E2500A0DAE0 /* InterpretedBySingle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpretedBySingle.swift; sourceTree = "<group>"; };
+		A1CCBF101DB61E2500A0DAE0 /* InterpretedBySingle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InterpretedBySingle.xib; sourceTree = "<group>"; };
+		A1CCBF171DB61E3E00A0DAE0 /* AppearsInSingle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearsInSingle.swift; sourceTree = "<group>"; };
+		A1CCBF181DB61E3E00A0DAE0 /* AppearsInSingle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppearsInSingle.xib; sourceTree = "<group>"; };
+		A1CCBF1F1DB626F900A0DAE0 /* SingleModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleModule.swift; sourceTree = "<group>"; };
+		A1CCBF201DB626F900A0DAE0 /* SingleModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleModule.xib; sourceTree = "<group>"; };
 		AEABBF57AAD4050B83453C21 /* Pods-SDKFrontiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOSUITests/Pods-SDKFrontiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8772F96BE5E1DAD5227F167 /* Pods-SDKFrontiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOS/Pods-SDKFrontiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1007,6 +1071,22 @@
 				32D5C4E01DB52D4A004FD460 /* OverviewNavigation.xib */,
 				32D5C4E71DB52E94004FD460 /* MovieHeaderSmall.swift */,
 				32D5C4E81DB52E94004FD460 /* MovieHeaderSmall.xib */,
+				A1CCBF071DB61C2400A0DAE0 /* MainCast.swift */,
+				A1CCBF081DB61C2400A0DAE0 /* MainCast.xib */,
+				A1CCBF0F1DB61E2500A0DAE0 /* InterpretedBySingle.swift */,
+				A1CCBF101DB61E2500A0DAE0 /* InterpretedBySingle.xib */,
+				A1CCBF171DB61E3E00A0DAE0 /* AppearsInSingle.swift */,
+				A1CCBF181DB61E3E00A0DAE0 /* AppearsInSingle.xib */,
+				A1CCBF1F1DB626F900A0DAE0 /* SingleModule.swift */,
+				A1CCBF201DB626F900A0DAE0 /* SingleModule.xib */,
+				A1917E771DB63D430035CA2C /* VerticalListModule.swift */,
+				A1917E781DB63D430035CA2C /* VerticalListModule.xib */,
+				A1917E7F1DB643470035CA2C /* Awards.swift */,
+				A1917E801DB643470035CA2C /* Awards.xib */,
+				A1917E871DB6438A0035CA2C /* Songs.swift */,
+				A1917E881DB6438A0035CA2C /* Songs.xib */,
+				A1917E8F1DB644560035CA2C /* MusicShops.swift */,
+				A1917E901DB644560035CA2C /* MusicShops.xib */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -1218,8 +1298,11 @@
 			files = (
 				A1CCBE6B1DB3954D00A0DAE0 /* RectangularImageItemView.xib in Resources */,
 				A1CCBEEC1DB5208E00A0DAE0 /* GalleryCollectionViewCell.xib in Resources */,
+				A1917E841DB643470035CA2C /* Awards.xib in Resources */,
 				A1CCBDF91DB36D6600A0DAE0 /* Lato-Heavy.ttf in Resources */,
+				A1917E8C1DB6438A0035CA2C /* Songs.xib in Resources */,
 				328E27781D9AB43400FF439A /* CuriosityView.xib in Resources */,
+				A1CCBF241DB626F900A0DAE0 /* SingleModule.xib in Resources */,
 				A1CCBE9B1DB4C67C00A0DAE0 /* SoundTrackView.xib in Resources */,
 				6D262B8E1DA9641700779B57 /* RatingModule.xib in Resources */,
 				A1CCBE021DB36D6600A0DAE0 /* Lato-Light.ttf in Resources */,
@@ -1235,6 +1318,7 @@
 				A1CCBE631DB393CA00A0DAE0 /* Filmography.xib in Resources */,
 				A1CCBE0E1DB36D6600A0DAE0 /* Lato-Regular.ttf in Resources */,
 				A1CCBE0B1DB36D6600A0DAE0 /* Lato-MediumItalic.ttf in Resources */,
+				A1917E941DB644560035CA2C /* MusicShops.xib in Resources */,
 				A1CCBE141DB36D6600A0DAE0 /* Lato-SemiboldItalic.ttf in Resources */,
 				A1CCBDED1DB36D6600A0DAE0 /* Lato-Bold.ttf in Resources */,
 				32D5C4C41DB52C62004FD460 /* Biography.xib in Resources */,
@@ -1268,12 +1352,16 @@
 				A1CCBE8B1DB4B96F00A0DAE0 /* ShopView.xib in Resources */,
 				A1CCBE5B1DB3938800A0DAE0 /* AppearsInLocation.xib in Resources */,
 				329670F71D9A84DB003674D8 /* CarouselCell.xib in Resources */,
+				A1917E7C1DB63D430035CA2C /* VerticalListModule.xib in Resources */,
 				6D262B8F1DA9641700779B57 /* Section.xib in Resources */,
+				A1CCBF1C1DB61E3E00A0DAE0 /* AppearsInSingle.xib in Resources */,
+				A1CCBF0C1DB61C2400A0DAE0 /* MainCast.xib in Resources */,
 				A1CCBE931DB4C53800A0DAE0 /* SoundTrack.xib in Resources */,
 				A15164C21D898402008AEA14 /* Assets.xcassets in Resources */,
 				A1CCBDD01DB3680000A0DAE0 /* HorizontalListModule.xib in Resources */,
 				6D262B931DA9641700779B57 /* TabModule.xib in Resources */,
 				A1CCBDF31DB36D6600A0DAE0 /* Lato-Hairline.ttf in Resources */,
+				A1CCBF141DB61E2500A0DAE0 /* InterpretedBySingle.xib in Resources */,
 				A1CCBDF61DB36D6600A0DAE0 /* Lato-HairlineItalic.ttf in Resources */,
 				A1CCBE7B1DB4B4E900A0DAE0 /* SeasonsView.xib in Resources */,
 				32D5C4E41DB52D4A004FD460 /* OverviewNavigation.xib in Resources */,
@@ -1321,6 +1409,8 @@
 				A1CCBDF11DB36D6600A0DAE0 /* Lato-BoldItalic.ttf in Resources */,
 				A1CCBEAC1DB4CA5200A0DAE0 /* CastView.xib in Resources */,
 				32D5C4941DB50C53004FD460 /* TwoColsModule.xib in Resources */,
+				A1917E951DB644560035CA2C /* MusicShops.xib in Resources */,
+				A1CCBF0D1DB61C2400A0DAE0 /* MainCast.xib in Resources */,
 				A1CCBEBC1DB4D96200A0DAE0 /* CuriositiesView.xib in Resources */,
 				6D9956931DB0FA2A007A8440 /* AwardModule.xib in Resources */,
 				A1CCBDEB1DB36D6600A0DAE0 /* Lato-BlackItalic.ttf in Resources */,
@@ -1335,12 +1425,15 @@
 				A1CCBE091DB36D6600A0DAE0 /* Lato-Medium.ttf in Resources */,
 				32D5C4ED1DB52E94004FD460 /* MovieHeaderSmall.xib in Resources */,
 				A1CCBEB41DB4D8E000A0DAE0 /* Curiosities.xib in Resources */,
+				A1917E8D1DB6438A0035CA2C /* Songs.xib in Resources */,
 				A1CCBE7C1DB4B4E900A0DAE0 /* SeasonsView.xib in Resources */,
 				A1CCBE6C1DB3954D00A0DAE0 /* RectangularImageItemView.xib in Resources */,
 				6D99568F1DB0FA2A007A8440 /* DirectorModule.xib in Resources */,
 				A1CCBDE81DB36D6600A0DAE0 /* Lato-Black.ttf in Resources */,
 				A1CCBE061DB36D6600A0DAE0 /* Lato-LightItalic.ttf in Resources */,
+				A1CCBF251DB626F900A0DAE0 /* SingleModule.xib in Resources */,
 				A1CCBDEE1DB36D6600A0DAE0 /* Lato-Bold.ttf in Resources */,
+				A1917E7D1DB63D430035CA2C /* VerticalListModule.xib in Resources */,
 				32D5C4C51DB52C62004FD460 /* Biography.xib in Resources */,
 				A1CCBDFD1DB36D6600A0DAE0 /* Lato-HeavyItalic.ttf in Resources */,
 				A1CCBE001DB36D6600A0DAE0 /* Lato-Italic.ttf in Resources */,
@@ -1354,6 +1447,7 @@
 				32D5C4DD1DB52CD2004FD460 /* Sinopsis.xib in Resources */,
 				32D5C4E51DB52D4A004FD460 /* OverviewNavigation.xib in Resources */,
 				A1CCBECC1DB4FC8900A0DAE0 /* AppearsInView.xib in Resources */,
+				A1917E851DB643470035CA2C /* Awards.xib in Resources */,
 				6D99568E1DB0FA2A007A8440 /* SynopsisModule.xib in Resources */,
 				A1CCBE341DB390CC00A0DAE0 /* InterpretedBy.xib in Resources */,
 				6D262BAF1DA965A400779B57 /* config1.json in Resources */,
@@ -1362,8 +1456,10 @@
 				A15165061D89851C008AEA14 /* PhotoModule.xib in Resources */,
 				32D5C4AD1DB50FD3004FD460 /* TwoColsCell.xib in Resources */,
 				A1CCBE841DB4B7F200A0DAE0 /* Shop.xib in Resources */,
+				A1CCBF151DB61E2500A0DAE0 /* InterpretedBySingle.xib in Resources */,
 				A1CCBDF41DB36D6600A0DAE0 /* Lato-Hairline.ttf in Resources */,
 				A1CCBE1B1DB36D6600A0DAE0 /* Lato-ThinItalic.ttf in Resources */,
+				A1CCBF1D1DB61E3E00A0DAE0 /* AppearsInSingle.xib in Resources */,
 				6D9956911DB0FA2A007A8440 /* ProductModule.xib in Resources */,
 				329670CE1D9A70DD003674D8 /* Carousel.xib in Resources */,
 				A1CCBE441DB3916D00A0DAE0 /* PlacesShown.xib in Resources */,
@@ -1406,6 +1502,8 @@
 				A1CCBDF21DB36D6600A0DAE0 /* Lato-BoldItalic.ttf in Resources */,
 				A1CCBEAD1DB4CA5200A0DAE0 /* CastView.xib in Resources */,
 				32D5C4951DB50C53004FD460 /* TwoColsModule.xib in Resources */,
+				A1917E961DB644560035CA2C /* MusicShops.xib in Resources */,
+				A1CCBF0E1DB61C2400A0DAE0 /* MainCast.xib in Resources */,
 				A1CCBEBD1DB4D96200A0DAE0 /* CuriositiesView.xib in Resources */,
 				6D99569A1DB0FA2B007A8440 /* AwardModule.xib in Resources */,
 				A1CCBDEC1DB36D6600A0DAE0 /* Lato-BlackItalic.ttf in Resources */,
@@ -1420,12 +1518,15 @@
 				A1CCBE0A1DB36D6600A0DAE0 /* Lato-Medium.ttf in Resources */,
 				32D5C4EE1DB52E94004FD460 /* MovieHeaderSmall.xib in Resources */,
 				A1CCBEB51DB4D8E000A0DAE0 /* Curiosities.xib in Resources */,
+				A1917E8E1DB6438A0035CA2C /* Songs.xib in Resources */,
 				A1CCBE7D1DB4B4E900A0DAE0 /* SeasonsView.xib in Resources */,
 				A1CCBE6D1DB3954D00A0DAE0 /* RectangularImageItemView.xib in Resources */,
 				6D9956961DB0FA2B007A8440 /* DirectorModule.xib in Resources */,
 				A1CCBDE91DB36D6600A0DAE0 /* Lato-Black.ttf in Resources */,
 				A1CCBE071DB36D6600A0DAE0 /* Lato-LightItalic.ttf in Resources */,
+				A1CCBF261DB626F900A0DAE0 /* SingleModule.xib in Resources */,
 				A1CCBDEF1DB36D6600A0DAE0 /* Lato-Bold.ttf in Resources */,
+				A1917E7E1DB63D430035CA2C /* VerticalListModule.xib in Resources */,
 				32D5C4C61DB52C62004FD460 /* Biography.xib in Resources */,
 				A1CCBDFE1DB36D6600A0DAE0 /* Lato-HeavyItalic.ttf in Resources */,
 				A1CCBE011DB36D6600A0DAE0 /* Lato-Italic.ttf in Resources */,
@@ -1439,6 +1540,7 @@
 				32D5C4DE1DB52CD2004FD460 /* Sinopsis.xib in Resources */,
 				32D5C4E61DB52D4A004FD460 /* OverviewNavigation.xib in Resources */,
 				A1CCBECD1DB4FC8900A0DAE0 /* AppearsInView.xib in Resources */,
+				A1917E861DB643470035CA2C /* Awards.xib in Resources */,
 				6D9956951DB0FA2B007A8440 /* SynopsisModule.xib in Resources */,
 				A1CCBE351DB390CC00A0DAE0 /* InterpretedBy.xib in Resources */,
 				6D262BB01DA965A500779B57 /* config1.json in Resources */,
@@ -1447,8 +1549,10 @@
 				A15165071D89851C008AEA14 /* PhotoModule.xib in Resources */,
 				32D5C4AE1DB50FD3004FD460 /* TwoColsCell.xib in Resources */,
 				A1CCBE851DB4B7F200A0DAE0 /* Shop.xib in Resources */,
+				A1CCBF161DB61E2500A0DAE0 /* InterpretedBySingle.xib in Resources */,
 				A1CCBDF51DB36D6600A0DAE0 /* Lato-Hairline.ttf in Resources */,
 				A1CCBE1C1DB36D6600A0DAE0 /* Lato-ThinItalic.ttf in Resources */,
+				A1CCBF1E1DB61E3E00A0DAE0 /* AppearsInSingle.xib in Resources */,
 				6D9956981DB0FA2B007A8440 /* ProductModule.xib in Resources */,
 				329670CF1D9A70DD003674D8 /* Carousel.xib in Resources */,
 				A1CCBE451DB3916D00A0DAE0 /* PlacesShown.xib in Resources */,
@@ -1602,6 +1706,7 @@
 			files = (
 				A1CCBEE01DB51E4000A0DAE0 /* Gallery.swift in Sources */,
 				A1CCBE301DB390CC00A0DAE0 /* InterpretedBy.swift in Sources */,
+				A1917E911DB644560035CA2C /* MusicShops.swift in Sources */,
 				A15165101D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				32D5C4B11DB514B9004FD460 /* TextModule.swift in Sources */,
 				A1CCBEB01DB4D8E000A0DAE0 /* Curiosities.swift in Sources */,
@@ -1633,11 +1738,15 @@
 				A1CCBED01DB50C8000A0DAE0 /* FullCuriosity.swift in Sources */,
 				32D5C4A91DB50FD3004FD460 /* TwoColsCell.swift in Sources */,
 				6D262B901DA9641700779B57 /* SynopsisModule.swift in Sources */,
+				A1CCBF091DB61C2400A0DAE0 /* MainCast.swift in Sources */,
 				A15165131D89852E008AEA14 /* CardDetailData.swift in Sources */,
+				A1CCBF111DB61E2500A0DAE0 /* InterpretedBySingle.swift in Sources */,
 				A15165021D89851C008AEA14 /* PhotoModule.swift in Sources */,
+				A1CCBF191DB61E3E00A0DAE0 /* AppearsInSingle.swift in Sources */,
 				6D9956A71DB13344007A8440 /* MiniCardData.swift in Sources */,
 				328E27741D9AB42200FF439A /* CuriosityView.swift in Sources */,
 				32D5C4C11DB52C62004FD460 /* Biography.swift in Sources */,
+				A1CCBF211DB626F900A0DAE0 /* SingleModule.swift in Sources */,
 				6D262B7F1DA9641700779B57 /* AwardModule.swift in Sources */,
 				32D5C4E11DB52D4A004FD460 /* OverviewNavigation.swift in Sources */,
 				A151651F1D89852E008AEA14 /* CardDetailJson.swift in Sources */,
@@ -1656,7 +1765,9 @@
 				A1CCBE261DB38C4C00A0DAE0 /* SquareImageItemView.swift in Sources */,
 				A1CCBE871DB4B90C00A0DAE0 /* ShopView.swift in Sources */,
 				328EAC1B1D9BBF3800A4042F /* CarouselViewType.swift in Sources */,
+				A1917E891DB6438A0035CA2C /* Songs.swift in Sources */,
 				A1CCBE581DB3938800A0DAE0 /* AppearsInLocation.swift in Sources */,
+				A1917E811DB643470035CA2C /* Awards.swift in Sources */,
 				6D9956801DAFA1B2007A8440 /* CardDetailErrors.swift in Sources */,
 				A1CCBE971DB4C66C00A0DAE0 /* SoundTrackView.swift in Sources */,
 				A15165191D89852E008AEA14 /* CardDetail.swift in Sources */,
@@ -1683,6 +1794,7 @@
 				A15165161D89852E008AEA14 /* CardDataCarousel.swift in Sources */,
 				A1CCBE481DB391AB00A0DAE0 /* Vehicles.swift in Sources */,
 				6D763C011D916604007B3E6C /* CarouselCard.swift in Sources */,
+				A1917E791DB63D430035CA2C /* VerticalListModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1691,6 +1803,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1CCBE781DB4B4D400A0DAE0 /* SeasonsView.swift in Sources */,
+				A1917E821DB643470035CA2C /* Awards.swift in Sources */,
 				A15165261D89852E008AEA14 /* Section.swift in Sources */,
 				6D99569B1DB0FA40007A8440 /* ViewController.swift in Sources */,
 				A1CCBE981DB4C66C00A0DAE0 /* SoundTrackView.swift in Sources */,
@@ -1717,6 +1830,7 @@
 				A1CCBEA11DB4C9E400A0DAE0 /* Cast.swift in Sources */,
 				329670CB1D9A70DD003674D8 /* Carousel.swift in Sources */,
 				32D5C4EA1DB52E94004FD460 /* MovieHeaderSmall.swift in Sources */,
+				A1CCBF1A1DB61E3E00A0DAE0 /* AppearsInSingle.swift in Sources */,
 				32D5C4E21DB52D4A004FD460 /* OverviewNavigation.swift in Sources */,
 				32D5C4CA1DB52C93004FD460 /* Description.swift in Sources */,
 				32D5C4D21DB52CBC004FD460 /* Reference.swift in Sources */,
@@ -1731,6 +1845,7 @@
 				A15165031D89851C008AEA14 /* PhotoModule.swift in Sources */,
 				6D9956A81DB13344007A8440 /* MiniCardData.swift in Sources */,
 				A151651D1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
+				A1CCBF121DB61E2500A0DAE0 /* InterpretedBySingle.swift in Sources */,
 				6D262B9B1DA9654000779B57 /* Target.swift in Sources */,
 				6D262BA31DA9656600779B57 /* DirectorModule.swift in Sources */,
 				A1CCBEFA1DB5299C00A0DAE0 /* ButtonHeader.swift in Sources */,
@@ -1739,6 +1854,7 @@
 				A1CCBE591DB3938800A0DAE0 /* AppearsInLocation.swift in Sources */,
 				A15165111D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165141D89852E008AEA14 /* CardDetailData.swift in Sources */,
+				A1917E8A1DB6438A0035CA2C /* Songs.swift in Sources */,
 				A1CCBF021DB52DC400A0DAE0 /* MovieHeader.swift in Sources */,
 				6D262B9F1DA9655B00779B57 /* SynopsisModule.swift in Sources */,
 				A1CCBDCE1DB3680000A0DAE0 /* HorizontalListModule.swift in Sources */,
@@ -1749,12 +1865,16 @@
 				A1CCBE201DB3729300A0DAE0 /* SquareImageItems.swift in Sources */,
 				6DE011DA1D9D2F6800279CDA /* GrouppableTree.swift in Sources */,
 				6D9956811DAFA1B2007A8440 /* CardDetailErrors.swift in Sources */,
+				A1CCBF221DB626F900A0DAE0 /* SingleModule.swift in Sources */,
 				32D5C4DA1DB52CD2004FD460 /* Sinopsis.swift in Sources */,
 				6D763C061D916617007B3E6C /* RelationData.swift in Sources */,
 				6D262BAB1DA9657D00779B57 /* AwardModule.swift in Sources */,
 				A1CCBE611DB393CA00A0DAE0 /* Filmography.swift in Sources */,
+				A1CCBF0A1DB61C2400A0DAE0 /* MainCast.swift in Sources */,
+				A1917E921DB644560035CA2C /* MusicShops.swift in Sources */,
 				A1CCBEB81DB4D95200A0DAE0 /* CuriositiesView.swift in Sources */,
 				A1CCBE511DB3933800A0DAE0 /* RectangularImageItems.swift in Sources */,
+				A1917E7A1DB63D430035CA2C /* VerticalListModule.swift in Sources */,
 				32D5C4911DB50C53004FD460 /* TwoColsModule.swift in Sources */,
 				A1CCBEA81DB4CA4500A0DAE0 /* CastView.swift in Sources */,
 				328E27751D9AB42200FF439A /* CuriosityView.swift in Sources */,
@@ -1782,6 +1902,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1CCBE791DB4B4D400A0DAE0 /* SeasonsView.swift in Sources */,
+				A1917E831DB643470035CA2C /* Awards.swift in Sources */,
 				A15165271D89852E008AEA14 /* Section.swift in Sources */,
 				6D99569C1DB0FA41007A8440 /* ViewController.swift in Sources */,
 				A1CCBE991DB4C66C00A0DAE0 /* SoundTrackView.swift in Sources */,
@@ -1808,6 +1929,7 @@
 				A1CCBEA21DB4C9E400A0DAE0 /* Cast.swift in Sources */,
 				329670CC1D9A70DD003674D8 /* Carousel.swift in Sources */,
 				32D5C4EB1DB52E94004FD460 /* MovieHeaderSmall.swift in Sources */,
+				A1CCBF1B1DB61E3E00A0DAE0 /* AppearsInSingle.swift in Sources */,
 				32D5C4E31DB52D4A004FD460 /* OverviewNavigation.swift in Sources */,
 				32D5C4CB1DB52C93004FD460 /* Description.swift in Sources */,
 				32D5C4D31DB52CBC004FD460 /* Reference.swift in Sources */,
@@ -1822,6 +1944,7 @@
 				A15165041D89851C008AEA14 /* PhotoModule.swift in Sources */,
 				6D9956A91DB13344007A8440 /* MiniCardData.swift in Sources */,
 				A151651E1D89852E008AEA14 /* CardDetailBuilder.swift in Sources */,
+				A1CCBF131DB61E2500A0DAE0 /* InterpretedBySingle.swift in Sources */,
 				6D262B9C1DA9654100779B57 /* Target.swift in Sources */,
 				6D262BA41DA9656700779B57 /* DirectorModule.swift in Sources */,
 				A1CCBEFB1DB5299C00A0DAE0 /* ButtonHeader.swift in Sources */,
@@ -1830,6 +1953,7 @@
 				A1CCBE5A1DB3938800A0DAE0 /* AppearsInLocation.swift in Sources */,
 				A15165121D89852E008AEA14 /* BaseCardDetailBuilder.swift in Sources */,
 				A15165151D89852E008AEA14 /* CardDetailData.swift in Sources */,
+				A1917E8B1DB6438A0035CA2C /* Songs.swift in Sources */,
 				A1CCBF031DB52DC400A0DAE0 /* MovieHeader.swift in Sources */,
 				6D262BA01DA9655B00779B57 /* SynopsisModule.swift in Sources */,
 				A1CCBDCF1DB3680000A0DAE0 /* HorizontalListModule.swift in Sources */,
@@ -1840,12 +1964,16 @@
 				A1CCBE211DB3729300A0DAE0 /* SquareImageItems.swift in Sources */,
 				6DE011DB1D9D2F6800279CDA /* GrouppableTree.swift in Sources */,
 				6D9956821DAFA1B2007A8440 /* CardDetailErrors.swift in Sources */,
+				A1CCBF231DB626F900A0DAE0 /* SingleModule.swift in Sources */,
 				32D5C4DB1DB52CD2004FD460 /* Sinopsis.swift in Sources */,
 				6D763C071D916617007B3E6C /* RelationData.swift in Sources */,
 				6D262BAC1DA9657D00779B57 /* AwardModule.swift in Sources */,
 				A1CCBE621DB393CA00A0DAE0 /* Filmography.swift in Sources */,
+				A1CCBF0B1DB61C2400A0DAE0 /* MainCast.swift in Sources */,
+				A1917E931DB644560035CA2C /* MusicShops.swift in Sources */,
 				A1CCBEB91DB4D95200A0DAE0 /* CuriositiesView.swift in Sources */,
 				A1CCBE521DB3933800A0DAE0 /* RectangularImageItems.swift in Sources */,
+				A1917E7B1DB63D430035CA2C /* VerticalListModule.swift in Sources */,
 				32D5C4921DB50C53004FD460 /* TwoColsModule.swift in Sources */,
 				A1CCBEA91DB4CA4500A0DAE0 /* CastView.swift in Sources */,
 				328E27761D9AB42200FF439A /* CuriosityView.swift in Sources */,
