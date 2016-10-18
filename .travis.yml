@@ -15,10 +15,10 @@ xcode_workspace: SDKFrontiOS/SDKFrontiOS.xcworkspace
 
 xcode_scheme: SDKFrontiOS
 
-xcode_sdk: iphonesimulator9.3
+xcode_sdk: iphonesimulator10.0
 
 script:
-  - xctool -workspace SDKFrontiOS/SDKFrontiOS.xcworkspace -scheme SDKFrontiOS -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO
+  - xcodebuild -workspace SDKFrontiOS/SDKFrontiOS.xcworkspace -scheme SDKFrontiOS -sdk iphonesimulator10.0
 #  - set -o pipefail && xcodebuild test -workspace SDKFrontiOS/SDKFrontiOS.xcworkspace -scheme SDKFrontiOS -sdk iphonesimulator9.3 | xcpretty
 
 after_success:
