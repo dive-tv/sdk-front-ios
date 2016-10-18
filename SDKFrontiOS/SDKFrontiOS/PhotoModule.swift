@@ -21,4 +21,9 @@ public class PhotoModule: Module {
         // Configure the view for the selected state
     }
     
+    override func setCardDetailData(_configModule : ConfigModule, _cardDetailData: CardDetailData) {
+        super.setCardDetailData(_configModule, _cardDetailData: _cardDetailData);
+    }
+    
+    
 }

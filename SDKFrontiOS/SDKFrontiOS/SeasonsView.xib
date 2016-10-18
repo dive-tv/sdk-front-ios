@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SeasonsView" customModule="SDKFrontiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="110" height="221"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c8O-Io-jq2">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="teH-om-4je"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0g-jF-ZtB">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwe-If-w4Q">
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyn-ky-jx7">
+                            <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Dwe-If-w4Q" firstAttribute="top" secondItem="Q0g-jF-ZtB" secondAttribute="top" constant="12" id="00W-zS-JMd"/>
+                        <constraint firstAttribute="trailing" secondItem="Dwe-If-w4Q" secondAttribute="trailing" constant="10" id="KcA-Jy-oJt"/>
+                        <constraint firstAttribute="trailing" secondItem="Cyn-ky-jx7" secondAttribute="trailing" constant="10" id="eSL-Ga-6pr"/>
+                        <constraint firstItem="Dwe-If-w4Q" firstAttribute="leading" secondItem="Q0g-jF-ZtB" secondAttribute="leading" constant="10" id="iei-2I-njT"/>
+                        <constraint firstItem="Cyn-ky-jx7" firstAttribute="top" secondItem="Dwe-If-w4Q" secondAttribute="bottom" constant="1" id="jRE-DR-ZyU"/>
+                        <constraint firstItem="Cyn-ky-jx7" firstAttribute="leading" secondItem="Q0g-jF-ZtB" secondAttribute="leading" constant="10" id="rL6-I0-cOE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="c8O-Io-jq2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4Sz-iT-7dn"/>
+                <constraint firstAttribute="trailing" secondItem="c8O-Io-jq2" secondAttribute="trailing" id="IaD-co-fmD"/>
+                <constraint firstItem="Q0g-jF-ZtB" firstAttribute="top" secondItem="c8O-Io-jq2" secondAttribute="bottom" constant="1" id="Msk-ZN-yjn"/>
+                <constraint firstAttribute="bottom" secondItem="Q0g-jF-ZtB" secondAttribute="bottom" id="SoC-fn-dxG"/>
+                <constraint firstItem="Q0g-jF-ZtB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oQw-vI-pKG"/>
+                <constraint firstAttribute="trailing" secondItem="Q0g-jF-ZtB" secondAttribute="trailing" id="qWT-qm-GuV"/>
+                <constraint firstItem="c8O-Io-jq2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vq3-za-Tbm"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageViewSeason" destination="c8O-Io-jq2" id="00D-P1-eKF"/>
+                <outlet property="labelSeason" destination="Cyn-ky-jx7" id="L2p-Te-RLn"/>
+                <outlet property="labelYear" destination="Dwe-If-w4Q" id="IJT-LQ-Rwh"/>
+                <outlet property="viewYearAndSeason" destination="Q0g-jF-ZtB" id="Fl3-GS-Nao"/>
+            </connections>
+        </view>
+    </objects>
+</document>

@@ -6,3 +6,9 @@ use_frameworks!
 target 'SDKFrontiOS' do
 pod 'SwiftyJSON'
 end
+target 'SDKFrontiOSTests' do
+    pod 'SwiftyJSON'
+end
+target 'SDKFrontiOSUITests' do
+    pod 'SwiftyJSON'
+end

@@ -1,0 +1,26 @@
+language: objective-c
+
+osx_image: xcode8
+
+branches:
+  only:
+    - master
+    - develop
+
+env:
+  global:
+  - secure: fuo0Mz2pLFbYB7meu/z7ROcgyvEf7RZKEZa2xmMMrJ445Zc5hTLc4aPnh9NlLo5Y0/PxnJpsP85Bj31rsBouLjviFiYvpL0ZlQPx41NpTVHCbEIG8jVfhsqLcFmTeD+MWbikusp2Y/2VaCc5Zwh+HVpla/XF6K5C4ZqJAImbRcpz8+jdmYMDtgbQKbk80+v/o4bQv2sw68EqsFq2NYWbRVIbiRBapkqiomeZYXW3+8pxKEcXNAjzs4qmRFnbWnXaCIvd+UXpjmFRnlJaJqgL6P41UJ9VnwLvqFSmppbTpZwg6G2yU3JM0t+VYXEHApI3db0LoMJMgOtdNwbp8DX34JUj5Tu/6Z+GscCdTkW4Ee1Fc7J6JGZsIxhdTl0hvO/TNX8GZx8gxJVRwX9jhNh8EOjLjIfnrYsK62gSXscBm9ZFKQ0+SR9tWZUhudI+OBhH9EdIQA/AfKEIe06SMBrqpkA94C4ftYEKh3JaWUpWz5x6Y/OQhQx+XANEuij2Zs8oACmw0SARXl129TprdQjIj/V1Qk29JoULBoUAxrXbeEkFQqGwpDuERFhGRWRyunxC2fAB10eAZhB8f+Wh0vWIfMMYQ9swgNbtmjy0SyX1+6WnBUQt8W0mZJDM8a458mVj5zh23cVIBJm2AVuHHManiutw5S4/jLAf9avqlxkYEqg=
+
+xcode_workspace: SDKFrontiOS/SDKFrontiOS.xcworkspace
+
+xcode_scheme: SDKFrontiOS
+
+xcode_sdk: iphonesimulator9.3
+
+script:
+  - xctool -workspace SDKFrontiOS/SDKFrontiOS.xcworkspace -scheme SDKFrontiOS -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO
+  - set -o pipefail && xcodebuild test -workspace SDKFrontiOS/SDKFrontiOS.xcworkspace -scheme SDKFrontiOS -sdk iphonesimulator9.3 | xcpretty
+
+after_success:
+  - chmod +x .utility/push-doc-to-pages.sh
+  - .utility/push-doc-to-pages.sh
