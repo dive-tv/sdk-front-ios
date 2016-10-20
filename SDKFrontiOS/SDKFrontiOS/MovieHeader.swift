@@ -10,25 +10,28 @@ import UIKit
 
 class MovieHeader: Module {
 
-    @IBOutlet weak var viewBackground : UIView!;
-    @IBOutlet weak var labelTitle : UILabel!;
-    @IBOutlet weak var labelProducer : UILabel!;
-    @IBOutlet weak var labelGenre : UILabel!;
-    @IBOutlet weak var labelTime : UILabel!;
-    @IBOutlet weak var buttonDiveIn : UIButton!;
-    @IBOutlet weak var imageViewSmall : UIImageView!;
-    @IBOutlet weak var imageViewBig : UIImageView!;
-    @IBOutlet weak var heightButtonDiveInConstraint : NSLayoutConstraint!;
+    var movieHeaderView : MovieHeaderView?;
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier);
+        
+        self.movieHeaderView = NSBundle.mainBundle().loadNibNamed("MovieHeaderView", owner: self, options: nil)?[0] as? MovieHeaderView;
+        
+        self.contentView.addSubview(self.movieHeaderView!);
+        self.movieHeaderView?.translatesAutoresizingMaskIntoConstraints = false;
+        
+        let constraintHorizontal = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.movieHeaderView!]);
+        
+        let constraintVertical = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.movieHeaderView!]);
+        
+        
+        self.contentView.addConstraints(constraintHorizontal);
+        self.contentView.addConstraints(constraintVertical);
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder);
     }
     
 }

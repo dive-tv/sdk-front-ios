@@ -10,23 +10,29 @@ import UIKit
 
 class HorizontalListModule: Module {
     
-    @IBOutlet weak var viewBackground : UIView!;
-    @IBOutlet weak var labelModuleTitle : UILabel!;
-    @IBOutlet weak var viewAll : UIView!;
-    @IBOutlet weak var labelAll : UILabel!;
-    @IBOutlet weak var imageViewNext : UIImageView!;
-    @IBOutlet weak var scrollView : UIScrollView!;
-    @IBOutlet weak var heightScrollViewConstraint : NSLayoutConstraint!;
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var horizontalListView : HorizontalListView?;
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier);
+        
+        self.horizontalListView = NSBundle.mainBundle().loadNibNamed("HorizontalListView", owner: self, options: nil)?[0] as? HorizontalListView;
+        
+        self.contentView.addSubview(self.horizontalListView!);
+        self.horizontalListView?.translatesAutoresizingMaskIntoConstraints = false;
+        
+        let constraintHorizontal = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.horizontalListView!]);
+        
+        let constraintVertical = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.horizontalListView!]);
+        
+        
+        self.contentView.addConstraints(constraintHorizontal);
+        self.contentView.addConstraints(constraintVertical);
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder);
     }
+    
     
 }
