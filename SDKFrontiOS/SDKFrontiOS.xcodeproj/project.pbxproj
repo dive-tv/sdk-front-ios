@@ -272,6 +272,12 @@
 		A15165251D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
 		A15165261D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
 		A15165271D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
+		A1718BC61DBA3B74006D9766 /* card_detail_example.json in Resources */ = {isa = PBXBuildFile; fileRef = A1718BC41DBA3B74006D9766 /* card_detail_example.json */; };
+		A1718BC71DBA3B74006D9766 /* card_detail_example.json in Resources */ = {isa = PBXBuildFile; fileRef = A1718BC41DBA3B74006D9766 /* card_detail_example.json */; };
+		A1718BC81DBA3B74006D9766 /* card_detail_example.json in Resources */ = {isa = PBXBuildFile; fileRef = A1718BC41DBA3B74006D9766 /* card_detail_example.json */; };
+		A1718BC91DBA3B74006D9766 /* config2.json in Resources */ = {isa = PBXBuildFile; fileRef = A1718BC51DBA3B74006D9766 /* config2.json */; };
+		A1718BCA1DBA3B74006D9766 /* config2.json in Resources */ = {isa = PBXBuildFile; fileRef = A1718BC51DBA3B74006D9766 /* config2.json */; };
+		A1718BCB1DBA3B74006D9766 /* config2.json in Resources */ = {isa = PBXBuildFile; fileRef = A1718BC51DBA3B74006D9766 /* config2.json */; };
 		A1917E791DB63D430035CA2C /* VerticalListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E771DB63D430035CA2C /* VerticalListModule.swift */; };
 		A1917E7A1DB63D430035CA2C /* VerticalListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E771DB63D430035CA2C /* VerticalListModule.swift */; };
 		A1917E7B1DB63D430035CA2C /* VerticalListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1917E771DB63D430035CA2C /* VerticalListModule.swift */; };
@@ -697,6 +703,8 @@
 		A151650D1D89852E008AEA14 /* CardDetailJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailJson.swift; sourceTree = "<group>"; };
 		A151650E1D89852E008AEA14 /* ConfigSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigSection.swift; sourceTree = "<group>"; };
 		A151650F1D89852E008AEA14 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		A1718BC41DBA3B74006D9766 /* card_detail_example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = card_detail_example.json; sourceTree = "<group>"; };
+		A1718BC51DBA3B74006D9766 /* config2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config2.json; sourceTree = "<group>"; };
 		A1917E771DB63D430035CA2C /* VerticalListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalListModule.swift; sourceTree = "<group>"; };
 		A1917E7F1DB643470035CA2C /* Awards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Awards.swift; sourceTree = "<group>"; };
 		A1917E871DB6438A0035CA2C /* Songs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
@@ -832,6 +840,8 @@
 		3258C85A1D9D11A300D61062 /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				A1718BC41DBA3B74006D9766 /* card_detail_example.json */,
+				A1718BC51DBA3B74006D9766 /* config2.json */,
 				6D262B6B1DA9641700779B57 /* config1.json */,
 				6DE011E61D9FCFBC00279CDA /* groupabletree.json */,
 				3258C85B1D9D11BD00D61062 /* cards.json */,
@@ -1365,9 +1375,11 @@
 				A1FA12A21DB9106800E15088 /* MovieHeaderSmallView.xib in Resources */,
 				6D262B8A1DA9641700779B57 /* NavigationModule.xib in Resources */,
 				A15165051D89851C008AEA14 /* PhotoModule.xib in Resources */,
+				A1718BC61DBA3B74006D9766 /* card_detail_example.json in Resources */,
 				A1FA12961DB9093C00E15088 /* MovieHeaderView.xib in Resources */,
 				6D262B871DA9641700779B57 /* DirectorModule.xib in Resources */,
 				32D5C4AC1DB50FD3004FD460 /* TwoColsCell.xib in Resources */,
+				A1718BC91DBA3B74006D9766 /* config2.json in Resources */,
 				A1CCBE171DB36D6600A0DAE0 /* Lato-Thin.ttf in Resources */,
 				6D262B831DA9641700779B57 /* config1.json in Resources */,
 				A15164C51D898402008AEA14 /* LaunchScreen.storyboard in Resources */,
@@ -1413,6 +1425,7 @@
 				A1CCBE121DB36D6600A0DAE0 /* Lato-Semibold.ttf in Resources */,
 				A1CCBE0C1DB36D6600A0DAE0 /* Lato-MediumItalic.ttf in Resources */,
 				A1FA12671DB8E41500E15088 /* SingleModuleView.xib in Resources */,
+				A1718BC71DBA3B74006D9766 /* card_detail_example.json in Resources */,
 				329670E01D9A7D0A003674D8 /* PhotoAndTitleView.xib in Resources */,
 				A1FA12971DB9093C00E15088 /* MovieHeaderView.xib in Resources */,
 				3258C85D1D9D11BD00D61062 /* cards.json in Resources */,
@@ -1464,6 +1477,7 @@
 				6D9956891DB0F9C4007A8440 /* TabModule.xib in Resources */,
 				6D99568B1DB0FA11007A8440 /* Section.xib in Resources */,
 				A1CCBE8C1DB4B96F00A0DAE0 /* ShopView.xib in Resources */,
+				A1718BCA1DBA3B74006D9766 /* config2.json in Resources */,
 				329670F81D9A84DB003674D8 /* CarouselCell.xib in Resources */,
 				6DE011E81D9FCFBC00279CDA /* groupabletree.json in Resources */,
 				6D9956921DB0FA2A007A8440 /* RatingModule.xib in Resources */,
@@ -1479,6 +1493,7 @@
 				A1CCBE131DB36D6600A0DAE0 /* Lato-Semibold.ttf in Resources */,
 				A1CCBE0D1DB36D6600A0DAE0 /* Lato-MediumItalic.ttf in Resources */,
 				A1FA12681DB8E41500E15088 /* SingleModuleView.xib in Resources */,
+				A1718BC81DBA3B74006D9766 /* card_detail_example.json in Resources */,
 				329670E11D9A7D0A003674D8 /* PhotoAndTitleView.xib in Resources */,
 				A1FA12981DB9093C00E15088 /* MovieHeaderView.xib in Resources */,
 				3258C85E1D9D11BD00D61062 /* cards.json in Resources */,
@@ -1530,6 +1545,7 @@
 				6D99568A1DB0F9C5007A8440 /* TabModule.xib in Resources */,
 				6D99568C1DB0FA12007A8440 /* Section.xib in Resources */,
 				A1CCBE8D1DB4B96F00A0DAE0 /* ShopView.xib in Resources */,
+				A1718BCB1DBA3B74006D9766 /* config2.json in Resources */,
 				329670F91D9A84DB003674D8 /* CarouselCell.xib in Resources */,
 				6DE011E91D9FCFBC00279CDA /* groupabletree.json in Resources */,
 				6D9956991DB0FA2B007A8440 /* RatingModule.xib in Resources */,

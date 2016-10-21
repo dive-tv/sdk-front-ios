@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     @IBAction func createCardDetail(sender: UIButton) {
     
-        if let path = NSBundle.mainBundle().pathForResource("config1", ofType: "json") {
+        if let path = NSBundle.mainBundle().pathForResource("config2", ofType: "json") {
             if let data = NSData(contentsOfFile: path) {
                 let json = JSON(data: data);
                 if(json != nil && json.error == nil){

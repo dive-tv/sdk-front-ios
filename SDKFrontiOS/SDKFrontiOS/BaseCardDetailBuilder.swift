@@ -75,7 +75,16 @@ public class BaseCardDetailBuilder : NSObject{
      */
     private func getCardDetail(cardId : String, completionBlock : completionBlockGetCard){
         // TODO: need to call the sdkclient and in the response call the completion
-        completionBlock(CardDetail(_cardId : "ID", _type : "person", _locale : "ES_es", _title : "Title"));
+        // For test we catch a local json
+        if let path = NSBundle.mainBundle().pathForResource("card_detail_example", ofType: "json") {
+            if let data = NSData(contentsOfFile: path) {
+                let json = JSON(data: data);
+                if(json != nil && json.error == nil){
+                    completionBlock(CardDetail(data: json));
+                }
+            }
+        }
+        //completionBlock(CardDetail(_cardId : "ID", _type : "person", _locale : "ES_es", _title : "Title"));
     }
     
     /**

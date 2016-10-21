@@ -1,0 +1,226 @@
+{
+    "card_id": "bf1b00c5-b779-3e73-a9f6-1cf836c674e5",
+    "locale": "es_ES",
+    "title": "El amor y otras cosas imposibles",
+    "subtitle": "Love and Other Impossible Pursuits",
+    "type": "movie",
+    "image": {
+        "thumb": "https://pre-img.dive.tv/bf1b00c5-b779-3e73-a9f6-1cf836c674e5/bf1b00c5-b779-3e73-a9f6-1cf836c674e5_0_es_ES_thumb_m.jpg",
+        "full": "https://pre-img.dive.tv/bf1b00c5-b779-3e73-a9f6-1cf836c674e5/bf1b00c5-b779-3e73-a9f6-1cf836c674e5_0_es_ES_full_m.jpg",
+        "anchor_x": 10,
+        "anchor_y": 90,
+        "source": null
+    },
+    "products": [{
+                 "product_id": "3#24cc98e19f90980df30b841c1d112f5b",
+                 "category": "fashion",
+                 "merchant": "Zalando",
+                 "title": "Persol Gafas de sol braun",
+                 "image": "http://i1.ztat.net/large/P0/35/4E/00/3O/13/P0354E003-O13@8.jpg",
+                 "url": "http://ad.zanox.com/ppc/?31847844C602651241&ULP=[[persol-gafas-de-sol-marron-oscuro-p0354e003-o13.html]]",
+                 "price": 164.95,
+                 "currency": "EUR",
+                 "matching": false
+                 }, {
+                 "product_id": "5#87cc98e19f90980df30b841c1d112f34",
+                 "category": "travel",
+                 "merchant": "Expedia",
+                 "title": "Hotel Bahiasol",
+                 "image": "http://i1.ztat.net/large/P0/35/4E/00/3O/13/P0354E003-O13@8.jpg",
+                 "url": "http://expedia.com/hotels/31847844C602651241",
+                 "price": 55.95,
+                 "currency": "EUR",
+                 "city": "Alicante",
+                 "country": "España",
+                 "address": "Avenida Constitución 5",
+                 "region": "Alicante",
+                 "postal_code": 21543,
+                 "rating": 3.1
+                 }],
+    "info": [{
+             "type": "rating",
+             "content_type": "rating",
+             "data": [{
+                      "value": "6.2",
+                      "source": null
+                      }, {
+                      "value": "6.4",
+                      "source": null
+                      }]
+             }, {
+             "type": "text",
+             "content_type": "description",
+             "data": [{
+                      "text": "Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is titled A Game of Thrones. It premiered on HBO in the United States on April 17, 2011. The series is set on the fictional continents of Westeros and Essos and interweaves several plot lines with a large ensemble cast. The first narrative arc follows a civil war among several noble houses for the Iron Throne of the Seven Kingdoms.",
+                      "source": null
+                      }]
+             }, {
+             "type": "listing",
+             "content_type": "specs",
+             "data": [{
+                      "text": "Año",
+                      "value": "2013"
+                      }, {
+                      "text": "Tipo de vehículo",
+                      "value": "Sedan"
+                      }, {
+                      "text": "Puertas",
+                      "value": "4"
+                      }, {
+                      "text": "Peso",
+                      "value": "1125 Kg"
+                      }, {
+                      "text": "Potencia",
+                      "value": "136 cv"
+                      }, {
+                      "text": "Válvulas",
+                      "value": "16"
+                      }, {
+                      "text": "Tipo de combustible",
+                      "value": "Gasolina"
+                      }, {
+                      "text": "Capacidad de combustible",
+                      "value": "43.15 l"
+                      }, {
+                      "text": "Consumo en ciudad",
+                      "value": "8.4 l/100Km"
+                      }, {
+                      "text": "Consumo en carretera",
+                      "value": "6.5 l/100Km"
+                      }, {
+                      "text": "Consumo combinado",
+                      "value": "7.6 l/100Km"
+                      }]
+             }, {
+             "type": "text",
+             "content_type": "reference",
+             "data": [{
+                      "text": "Metrópoli o metrópolis es el término que se utilizaba en la Grecia antigua para las ciudades a partir de las cuales se crearía más tarde una colonia. Las metrópolis tenían una influencia política decisiva en las colonias y eran igualmente los centros religiosos, económicos, culturales y sociales de la región. A partir del tiempo del Imperio Romano se renombraron algunas importantes ciudades como metrópolis. El uso del término en el siglo XXI no está claramente delimitado. Se suelen determinar así a las ciudades globales. A diferencia de una ciudad global, que cuenta con una importancia internacional, una metrópoli puede contar con una importancia relativa en una determinada región, ej. metrópoli artística o financiera.Se conoce como metropolización a la concentración cada vez mayor de economía, administración y cultura. En la teoría de la dependencia se denomina metrópoli a lo contrario de la periferia.Según algunas definiciones la población de una metrópoli variaría entre 1 y 10 millones de personas. A partir de los 10 millones se utiliza el término “megaciudad”, “megalópolis” o “megápolis”. En las metrópolis que destacan por su importancia económica la cantidad de habitantes juega un papel menor.",
+                      "source": null
+                      }]
+             }, {
+             "type": "map",
+             "content_type": "location",
+             "data": [{
+                      "zoom": 14,
+                      "latitude": 53.546772,
+                      "longitude": 10.011608
+                      }]
+             }, {
+             "type": "link",
+             "content_type": "trailer",
+             "data": [{
+                      "url": "https://www.youtube.com?v=uJWasvx4ZHs",
+                      "source": null
+                      }]
+             }, {
+             "type": "image",
+             "content_type": "gallery",
+             "data": [{
+                      "thumb": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_thumb_m.jpg",
+                      "full": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_full_m.jpg",
+                      "anchor_x": 50,
+                      "anchor_y": 50,
+                      "source": {
+                      "name": "TMDB",
+                      "url": "https://www.themoviedb.org/movie/9740",
+                      "disclaimer": "TMDB All rights reserved",
+                      "image": "http://static.touchvie.com/sources/tmdb.jpg"
+                      }
+                      }]
+             }, {
+             "type": "text",
+             "content_type": "overview",
+             "data": [{
+                      "text": "Leonardo da Vinci was left handed or possibly ambidextrous which can be a reason for his backwards writing.  Some researchers mention he did this so the ink wouldn´t smear with his hand.  Others say it was to keep certain information more private.  It´s important to note that his backwards writings were not present in all of his work and only used in specific, more concrete cases. Although the exact reason is unknown.",
+                      "source": null
+                      }]
+             }, {
+             "type": "awards",
+             "content_type": "awards",
+             "data": [{
+                      "title": "Venice Film Festival",
+                      "nominee": [{
+                                  "title": "Golden Lion - Best Picture",
+                                  "value": "1948"
+                                  }],
+                      "winner": [{
+                                 "title": "Golden Lion - Best Picture",
+                                 "value": "1948"
+                                 }]
+                      }, {
+                      "title": "European Film Awards",
+                      "nominee": [{
+                                  "title": "People's Choice Award for Bes European Film",
+                                  "value": "2006"
+                                  }],
+                      "winner": [{
+                                 "title": "People's Choice Award for Bes European Film",
+                                 "value": "2006"
+                                 }]
+                      }, {
+                      "title": "BAFTA - British Academy Film Awards",
+                      "nominee": [{
+                                  "title": "Best TV Make Up & Hair Design (2008)",
+                                  "value": "Anne Oldham"
+                                  }, {
+                                  "title": "Most Outstanding British Film",
+                                  "value": "1949"
+                                  }],
+                      "winner": [{
+                                 "title": "Best TV Make Up & Hair Design (2008)",
+                                 "value": "Anne Oldham"
+                                 }, {
+                                 "title": "Most Outstanding British Film",
+                                 "value": "1949"
+                                 }]
+                      }]
+             }, {
+             "type": "catalog",
+             "content_type": "movie",
+             "data": [{
+                      "background_image": "a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES.jpg",
+                      "director": "Peter Webber",
+                      "genres": ["CRIME", "THRILLER", "DRAMA"],
+                      "original_title": "Hannibal Rising",
+                      "runtime": "117",
+                      "sync": {
+                      "is_synchronizable": true,
+                      "audio_langs": ["es", "en", "de"],
+                      "channels": [{
+                                   "tv_event_id": "00337f53-670a-8ec1-95f3-e95331c6bb00",
+                                   "channel_id": 11,
+                                   "channel_name": "Cuatro",
+                                   "start_date": 1449522000000,
+                                   "end_date": 1449530400000,
+                                   "status": "FILM"
+                                   }]
+                      },
+                      "year": 2007
+                      }]
+             }, {
+             "type": "seasons",
+             "content_type": "seasons",
+             "data": [{
+                      "season_index": 1,
+                      "chapter_nr": 10,
+                      "creators": " Glen A. Larson, Ronald D. Moore",
+                      "year": 2005,
+                      "image": {
+                      "thumb": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_thumb_m.jpg",
+                      "full": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_full_m.jpg",
+                      "anchor_x": 50,
+                      "anchor_y": 50,
+                      "source": {
+                      "name": "TMDB",
+                      "url": "https://www.themoviedb.org/movie/9740",
+                      "disclaimer": "TMDB All rights reserved",
+                      "image": "http://static.touchvie.com/sources/tmdb.jpg"
+                      }
+                      }
+                      }]
+             }],
+    "user": {
+        "is_liked": true
+    }
+}
