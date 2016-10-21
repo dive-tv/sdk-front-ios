@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Carousel" customModule="SDKFrontiOS" customModuleProvider="target">
+            <connections>
+                <outlet property="sectionToastText" destination="OiR-wz-6Cw" id="Lou-vS-AAj"/>
+                <outlet property="sectionsToast" destination="Zm4-zX-RxO" id="Zdf-md-weO"/>
+                <outlet property="tableView" destination="aes-bg-WQK" id="aR0-0q-WZU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnj-0h-h2t">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aes-bg-WQK">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="IIu-XM-4ry"/>
+                                <outlet property="delegate" destination="-1" id="ni5-kS-qks"/>
+                            </connections>
+                        </tableView>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zm4-zX-RxO">
+                            <rect key="frame" x="250" y="280" width="100" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiR-wz-6Cw">
+                                    <rect key="frame" x="29" y="10" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.2981493794326241" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OiR-wz-6Cw" secondAttribute="trailing" constant="5" id="7js-HG-pLO"/>
+                                <constraint firstAttribute="height" constant="40" id="EKv-Gx-Spd"/>
+                                <constraint firstAttribute="width" constant="100" id="F1Q-9y-xxJ"/>
+                                <constraint firstItem="OiR-wz-6Cw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zm4-zX-RxO" secondAttribute="leading" constant="5" id="TIg-TT-x3t"/>
+                                <constraint firstItem="OiR-wz-6Cw" firstAttribute="centerY" secondItem="Zm4-zX-RxO" secondAttribute="centerY" id="e3i-Wa-PE6"/>
+                                <constraint firstItem="OiR-wz-6Cw" firstAttribute="centerX" secondItem="Zm4-zX-RxO" secondAttribute="centerX" id="p19-5F-ztx"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="aes-bg-WQK" secondAttribute="trailing" id="F7j-us-PDz"/>
+                        <constraint firstAttribute="bottom" secondItem="aes-bg-WQK" secondAttribute="bottom" id="UiD-3W-wlu"/>
+                        <constraint firstItem="Zm4-zX-RxO" firstAttribute="centerX" secondItem="bnj-0h-h2t" secondAttribute="centerX" id="dLx-Dg-g8L"/>
+                        <constraint firstItem="aes-bg-WQK" firstAttribute="leading" secondItem="bnj-0h-h2t" secondAttribute="leading" id="rHg-YR-hNw"/>
+                        <constraint firstItem="Zm4-zX-RxO" firstAttribute="centerY" secondItem="bnj-0h-h2t" secondAttribute="centerY" id="ujS-kz-9yR"/>
+                        <constraint firstItem="aes-bg-WQK" firstAttribute="top" secondItem="bnj-0h-h2t" secondAttribute="top" id="xWt-wU-oDm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bnj-0h-h2t" secondAttribute="bottom" id="2p4-YH-jv6"/>
+                <constraint firstAttribute="trailing" secondItem="bnj-0h-h2t" secondAttribute="trailing" id="DE5-5N-AfY"/>
+                <constraint firstItem="bnj-0h-h2t" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bGl-oV-7kG"/>
+                <constraint firstItem="bnj-0h-h2t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sUE-ed-13X"/>
+            </constraints>
+            <point key="canvasLocation" x="489" y="399"/>
+        </view>
+    </objects>
+</document>

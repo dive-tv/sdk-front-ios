@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MNb-8U-tzl">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SDKFrontiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKu-kh-xcY">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgz-ik-MlG">
+                                        <state key="normal" title="Create Carousel">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addCarousel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4To-1y-41W"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKf-GQ-cLT">
+                                        <frame key="frameInset" minX="211" minY="8" width="83" height="30"/>
+                                        <state key="normal" title="Create Card">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createCardDetail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KaX-Fc-LW1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="EKf-GQ-cLT" firstAttribute="centerY" secondItem="pKu-kh-xcY" secondAttribute="centerY" id="94u-0e-rXQ"/>
+                                    <constraint firstItem="Qgz-ik-MlG" firstAttribute="leading" secondItem="pKu-kh-xcY" secondAttribute="leading" constant="25" id="Suj-cY-78O"/>
+                                    <constraint firstItem="Qgz-ik-MlG" firstAttribute="centerY" secondItem="pKu-kh-xcY" secondAttribute="centerY" id="gI4-vG-gbv"/>
+                                    <constraint firstAttribute="trailing" secondItem="EKf-GQ-cLT" secondAttribute="trailing" constant="25" id="n22-o1-SJD"/>
+                                    <constraint firstAttribute="height" constant="50" id="sG1-ft-HeA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="se0-8o-Yxp">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZQ-m4-fce">
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gU5-rP-e8U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD4-1k-wQr">
+                                        <state key="normal" title="New section">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newSection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="py3-jg-png"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cZQ-m4-fce" secondAttribute="trailing" constant="25" id="JId-mS-2Vj"/>
+                                    <constraint firstItem="bD4-1k-wQr" firstAttribute="centerY" secondItem="se0-8o-Yxp" secondAttribute="centerY" id="JJN-0f-ytM"/>
+                                    <constraint firstItem="bD4-1k-wQr" firstAttribute="leading" secondItem="se0-8o-Yxp" secondAttribute="leading" constant="25" id="YOt-jO-CUU"/>
+                                    <constraint firstItem="cZQ-m4-fce" firstAttribute="centerY" secondItem="se0-8o-Yxp" secondAttribute="centerY" id="yb4-5g-i4H"/>
+                                    <constraint firstAttribute="height" constant="50" id="z7E-hZ-DgC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E59-3O-j4C">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="se0-8o-Yxp" firstAttribute="top" secondItem="E59-3O-j4C" secondAttribute="bottom" id="CfP-SS-jhz"/>
+                            <constraint firstAttribute="trailing" secondItem="pKu-kh-xcY" secondAttribute="trailing" id="NrP-6W-UGW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="se0-8o-Yxp" secondAttribute="bottom" id="PN3-Lj-rhr"/>
+                            <constraint firstItem="E59-3O-j4C" firstAttribute="top" secondItem="pKu-kh-xcY" secondAttribute="bottom" id="QG6-hQ-xRb"/>
+                            <constraint firstAttribute="trailing" secondItem="E59-3O-j4C" secondAttribute="trailing" id="eve-E4-Aez"/>
+                            <constraint firstItem="pKu-kh-xcY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="f1m-R6-aaf"/>
+                            <constraint firstItem="E59-3O-j4C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gjj-sV-x9k"/>
+                            <constraint firstAttribute="trailing" secondItem="se0-8o-Yxp" secondAttribute="trailing" id="iWx-x6-gyt"/>
+                            <constraint firstItem="se0-8o-Yxp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n6r-HR-39a"/>
+                            <constraint firstItem="pKu-kh-xcY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u5f-bj-fS8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dh2-1Z-mCU"/>
+                    <connections>
+                        <outlet property="addCardBtn" destination="cZQ-m4-fce" id="Y2w-8C-eCM"/>
+                        <outlet property="carouselContainer" destination="E59-3O-j4C" id="JoZ-2w-Df2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="333"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="llw-46-pY6">
+            <objects>
+                <navigationController id="MNb-8U-tzl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aYT-Bv-S0q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1uJ-fr-e3A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cMf-2D-F6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109" y="333"/>
+        </scene>
+    </scenes>
+</document>

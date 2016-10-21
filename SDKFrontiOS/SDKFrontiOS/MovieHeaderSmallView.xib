@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MovieHeaderSmallView" customModule="SDKFrontiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UkW-LT-Q4N">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="175" id="LgW-O9-rBH"/>
+                        <constraint firstAttribute="width" constant="120" id="bWu-ew-9Rj"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leL-Ip-UUu">
+                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="23"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5A-xg-Mia">
+                    <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
+                    <color key="textColor" red="0.30902412533760071" green="0.72728466987609863" blue="0.65530616044998169" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2B-Lq-hY4">
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                    <color key="textColor" red="0.56470590829849243" green="0.56470590829849243" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UkW-LT-Q4N" secondAttribute="bottom" constant="20" id="42c-dW-rZt"/>
+                <constraint firstAttribute="trailing" secondItem="leL-Ip-UUu" secondAttribute="trailing" constant="15" id="49u-Dw-oR3"/>
+                <constraint firstItem="UkW-LT-Q4N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="FBT-8n-fEW"/>
+                <constraint firstItem="f2B-Lq-hY4" firstAttribute="leading" secondItem="UkW-LT-Q4N" secondAttribute="trailing" constant="15" id="G0V-Ls-0l2"/>
+                <constraint firstItem="f2B-Lq-hY4" firstAttribute="top" secondItem="D5A-xg-Mia" secondAttribute="bottom" constant="29" id="GFW-2F-sZ4"/>
+                <constraint firstItem="D5A-xg-Mia" firstAttribute="top" secondItem="leL-Ip-UUu" secondAttribute="bottom" constant="14" id="Jy4-7E-TKt"/>
+                <constraint firstAttribute="trailing" secondItem="D5A-xg-Mia" secondAttribute="trailing" constant="15" id="KXJ-TO-aDK"/>
+                <constraint firstAttribute="trailing" secondItem="f2B-Lq-hY4" secondAttribute="trailing" constant="15" id="kjc-K1-lnr"/>
+                <constraint firstItem="UkW-LT-Q4N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="vAH-pH-0Q3"/>
+                <constraint firstItem="D5A-xg-Mia" firstAttribute="leading" secondItem="UkW-LT-Q4N" secondAttribute="trailing" constant="15" id="vEb-Ao-ywV"/>
+                <constraint firstItem="leL-Ip-UUu" firstAttribute="leading" secondItem="UkW-LT-Q4N" secondAttribute="trailing" constant="15" id="veA-nC-BNP"/>
+                <constraint firstItem="leL-Ip-UUu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="22" id="yBN-aw-yBB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageViewItem" destination="UkW-LT-Q4N" id="qKe-ad-ULY"/>
+                <outlet property="labelGenre" destination="f2B-Lq-hY4" id="VoX-at-EqW"/>
+                <outlet property="labelProducer" destination="D5A-xg-Mia" id="hQn-mt-LvJ"/>
+                <outlet property="labelTitle" destination="leL-Ip-UUu" id="7pB-LZ-s02"/>
+            </connections>
+            <point key="canvasLocation" x="35.5" y="-171.5"/>
+        </view>
+    </objects>
+</document>
