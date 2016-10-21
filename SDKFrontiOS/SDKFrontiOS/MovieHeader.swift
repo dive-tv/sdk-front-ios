@@ -34,4 +34,12 @@ class MovieHeader: Module {
         super.init(coder: aDecoder);
     }
     
+    /*override class func validate(data: CardDetail) throws {
+        
+        /*guard let title = data.title where data.title != nil else{
+            try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.emptyData);
+            return;
+        }*/
+    }*/
+    
 }
