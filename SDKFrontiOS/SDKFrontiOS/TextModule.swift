@@ -6,36 +6,32 @@
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-public class TextModule : Module{
+class TextModule : Module{
     
-    override class func validate(data: CardDetailData) throws {
-        print("VALIDATE: TEXTMODULE");
-    }
+    var textView : TextView?;
     
-    @IBOutlet weak var headerLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var expandOpenBtn: UIButton!
-    @IBOutlet weak var separatorView: UIView!
-    
-    @IBOutlet weak var disclamerViewHeight: NSLayoutConstraint!
-    
-    @IBOutlet weak var disclaimerTitle: UILabel!
-    @IBOutlet weak var disclaimerBtn: UIButton!
-    @IBOutlet weak var disclaimerImage: UIImageView!
-    @IBOutlet weak var disclaimerSubtitle: UILabel!
-    
-    override public func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override public func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier);
         
-        // Configure the view for the selected state
+        self.textView = NSBundle.mainBundle().loadNibNamed("TextView", owner: self, options: nil)?[0] as? TextView;
+        
+        self.contentView.addSubview(self.textView!);
+        self.textView?.translatesAutoresizingMaskIntoConstraints = false;
+        
+        let constraintHorizontal = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.textView!]);
+        
+        let constraintVertical = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.textView!]);
+        
+        
+        self.contentView.addConstraints(constraintHorizontal);
+        self.contentView.addConstraints(constraintVertical);
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder);
     }
     
 }

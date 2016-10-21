@@ -10,22 +10,28 @@ import UIKit
 
 class MovieHeaderSmall: Module {
 
+    var movieHeaderSmallView : MovieHeaderSmallView?;
     
-    @IBOutlet weak var cellImageView: UIImageView!
-    @IBOutlet weak var movieTitle: UILabel!
-    @IBOutlet weak var movieSubtitleBtn: UIButton!
-    @IBOutlet weak var movieGenres: UILabel!
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier);
+        
+        self.movieHeaderSmallView = NSBundle.mainBundle().loadNibNamed("MovieHeaderSmallView", owner: self, options: nil)?[0] as? MovieHeaderSmallView;
+        
+        self.contentView.addSubview(self.movieHeaderSmallView!);
+        self.movieHeaderSmallView?.translatesAutoresizingMaskIntoConstraints = false;
+        
+        let constraintHorizontal = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.movieHeaderSmallView!]);
+        
+        let constraintVertical = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.movieHeaderSmallView!]);
+        
+        
+        self.contentView.addConstraints(constraintHorizontal);
+        self.contentView.addConstraints(constraintVertical);
+        
     }
-
-    override func setSelected( selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder);
     }
     
 }
