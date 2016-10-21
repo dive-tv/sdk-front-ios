@@ -13,7 +13,10 @@ internal class DataModelErrors : ErrorManager{
     private static var ErrorMessages : [String : String] = [
         "UnrecognizableError" : "ERROR: an unrecognizable error has occurred",
         "CreateCardDetailErrors" : "ERROR: The data for create CardDetail is invalid",
-        "CreateImageErrors" : "ERROR: The data for create Image is invalid"
+        "CreateImageErrors" : "ERROR: The data for create Image is invalid",
+        "CreateSourceErrors" : "ERROR: The data for create Source is invalid",
+        "CreateProductErrors" : "ERROR: The data for create Product is invalid",
+        "CreateTextContainerErrors" : "ERROR: The data for create TextContainer is invalid"
     ]
     
     internal enum CreateCardDetailErrors : ErrorType{
@@ -34,6 +37,11 @@ internal class DataModelErrors : ErrorManager{
     
     internal enum CreateProductErrors : ErrorType{
         case invalidCategoryOfProduct
+        case invalidData
+        case emptyData
+    }
+    
+    internal enum CreateTextContainerErrors : ErrorType{
         case invalidData
         case emptyData
     }

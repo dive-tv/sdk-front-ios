@@ -7,7 +7,14 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-internal class ContainerData{
+internal class ContainerData : NSObject, Validatable{
     
+    class func validate(data: JSON?) throws{
+    
+    }
 }
+
+
+

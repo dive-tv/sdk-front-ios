@@ -22,15 +22,16 @@ internal class CardDetail : NSObject, Validatable{
     var containers = Dictionary<ContainerContentType, ContainerData>();
     var relations = Dictionary<ContainerContentType, ContainerData>();
     
-    /*lazy var matchProduct{
-        get{
-            if(self == nil){
-                for product in products{
-                    if(product.)
+    lazy var matchProduct : ItemProduct? = {
+        for product in self.products{
+            if let matchedProduct = product as? ItemProduct{
+                if(matchedProduct.matching){
+                    return matchedProduct;
                 }
             }
         }
-    }*/
+        return nil;
+    }();
     
     init(_cardId : String, _type : String, _locale : String, _title : String, _image : Image? = nil) {
         
