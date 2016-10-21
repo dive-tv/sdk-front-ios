@@ -9,13 +9,13 @@
 import UIKit
 
 class TextView: UIView {
+    
+    // TODO: need more constraints for all cases.
 
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var expandOpenBtn: UIButton!
     @IBOutlet weak var separatorView: UIView!
-    
-    @IBOutlet weak var disclamerViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var disclaimerTitle: UILabel!
     @IBOutlet weak var disclaimerBtn: UIButton!

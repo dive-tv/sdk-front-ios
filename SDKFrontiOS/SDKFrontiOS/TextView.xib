@@ -51,18 +51,20 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fI7-lo-SSV">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="rqC-Oz-B9B"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
                                     <state key="normal" title="Button">
                                         <color key="titleColor" red="0.36470589040000001" green="0.76862746479999999" blue="0.71372550729999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c3y-eF-5KJ">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="ico_next" translatesAutoresizingMaskIntoConstraints="NO" id="c3y-eF-5KJ">
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="55" id="cwR-a0-mal"/>
-                                        <constraint firstAttribute="height" constant="22" id="oSo-Tv-wn3"/>
+                                        <constraint firstAttribute="height" constant="25" id="oSo-Tv-wn3"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlM-hB-jUM">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlM-hB-jUM">
                                     <fontDescription key="fontDescription" name="Lato-Italic" family="Lato" pointSize="9"/>
                                     <color key="textColor" red="0.5647059083" green="0.5647059083" blue="0.5647059083" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -71,13 +73,15 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="LcV-jc-ENT" firstAttribute="top" secondItem="mmG-ik-aWI" secondAttribute="top" constant="15" id="2Cg-4M-wrV"/>
-                                <constraint firstAttribute="height" constant="75" id="CQ3-g4-inK"/>
+                                <constraint firstAttribute="trailing" secondItem="GlM-hB-jUM" secondAttribute="trailing" constant="127" id="3j4-97-j5y"/>
+                                <constraint firstItem="c3y-eF-5KJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fI7-lo-SSV" secondAttribute="trailing" constant="10" id="BgG-6C-Y2A"/>
                                 <constraint firstAttribute="trailing" secondItem="c3y-eF-5KJ" secondAttribute="trailing" id="CyE-H2-ueI"/>
                                 <constraint firstItem="LcV-jc-ENT" firstAttribute="leading" secondItem="mmG-ik-aWI" secondAttribute="leading" id="IXB-DF-5A1"/>
-                                <constraint firstItem="c3y-eF-5KJ" firstAttribute="top" secondItem="mmG-ik-aWI" secondAttribute="top" constant="18" id="MAY-dp-NYB"/>
+                                <constraint firstItem="c3y-eF-5KJ" firstAttribute="top" secondItem="mmG-ik-aWI" secondAttribute="top" constant="15" id="MAY-dp-NYB"/>
+                                <constraint firstAttribute="bottom" secondItem="GlM-hB-jUM" secondAttribute="bottom" constant="15" id="QVO-CW-TUt"/>
                                 <constraint firstItem="GlM-hB-jUM" firstAttribute="leading" secondItem="mmG-ik-aWI" secondAttribute="leading" id="Z1a-pe-HXe"/>
                                 <constraint firstItem="GlM-hB-jUM" firstAttribute="top" secondItem="LcV-jc-ENT" secondAttribute="bottom" constant="7" id="cvF-FZ-A5L"/>
-                                <constraint firstItem="fI7-lo-SSV" firstAttribute="leading" secondItem="LcV-jc-ENT" secondAttribute="trailing" constant="15" id="i3N-mx-qeY"/>
+                                <constraint firstItem="fI7-lo-SSV" firstAttribute="leading" secondItem="LcV-jc-ENT" secondAttribute="trailing" constant="3" id="i3N-mx-qeY"/>
                                 <constraint firstItem="fI7-lo-SSV" firstAttribute="centerY" secondItem="LcV-jc-ENT" secondAttribute="centerY" id="m0Z-1m-hum"/>
                             </constraints>
                         </view>
@@ -120,7 +124,6 @@
                 <outlet property="disclaimerImage" destination="c3y-eF-5KJ" id="1Js-8H-g0D"/>
                 <outlet property="disclaimerSubtitle" destination="GlM-hB-jUM" id="Pcp-Qo-Qjj"/>
                 <outlet property="disclaimerTitle" destination="LcV-jc-ENT" id="pFf-h9-LUN"/>
-                <outlet property="disclamerViewHeight" destination="CQ3-g4-inK" id="BiJ-1b-AjC"/>
                 <outlet property="expandOpenBtn" destination="jgm-kw-RC8" id="L3X-3y-LhU"/>
                 <outlet property="headerLabel" destination="yOE-yC-2hV" id="BEP-l2-9na"/>
                 <outlet property="leftDistanceConstraint" destination="Lnp-zP-0o0" id="7eU-oP-6T8"/>
@@ -131,4 +134,7 @@
             <point key="canvasLocation" x="35.5" y="-147.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ico_next" width="6" height="11"/>
+    </resources>
 </document>

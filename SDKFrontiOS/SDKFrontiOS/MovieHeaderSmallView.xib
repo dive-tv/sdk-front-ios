@@ -47,9 +47,9 @@
                 <constraint firstAttribute="trailing" secondItem="leL-Ip-UUu" secondAttribute="trailing" constant="15" id="49u-Dw-oR3"/>
                 <constraint firstItem="UkW-LT-Q4N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="FBT-8n-fEW"/>
                 <constraint firstItem="f2B-Lq-hY4" firstAttribute="leading" secondItem="UkW-LT-Q4N" secondAttribute="trailing" constant="15" id="G0V-Ls-0l2"/>
+                <constraint firstItem="f2B-Lq-hY4" firstAttribute="top" secondItem="D5A-xg-Mia" secondAttribute="bottom" constant="29" id="GFW-2F-sZ4"/>
                 <constraint firstItem="D5A-xg-Mia" firstAttribute="top" secondItem="leL-Ip-UUu" secondAttribute="bottom" constant="14" id="Jy4-7E-TKt"/>
                 <constraint firstAttribute="trailing" secondItem="D5A-xg-Mia" secondAttribute="trailing" constant="15" id="KXJ-TO-aDK"/>
-                <constraint firstAttribute="bottom" secondItem="f2B-Lq-hY4" secondAttribute="bottom" constant="36" id="ehj-1F-q20"/>
                 <constraint firstAttribute="trailing" secondItem="f2B-Lq-hY4" secondAttribute="trailing" constant="15" id="kjc-K1-lnr"/>
                 <constraint firstItem="UkW-LT-Q4N" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="vAH-pH-0Q3"/>
                 <constraint firstItem="D5A-xg-Mia" firstAttribute="leading" secondItem="UkW-LT-Q4N" secondAttribute="trailing" constant="15" id="vEb-Ao-ywV"/>
