@@ -238,9 +238,6 @@
 		A135D34C1DB75FA900224CF2 /* ImageTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135D34A1DB75FA900224CF2 /* ImageTextViewCell.swift */; };
 		A135D34D1DB75FA900224CF2 /* ImageTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135D34A1DB75FA900224CF2 /* ImageTextViewCell.swift */; };
 		A135D34E1DB75FA900224CF2 /* ImageTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135D34A1DB75FA900224CF2 /* ImageTextViewCell.swift */; };
-		A135D34F1DB75FA900224CF2 /* ImageTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A135D34B1DB75FA900224CF2 /* ImageTextViewCell.xib */; };
-		A135D3501DB75FA900224CF2 /* ImageTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A135D34B1DB75FA900224CF2 /* ImageTextViewCell.xib */; };
-		A135D3511DB75FA900224CF2 /* ImageTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A135D34B1DB75FA900224CF2 /* ImageTextViewCell.xib */; };
 		A135D35B1DB7671600224CF2 /* ImageTextRectangleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135D35A1DB7671600224CF2 /* ImageTextRectangleViewCell.swift */; };
 		A135D35C1DB7671600224CF2 /* ImageTextRectangleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135D35A1DB7671600224CF2 /* ImageTextRectangleViewCell.swift */; };
 		A135D35D1DB7671600224CF2 /* ImageTextRectangleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A135D35A1DB7671600224CF2 /* ImageTextRectangleViewCell.swift */; };
@@ -590,6 +587,12 @@
 		A1CCBF241DB626F900A0DAE0 /* SingleModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF201DB626F900A0DAE0 /* SingleModule.xib */; };
 		A1CCBF251DB626F900A0DAE0 /* SingleModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF201DB626F900A0DAE0 /* SingleModule.xib */; };
 		A1CCBF261DB626F900A0DAE0 /* SingleModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1CCBF201DB626F900A0DAE0 /* SingleModule.xib */; };
+		A1FA12BB1DBA045500E15088 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA12BA1DBA045500E15088 /* ImageTextView.swift */; };
+		A1FA12BC1DBA045500E15088 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA12BA1DBA045500E15088 /* ImageTextView.swift */; };
+		A1FA12BD1DBA045500E15088 /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FA12BA1DBA045500E15088 /* ImageTextView.swift */; };
+		A1FA12BF1DBA046700E15088 /* ImageTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1FA12BE1DBA046700E15088 /* ImageTextView.xib */; };
+		A1FA12C01DBA046700E15088 /* ImageTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1FA12BE1DBA046700E15088 /* ImageTextView.xib */; };
+		A1FA12C11DBA046700E15088 /* ImageTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1FA12BE1DBA046700E15088 /* ImageTextView.xib */; };
 		B7A2F8F6C78E941A0C77973A /* Pods_SDKFrontiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA2EA1464E2AC606C5E483C /* Pods_SDKFrontiOSUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -693,7 +696,6 @@
 		A135D33E1DB755BD00224CF2 /* VerticalList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerticalList.xib; sourceTree = "<group>"; };
 		A135D3451DB75E8600224CF2 /* ImageTextList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTextList.swift; sourceTree = "<group>"; };
 		A135D34A1DB75FA900224CF2 /* ImageTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTextViewCell.swift; sourceTree = "<group>"; };
-		A135D34B1DB75FA900224CF2 /* ImageTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTextViewCell.xib; sourceTree = "<group>"; };
 		A135D35A1DB7671600224CF2 /* ImageTextRectangleViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTextRectangleViewCell.swift; sourceTree = "<group>"; };
 		A135D3621DB7902B00224CF2 /* VehiclesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesList.swift; sourceTree = "<group>"; };
 		A135D3661DB7906E00224CF2 /* PlacesShownList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesShownList.swift; sourceTree = "<group>"; };
@@ -821,6 +823,8 @@
 		A1CCBF181DB61E3E00A0DAE0 /* AppearsInSingle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppearsInSingle.xib; sourceTree = "<group>"; };
 		A1CCBF1F1DB626F900A0DAE0 /* SingleModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleModule.swift; sourceTree = "<group>"; };
 		A1CCBF201DB626F900A0DAE0 /* SingleModule.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleModule.xib; sourceTree = "<group>"; };
+		A1FA12BA1DBA045500E15088 /* ImageTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
+		A1FA12BE1DBA046700E15088 /* ImageTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTextView.xib; sourceTree = "<group>"; };
 		AEABBF57AAD4050B83453C21 /* Pods-SDKFrontiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOSUITests/Pods-SDKFrontiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8772F96BE5E1DAD5227F167 /* Pods-SDKFrontiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKFrontiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKFrontiOS/Pods-SDKFrontiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -957,6 +961,7 @@
 		A135D33C1DB7556000224CF2 /* ListModules */ = {
 			isa = PBXGroup;
 			children = (
+				A1FA12B91DBA03F500E15088 /* Views */,
 				A135D3491DB75EB500224CF2 /* Cells */,
 				A135D33D1DB755BD00224CF2 /* VerticalList.swift */,
 				A135D33E1DB755BD00224CF2 /* VerticalList.xib */,
@@ -978,7 +983,6 @@
 			isa = PBXGroup;
 			children = (
 				A135D34A1DB75FA900224CF2 /* ImageTextViewCell.swift */,
-				A135D34B1DB75FA900224CF2 /* ImageTextViewCell.xib */,
 				A135D35A1DB7671600224CF2 /* ImageTextRectangleViewCell.swift */,
 			);
 			name = Cells;
@@ -1248,6 +1252,15 @@
 			name = CollectionCells;
 			sourceTree = "<group>";
 		};
+		A1FA12B91DBA03F500E15088 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1FA12BA1DBA045500E15088 /* ImageTextView.swift */,
+				A1FA12BE1DBA046700E15088 /* ImageTextView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		CE71B7D156362772ECDA3984 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1428,6 +1441,7 @@
 				A1CCBDF01DB36D6600A0DAE0 /* Lato-BoldItalic.ttf in Resources */,
 				A1CCBEC31DB4FBA800A0DAE0 /* AppearsIn.xib in Resources */,
 				A1CCBEBB1DB4D96200A0DAE0 /* CuriositiesView.xib in Resources */,
+				A1FA12BF1DBA046700E15088 /* ImageTextView.xib in Resources */,
 				6DE011E71D9FCFBC00279CDA /* groupabletree.json in Resources */,
 				A1CCBED31DB50C8000A0DAE0 /* FullCuriosity.xib in Resources */,
 				A1CCBEFC1DB5299C00A0DAE0 /* ButtonHeader.xib in Resources */,
@@ -1465,7 +1479,6 @@
 				32D5C4BC1DB52BD5004FD460 /* TextNavigation.xib in Resources */,
 				A1CCBE531DB3933800A0DAE0 /* RectangularImageItems.xib in Resources */,
 				6D262B811DA9641700779B57 /* LaunchScreen.storyboard in Resources */,
-				A135D34F1DB75FA900224CF2 /* ImageTextViewCell.xib in Resources */,
 				32D5C4A41DB50F64004FD460 /* Specifications.xib in Resources */,
 				329670CD1D9A70DD003674D8 /* Carousel.xib in Resources */,
 				A1CCBE221DB3729300A0DAE0 /* SquareImageItems.xib in Resources */,
@@ -1526,7 +1539,6 @@
 				A1CCBDE81DB36D6600A0DAE0 /* Lato-Black.ttf in Resources */,
 				A1CCBE061DB36D6600A0DAE0 /* Lato-LightItalic.ttf in Resources */,
 				A1CCBF251DB626F900A0DAE0 /* SingleModule.xib in Resources */,
-				A135D3501DB75FA900224CF2 /* ImageTextViewCell.xib in Resources */,
 				A1CCBDEE1DB36D6600A0DAE0 /* Lato-Bold.ttf in Resources */,
 				A1917E7D1DB63D430035CA2C /* VerticalListModule.xib in Resources */,
 				32D5C4C51DB52C62004FD460 /* Biography.xib in Resources */,
@@ -1557,6 +1569,7 @@
 				A1CCBF1D1DB61E3E00A0DAE0 /* AppearsInSingle.xib in Resources */,
 				6D9956911DB0FA2A007A8440 /* ProductModule.xib in Resources */,
 				329670CE1D9A70DD003674D8 /* Carousel.xib in Resources */,
+				A1FA12C01DBA046700E15088 /* ImageTextView.xib in Resources */,
 				A1CCBE441DB3916D00A0DAE0 /* PlacesShown.xib in Resources */,
 				6D9956871DB0F9AF007A8440 /* Main.storyboard in Resources */,
 				A1CCBF051DB52DC400A0DAE0 /* MovieHeader.xib in Resources */,
@@ -1621,7 +1634,6 @@
 				A1CCBDE91DB36D6600A0DAE0 /* Lato-Black.ttf in Resources */,
 				A1CCBE071DB36D6600A0DAE0 /* Lato-LightItalic.ttf in Resources */,
 				A1CCBF261DB626F900A0DAE0 /* SingleModule.xib in Resources */,
-				A135D3511DB75FA900224CF2 /* ImageTextViewCell.xib in Resources */,
 				A1CCBDEF1DB36D6600A0DAE0 /* Lato-Bold.ttf in Resources */,
 				A1917E7E1DB63D430035CA2C /* VerticalListModule.xib in Resources */,
 				32D5C4C61DB52C62004FD460 /* Biography.xib in Resources */,
@@ -1652,6 +1664,7 @@
 				A1CCBF1E1DB61E3E00A0DAE0 /* AppearsInSingle.xib in Resources */,
 				6D9956981DB0FA2B007A8440 /* ProductModule.xib in Resources */,
 				329670CF1D9A70DD003674D8 /* Carousel.xib in Resources */,
+				A1FA12C11DBA046700E15088 /* ImageTextView.xib in Resources */,
 				A1CCBE451DB3916D00A0DAE0 /* PlacesShown.xib in Resources */,
 				6D9956881DB0F9B1007A8440 /* Main.storyboard in Resources */,
 				A1CCBF061DB52DC400A0DAE0 /* MovieHeader.xib in Resources */,
@@ -1841,6 +1854,7 @@
 				A15165131D89852E008AEA14 /* CardDetailData.swift in Sources */,
 				A135D36B1DB7908300224CF2 /* CastList.swift in Sources */,
 				A1CCBF111DB61E2500A0DAE0 /* InterpretedBySingle.swift in Sources */,
+				A1FA12BB1DBA045500E15088 /* ImageTextView.swift in Sources */,
 				A15165021D89851C008AEA14 /* PhotoModule.swift in Sources */,
 				A1CCBF191DB61E3E00A0DAE0 /* AppearsInSingle.swift in Sources */,
 				6D9956A71DB13344007A8440 /* MiniCardData.swift in Sources */,
@@ -1993,6 +2007,7 @@
 				A135D3681DB7906E00224CF2 /* PlacesShownList.swift in Sources */,
 				A1917E921DB644560035CA2C /* MusicShops.swift in Sources */,
 				A1CCBEB81DB4D95200A0DAE0 /* CuriositiesView.swift in Sources */,
+				A1FA12BC1DBA045500E15088 /* ImageTextView.swift in Sources */,
 				A1CCBE511DB3933800A0DAE0 /* RectangularImageItems.swift in Sources */,
 				A1917E7A1DB63D430035CA2C /* VerticalListModule.swift in Sources */,
 				32D5C4911DB50C53004FD460 /* TwoColsModule.swift in Sources */,
@@ -2105,6 +2120,7 @@
 				A135D3691DB7906E00224CF2 /* PlacesShownList.swift in Sources */,
 				A1917E931DB644560035CA2C /* MusicShops.swift in Sources */,
 				A1CCBEB91DB4D95200A0DAE0 /* CuriositiesView.swift in Sources */,
+				A1FA12BD1DBA045500E15088 /* ImageTextView.swift in Sources */,
 				A1CCBE521DB3933800A0DAE0 /* RectangularImageItems.swift in Sources */,
 				A1917E7B1DB63D430035CA2C /* VerticalListModule.swift in Sources */,
 				32D5C4921DB50C53004FD460 /* TwoColsModule.swift in Sources */,

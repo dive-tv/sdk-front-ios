@@ -10,21 +10,28 @@ import UIKit
 
 class ImageTextViewCell: UITableViewCell {
 
-    @IBOutlet weak var viewContainer : UIView!;
-    @IBOutlet weak var labelTitle : UILabel!;
-    @IBOutlet weak var labelSubtitle : UILabel!;
-    @IBOutlet weak var imageViewItem : UIImageView!;
-    @IBOutlet weak var widthImageViewItemConstraint : NSLayoutConstraint!;
+    var imageTextView : ImageTextView?;
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier);
+        
+        self.imageTextView = NSBundle.mainBundle().loadNibNamed("ImageTextView", owner: self, options: nil)?[0] as? ImageTextView;
+        
+        self.contentView.addSubview(self.imageTextView!);
+        self.imageTextView?.translatesAutoresizingMaskIntoConstraints = false;
+        
+        let constraintHorizontal = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.imageTextView!]);
+        
+        let constraintVertical = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.imageTextView!]);
+        
+        
+        self.contentView.addConstraints(constraintHorizontal);
+        self.contentView.addConstraints(constraintVertical);
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder);
     }
     
 }
