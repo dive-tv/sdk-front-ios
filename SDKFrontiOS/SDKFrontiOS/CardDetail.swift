@@ -19,7 +19,7 @@ internal class CardDetail : NSObject, Validatable{
     var subtitle : String?;
     var image : Image?;
     var products = [Product]();
-    var containers = Dictionary<ContainerContentType, ContainerData>();
+    var containers = Dictionary<ContainerContentType, Container>();
     var relations = Dictionary<ContainerContentType, ContainerData>();
     
     lazy var matchProduct : ItemProduct? = {
@@ -140,8 +140,42 @@ internal class CardDetail : NSObject, Validatable{
         }
         
         //Create Containers
+        if let _containers = data["products"].array where _containers.count > 0{
+            for _container in _containers{
+                do{
+                    try Container.validate(_container);
+                    let _containerObject = Container(data: _container);
+                    self.containers[_containerObject.contentType] = _containerObject;
+                }
+                catch DataModelErrors.CreateContainerErrors.invalidContainerType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerErrors.invalidContainerContentType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerContentType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerErrors.invalidData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.emptyData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerDataErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.emptyData);
+                }
+                catch DataModelErrors.CreateContainerDataErrors.invalidData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.invalidData);
+                }
+                catch{
+                    DataModelErrors.UnreconigzedError();
+                }
+            }
+        }
         
-        
+        //Create relations
         
     }
     

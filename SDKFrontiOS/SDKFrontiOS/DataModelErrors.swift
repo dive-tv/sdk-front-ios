@@ -25,6 +25,12 @@ internal class DataModelErrors : ErrorManager{
         case emptyData
     }
     
+    internal enum CreateMiniCardErrors : ErrorType{
+        case invalidTypeOfCard
+        case invalidData
+        case emptyData
+    }
+    
     internal enum CreateImageErrors : ErrorType{
         case invalidData
         case emptyData
@@ -41,10 +47,28 @@ internal class DataModelErrors : ErrorManager{
         case emptyData
     }
     
-    internal enum CreateTextContainerErrors : ErrorType{
+    internal enum CreateContainerErrors : ErrorType{
+        case invalidContainerType
+        case invalidContainerContentType
         case invalidData
         case emptyData
     }
+    
+    internal enum CreateContainerDataErrors : ErrorType{
+        case invalidData
+        case emptyData
+    }
+    
+    internal enum CreateSyncErrors : ErrorType{
+        case invalidData
+        case emptyData
+    }
+    
+    internal enum CreateTVEventErrors : ErrorType{
+        case invalidData
+        case emptyData
+    }
+
     
     //MARK: ERROR MANAGER PROTOCOL IMPLEMENTATION
     internal class func ThrowError(errorType : ErrorType) throws{
