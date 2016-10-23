@@ -20,7 +20,8 @@ class PhotoAndTitleView: CarouselView {
         self.title.text = _data.data.title;
         self.imageView.image = nil;
         
-        if (_data.data.image != nil && !_data.data.image!.isEmpty) {
+        // TODO: need to do the logic
+        /*if (_data.data.image != nil && !_data.data.image!.isEmpty) {
             
             var urlArray = _data.data.image!.componentsSeparatedByString(".");
             urlArray[0] += "_s_@3x"
@@ -37,7 +38,7 @@ class PhotoAndTitleView: CarouselView {
                 }
             }
             
-        }
+        }*/
     }
     
 }

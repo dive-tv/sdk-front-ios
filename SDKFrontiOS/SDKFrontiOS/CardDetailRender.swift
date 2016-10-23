@@ -37,7 +37,7 @@ public class CardDetailRender : NSObject, CardDetailDelegate{
         self.cardDetail = _cardDetail;
         
         // TODO: need to do the new logic
-        //self.pushMain();
+        self.pushMain();
     }
 
     deinit {

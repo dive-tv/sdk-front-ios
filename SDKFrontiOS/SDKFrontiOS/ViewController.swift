@@ -171,13 +171,14 @@ class ViewController: UIViewController {
         let jsonData:NSData = NSData.dataWithContentsOfMappedFile(jsonFilePath as String) as! NSData;
         let json = JSON(data: jsonData);
         
-        for card in json {
+        // TODO: need to do the logic
+        /*for card in json {
             
             let miniCardData = MiniCard(_cardId: card.1["card_id"].stringValue, _title: card.1["title"].stringValue, _type: TypeOfCard(rawValue: card.1["type"].stringValue)!, _image : card.1["image"].stringValue);
             let carouselCard = CarouselCard(_scene_id: Int(self.batchCards.count / 5) , _data: miniCardData);
             self.batchCards.insert(carouselCard, atIndex: 0);
             //self.batchCards.append(carouselCard);
-        }
+        }*/
         
         
     }
