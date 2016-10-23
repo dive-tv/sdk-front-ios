@@ -11,6 +11,12 @@ import UIKit
 class TextView: UIView {
     
     // TODO: need more constraints for all cases.
+    @IBOutlet weak var heightDisclaimerBtnConstraint : NSLayoutConstraint!;
+    @IBOutlet weak var heightDisclaimerImageConstraint : NSLayoutConstraint!;
+    @IBOutlet weak var topDistanceDisclaimerTitleConstraint : NSLayoutConstraint!;
+    @IBOutlet weak var topDistanceDisclaimerSubtitleConstraint : NSLayoutConstraint!;
+    @IBOutlet weak var bottomDistanceDisclaimerSubtitleConstraint : NSLayoutConstraint!;
+    @IBOutlet weak var heightSeparatorViewConstraint : NSLayoutConstraint!;
 
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!

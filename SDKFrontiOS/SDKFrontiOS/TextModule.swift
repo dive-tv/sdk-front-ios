@@ -34,7 +34,47 @@ class TextModule : Module{
         super.init(coder: aDecoder);
     }
     
-    /*override class func validate(data: CardDetail) throws {
-        print("VALIDATE: TEXTMODULE");
-    }*/
+    // MARK: Internal Methods
+    internal func setSource(source : Source?){
+        if(source != nil){
+            // TODO: need to put localizable
+            self.textView?.disclaimerTitle.text = "Fuente:";
+            self.textView?.disclaimerBtn.titleLabel?.text = source!.name;
+            if(source?.url != nil){
+                // TODO: change the color
+                self.textView?.disclaimerBtn.enabled = true;
+            }
+            else{
+                // TODO: change the color
+                self.textView?.disclaimerBtn.enabled = false;
+            }
+            if(source?.image != nil){
+                // TODO: download image
+            }
+            else{
+                self.textView?.disclaimerImage.hidden = true;
+                self.textView?.heightDisclaimerImageConstraint.constant = 0;
+            }
+            if(source?.disclaimer != nil){
+                self.textView?.disclaimerSubtitle.text = source?.disclaimer;
+            }
+            else{
+                self.textView?.disclaimerSubtitle.text = "";
+                self.textView?.topDistanceDisclaimerSubtitleConstraint.constant = 0;
+            }
+            
+        }
+        else{
+            self.textView?.disclaimerTitle.text = "";
+            self.textView?.disclaimerBtn.hidden = true;
+            self.textView?.disclaimerImage.hidden = true;
+            self.textView?.disclaimerSubtitle.text = "";
+            self.textView?.topDistanceDisclaimerTitleConstraint.constant = 0;
+            self.textView?.topDistanceDisclaimerSubtitleConstraint.constant = 0;
+            self.textView?.heightDisclaimerBtnConstraint.constant = 0;
+            self.textView?.heightDisclaimerImageConstraint.constant = 0;
+            self.textView?.bottomDistanceDisclaimerSubtitleConstraint.constant = 0;
+            self.textView?.heightSeparatorViewConstraint.constant = 0;
+        }
+    }
 }

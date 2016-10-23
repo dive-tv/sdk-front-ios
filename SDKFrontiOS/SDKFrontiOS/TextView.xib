@@ -119,6 +119,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bottomDistanceConstraint" destination="0OH-8G-dQ5" id="N5c-Xn-xmk"/>
+                <outlet property="bottomDistanceDisclaimerSubtitleConstraint" destination="QVO-CW-TUt" id="TYO-l7-TJK"/>
                 <outlet property="contentLabel" destination="RW1-P7-laX" id="84z-h9-IfD"/>
                 <outlet property="disclaimerBtn" destination="fI7-lo-SSV" id="snP-KA-kRj"/>
                 <outlet property="disclaimerImage" destination="c3y-eF-5KJ" id="1Js-8H-g0D"/>
@@ -126,10 +127,15 @@
                 <outlet property="disclaimerTitle" destination="LcV-jc-ENT" id="pFf-h9-LUN"/>
                 <outlet property="expandOpenBtn" destination="jgm-kw-RC8" id="L3X-3y-LhU"/>
                 <outlet property="headerLabel" destination="yOE-yC-2hV" id="BEP-l2-9na"/>
+                <outlet property="heightDisclaimerBtnConstraint" destination="rqC-Oz-B9B" id="XVR-xD-AEb"/>
+                <outlet property="heightDisclaimerImageConstraint" destination="oSo-Tv-wn3" id="WgR-Pf-tKL"/>
+                <outlet property="heightSeparatorViewConstraint" destination="rCK-0c-Oi7" id="nqE-4s-B8m"/>
                 <outlet property="leftDistanceConstraint" destination="Lnp-zP-0o0" id="7eU-oP-6T8"/>
                 <outlet property="rightDistanceConstraint" destination="IHF-VT-6pI" id="8oY-Pm-c3E"/>
                 <outlet property="separatorView" destination="XuJ-Fw-gKl" id="Tfp-HO-18K"/>
                 <outlet property="topDistanceConstraint" destination="jei-GV-kET" id="hUl-I2-pAT"/>
+                <outlet property="topDistanceDisclaimerSubtitleConstraint" destination="cvF-FZ-A5L" id="8kI-zD-NUc"/>
+                <outlet property="topDistanceDisclaimerTitleConstraint" destination="2Cg-4M-wrV" id="mVB-R4-6v4"/>
             </connections>
             <point key="canvasLocation" x="35.5" y="-147.5"/>
         </view>
