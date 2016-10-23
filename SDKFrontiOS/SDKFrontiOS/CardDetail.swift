@@ -140,7 +140,7 @@ internal class CardDetail : NSObject, Validatable{
         }
         
         //Create Containers
-        if let _containers = data["products"].array where _containers.count > 0{
+        if let _containers = data["info"].array where _containers.count > 0{
             for _container in _containers{
                 do{
                     try Container.validate(_container);

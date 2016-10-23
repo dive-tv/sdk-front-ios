@@ -46,7 +46,7 @@ internal class Product : Validatable{
             return;
         }
         
-        if(ProductCategory(rawValue: _category) != nil){
+        if(ProductCategory(rawValue: _category) == nil){
             //Throw invalid type of card Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateProductErrors.invalidCategoryOfProduct);
         }
