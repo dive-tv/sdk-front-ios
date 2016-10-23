@@ -25,7 +25,7 @@ internal class TVEvent : NSObject, Validatable{
         self.channelId = data["channel_id"].object as! String;
         self.channelName = data["channel_name"].object as! String;
         self.startDate = data["start_date"].intValue;
-        self.card = MiniCard(data: data["mini_card"]);
+        self.card = MiniCard(data: data["card"]);
         
         if let _alarmMinutesBefore = data["alarm_minutes_before"].int{
             self.alarmMinutesBefore = _alarmMinutesBefore;
@@ -48,6 +48,7 @@ internal class TVEvent : NSObject, Validatable{
                 return;
         }
         
-        try MiniCard.validate(_data["mini_card"]);
+        //TODO: Revisar si es obligatoria o no. En caso de no serlo, poner u if let de data["card"]
+        try MiniCard.validate(_data["card"]);
     }
 }

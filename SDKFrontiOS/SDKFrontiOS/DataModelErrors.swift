@@ -13,10 +13,14 @@ internal class DataModelErrors : ErrorManager{
     private static var ErrorMessages : [String : String] = [
         "UnrecognizableError" : "ERROR: an unrecognizable error has occurred",
         "CreateCardDetailErrors" : "ERROR: The data for create CardDetail is invalid",
+        "CreateMiniCardErrors" : "ERROR: The data for create a MiniCard is invalid",
         "CreateImageErrors" : "ERROR: The data for create Image is invalid",
         "CreateSourceErrors" : "ERROR: The data for create Source is invalid",
         "CreateProductErrors" : "ERROR: The data for create Product is invalid",
-        "CreateTextContainerErrors" : "ERROR: The data for create TextContainer is invalid"
+        "CreateContainerErrors" : "ERROR: The data for create Container is invalid",
+        "CreateContainerDataErrors" : "ERROR: The data for create ContainerData is invalid",
+        "CreateSyncErrors" : "ERROR: The data for create Sync is invalid",
+        "CreateTVEventErrors" : "ERROR: The data for create TVEvent is invalid"
     ]
     
     internal enum CreateCardDetailErrors : ErrorType{
@@ -77,7 +81,7 @@ internal class DataModelErrors : ErrorManager{
     
     internal class func ShowError(errorType : ErrorType){
         print(ErrorMessages[String(errorType.self)]);
-        print(errorType);
+        print(String(errorType.self) + "." + String(errorType));
     }
     
     internal class func UnreconigzedError(){

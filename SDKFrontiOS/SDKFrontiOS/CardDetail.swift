@@ -166,9 +166,6 @@ internal class CardDetail : NSObject, Validatable{
                 catch DataModelErrors.CreateContainerDataErrors.emptyData{
                     DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.emptyData);
                 }
-                catch DataModelErrors.CreateContainerDataErrors.invalidData{
-                    DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.invalidData);
-                }
                 catch{
                     DataModelErrors.UnreconigzedError();
                 }

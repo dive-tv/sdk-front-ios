@@ -28,7 +28,7 @@ internal class CarruselErrors : ErrorManager{
     
     internal class func ShowError(errorType : ErrorType){
         print(ErrorMessages[String(errorType.self)]);
-        print(errorType);
+        print(String(errorType.self) + "." + String(errorType));
     }
     
     internal class func UnreconigzedError(){

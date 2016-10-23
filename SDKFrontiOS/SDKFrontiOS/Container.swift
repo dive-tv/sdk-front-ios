@@ -13,7 +13,7 @@ internal class Container : NSObject, Validatable{
 
     var type : ContainerType;
     var contentType : ContainerContentType;
-    var data : ContainerData;
+    var data = [ContainerData]();
     
     init(data: JSON){
         
@@ -27,26 +27,49 @@ internal class Container : NSObject, Validatable{
         
         //TODO: researdch the posibility to delete the switch
         
-        switch self.type {
-            case ContainerType.Text:
-                self.data = TextContainerData(data: data["data"]);
-            case ContainerType.Listing:
-                self.data = ListingContainerData(data: data["data"]);
-            case ContainerType.Rating:
-                self.data = RatingContainerData(data: data["data"]);
-            case ContainerType.Map:
-                self.data = MapContainerData(data: data["data"]);
-            case ContainerType.Link:
-                self.data = LinkContainerData(data: data["data"]);
-            case ContainerType.Image:
-                self.data = ImageContainerData(data: data["data"]);
-            case ContainerType.Awards:
-                self.data = AwardsContainerData(data: data["data"]);
-            case ContainerType.Catalog:
-                self.data = CatalogContainerData(data: data["data"]);
-            case ContainerType.Seasons:
-                self.data = SeasonsContainerData(data: data["data"]);
+        //create a type of class for validate the data
+        let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
+        let _containerClass = NSClassFromString(appName + "." + (self.type.rawValue).capitalizedString  + "ContainerData") as! ContainerData.Type;
+
+        for item in data["data"].array!{
+            do{
+                try _containerClass.validate(item);
+                
+                switch self.type {
+                case ContainerType.Text:
+                    self.data.append(TextContainerData(data: item));
+                case ContainerType.Listing:
+                     self.data.append(ListingContainerData(data: item));
+                case ContainerType.Rating:
+                     self.data.append(RatingContainerData(data: item));
+                case ContainerType.Map:
+                     self.data.append(MapContainerData(data: item));
+                case ContainerType.Link:
+                     self.data.append(LinkContainerData(data: item));
+                case ContainerType.Image:
+                     self.data.append(ImageContainerData(data: item));
+                case ContainerType.Awards:
+                     self.data.append(AwardsContainerData(data: item));
+                case ContainerType.Catalog:
+                     self.data.append(CatalogContainerData(data: item));
+                case ContainerType.Seasons:
+                     self.data.append(SeasonsContainerData(data: item));
+                }
+                
+            }
+            catch DataModelErrors.CreateContainerDataErrors.emptyData{
+                DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.emptyData);
+            }
+            catch DataModelErrors.CreateContainerDataErrors.invalidData{
+                DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.invalidData);
+            }
+            catch{
+                DataModelErrors.UnreconigzedError();
+            }
         }
+
+        
+        
     }
     
     class func validate(data: JSON?) throws{
@@ -56,7 +79,7 @@ internal class Container : NSObject, Validatable{
             return;
         }
         
-        guard case let (_type as String, _contentType as String, _containerData as JSON) = (_data["type"].object, _data["content_type"].object, _data["data"]) else{
+        guard case let (_type as String, _contentType as String, _containerData as [JSON]) = (_data["type"].object, _data["content_type"].object, _data["data"].array) where _type != "" && _contentType != "" && _containerData.count > 0 else{
             //Throw indavilData Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerErrors.invalidData);
             return;
@@ -77,6 +100,27 @@ internal class Container : NSObject, Validatable{
         let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
         let _containerClass = NSClassFromString(appName + "." + (_containerType.rawValue).capitalizedString  + "ContainerData") as! ContainerData.Type;
         
-        try _containerClass.validate(_containerData);
+        var validatedContainerData = 0;
+        
+        for item in _containerData{
+            do{
+                try _containerClass.validate(item);
+                validatedContainerData += 1;
+            }
+            catch DataModelErrors.CreateContainerDataErrors.emptyData{
+                DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.emptyData);
+            }
+            catch DataModelErrors.CreateContainerDataErrors.invalidData{
+                DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.invalidData);
+            }
+            catch{
+                DataModelErrors.UnreconigzedError();
+            }
+        }
+        
+        //if there isnt any containerData, the container is invalid
+        if(validatedContainerData == 0){
+            try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.emptyData);
+        }
     }
 }

@@ -141,37 +141,37 @@
              "data": [{
                       "title": "Venice Film Festival",
                       "nominee": [{
-                                  "title": "Golden Lion - Best Picture",
+                                  "text": "Golden Lion - Best Picture",
                                   "value": "1948"
                                   }],
                       "winner": [{
-                                 "title": "Golden Lion - Best Picture",
+                                 "text": "Golden Lion - Best Picture",
                                  "value": "1948"
                                  }]
                       }, {
                       "title": "European Film Awards",
                       "nominee": [{
-                                  "title": "People's Choice Award for Bes European Film",
+                                  "text": "People's Choice Award for Bes European Film",
                                   "value": "2006"
                                   }],
                       "winner": [{
-                                 "title": "People's Choice Award for Bes European Film",
+                                 "text": "People's Choice Award for Bes European Film",
                                  "value": "2006"
                                  }]
                       }, {
                       "title": "BAFTA - British Academy Film Awards",
                       "nominee": [{
-                                  "title": "Best TV Make Up & Hair Design (2008)",
+                                  "text": "Best TV Make Up & Hair Design (2008)",
                                   "value": "Anne Oldham"
                                   }, {
-                                  "title": "Most Outstanding British Film",
+                                  "text": "Most Outstanding British Film",
                                   "value": "1949"
                                   }],
                       "winner": [{
-                                 "title": "Best TV Make Up & Hair Design (2008)",
+                                 "text": "Best TV Make Up & Hair Design (2008)",
                                  "value": "Anne Oldham"
                                  }, {
-                                 "title": "Most Outstanding British Film",
+                                 "text": "Most Outstanding British Film",
                                  "value": "1949"
                                  }]
                       }]
@@ -183,13 +183,13 @@
                       "director": "Peter Webber",
                       "genres": ["CRIME", "THRILLER", "DRAMA"],
                       "original_title": "Hannibal Rising",
-                      "runtime": "117",
+                      "runtime": 117,
                       "sync": {
                       "is_synchronizable": true,
                       "audio_langs": ["es", "en", "de"],
                       "channels": [{
                                    "tv_event_id": "00337f53-670a-8ec1-95f3-e95331c6bb00",
-                                   "channel_id": 11,
+                                   "channel_id": "11",
                                    "channel_name": "Cuatro",
                                    "start_date": 1449522000000,
                                    "end_date": 1449530400000,

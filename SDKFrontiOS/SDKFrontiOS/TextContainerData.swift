@@ -21,18 +21,22 @@ class TextContainerData : ContainerData{
         
         let _source = data["source"];
         
-        do{
-            try Source.validate(_source);
-            self.source = Source(data: _source);
-        }
-        catch DataModelErrors.CreateSourceErrors.emptyData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.emptyData);
-        }
-        catch DataModelErrors.CreateSourceErrors.invalidData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.invalidData);
-        }
-        catch{
-            DataModelErrors.UnreconigzedError();
+        if(_source != nil){
+        
+            do{
+                try Source.validate(_source);
+                self.source = Source(data: _source);
+            }
+            catch DataModelErrors.CreateSourceErrors.emptyData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.emptyData);
+            }
+            catch DataModelErrors.CreateSourceErrors.invalidData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.invalidData);
+            }
+            catch{
+                DataModelErrors.UnreconigzedError();
+            }
+            
         }
         
         super.init();
@@ -72,7 +76,7 @@ class ListingContainerData : ContainerData{
         }
         
         guard case let (_text as String, _value as String) = (_data["text"].object, _data["value"].object)
-            where _text != "" || _value != "" else{
+            where _text != "" && _value != "" else{
             //Throw indavilData Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
             return;
@@ -92,18 +96,22 @@ class RatingContainerData : ContainerData{
         
         let _source = data["source"];
         
-        do{
-            try Source.validate(_source);
-            self.source = Source(data: _source);
-        }
-        catch DataModelErrors.CreateSourceErrors.emptyData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.emptyData);
-        }
-        catch DataModelErrors.CreateSourceErrors.invalidData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.invalidData);
-        }
-        catch{
-            DataModelErrors.UnreconigzedError();
+        //TODO: Source debería no poder ser nil
+        if(_source != nil){
+        
+            do{
+                try Source.validate(_source);
+                self.source = Source(data: _source);
+            }
+            catch DataModelErrors.CreateSourceErrors.emptyData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.emptyData);
+            }
+            catch DataModelErrors.CreateSourceErrors.invalidData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.invalidData);
+            }
+            catch{
+                DataModelErrors.UnreconigzedError();
+            }
         }
         
         super.init();
@@ -115,8 +123,7 @@ class RatingContainerData : ContainerData{
             return;
         }
         
-        if let _value = _data["value"].object as? String
-            where _value != ""{
+        if(_data["value"].int != nil){
                 //Throw indavilData Error
                 try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
                 return;
@@ -155,28 +162,32 @@ class MapContainerData : ContainerData{
 
 class LinkContainerData : ContainerData{
     
-    var link : String;
+    var url : String;
     var source : Source?;
     
     init(data: JSON){
         
         //validate variables
-        self.link = data["link"].object as! String;
+        self.url = data["url"].object as! String;
         
         let _source = data["source"];
         
-        do{
-            try Source.validate(_source);
-            self.source = Source(data: _source);
-        }
-        catch DataModelErrors.CreateSourceErrors.emptyData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.emptyData);
-        }
-        catch DataModelErrors.CreateSourceErrors.invalidData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.invalidData);
-        }
-        catch{
-            DataModelErrors.UnreconigzedError();
+        //TODO: Source debería no poder ser nil
+        if(_source != nil){
+        
+            do{
+                try Source.validate(_source);
+                self.source = Source(data: _source);
+            }
+            catch DataModelErrors.CreateSourceErrors.emptyData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.emptyData);
+            }
+            catch DataModelErrors.CreateSourceErrors.invalidData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.invalidData);
+            }
+            catch{
+                DataModelErrors.UnreconigzedError();
+            }
         }
         
         super.init();
@@ -188,7 +199,7 @@ class LinkContainerData : ContainerData{
             return;
         }
         
-        guard let _link = _data["link"].object as? String
+        guard let _link = _data["url"].object as? String
             where _link != "" else{
             //Throw indavilData Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
@@ -204,7 +215,7 @@ class ImageContainerData : ContainerData{
     init(data: JSON){
         
         //validate variables
-        self.image = Image(data: data["image"]);
+        self.image = Image(data: data);
         
         super.init();
     }
@@ -215,8 +226,7 @@ class ImageContainerData : ContainerData{
             return;
         }
         
-        let _image = _data["image"];
-        try Image.validate(_image);
+        try Image.validate(_data);
     }
 }
 
@@ -322,18 +332,20 @@ class CatalogContainerData : ContainerData{
         
         let _sync = data["sync"];
         
-        do{
-            try Sync.validate(_sync);
-            self.sync = Sync(data: _sync);
-        }
-        catch DataModelErrors.CreateSyncErrors.emptyData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSyncErrors.emptyData);
-        }
-        catch DataModelErrors.CreateSyncErrors.invalidData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSyncErrors.invalidData);
-        }
-        catch{
-            DataModelErrors.UnreconigzedError();
+        if(_sync != nil){
+            do{
+                try Sync.validate(_sync);
+                self.sync = Sync(data: _sync);
+            }
+            catch DataModelErrors.CreateSyncErrors.emptyData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSyncErrors.emptyData);
+            }
+            catch DataModelErrors.CreateSyncErrors.invalidData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSyncErrors.invalidData);
+            }
+            catch{
+                DataModelErrors.UnreconigzedError();
+            }
         }
         
         if let _creators = data["creators"].object as? String where _creators != ""{
@@ -393,23 +405,25 @@ class SeasonsContainerData : ContainerData{
         //Create image
         let _image = data["image"];
         
-        do{
-            //validate data
-            try Image.validate(_image);
-            self.image = Image(data: _image);
-        }
-        catch DataModelErrors.CreateImageErrors.emptyData{
-            DataModelErrors.ShowError(DataModelErrors.CreateImageErrors.emptyData);
-            //Some recover code
-        }
-        catch DataModelErrors.CreateImageErrors.invalidData{
-            DataModelErrors.ShowError(DataModelErrors.CreateImageErrors.invalidData);
-            //Some recover code
-        }
-        catch{
-            //Throw error for validate
-            DataModelErrors.UnreconigzedError();
-            //Some recorver code
+        if(_image != nil){
+            do{
+                //validate data
+                try Image.validate(_image);
+                self.image = Image(data: _image);
+            }
+            catch DataModelErrors.CreateImageErrors.emptyData{
+                DataModelErrors.ShowError(DataModelErrors.CreateImageErrors.emptyData);
+                //Some recover code
+            }
+            catch DataModelErrors.CreateImageErrors.invalidData{
+                DataModelErrors.ShowError(DataModelErrors.CreateImageErrors.invalidData);
+                //Some recover code
+            }
+            catch{
+                //Throw error for validate
+                DataModelErrors.UnreconigzedError();
+                //Some recorver code
+            }
         }
         
         super.init();
