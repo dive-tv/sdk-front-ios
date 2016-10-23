@@ -188,8 +188,8 @@ class LinkContainerData : ContainerData{
             return;
         }
         
-        if let _link = _data["link"].object as? String
-            where _link != ""{
+        guard let _link = _data["link"].object as? String
+            where _link != "" else{
             //Throw indavilData Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
             return;
