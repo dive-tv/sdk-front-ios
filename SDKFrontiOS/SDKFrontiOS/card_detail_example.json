@@ -238,37 +238,37 @@
              "data": [{
                       "title": "Venice Film Festival",
                       "nominee": [{
-                                  "text": "Golden Lion - Best Picture",
+                                  "title": "Golden Lion - Best Picture",
                                   "value": "1948"
                                   }],
                       "winner": [{
-                                 "text": "Golden Lion - Best Picture",
+                                 "title": "Golden Lion - Best Picture",
                                  "value": "1948"
                                  }]
                       }, {
                       "title": "European Film Awards",
                       "nominee": [{
-                                  "text": "People's Choice Award for Bes European Film",
+                                  "title": "People's Choice Award for Bes European Film",
                                   "value": "2006"
                                   }],
                       "winner": [{
-                                 "text": "People's Choice Award for Bes European Film",
+                                 "title": "People's Choice Award for Bes European Film",
                                  "value": "2006"
                                  }]
                       }, {
                       "title": "BAFTA - British Academy Film Awards",
                       "nominee": [{
-                                  "text": "Best TV Make Up & Hair Design (2008)",
+                                  "title": "Best TV Make Up & Hair Design (2008)",
                                   "value": "Anne Oldham"
                                   }, {
-                                  "text": "Most Outstanding British Film",
+                                  "title": "Most Outstanding British Film",
                                   "value": "1949"
                                   }],
                       "winner": [{
-                                 "text": "Best TV Make Up & Hair Design (2008)",
+                                 "title": "Best TV Make Up & Hair Design (2008)",
                                  "value": "Anne Oldham"
                                  }, {
-                                 "text": "Most Outstanding British Film",
+                                 "title": "Most Outstanding British Film",
                                  "value": "1949"
                                  }]
                       }]
