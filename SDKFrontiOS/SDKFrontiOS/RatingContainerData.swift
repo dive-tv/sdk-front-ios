@@ -1,28 +1,29 @@
 //
-//  TextContainerData.swift
+//  RatingContainerData.swift
 //  SDKFrontiOS
 //
-//  Created by Jonathan Castro Miguel on 20/10/16.
+//  Created by Jonathan Castro Miguel on 24/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import Foundation
 import SwiftyJSON
 
-class TextContainerData : ContainerData{
+class RatingContainerData : ContainerData{
     
-    var text : String;
+    var value : Int;
     var source : Source?;
     
     init(data: JSON){
         
         //validate variables
-        self.text = data["text"].object as! String;
+        self.value = data["value"].intValue;
         
         let _source = data["source"];
         
+        //TODO: Source debería no poder ser nil
         if(_source != nil){
-        
+            
             do{
                 try Source.validate(_source);
                 self.source = Source(data: _source);
@@ -47,9 +48,10 @@ class TextContainerData : ContainerData{
             return;
         }
         
-        if(_data["text"].object as? String == nil){
+        if(_data["value"].int != nil){
             //Throw indavilData Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
+            return;
         }
     }
 }

@@ -19,8 +19,11 @@ internal class DataModelErrors : ErrorManager{
         "CreateProductErrors" : "ERROR: The data for create Product is invalid",
         "CreateContainerErrors" : "ERROR: The data for create Container is invalid",
         "CreateContainerDataErrors" : "ERROR: The data for create ContainerData is invalid",
+        "CreateRelationsErrors" : "ERROR: The data for create Relations is invalid",
+        "CreateRelationsDataErrors" : "ERROR: The data for create RelationsData is invalid",
         "CreateSyncErrors" : "ERROR: The data for create Sync is invalid",
-        "CreateTVEventErrors" : "ERROR: The data for create TVEvent is invalid"
+        "CreateTVEventErrors" : "ERROR: The data for create TVEvent is invalid",
+        "CreateUserErrors" : "ERROR: The data for create User is invalid"
     ]
     
     internal enum CreateCardDetailErrors : ErrorType{
@@ -63,6 +66,18 @@ internal class DataModelErrors : ErrorManager{
         case emptyData
     }
     
+    internal enum CreateRelationsErrors : ErrorType{
+        case invalidRelationType
+        case invalidRelationContentType
+        case invalidData
+        case emptyData
+    }
+    
+    internal enum CreateRelationsDataErrors : ErrorType{
+        case invalidData
+        case emptyData
+    }
+    
     internal enum CreateSyncErrors : ErrorType{
         case invalidData
         case emptyData
@@ -72,8 +87,12 @@ internal class DataModelErrors : ErrorManager{
         case invalidData
         case emptyData
     }
-
     
+    internal enum CreateUserErrors : ErrorType{
+        case invalidData
+        case emptyData
+    }
+
     //MARK: ERROR MANAGER PROTOCOL IMPLEMENTATION
     internal class func ThrowError(errorType : ErrorType) throws{
         throw errorType;

@@ -21,9 +21,6 @@ internal class Container : NSObject, Validatable{
         self.type = ContainerType(rawValue: data["type"].object as! String)!;
         self.contentType = ContainerContentType(rawValue: data["content_type"].object as! String)!;
         
-        //create a type of class for validate the data
-        //let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
-        //let _containerClass = NSClassFromString(appName + "." + (self.type.rawValue).capitalizedString  + "ContainerData") as! ContainerData.Type;
         
         //TODO: researdch the posibility to delete the switch
         

@@ -1,28 +1,29 @@
 //
-//  TextContainerData.swift
+//  LinkContainerData.swift
 //  SDKFrontiOS
 //
-//  Created by Jonathan Castro Miguel on 20/10/16.
+//  Created by Jonathan Castro Miguel on 24/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import Foundation
 import SwiftyJSON
 
-class TextContainerData : ContainerData{
+class LinkContainerData : ContainerData{
     
-    var text : String;
+    var url : String;
     var source : Source?;
     
     init(data: JSON){
         
         //validate variables
-        self.text = data["text"].object as! String;
+        self.url = data["url"].object as! String;
         
         let _source = data["source"];
         
+        //TODO: Source debería no poder ser nil
         if(_source != nil){
-        
+            
             do{
                 try Source.validate(_source);
                 self.source = Source(data: _source);
@@ -47,9 +48,11 @@ class TextContainerData : ContainerData{
             return;
         }
         
-        if(_data["text"].object as? String == nil){
-            //Throw indavilData Error
-            try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
+        guard let _link = _data["url"].object as? String
+            where _link != "" else{
+                //Throw indavilData Error
+                try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
+                return;
         }
     }
 }
