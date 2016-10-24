@@ -32,11 +32,15 @@
                         <constraint firstItem="W7q-Bg-hd3" firstAttribute="leading" secondItem="ruo-g1-edM" secondAttribute="leading" constant="15" id="y3g-Wk-FxG"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fWe-Fa-xrJ">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fWe-Fa-xrJ">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="275" id="XEg-zr-wbb"/>
                     </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="oXr-Ip-hRC"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="4t5-46-Lmw"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

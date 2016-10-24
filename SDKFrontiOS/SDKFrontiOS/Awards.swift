@@ -23,8 +23,8 @@ class Awards: VerticalListModule {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         
         // This is not needed because if not pass the validate this will never be call
-        if let container = self.cardDetail.containers[ContainerContentType.Awards], awardsContainer = container.data.first as? AwardsContainerData{
-            // TODO: need to do the logic
+        if let container = self.cardDetail.containers[ContainerContentType.Awards]{
+            
         }
         
         
