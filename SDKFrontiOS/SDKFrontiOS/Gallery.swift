@@ -48,8 +48,8 @@ class Gallery: Module {
         
         
         // This is not needed because if not pass the validate this will never be call
-        if let container = self.cardDetail.containers[ContainerContentType.Gallery], imageContainer = container.data.first as? ImageContainerData{
-            // TODO: need to do the logic
+        if let container = self.cardDetail.containers[ContainerContentType.Gallery]{
+            self.galleryView?.setData(container.data as! [ImageContainerData]);
         }
         
         
