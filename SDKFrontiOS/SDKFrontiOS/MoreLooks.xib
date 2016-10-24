@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoreLooks" rowHeight="253" id="KGk-i7-Jjw" customClass="MoreLooks" customModule="SDKFrontiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="253"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="252"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qqh-5A-RFf">
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ace-Tq-4Fw">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYj-fH-xyP">
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_next" translatesAutoresizingMaskIntoConstraints="NO" id="Ym7-eN-KXu"/>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Ym7-eN-KXu" firstAttribute="leading" secondItem="WYj-fH-xyP" secondAttribute="trailing" constant="3" id="0Vc-3W-D15"/>
+                                    <constraint firstAttribute="height" constant="16" id="PJi-Gy-sQW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ym7-eN-KXu" secondAttribute="trailing" id="R7v-U4-4js"/>
+                                    <constraint firstItem="WYj-fH-xyP" firstAttribute="leading" secondItem="ace-Tq-4Fw" secondAttribute="leading" id="Zyp-w8-dhj"/>
+                                    <constraint firstItem="Ym7-eN-KXu" firstAttribute="centerY" secondItem="ace-Tq-4Fw" secondAttribute="centerY" id="jD6-yb-gyz"/>
+                                    <constraint firstAttribute="bottom" secondItem="WYj-fH-xyP" secondAttribute="bottom" id="rLg-54-cOA"/>
+                                    <constraint firstItem="WYj-fH-xyP" firstAttribute="top" secondItem="ace-Tq-4Fw" secondAttribute="top" id="ryk-4a-fOb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTL-LS-dl1">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqg-X3-bkw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="S1T-ne-AJh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pqg-X3-bkw" secondAttribute="trailing" id="12d-gt-J1C"/>
+                            <constraint firstItem="pqg-X3-bkw" firstAttribute="top" secondItem="mTL-LS-dl1" secondAttribute="bottom" constant="12" id="ADq-zr-Yjh"/>
+                            <constraint firstItem="mTL-LS-dl1" firstAttribute="top" secondItem="Qqh-5A-RFf" secondAttribute="top" constant="15" id="DRQ-uv-35J"/>
+                            <constraint firstItem="ace-Tq-4Fw" firstAttribute="top" secondItem="Qqh-5A-RFf" secondAttribute="top" constant="15" id="Qs1-DC-N9m"/>
+                            <constraint firstAttribute="trailing" secondItem="ace-Tq-4Fw" secondAttribute="trailing" constant="15" id="ZSb-af-W44"/>
+                            <constraint firstAttribute="bottom" secondItem="pqg-X3-bkw" secondAttribute="bottom" constant="15" id="lZN-XO-KKT"/>
+                            <constraint firstItem="pqg-X3-bkw" firstAttribute="leading" secondItem="Qqh-5A-RFf" secondAttribute="leading" id="oTt-TW-8pm"/>
+                            <constraint firstItem="mTL-LS-dl1" firstAttribute="leading" secondItem="Qqh-5A-RFf" secondAttribute="leading" constant="15" id="rGY-Fw-h0e"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Qqh-5A-RFf" secondAttribute="bottom" id="L8E-VG-hPN"/>
+                    <constraint firstItem="Qqh-5A-RFf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Qbn-8c-7xb"/>
+                    <constraint firstItem="Qqh-5A-RFf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hba-Yq-Umh"/>
+                    <constraint firstAttribute="trailing" secondItem="Qqh-5A-RFf" secondAttribute="trailing" id="ivP-eq-f4F"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="heightScrollViewConstraint" destination="S1T-ne-AJh" id="mTk-My-Zx2"/>
+                <outlet property="imageViewNext" destination="Ym7-eN-KXu" id="AYj-OF-h4z"/>
+                <outlet property="labelAll" destination="WYj-fH-xyP" id="Zty-kE-PPn"/>
+                <outlet property="labelModuleTitle" destination="mTL-LS-dl1" id="GId-8a-i8Q"/>
+                <outlet property="scrollView" destination="pqg-X3-bkw" id="MT7-yT-y2T"/>
+                <outlet property="viewAll" destination="ace-Tq-4Fw" id="Ov3-JZ-4Qb"/>
+                <outlet property="viewBackground" destination="Qqh-5A-RFf" id="fJN-Fz-wGo"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="158.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_next" width="6" height="11"/>
+    </resources>
+</document>

@@ -56,12 +56,12 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 100;
         
-        let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
+        //let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
         
         for module in self.configSection.arrayModules {
-            let moduleClass = NSClassFromString(appName + "." + module.moduleName!) as! Module.Type
-            self.tableView.registerClass(moduleClass.self, forCellReuseIdentifier: module.moduleName!);
-            //self.tableView?.registerNib(UINib(nibName: module.moduleName!, bundle: nil), forCellReuseIdentifier: module.moduleName!);
+            /*let moduleClass = NSClassFromString(appName + "." + module.moduleName!) as! Module.Type
+            self.tableView.registerClass(moduleClass.self, forCellReuseIdentifier: module.moduleName!);*/
+            self.tableView?.registerNib(UINib(nibName: module.moduleName!, bundle: nil), forCellReuseIdentifier: module.moduleName!);
         }
     }
     

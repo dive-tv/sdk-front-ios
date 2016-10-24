@@ -44,7 +44,7 @@
                 "type":"TravelShop"
             },
             {
-                "type":"SoundTrack"
+                "type":"Soundtrack"
             },
             {
                 "type":"Cast"
@@ -107,7 +107,7 @@
                 "type":"MovieHeaderSmall"
             },
             {
-                "type":"Sinopsis"
+                "type":"Overview"
             },
             {
                 "type":"Biography"

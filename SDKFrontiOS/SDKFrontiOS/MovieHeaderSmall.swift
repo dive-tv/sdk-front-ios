@@ -2,7 +2,7 @@
 //  MovieHeaderSmall.swift
 //  SDKFrontiOS
 //
-//  Created by Carlos Bailon Perez on 17/10/16.
+//  Created by Sergio Girao on 24/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
@@ -10,46 +10,39 @@ import UIKit
 
 class MovieHeaderSmall: Module {
 
-    var movieHeaderSmallView : MovieHeaderSmallView?;
+    @IBOutlet weak var viewBackground : UIView!;
+    @IBOutlet weak var imageViewItem : UIImageView!;
+    @IBOutlet weak var labelTitle : UILabel!;
+    @IBOutlet weak var labelProducer : UILabel!;
+    @IBOutlet weak var labelGenre : UILabel!;
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier);
-        
-        self.movieHeaderSmallView = NSBundle.mainBundle().loadNibNamed("MovieHeaderSmallView", owner: self, options: nil)?[0] as? MovieHeaderSmallView;
-        
-        self.contentView.addSubview(self.movieHeaderSmallView!);
-        self.movieHeaderSmallView?.translatesAutoresizingMaskIntoConstraints = false;
-        
-        let constraintHorizontal = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.movieHeaderSmallView!]);
-        
-        let constraintVertical = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.movieHeaderSmallView!]);
-        
-        
-        self.contentView.addConstraints(constraintHorizontal);
-        self.contentView.addConstraints(constraintVertical);
-        
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder);
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
     
     override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         // TODO: need to put the color of the background
-        self.movieHeaderSmallView?.backgroundColor = UIColor.blueColor();
+        self.viewBackground.backgroundColor = UIColor.blueColor();
         
-        self.movieHeaderSmallView?.labelTitle.text = self.cardDetail.title;
+        self.labelTitle.text = self.cardDetail.title;
         if let container = self.cardDetail.containers[ContainerContentType.Movie], catalogContainer = container.data.first as? CatalogContainerData{
-            self.movieHeaderSmallView?.labelProducer.text = catalogContainer.director;
+            self.labelProducer.text = catalogContainer.director;
             self.setGenres(catalogContainer.genres);
             
             if(catalogContainer.backGroundImage != nil && catalogContainer.backGroundImage?.characters.count > 0){
                 // TODO: need to download the image
             }
             
-            self.movieHeaderSmallView?.labelTitle.text = self.movieHeaderSmallView!.labelTitle.text! + "(\(catalogContainer.year))";
+            self.labelTitle.text = self.labelTitle.text! + "(\(catalogContainer.year))";
             
         }
         
@@ -75,6 +68,6 @@ class MovieHeaderSmall: Module {
             i += 1;
             
         }
-        self.movieHeaderSmallView?.labelGenre.text = text;
+        self.labelGenre.text = text;
     }
 }
