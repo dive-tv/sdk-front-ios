@@ -21,22 +21,22 @@ internal class Source : Validatable{
         self.name = data["name"].object as! String;
         
         //non validated variables
-        if let _url = data["url"].object as? String where _url != ""{
+        if let _url = data["url"].object as? String , _url != ""{
             self.url = _url;
         }
         
-        if let _disclaimer = data["disclaimer"].object as? String where _disclaimer != ""{
+        if let _disclaimer = data["disclaimer"].object as? String , _disclaimer != ""{
             self.disclaimer = _disclaimer;
         }
         
-        if let _image = data["image"].object as? String where _image != ""{
+        if let _image = data["image"].object as? String , _image != ""{
             self.image = _image;
         }
     }
     
-    class func validate(data: JSON?) throws{
+    class func validate(_ data: JSON?) throws{
         
-        guard let _data = data where _data != nil else{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateSourceErrors.emptyData);
             return;
         }

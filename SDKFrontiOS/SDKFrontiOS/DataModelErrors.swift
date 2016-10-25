@@ -10,7 +10,7 @@ import Foundation
 
 internal class DataModelErrors : ErrorManager{
     
-    private static var ErrorMessages : [String : String] = [
+    fileprivate static var ErrorMessages : [String : String] = [
         "UnrecognizableError" : "ERROR: an unrecognizable error has occurred",
         "CreateCardDetailErrors" : "ERROR: The data for create CardDetail is invalid",
         "CreateMiniCardErrors" : "ERROR: The data for create a MiniCard is invalid",
@@ -26,81 +26,81 @@ internal class DataModelErrors : ErrorManager{
         "CreateUserErrors" : "ERROR: The data for create User is invalid"
     ]
     
-    internal enum CreateCardDetailErrors : ErrorType{
+    internal enum CreateCardDetailErrors : Error{
         case invalidTypeOfCard
         case invalidData
         case emptyData
     }
     
-    internal enum CreateMiniCardErrors : ErrorType{
+    internal enum CreateMiniCardErrors : Error{
         case invalidTypeOfCard
         case invalidData
         case emptyData
     }
     
-    internal enum CreateImageErrors : ErrorType{
+    internal enum CreateImageErrors : Error{
         case invalidData
         case emptyData
     }
     
-    internal enum CreateSourceErrors : ErrorType{
+    internal enum CreateSourceErrors : Error{
         case invalidData
         case emptyData
     }
     
-    internal enum CreateProductErrors : ErrorType{
+    internal enum CreateProductErrors : Error{
         case invalidCategoryOfProduct
         case invalidData
         case emptyData
     }
     
-    internal enum CreateContainerErrors : ErrorType{
+    internal enum CreateContainerErrors : Error{
         case invalidContainerType
         case invalidContainerContentType
         case invalidData
         case emptyData
     }
     
-    internal enum CreateContainerDataErrors : ErrorType{
+    internal enum CreateContainerDataErrors : Error{
         case invalidData
         case emptyData
     }
     
-    internal enum CreateRelationsErrors : ErrorType{
+    internal enum CreateRelationsErrors : Error{
         case invalidRelationType
         case invalidRelationContentType
         case invalidData
         case emptyData
     }
     
-    internal enum CreateRelationsDataErrors : ErrorType{
+    internal enum CreateRelationsDataErrors : Error{
         case invalidData
         case emptyData
     }
     
-    internal enum CreateSyncErrors : ErrorType{
+    internal enum CreateSyncErrors : Error{
         case invalidData
         case emptyData
     }
     
-    internal enum CreateTVEventErrors : ErrorType{
+    internal enum CreateTVEventErrors : Error{
         case invalidData
         case emptyData
     }
     
-    internal enum CreateUserErrors : ErrorType{
+    internal enum CreateUserErrors : Error{
         case invalidData
         case emptyData
     }
 
     //MARK: ERROR MANAGER PROTOCOL IMPLEMENTATION
-    internal class func ThrowError(errorType : ErrorType) throws{
+    internal class func ThrowError(_ errorType : Error) throws{
         throw errorType;
     }
     
-    internal class func ShowError(errorType : ErrorType){
-        print(ErrorMessages[String(errorType.self)]);
-        print(String(errorType.self) + "." + String(errorType));
+    internal class func ShowError(_ errorType : Error){
+        print(ErrorMessages[String(describing: errorType.self)]);
+        print(String(describing: errorType.self) + "." + String(describing: errorType));
     }
     
     internal class func UnreconigzedError(){

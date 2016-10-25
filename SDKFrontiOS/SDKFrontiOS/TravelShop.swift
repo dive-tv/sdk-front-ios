@@ -21,7 +21,7 @@ class TravelShop: HorizontalListModule {
         // Configure the view for the selected state
     }
     
-    override class func validate(cardDetail : CardDetail) throws {
+    override class func validate(_ cardDetail : CardDetail) throws {
         if cardDetail.products.count == 0{
             // TODO: create error
             try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.emptyData);
@@ -43,7 +43,7 @@ class TravelShop: HorizontalListModule {
     }
     
     
-    override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
+    override func setCardDetail(_ _configModule: ConfigModule, _cardDetail: CardDetail) {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         
         // This is not needed because if not pass the validate this will never be call
@@ -64,10 +64,10 @@ class TravelShop: HorizontalListModule {
             
             self.heightScrollViewConstraint.constant = 250;
             self.itemWidth = 220;
-            self.labelModuleTitle.text = "Alojamientos".uppercaseString;
+            self.labelModuleTitle.text = "Alojamientos".uppercased();
             
             
-            self.viewBackground.backgroundColor = UIColor.greenColor();
+            self.viewBackground.backgroundColor = UIColor.green;
             self.addItemToScrollView(products);
             
             let width = (CGFloat(cardDetail.products.count) * (self.itemWidth + 10)) + 15 + 5;
@@ -79,10 +79,10 @@ class TravelShop: HorizontalListModule {
     
     
     // MARK: Private Methods
-    private func addItemToScrollView(products : [Product]){
+    fileprivate func addItemToScrollView(_ products : [Product]){
         for i in 0 ..< products.count {
             
-            let item = NSBundle.mainBundle().loadNibNamed("TravelShopView", owner: self, options: nil)![0] as? TravelShopView
+            let item = Bundle.main.loadNibNamed("TravelShopView", owner: self, options: nil)![0] as? TravelShopView
             
             self.scrollView.addSubview(item!);
             

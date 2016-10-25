@@ -14,7 +14,7 @@ class PhotoAndTitleView: CarouselView {
     @IBOutlet weak var imageView: UIImageView!
     
     
-    override func setView(_data : CarouselCard) {
+    override func setView(_ _data : CarouselCard) {
         super.setView(_data);
         
         self.title.text = _data.data.title;

@@ -10,24 +10,24 @@ import Foundation
 
 internal class CardDetailErrors : ErrorManager{
     
-    private static var ErrorMessages : [String : String] = [
+    fileprivate static var ErrorMessages : [String : String] = [
         "UnrecognizableError" : "ERROR: an unrecognizable error has occurred",
         "CreateCardDetailRenderErrors" : "ERROR: The data for create a CardDetailRender is invalid"
     ]
     
-    internal enum CreateCardDetailRenderErrors : ErrorType{
+    internal enum CreateCardDetailRenderErrors : Error{
         case emptyData
         case invalidData
     }
     
     //MARK: ERROR MANAGER PROTOCOL IMPLEMENTATION
-    internal class func ThrowError(errorType : ErrorType) throws{
+    internal class func ThrowError(_ errorType : Error) throws{
         throw errorType;
     }
     
-    internal class func ShowError(errorType : ErrorType){
-        print(ErrorMessages[String(errorType.self)]);
-        print(String(errorType.self) + "." + String(errorType));
+    internal class func ShowError(_ errorType : Error){
+        print(ErrorMessages[String(describing: errorType.self)]);
+        print(String(describing: errorType.self) + "." + String(describing: errorType));
     }
     
     internal class func UnreconigzedError(){

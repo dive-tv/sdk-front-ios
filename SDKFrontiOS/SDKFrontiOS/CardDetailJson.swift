@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-public class CardDetailJson : BaseCardDetailBuilder{
+open class CardDetailJson : BaseCardDetailBuilder{
     
     // MARK: Init
     /**
@@ -33,7 +33,7 @@ public class CardDetailJson : BaseCardDetailBuilder{
      
      - returns: Returns the CardDetailJson
      */
-    public func loadDataConfig(json : JSON) -> CardDetailJson{
+    open func loadDataConfig(_ json : JSON) -> CardDetailJson{
         
         
         for section in json["sections"].arrayValue{
@@ -61,10 +61,10 @@ public class CardDetailJson : BaseCardDetailBuilder{
      - parameter module:        The json with the type of module the user wants.
      - parameter configSection: The object ConfigSection to add the modules.
      */
-    private func addModuleType(module : JSON, configSection : ConfigSection){
+    fileprivate func addModuleType(_ module : JSON, configSection : ConfigSection){
         if(module["type"] != nil){
             let moduleName = module["type"].stringValue;
-            if  let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String {
+            if  let appName = Bundle.main.infoDictionary!["CFBundleName"] as? String {
                 if(NSClassFromString("\(appName).\(moduleName)") as? NSObject.Type != nil){
                     var targets : [Target]?;
                     if (moduleName == "NavigationModule" || moduleName == "TabModule") {

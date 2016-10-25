@@ -19,7 +19,7 @@ class SeasonsView: UIView {
         super.awakeFromNib();
     }
     
-    func setData(season : SeasonsContainerData){
+    func setData(_ season : SeasonsContainerData){
         
         self.labelYear.text = "\(season.year)";
         self.labelSeason.text = "\(season.seasonIndex)ª Temp.";

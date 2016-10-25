@@ -21,8 +21,8 @@ class Overview: TextModule {
         // Configure the view for the selected state
     }
     
-    override class func validate(cardDetail : CardDetail) throws {
-        guard let container = cardDetail.containers[ContainerContentType.Overview] where container.data.count > 0 else{
+    override class func validate(_ cardDetail : CardDetail) throws {
+        guard let container = cardDetail.containers[ContainerContentType.Overview] , container.data.count > 0 else{
             // TODO: create error
             try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.emptyData);
             return;
@@ -30,18 +30,18 @@ class Overview: TextModule {
     }
     
     
-    override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
+    override func setCardDetail(_ _configModule: ConfigModule, _cardDetail: CardDetail) {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         // TODO: need to put the color of the background
-        self.viewBackground.backgroundColor = UIColor.yellowColor();
+        self.viewBackground.backgroundColor = UIColor.yellow;
         
         // TODO: need to put the localizable strings
-        self.headerLabel.text = "Sinopsis".uppercaseString;
+        self.headerLabel.text = "Sinopsis".uppercased();
         
         // TODO: need to know when show the button all description
         
         // This is not needed because if not pass the validate this will never be call
-        if let container = self.cardDetail.containers[ContainerContentType.Overview], textContainer = container.data.first as? TextContainerData{
+        if let container = self.cardDetail.containers[ContainerContentType.Overview], let textContainer = container.data.first as? TextContainerData{
             self.contentLabel.text = textContainer.text;
             self.setSource(textContainer.source);
         }

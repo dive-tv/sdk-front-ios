@@ -9,9 +9,9 @@
 import Foundation
 
 protocol ErrorManager {
-    static func ThrowError(errorType : ErrorType) throws
+    static func ThrowError(_ errorType : Error) throws
     
-    static func ShowError(errorType : ErrorType)
+    static func ShowError(_ errorType : Error)
     
     static func UnreconigzedError()
    

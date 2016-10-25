@@ -32,13 +32,13 @@ class CatalogContainerData : ContainerData{
         self.year = data["year"].intValue;
         
         //non validated variables
-        if let _backGroundImage = data["background_image"].object as? String where _backGroundImage != ""{
+        if let _backGroundImage = data["background_image"].object as? String , _backGroundImage != ""{
             self.backGroundImage = _backGroundImage;
         }
         
-        if let _genres = data["genres"].array where _genres.count > 0{
+        if let _genres = data["genres"].array , _genres.count > 0{
             for item in _genres{
-                if let _genre = item.object as? String where _genre != ""{
+                if let _genre = item.object as? String , _genre != ""{
                     self.genres.append(_genre);
                 }
             }
@@ -62,11 +62,11 @@ class CatalogContainerData : ContainerData{
             }
         }
         
-        if let _creators = data["creators"].object as? String where _creators != ""{
+        if let _creators = data["creators"].object as? String , _creators != ""{
             self.creators = _creators;
         }
         
-        if let _serieTitle = data["serie_title"].object as? String where _serieTitle != ""{
+        if let _serieTitle = data["serie_title"].object as? String , _serieTitle != ""{
             self.serieTitle = _serieTitle;
         }
         
@@ -81,14 +81,14 @@ class CatalogContainerData : ContainerData{
         super.init();
     }
     
-    override class func validate(data: JSON?) throws{
-        guard let _data = data where _data != nil else{
+    override class func validate(_ data: JSON?) throws{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.emptyData);
             return;
         }
         
         guard case let (_director as String, _originalTitle as String) = (_data["director"].object, _data["original_title"].object)
-            where _director != "" && _originalTitle != "" && _data["runtime"].int != nil && _data["year"].int != nil else{
+            , _director != "" && _originalTitle != "" && _data["runtime"].int != nil && _data["year"].int != nil else{
                 //Throw indavilData Error
                 try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
                 return;

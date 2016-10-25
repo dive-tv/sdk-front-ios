@@ -22,14 +22,14 @@ class DupleRelationData : RelationData{
         self.to = MiniCard(data: data["to"]);
     }
     
-    override class func validate(data: JSON?) throws{
-        guard let _data = data where _data != nil else{
+    override class func validate(_ data: JSON?) throws{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateRelationsDataErrors.emptyData);
             return;
         }
         
         guard case let (_relType as String, _from as JSON, _to as JSON) = (_data["rel_type"].object, _data["from"], _data["to"])
-            where _relType != ""else{
+            , _relType != ""else{
                 //Throw indavilData Error
                 try DataModelErrors.ThrowError(DataModelErrors.CreateRelationsDataErrors.invalidData);
                 return;

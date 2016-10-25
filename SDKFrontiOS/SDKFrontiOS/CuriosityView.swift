@@ -12,7 +12,7 @@ class CuriosityView: CarouselView {
 
     @IBOutlet weak var titleCell: UILabel!
     
-    override func setView(_data: CarouselCard) {
+    override func setView(_ _data: CarouselCard) {
         super.setView(_data);
         
         self.titleCell.text = _data.data.title;

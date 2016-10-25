@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class CardDetailBuilder : BaseCardDetailBuilder{
+open class CardDetailBuilder : BaseCardDetailBuilder{
     
     
     // MARK: Public Methods
@@ -20,7 +20,7 @@ public class CardDetailBuilder : BaseCardDetailBuilder{
      - parameter cardId:   The cardId to get the information of the card
      - parameter navigationController: The navigation controller of the user.
      */
-    public func buildAll(cardId : String, navigationController : UINavigationController){
+    open func buildAll(_ cardId : String, navigationController : UINavigationController){
         // TODO: need to do the logic
     }
     
@@ -33,7 +33,7 @@ public class CardDetailBuilder : BaseCardDetailBuilder{
      
      - returns: Return the CardDetailBuilder
      */
-    public func addSection(idSection : String, configSection : ConfigSection, isMainSection : Bool)->CardDetailBuilder{
+    open func addSection(_ idSection : String, configSection : ConfigSection, isMainSection : Bool)->CardDetailBuilder{
         
         if(isMainSection && self.mainKeySection == nil){
             self.mainKeySection = idSection;

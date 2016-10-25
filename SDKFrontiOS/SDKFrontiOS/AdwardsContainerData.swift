@@ -59,14 +59,14 @@ class AwardsContainerData : ContainerData{
         super.init();
     }
     
-    override class func validate(data: JSON?) throws{
-        guard let _data = data where _data != nil else{
+    override class func validate(_ data: JSON?) throws{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.emptyData);
             return;
         }
         
         guard case let (_title as String, _nominee as [JSON], _winner as [JSON]) = (_data["title"].object, _data["nominee"].array, _data["winner"].array)
-            where _title != "" && (_nominee.count > 0 || _winner.count > 0) else{
+            , _title != "" && (_nominee.count > 0 || _winner.count > 0) else{
                 //Throw indavilData Error
                 try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
                 return;

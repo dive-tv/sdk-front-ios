@@ -11,7 +11,7 @@ import SwiftyJSON
 
 internal class CarouselLogic : NSObject, JSONValidatable {
     
-    private var trees : [TypeOfCard : GrouppableTree];
+    fileprivate var trees : [TypeOfCard : GrouppableTree];
     
     // MARK: Init
     override init() {
@@ -31,48 +31,55 @@ internal class CarouselLogic : NSObject, JSONValidatable {
     }
     
     // MARK: Private funcs
-    private func loadGrouppableTrees () {
+    fileprivate func loadGrouppableTrees () {
         
-        let jsonFilePath:NSString = NSBundle.mainBundle().pathForResource("groupabletree", ofType: "json")!
-        let jsonData:NSData = NSData.dataWithContentsOfMappedFile(jsonFilePath as String) as! NSData;
-        let json = JSON(data: jsonData);
+        let jsonFilePath:String = Bundle.main.path(forResource: "groupabletree", ofType: "json")! as String
         
-        //Validate the Json
-        do{
-            try CarouselLogic.validate(json);
+        if let data = try? Data(contentsOf: URL(fileURLWithPath: jsonFilePath)) {
+            let json = JSON(data: data);
             
-            //Create the grouppable Trees
-            for tree in json["trees"].array! {
+            //Validate the Json
+            do{
+                try CarouselLogic.validate(json);
                 
-                do{
-                    try GrouppableTree.validate(tree)
+                //Create the grouppable Trees
+                for tree in json["trees"].array! {
                     
-                    self.trees[TypeOfCard( rawValue: tree["type"].object as! String)!] = GrouppableTree(data: tree);
-                    //self.trees.append(GrouppableTree(data: self));
-                    
-                }
-                catch CarruselErrors.CreateGrouppableTreeErrors.invalidData{
-                    CarruselErrors.ShowError(CarruselErrors.CreateGrouppableTreeErrors.invalidData);
-                }
-                catch{
-                    CarruselErrors.UnreconigzedError();
+                    do{
+                        try GrouppableTree.validate(tree)
+                        
+                        self.trees[TypeOfCard( rawValue: tree["type"].object as! String)!] = GrouppableTree(data: tree);
+                        //self.trees.append(GrouppableTree(data: self));
+                        
+                    }
+                    catch CarruselErrors.CreateGrouppableTreeErrors.invalidData{
+                        CarruselErrors.ShowError(CarruselErrors.CreateGrouppableTreeErrors.invalidData);
+                    }
+                    catch{
+                        CarruselErrors.UnreconigzedError();
+                    }
                 }
             }
+            catch CarruselErrors.CreateGrouppableTreeErrors.emptyData{
+                CarruselErrors.ShowError(CarruselErrors.CreateGrouppableTreeErrors.emptyData);
+                //Some recover error code
+            }
+            catch{
+                CarruselErrors.UnreconigzedError();
+            }
         }
-        catch CarruselErrors.CreateGrouppableTreeErrors.emptyData{
-            CarruselErrors.ShowError(CarruselErrors.CreateGrouppableTreeErrors.emptyData);
-            //Some recover error code
-        }
-        catch{
-            CarruselErrors.UnreconigzedError();
-        }
+        
+        /*let jsonData:Data = Data.dataWithContentsOfMappedFile(jsonFilePath as String) as! Data;
+        let json = JSON(data: jsonData);*/
+        
+        
     }
     
     // MARK: Protocols implementation
-    class func validate(data : JSON) throws{
+    class func validate(_ data : JSON) throws{
         
         guard case let (trees as [JSON]) = (data["trees"].array)
-            where trees.count > 0 else {
+            , trees.count > 0 else {
                 
                 //ThrowError
                 try CarruselErrors.ThrowError(CarruselErrors.CreateGrouppableTreeErrors.emptyData);

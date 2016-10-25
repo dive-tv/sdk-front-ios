@@ -38,9 +38,9 @@ internal class GrouppableTree : JSONValidatable{
     }
     
     // MARK: Protocols implementation
-    class func validate(data : JSON) throws{
+    class func validate(_ data : JSON) throws{
         guard case let (_children as [JSON], _type as String) = (data["children"].arrayValue, data["type"].object)
-            where _type != "" else {
+            , _type != "" else {
                 
                 //ThrowError
                 try CarruselErrors.ThrowError(CarruselErrors.CreateGrouppableTreeErrors.invalidData);

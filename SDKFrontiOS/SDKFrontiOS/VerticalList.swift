@@ -17,7 +17,7 @@ class VerticalList: UIViewController, UITableViewDelegate, UITableViewDataSource
 
         // Create a cell by default
         self.tableView.tableFooterView = UIView();
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "nativeCell");
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "nativeCell");
         
     }
 
@@ -28,16 +28,16 @@ class VerticalList: UIViewController, UITableViewDelegate, UITableViewDataSource
     
 
     // MARK: TableViewDataSource
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("nativeCell", forIndexPath: indexPath);
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "nativeCell", for: indexPath);
         return cell;
     }
 

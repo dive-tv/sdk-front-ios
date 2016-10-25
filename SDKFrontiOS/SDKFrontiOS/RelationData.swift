@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 internal class RelationData : NSObject, Validatable{
-    class func validate(data: JSON?) throws{
+    class func validate(_ data: JSON?) throws{
         
     }
 }

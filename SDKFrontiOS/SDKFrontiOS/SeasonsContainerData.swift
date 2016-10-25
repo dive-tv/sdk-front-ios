@@ -25,7 +25,7 @@ class SeasonsContainerData : ContainerData{
         self.year = data["year"].intValue;
         
         //non validated variables
-        if let _creators = data["creators"].object as? String where _creators != ""{
+        if let _creators = data["creators"].object as? String , _creators != ""{
             self.creators = _creators;
         }
         
@@ -56,8 +56,8 @@ class SeasonsContainerData : ContainerData{
         super.init();
     }
     
-    override class func validate(data: JSON?) throws{
-        guard let _data = data where _data != nil else{
+    override class func validate(_ data: JSON?) throws{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.emptyData);
             return;
         }

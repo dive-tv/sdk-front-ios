@@ -18,8 +18,8 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var configSection : ConfigSection!;
-    private var cardDetail : CardDetail!;
+    fileprivate var configSection : ConfigSection!;
+    fileprivate var cardDetail : CardDetail!;
     var cardDelegate : CardDetailDelegate?;
     weak var tabModuleDelegate : TabModuleDelegate?;
     
@@ -29,7 +29,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     //MARK: INIT
     
     
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, _configSection : ConfigSection, _cardDetail : CardDetail) {
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, _configSection : ConfigSection, _cardDetail : CardDetail) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
         
         self.configSection = _configSection;
@@ -52,8 +52,8 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
      */
     override func viewDidLoad() {
         
-        self.tableView.tableFooterView = UIView(frame: CGRectZero);
-        self.tableView.separatorStyle = .None;
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero);
+        self.tableView.separatorStyle = .none;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 100;
         
@@ -62,7 +62,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         for module in self.configSection.arrayModules {
             /*let moduleClass = NSClassFromString(appName + "." + module.moduleName!) as! Module.Type
             self.tableView.registerClass(moduleClass.self, forCellReuseIdentifier: module.moduleName!);*/
-            self.tableView?.registerNib(UINib(nibName: module.moduleName!, bundle: nil), forCellReuseIdentifier: module.moduleName!);
+            self.tableView?.register(UINib(nibName: module.moduleName!, bundle: nil), forCellReuseIdentifier: module.moduleName!);
         }
     }
     
@@ -72,7 +72,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
 
     
     
-    private func getScrollViewOffset (_offset : CGFloat) -> CGFloat {
+    fileprivate func getScrollViewOffset (_ _offset : CGFloat) -> CGFloat {
         
         var offset = _offset;
         
@@ -109,26 +109,26 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     // MARK: UITableViewDataSource
     
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.configSection.arrayModules.count;
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         
-        let cell = self.tableView.dequeueReusableCellWithIdentifier(self.configSection.arrayModules[indexPath.row].moduleName!) as! Module;
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: self.configSection.arrayModules[(indexPath as NSIndexPath).row].moduleName!) as! Module;
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.sectionDelegate = self;
         cell.cardDelegate = self.cardDelegate;
-        cell.setCardDetail(self.configSection.arrayModules[indexPath.row], _cardDetail: self.cardDetail);
+        cell.setCardDetail(self.configSection.arrayModules[(indexPath as NSIndexPath).row], _cardDetail: self.cardDetail);
         return cell;
     }
     

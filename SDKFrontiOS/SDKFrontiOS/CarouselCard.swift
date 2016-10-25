@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class CarouselCard : NSObject {
+open class CarouselCard : NSObject {
     
     var scene_id : Int!;
     var data : MiniCard!;

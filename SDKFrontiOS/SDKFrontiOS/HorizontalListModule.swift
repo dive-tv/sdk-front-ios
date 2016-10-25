@@ -33,21 +33,21 @@ class HorizontalListModule: Module {
     }
     
     
-    internal func setScrollItemConstraints(position: Int, item: UIView){
+    internal func setScrollItemConstraints(_ position: Int, item: UIView){
         item.translatesAutoresizingMaskIntoConstraints = false;
-        scrollView.addConstraint(NSLayoutConstraint(item: item, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0));
-        scrollView.addConstraint(NSLayoutConstraint(item: item, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0));
+        scrollView.addConstraint(NSLayoutConstraint(item: item, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: scrollView, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 0));
+        scrollView.addConstraint(NSLayoutConstraint(item: item, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: scrollView, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0));
         
-        scrollView.addConstraint(NSLayoutConstraint(item: item, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: itemWidth));
+        scrollView.addConstraint(NSLayoutConstraint(item: item, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: itemWidth));
         
         
         
         let left : CGFloat = (CGFloat(position) * (itemWidth+10)) + 15;
-        scrollView.addConstraint(NSLayoutConstraint(item: item, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Leading, multiplier: 1, constant: left));
+        scrollView.addConstraint(NSLayoutConstraint(item: item, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: scrollView, attribute: NSLayoutAttribute.leading, multiplier: 1, constant: left));
     }
     
-    internal func layoutScrollView(width : CGFloat){
+    internal func layoutScrollView(_ width : CGFloat){
         self.scrollView.layoutSubviews();
-        self.scrollView.contentSize = CGSizeMake(width, self.heightScrollViewConstraint.constant);
+        self.scrollView.contentSize = CGSize(width: width, height: self.heightScrollViewConstraint.constant);
     }
 }

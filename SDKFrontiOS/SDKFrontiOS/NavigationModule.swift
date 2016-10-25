@@ -19,12 +19,12 @@ class NavigationModule: Module {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
     
-    override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
+    override func setCardDetail(_ _configModule: ConfigModule, _cardDetail: CardDetail) {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         if (self.configModule.targets != nil && !self.configModule.targets!.isEmpty &&
             self.configModule.targets!.first!.sectionId != nil && !self.configModule.targets!.first!.sectionId!.isEmpty &&
@@ -33,10 +33,10 @@ class NavigationModule: Module {
             self.navigationTarget = self.configModule.targets?.first!;
         }
         
-        self.navigationBtn.setTitle(self.navigationTarget.text, forState: .Normal);
+        self.navigationBtn.setTitle(self.navigationTarget.text, for: UIControlState());
     }
     
-    @IBAction func touchNavigationBtn(sender: UIButton) {
+    @IBAction func touchNavigationBtn(_ sender: UIButton) {
         
         self.cardDelegate?.newSection(self.navigationTarget.sectionId!)
     }

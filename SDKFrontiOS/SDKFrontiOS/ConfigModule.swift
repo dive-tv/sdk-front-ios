@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class ConfigModule: NSObject {
+open class ConfigModule: NSObject {
     
-    private(set) var moduleName : String?;
-    private(set) var targets : [Target]?;
+    fileprivate(set) var moduleName : String?;
+    fileprivate(set) var targets : [Target]?;
     var isValid : Bool = false;
     
     init(moduleName : String, targets : [Target]? = nil){
