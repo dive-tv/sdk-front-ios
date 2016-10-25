@@ -28,15 +28,24 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_next" translatesAutoresizingMaskIntoConstraints="NO" id="cvn-XQ-DlD"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="ico_next" translatesAutoresizingMaskIntoConstraints="NO" id="cvn-XQ-DlD"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRU-PR-U1t">
+                                        <connections>
+                                            <action selector="showAllSeason" destination="KGk-i7-Jjw" eventType="touchUpInside" id="U54-R3-UbR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="x6f-zo-d0C" firstAttribute="top" secondItem="v4o-a3-F04" secondAttribute="top" id="68E-5c-ber"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZRU-PR-U1t" secondAttribute="bottom" id="ARg-KZ-9fw"/>
+                                    <constraint firstItem="ZRU-PR-U1t" firstAttribute="leading" secondItem="v4o-a3-F04" secondAttribute="leading" id="N75-Yi-a1A"/>
                                     <constraint firstAttribute="height" constant="16" id="NKe-9M-k9W"/>
                                     <constraint firstItem="x6f-zo-d0C" firstAttribute="leading" secondItem="v4o-a3-F04" secondAttribute="leading" id="RLE-oF-65c"/>
+                                    <constraint firstItem="ZRU-PR-U1t" firstAttribute="top" secondItem="v4o-a3-F04" secondAttribute="top" id="Ypt-3j-8GP"/>
                                     <constraint firstAttribute="trailing" secondItem="cvn-XQ-DlD" secondAttribute="trailing" id="bn0-wb-VXa"/>
                                     <constraint firstItem="cvn-XQ-DlD" firstAttribute="centerY" secondItem="v4o-a3-F04" secondAttribute="centerY" id="eEl-Sz-m0m"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZRU-PR-U1t" secondAttribute="trailing" id="idK-I4-rtq"/>
                                     <constraint firstItem="cvn-XQ-DlD" firstAttribute="leading" secondItem="x6f-zo-d0C" secondAttribute="trailing" constant="3" id="odA-oz-gXL"/>
                                     <constraint firstAttribute="bottom" secondItem="x6f-zo-d0C" secondAttribute="bottom" id="yZ5-SD-SNa"/>
                                 </constraints>
@@ -74,6 +83,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="buttonAll" destination="ZRU-PR-U1t" id="iTH-CQ-TeF"/>
                 <outlet property="heightScrollViewConstraint" destination="tY2-4Z-moY" id="cNP-lD-Zf5"/>
                 <outlet property="imageViewNext" destination="cvn-XQ-DlD" id="hSF-cI-kzj"/>
                 <outlet property="labelAll" destination="x6f-zo-d0C" id="Jj2-dC-STc"/>

@@ -271,6 +271,70 @@
                                  "title": "Most Outstanding British Film",
                                  "value": "1949"
                                  }]
+                      },
+                      {
+                      "title": "Venice Film Festival",
+                      "nominee": [{
+                                  "title": "Golden Lion - Best Picture",
+                                  "value": "1948"
+                                  }],
+                      "winner": [{
+                                 "title": "Golden Lion - Best Picture",
+                                 "value": "1948"
+                                 }]
+                      }, {
+                      "title": "European Film Awards",
+                      "nominee": [{
+                                  "title": "People's Choice Award for Bes European Film",
+                                  "value": "2006"
+                                  }],
+                      "winner": [{
+                                 "title": "People's Choice Award for Bes European Film",
+                                 "value": "2006"
+                                 }]
+                      }, {
+                      "title": "BAFTA - British Academy Film Awards",
+                      "nominee": [{
+                                  "title": "Best TV Make Up & Hair Design (2008)",
+                                  "value": "Anne Oldham"
+                                  }, {
+                                  "title": "Most Outstanding British Film",
+                                  "value": "1949"
+                                  }],
+                      "winner": [{
+                                 "title": "Best TV Make Up & Hair Design (2008)",
+                                 "value": "Anne Oldham"
+                                 }, {
+                                 "title": "Most Outstanding British Film",
+                                 "value": "1949"
+                                 }]
+                      },
+                      {
+                      "title": "European Film Awards",
+                      "nominee": [{
+                                  "title": "People's Choice Award for Bes European Film",
+                                  "value": "2006"
+                                  }],
+                      "winner": [{
+                                 "title": "People's Choice Award for Bes European Film",
+                                 "value": "2006"
+                                 }]
+                      }, {
+                      "title": "BAFTA - British Academy Film Awards",
+                      "nominee": [{
+                                  "title": "Best TV Make Up & Hair Design (2008)",
+                                  "value": "Anne Oldham"
+                                  }, {
+                                  "title": "Most Outstanding British Film",
+                                  "value": "1949"
+                                  }],
+                      "winner": [{
+                                 "title": "Best TV Make Up & Hair Design (2008)",
+                                 "value": "Anne Oldham"
+                                 }, {
+                                 "title": "Most Outstanding British Film",
+                                 "value": "1949"
+                                 }]
                       }]
              }, {
              "type": "catalog",
@@ -299,6 +363,114 @@
              "type": "seasons",
              "content_type": "seasons",
              "data": [{
+                      "season_index": 1,
+                      "chapter_nr": 10,
+                      "creators": " Glen A. Larson, Ronald D. Moore",
+                      "year": 2005,
+                      "image": {
+                      "thumb": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_thumb_m.jpg",
+                      "full": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_full_m.jpg",
+                      "anchor_x": 50,
+                      "anchor_y": 50,
+                      "source": {
+                      "name": "TMDB",
+                      "url": "https://www.themoviedb.org/movie/9740",
+                      "disclaimer": "TMDB All rights reserved",
+                      "image": "http://static.touchvie.com/sources/tmdb.jpg"
+                      }
+                      }
+                      },
+                      {
+                      "season_index": 1,
+                      "chapter_nr": 10,
+                      "creators": " Glen A. Larson, Ronald D. Moore",
+                      "year": 2005,
+                      "image": {
+                      "thumb": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_thumb_m.jpg",
+                      "full": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_full_m.jpg",
+                      "anchor_x": 50,
+                      "anchor_y": 50,
+                      "source": {
+                      "name": "TMDB",
+                      "url": "https://www.themoviedb.org/movie/9740",
+                      "disclaimer": "TMDB All rights reserved",
+                      "image": "http://static.touchvie.com/sources/tmdb.jpg"
+                      }
+                      }
+                      },
+                      {
+                      "season_index": 1,
+                      "chapter_nr": 10,
+                      "creators": " Glen A. Larson, Ronald D. Moore",
+                      "year": 2005,
+                      "image": {
+                      "thumb": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_thumb_m.jpg",
+                      "full": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_full_m.jpg",
+                      "anchor_x": 50,
+                      "anchor_y": 50,
+                      "source": {
+                      "name": "TMDB",
+                      "url": "https://www.themoviedb.org/movie/9740",
+                      "disclaimer": "TMDB All rights reserved",
+                      "image": "http://static.touchvie.com/sources/tmdb.jpg"
+                      }
+                      }
+                      },
+                      {
+                      "season_index": 1,
+                      "chapter_nr": 10,
+                      "creators": " Glen A. Larson, Ronald D. Moore",
+                      "year": 2005,
+                      "image": {
+                      "thumb": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_thumb_m.jpg",
+                      "full": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_full_m.jpg",
+                      "anchor_x": 50,
+                      "anchor_y": 50,
+                      "source": {
+                      "name": "TMDB",
+                      "url": "https://www.themoviedb.org/movie/9740",
+                      "disclaimer": "TMDB All rights reserved",
+                      "image": "http://static.touchvie.com/sources/tmdb.jpg"
+                      }
+                      }
+                      },
+                      {
+                      "season_index": 1,
+                      "chapter_nr": 10,
+                      "creators": " Glen A. Larson, Ronald D. Moore",
+                      "year": 2005,
+                      "image": {
+                      "thumb": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_thumb_m.jpg",
+                      "full": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_full_m.jpg",
+                      "anchor_x": 50,
+                      "anchor_y": 50,
+                      "source": {
+                      "name": "TMDB",
+                      "url": "https://www.themoviedb.org/movie/9740",
+                      "disclaimer": "TMDB All rights reserved",
+                      "image": "http://static.touchvie.com/sources/tmdb.jpg"
+                      }
+                      }
+                      },
+                      {
+                      "season_index": 1,
+                      "chapter_nr": 10,
+                      "creators": " Glen A. Larson, Ronald D. Moore",
+                      "year": 2005,
+                      "image": {
+                      "thumb": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_thumb_m.jpg",
+                      "full": "https://pre-img.dive.tv/a6d1361e-dc8f-3953-bd03-5228c2486be8/a6d1361e-dc8f-3953-bd03-5228c2486be8_0_es_ES_full_m.jpg",
+                      "anchor_x": 50,
+                      "anchor_y": 50,
+                      "source": {
+                      "name": "TMDB",
+                      "url": "https://www.themoviedb.org/movie/9740",
+                      "disclaimer": "TMDB All rights reserved",
+                      "image": "http://static.touchvie.com/sources/tmdb.jpg"
+                      }
+                      }
+                      },
+                      {
                       "season_index": 1,
                       "chapter_nr": 10,
                       "creators": " Glen A. Larson, Ronald D. Moore",

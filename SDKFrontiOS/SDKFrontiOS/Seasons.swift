@@ -9,6 +9,8 @@
 import UIKit
 
 class Seasons: HorizontalListModule {
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,11 +36,45 @@ class Seasons: HorizontalListModule {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         
         // This is not needed because if not pass the validate this will never be call
-        if let container = self.cardDetail.containers[ContainerContentType.Seasons], seasonsContainer = container.data.first as? SeasonsContainerData{
-            // TODO: need to do the logic
+        if let container = self.cardDetail.containers[ContainerContentType.Seasons]{
+            
+            for subview in scrollView.subviews {
+                subview.removeFromSuperview();
+            }
+            
+            self.heightScrollViewConstraint.constant = 221;
+            self.itemWidth = 110;
+            
+            self.labelModuleTitle.text = "Temporadas".uppercaseString;
+            self.viewBackground.backgroundColor = UIColor.redColor();
+            self.addItemToScrollView(container.data as! [SeasonsContainerData]);
+            
+            let width = (CGFloat(container.data.count) * (self.itemWidth + 10)) + 15 + 5;
+            self.layoutScrollView(width);
+            
         }
-        
         
     }
     
+    
+    
+    // MARK: Private Methods
+    private func addItemToScrollView(seasons : [SeasonsContainerData]){
+        for i in 0 ..< seasons.count {
+            
+            let item = NSBundle.mainBundle().loadNibNamed("SeasonsView", owner: self, options: nil)![0] as? SeasonsView
+            
+            self.scrollView.addSubview(item!);
+            
+            item!.setData(seasons[i]);
+            
+            self.setScrollItemConstraints(i, item: item!);
+            
+        }
+    }
+    
+    // MARK: IBAction
+    @IBAction func showAllSeason(){
+        print("");
+    }
 }

@@ -117,7 +117,7 @@ class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
             
             self.scrollView.contentSize = CGSizeMake((self.frame.width * CGFloat(self.sections.count)), 0);
             self.scrollViewHeight.constant = self.sections[self.actualPage].tableView.contentSize.height;
-            self.sectionDelegate?.reloadTable();
+            self.sectionDelegate?.reloadTableAndOffset();
         }
     }
     

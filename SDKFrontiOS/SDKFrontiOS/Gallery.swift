@@ -20,6 +20,8 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var buttonAll : UIButton!;
     
     private var data = [ImageContainerData]();
+    
+    private var isFirstTime = true;
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -68,7 +70,13 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
             
             self.collectionView.reloadData();
             self.layoutIfNeeded();
-            self.heightCollectionViewConstraint.constant = collectionView.contentSize.height;
+            self.heightCollectionViewConstraint.constant = self.collectionView.contentSize.height;
+            
+            // TODO: need to find a better solution
+            /*if(self.isFirstTime){
+                self.isFirstTime = false;
+                self.sectionDelegate?.reloadTable();
+            }*/
         }
     }
     

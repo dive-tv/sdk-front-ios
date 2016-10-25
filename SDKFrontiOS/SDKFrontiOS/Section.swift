@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 protocol SectionDelegate : class {
-    func reloadTable ();
+    func reloadTableAndOffset ();
+    func reloadTable();
 }
 
 class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableViewDataSource {
@@ -89,7 +90,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     /**
      Reload tableview and calls tab menu to refresh if exists.
      */
-    func reloadTable() {
+    func reloadTableAndOffset() {
         
         let offset = self.tableView.contentOffset.y;
         self.tableView.reloadData();
@@ -100,6 +101,9 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         }
     }
     
+    func reloadTable() {
+        self.tableView.reloadData();
+    }
     
     
     // MARK: UITableViewDataSource

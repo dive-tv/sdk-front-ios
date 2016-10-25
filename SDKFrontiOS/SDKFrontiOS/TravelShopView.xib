@@ -20,6 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JD1-9W-6DX">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="144" id="Eyr-lX-NxZ"/>
                     </constraints>
@@ -132,15 +133,23 @@
                         <constraint firstItem="GOg-0q-cbs" firstAttribute="top" secondItem="RgT-3D-kSA" secondAttribute="top" constant="5" id="abk-Py-UAb"/>
                         <constraint firstItem="56b-Ap-R55" firstAttribute="leading" secondItem="GcV-8c-yUn" secondAttribute="trailing" constant="10" id="ax0-rL-5B0"/>
                         <constraint firstItem="GOg-0q-cbs" firstAttribute="leading" secondItem="RgT-3D-kSA" secondAttribute="leading" constant="15" id="dLN-1z-qqP"/>
+                        <constraint firstAttribute="height" constant="40" id="ewZ-Ys-sUP"/>
                         <constraint firstAttribute="bottom" secondItem="56b-Ap-R55" secondAttribute="bottom" id="wT4-zb-3xJ"/>
                     </constraints>
                 </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_next" translatesAutoresizingMaskIntoConstraints="NO" id="Bbx-Qy-5II">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="85X-Lr-daD"/>
+                    </constraints>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="RgT-3D-kSA" firstAttribute="top" secondItem="fbj-y6-TmO" secondAttribute="bottom" constant="1" id="2I0-GW-XB0"/>
                 <constraint firstAttribute="trailing" secondItem="fbj-y6-TmO" secondAttribute="trailing" id="De6-c1-73E"/>
+                <constraint firstItem="Bbx-Qy-5II" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="FXh-gb-SOK"/>
                 <constraint firstAttribute="trailing" secondItem="RgT-3D-kSA" secondAttribute="trailing" id="TJX-0X-HcW"/>
+                <constraint firstItem="Bbx-Qy-5II" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="cnN-Q2-0wn"/>
                 <constraint firstItem="JD1-9W-6DX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dW9-d5-sqb"/>
                 <constraint firstItem="RgT-3D-kSA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eBD-0S-TGU"/>
                 <constraint firstItem="fbj-y6-TmO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fDt-c0-IPe"/>
@@ -153,7 +162,13 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="buttonBook" destination="56b-Ap-R55" id="LDw-M9-7Wh"/>
+                <outlet property="imageStar1" destination="Mih-xD-Nvm" id="yo5-5A-7KX"/>
+                <outlet property="imageStar2" destination="JPC-9e-hxZ" id="nMG-cp-PHY"/>
+                <outlet property="imageStar3" destination="Uyj-MV-qO4" id="mdB-5W-xeS"/>
+                <outlet property="imageStar4" destination="df1-4x-VgB" id="3zk-dq-dyW"/>
+                <outlet property="imageStar5" destination="4ME-9i-VOC" id="4Sb-Em-IsA"/>
                 <outlet property="imageViewItem" destination="JD1-9W-6DX" id="xyj-f0-enZ"/>
+                <outlet property="imageViewLogo" destination="Bbx-Qy-5II" id="8Q3-UJ-C2K"/>
                 <outlet property="labelPrice" destination="GcV-8c-yUn" id="QSz-pP-3gr"/>
                 <outlet property="labelSince" destination="GOg-0q-cbs" id="6hi-Kv-7oh"/>
                 <outlet property="labelSubtitle" destination="dN3-5Y-ugM" id="8is-Pu-uPC"/>
@@ -167,6 +182,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ico_next" width="6" height="11"/>
         <image name="ico_star" width="13" height="12"/>
     </resources>
 </document>

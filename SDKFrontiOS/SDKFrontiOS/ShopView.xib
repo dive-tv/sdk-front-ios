@@ -16,19 +16,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ShopView" customModule="SDKFrontiOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="144" height="189"/>
+            <rect key="frame" x="0.0" y="0.0" width="144" height="185"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nI8-wv-M1C">
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="144" id="CJj-Rq-a5J"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAj-KL-Xbg">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAj-KL-Xbg">
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S87-AQ-RH8">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S87-AQ-RH8">
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_shopping" translatesAutoresizingMaskIntoConstraints="NO" id="Wgx-tf-q3U">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_shopping" translatesAutoresizingMaskIntoConstraints="NO" id="Wgx-tf-q3U">
                                     <constraints>
                                         <constraint firstAttribute="width" constant="15" id="G9B-LT-uQz"/>
                                         <constraint firstAttribute="height" constant="19" id="poK-H7-RLP"/>
@@ -37,9 +38,9 @@
                             </subviews>
                             <color key="backgroundColor" red="0.96862745098039216" green="0.84313725490196079" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstItem="Wgx-tf-q3U" firstAttribute="centerY" secondItem="S87-AQ-RH8" secondAttribute="centerY" id="BPd-cl-AP3"/>
+                                <constraint firstAttribute="bottom" secondItem="Wgx-tf-q3U" secondAttribute="bottom" constant="10" id="9oT-bB-9Pl"/>
                                 <constraint firstAttribute="width" constant="45" id="HTW-Tb-E3R"/>
-                                <constraint firstItem="Wgx-tf-q3U" firstAttribute="centerX" secondItem="S87-AQ-RH8" secondAttribute="centerX" id="mk2-0F-jkX"/>
+                                <constraint firstAttribute="trailing" secondItem="Wgx-tf-q3U" secondAttribute="trailing" constant="15" id="VvW-pd-vJ5"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGj-vO-m3K">
@@ -64,10 +65,11 @@
                         <constraint firstItem="YGj-vO-m3K" firstAttribute="leading" secondItem="VAj-KL-Xbg" secondAttribute="leading" constant="10" id="e3E-k3-lhb"/>
                         <constraint firstItem="9XE-c5-iht" firstAttribute="leading" secondItem="VAj-KL-Xbg" secondAttribute="leading" constant="10" id="hYX-wN-enm"/>
                         <constraint firstItem="S87-AQ-RH8" firstAttribute="top" secondItem="VAj-KL-Xbg" secondAttribute="top" id="rF6-gJ-CuF"/>
+                        <constraint firstAttribute="height" priority="999" constant="40" id="zgc-f2-SRE"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="nI8-wv-M1C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0YA-bk-tPm"/>
                 <constraint firstItem="VAj-KL-Xbg" firstAttribute="top" secondItem="nI8-wv-M1C" secondAttribute="bottom" constant="1" id="2zk-Z5-qC2"/>
@@ -85,6 +87,7 @@
                 <outlet property="labelShop" destination="9XE-c5-iht" id="suY-wj-5Lc"/>
                 <outlet property="viewPriceAndShop" destination="VAj-KL-Xbg" id="Euy-Vz-eJ1"/>
             </connections>
+            <point key="canvasLocation" x="34" y="51.5"/>
         </view>
     </objects>
     <resources>
