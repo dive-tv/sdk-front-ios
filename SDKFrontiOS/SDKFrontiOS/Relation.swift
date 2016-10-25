@@ -22,8 +22,8 @@ internal class Relation : NSObject, Validatable {
         self.contentType = RelationContentType(rawValue: data["content_type"].object as! String)!;
         
         //create a type of class for validate the data
-        let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
-        let _containerClass = NSClassFromString(appName + "." + (self.type.rawValue).capitalizedString  + "ContainerData") as! ContainerData.Type;
+        let appName = Bundle.main.infoDictionary!["CFBundleName"] as! String;
+        let _containerClass = NSClassFromString(appName + "." + (self.type.rawValue).capitalized  + "ContainerData") as! ContainerData.Type;
         
         for item in data["data"].array!{
             do{
@@ -48,13 +48,13 @@ internal class Relation : NSObject, Validatable {
         }
     }
     
-    class func validate(data: JSON?) throws {
-        guard let _data = data where _data != nil else{
+    class func validate(_ data: JSON?) throws {
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateRelationsErrors.emptyData);
             return;
         }
         
-        guard case let (_type as String, _contentType as String, _containerData as [JSON]) = (_data["type"].object, _data["content_type"].object, _data["data"].array) where _type != "" && _contentType != "" && _containerData.count > 0 else{
+        guard case let (_type as String, _contentType as String, _containerData as [JSON]) = (_data["type"].object, _data["content_type"].object, _data["data"].array) , _type != "" && _contentType != "" && _containerData.count > 0 else{
             //Throw indavilData Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateRelationsErrors.invalidData);
             return;
@@ -72,8 +72,8 @@ internal class Relation : NSObject, Validatable {
         }
         
         //create a type of class for validate the data
-        let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
-        let _containerClass = NSClassFromString(appName + "." + (_relationType.rawValue).capitalizedString  + "RelationData") as! RelationData.Type;
+        let appName = Bundle.main.infoDictionary!["CFBundleName"] as! String;
+        let _containerClass = NSClassFromString(appName + "." + (_relationType.rawValue).capitalized  + "RelationData") as! RelationData.Type;
         
         var validatedRelationData = 0;
         

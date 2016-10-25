@@ -49,24 +49,24 @@ class TextModule: Module {
     
     
     // MARK: Internal Methods
-    internal func setSource(source : Source?){
+    internal func setSource(_ source : Source?){
         if(source != nil){
             // TODO: need to put localizable
             self.disclaimerTitle.text = "Fuente:";
             self.disclaimerBtn.titleLabel?.text = source!.name;
             if(source?.url != nil){
                 // TODO: change the color
-                self.disclaimerBtn.enabled = true;
+                self.disclaimerBtn.isEnabled = true;
             }
             else{
                 // TODO: change the color
-                self.disclaimerBtn.enabled = false;
+                self.disclaimerBtn.isEnabled = false;
             }
             if(source?.image != nil){
                 // TODO: download image
             }
             else{
-                self.disclaimerImage.hidden = true;
+                self.disclaimerImage.isHidden = true;
                 self.heightDisclaimerImageConstraint.constant = 0;
             }
             if(source?.disclaimer != nil){
@@ -80,8 +80,8 @@ class TextModule: Module {
         }
         else{
             self.disclaimerTitle.text = "";
-            self.disclaimerBtn.hidden = true;
-            self.disclaimerImage.hidden = true;
+            self.disclaimerBtn.isHidden = true;
+            self.disclaimerImage.isHidden = true;
             self.disclaimerSubtitle.text = "";
             self.topDistanceDisclaimerTitleConstraint.constant = 0;
             self.topDistanceDisclaimerSubtitleConstraint.constant = 0;

@@ -7,6 +7,26 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l >= r
+  default:
+    return !(lhs < rhs)
+  }
+}
+
 
 class TravelShopView: UIView {
     
@@ -29,7 +49,7 @@ class TravelShopView: UIView {
     @IBOutlet weak var imageViewLogo : UIImageView!;
     
     
-    func setData(product : TravelProduct){
+    func setData(_ product : TravelProduct){
         
         // TODO: Download the image and the logo image
         self.labelTitle.text = product.title;
@@ -49,7 +69,7 @@ class TravelShopView: UIView {
     }
     
     // MARK: Private Methods
-    private func setRating(rating : Float?){
+    fileprivate func setRating(_ rating : Float?){
         
         self.widthImageStar1Constraint.constant = 13;
         self.widthImageStar2Constraint.constant = 13;
@@ -65,7 +85,7 @@ class TravelShopView: UIView {
         
         if(rating != nil){
             let value = String(format: "%.1f", rating!);
-            let splitValue = value.componentsSeparatedByString(".");
+            let splitValue = value.components(separatedBy: ".");
             let intValue = Int(splitValue[0]);
             let decimalValue = Int(splitValue[1]);
             

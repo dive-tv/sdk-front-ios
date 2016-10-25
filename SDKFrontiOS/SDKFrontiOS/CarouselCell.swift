@@ -12,8 +12,8 @@ class CarouselCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
     
-    private var cellData : CarouselCellData!;
-    private var sections = [UIView]();
+    fileprivate var cellData : CarouselCellData!;
+    fileprivate var sections = [UIView]();
     //private var carouselViews = [CarouselView]();
     
     
@@ -30,7 +30,7 @@ class CarouselCell: UITableViewCell {
      
      - parameter _cards: <#_cards description#>
      */
-    func setCarouselCell (_cards : CarouselCellData) {
+    func setCarouselCell (_ _cards : CarouselCellData) {
         self.cellData = _cards;
         
         if (!self.sections.isEmpty) {
@@ -50,7 +50,7 @@ class CarouselCell: UITableViewCell {
     /**
      Clean the cell of subviews for the new sections and cells
      */
-    private func cleanCellForReuse () {
+    fileprivate func cleanCellForReuse () {
         
         for view in self.containerView.subviews {
             view.removeFromSuperview();
@@ -63,12 +63,12 @@ class CarouselCell: UITableViewCell {
     /**
      Create the sections with the same width for the cards views. In a cell can be up to 3 sections, depending of the cards.
      */
-    private func createSectionsForCards () {
+    fileprivate func createSectionsForCards () {
         
         for idx in 0..<self.cellData.cards.count {
             
             let sectionView = UIView();
-            sectionView.backgroundColor = UIColor.clearColor();
+            sectionView.backgroundColor = UIColor.clear;
             sectionView.translatesAutoresizingMaskIntoConstraints = false;
             self.sections.append(sectionView);
             
@@ -79,23 +79,23 @@ class CarouselCell: UITableViewCell {
             
             if (idx == 0) {
                 
-                left = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.containerView, attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0);
+                left = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self.containerView, attribute: NSLayoutAttribute.left, multiplier: 1, constant: 0);
             } else {
                 
-                left = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.sections[idx - 1], attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0);
+                left = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self.sections[idx - 1], attribute: NSLayoutAttribute.right, multiplier: 1, constant: 0);
                 
-                let width = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: self.sections.first!, attribute: NSLayoutAttribute.Width, multiplier: 1, constant: 0);
+                let width = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: self.sections.first!, attribute: NSLayoutAttribute.width, multiplier: 1, constant: 0);
                 self.containerView.addConstraint(width);
             }
             
-            let top = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.containerView, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0);
+            let top = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self.containerView, attribute: NSLayoutAttribute.top, multiplier: 1, constant: 0);
             
-            let bottom = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.containerView, attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0);
+            let bottom = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self.containerView, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0);
             
             
             if (idx == self.cellData.cards.count - 1) {
                 
-                let right = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.containerView, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0);
+                let right = NSLayoutConstraint(item: sectionView, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self.containerView, attribute: NSLayoutAttribute.right, multiplier: 1, constant: 0);
                 self.containerView.addConstraint(right);
             }
             
@@ -107,29 +107,29 @@ class CarouselCell: UITableViewCell {
     /**
      Add the card view to the sections of the cell
      */
-    private func addViewToSection () {
+    fileprivate func addViewToSection () {
         
         for idx in 0..<self.sections.count {
             
             let carouselView = self.getViewForType(self.cellData.cards[idx].data.type);
             
-            let top = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0);
+            let top = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.top, multiplier: 1, constant: 0);
             
-            let bottom = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.Bottom, multiplier: 1, constant: 0);
+            let bottom = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0);
             
-            let left = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.Left, multiplier: 1, constant: 0);
+            let left = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.left, multiplier: 1, constant: 0);
             
-            let right = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0);
+            let right = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.right, multiplier: 1, constant: 0);
             
-            carouselView.translatesAutoresizingMaskIntoConstraints = false;
-            self.sections[idx].addSubview(carouselView);
+            carouselView?.translatesAutoresizingMaskIntoConstraints = false;
+            self.sections[idx].addSubview(carouselView!);
             self.sections[idx].addConstraints([top, bottom, left, right]);
             
-            carouselView.setView(self.cellData.cards[idx]);
+            carouselView?.setView(self.cellData.cards[idx]);
         }
     }
     
-    private func getViewForType (_type : TypeOfCard) -> CarouselView! {
+    fileprivate func getViewForType (_ _type : TypeOfCard) -> CarouselView! {
         
         switch _type {
             

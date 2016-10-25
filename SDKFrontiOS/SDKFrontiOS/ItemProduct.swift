@@ -17,7 +17,7 @@ internal class ItemProduct : Product{
         super.init(data: data);
     }
     
-    override class func validate(data: JSON?) throws{
+    override class func validate(_ data: JSON?) throws{
         
         try super.validate(data);
         

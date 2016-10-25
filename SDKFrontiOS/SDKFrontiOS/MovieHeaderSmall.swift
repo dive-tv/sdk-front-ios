@@ -7,6 +7,26 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class MovieHeaderSmall: Module {
 
@@ -28,13 +48,13 @@ class MovieHeaderSmall: Module {
     }
     
     
-    override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
+    override func setCardDetail(_ _configModule: ConfigModule, _cardDetail: CardDetail) {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         // TODO: need to put the color of the background
-        self.viewBackground.backgroundColor = UIColor.blueColor();
+        self.viewBackground.backgroundColor = UIColor.blue;
         
         self.labelTitle.text = self.cardDetail.title;
-        if let container = self.cardDetail.containers[ContainerContentType.Movie], catalogContainer = container.data.first as? CatalogContainerData{
+        if let container = self.cardDetail.containers[ContainerContentType.Movie], let catalogContainer = container.data.first as? CatalogContainerData{
             self.labelProducer.text = catalogContainer.director;
             self.setGenres(catalogContainer.genres);
             
@@ -50,7 +70,7 @@ class MovieHeaderSmall: Module {
     }
     
     // MARK: Private
-    private func setGenres(genres : [String]){
+    fileprivate func setGenres(_ genres : [String]){
         var text = "";
         var i = 0;
         for genre in genres{

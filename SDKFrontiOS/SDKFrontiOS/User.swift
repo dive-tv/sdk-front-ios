@@ -18,9 +18,9 @@ class User : NSObject, Validatable{
         self.isLiked = data["is_liked"].boolValue;
     }
     
-    class func validate(data: JSON?) throws{
+    class func validate(_ data: JSON?) throws{
         
-        guard let _data = data where _data != nil else{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateUserErrors.emptyData);
             return;
         }

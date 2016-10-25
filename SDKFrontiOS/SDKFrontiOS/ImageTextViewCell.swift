@@ -15,14 +15,14 @@ class ImageTextViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier);
         
-        self.imageTextView = NSBundle.mainBundle().loadNibNamed("ImageTextView", owner: self, options: nil)?[0] as? ImageTextView;
+        self.imageTextView = Bundle.main.loadNibNamed("ImageTextView", owner: self, options: nil)?[0] as? ImageTextView;
         
         self.contentView.addSubview(self.imageTextView!);
         self.imageTextView?.translatesAutoresizingMaskIntoConstraints = false;
         
-        let constraintHorizontal = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.imageTextView!]);
+        let constraintHorizontal = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.imageTextView!]);
         
-        let constraintVertical = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.imageTextView!]);
+        let constraintVertical = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.imageTextView!]);
         
         
         self.contentView.addConstraints(constraintHorizontal);

@@ -13,13 +13,13 @@ import SwiftyJSON
 
 private typealias completionBlockGetCard = (CardDetail)->Void;
 
-public class BaseCardDetailBuilder : NSObject{
+open class BaseCardDetailBuilder : NSObject{
     
     internal var styleConfig : JSON?;
     internal var dictSections = [String : ConfigSection]();
     internal var mainKeySection : String?;
     
-    private var moduleValidator : ModuleValidator!;
+    fileprivate var moduleValidator : ModuleValidator!;
     
     // MARK: Init
     /**
@@ -45,7 +45,7 @@ public class BaseCardDetailBuilder : NSObject{
      - parameter cardId:   The cardId to get the information of the card
      - parameter navigationController: The navigation controller of the user.
      */
-    public func build(cardId : String, navigationController : UINavigationController){
+    open func build(_ cardId : String, navigationController : UINavigationController){
         self.getCardDetail(cardId) { (cardData : CardDetail) in
             
             self.validateSectionsAndModules(cardData);
@@ -73,11 +73,11 @@ public class BaseCardDetailBuilder : NSObject{
      - parameter cardId:          The cardId to get the information of the card
      - parameter completionBlock: The completion with the CardData.
      */
-    private func getCardDetail(cardId : String, completionBlock : completionBlockGetCard){
+    fileprivate func getCardDetail(_ cardId : String, completionBlock : completionBlockGetCard){
         // TODO: need to call the sdkclient and in the response call the completion
         // For test we catch a local json
-        if let path = NSBundle.mainBundle().pathForResource("card_detail_example", ofType: "json") {
-            if let data = NSData(contentsOfFile: path) {
+        if let path = Bundle.main.path(forResource: "card_detail_example", ofType: "json") {
+            if let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
                 let json = JSON(data: data);
                 if(json != nil && json.error == nil){
                     completionBlock(CardDetail(data: json));
@@ -92,7 +92,7 @@ public class BaseCardDetailBuilder : NSObject{
      
      - parameter cardData: The data with all the info
      */
-    private func validateSectionsAndModules(cardData : CardDetail){
+    fileprivate func validateSectionsAndModules(_ cardData : CardDetail){
         for key in self.dictSections.keys{
             let configSection = self.dictSections[key]!;
             for configModule in configSection.arrayModules{
@@ -115,7 +115,7 @@ public class BaseCardDetailBuilder : NSObject{
      
      - returns: Return a ConfigSection
      */
-    private func createConfigSection(arrayModules : [ConfigModule])->ConfigSection{
+    fileprivate func createConfigSection(_ arrayModules : [ConfigModule])->ConfigSection{
         // Create a new ConfigSection
         let newConfigSection = ConfigSection();
         for configModule in arrayModules{

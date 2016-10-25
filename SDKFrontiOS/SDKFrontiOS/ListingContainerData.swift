@@ -23,14 +23,14 @@ class ListingContainerData : ContainerData{
         super.init();
     }
     
-    override class func validate(data: JSON?) throws{
-        guard let _data = data where _data != nil else{
+    override class func validate(_ data: JSON?) throws{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.emptyData);
             return;
         }
         
         guard case let (_text as String, _value as String) = (_data["text"].object, _data["value"].object)
-            where _text != "" && _value != "" else{
+            , _text != "" && _value != "" else{
                 //Throw indavilData Error
                 try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
                 return;

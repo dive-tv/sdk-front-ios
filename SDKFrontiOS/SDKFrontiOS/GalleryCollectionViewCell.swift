@@ -17,9 +17,9 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func updateCell(image : Image){
+    func updateCell(_ image : Image){
         // TODO: need to download thumb
-        self.imageViewItem.backgroundColor = UIColor.blueColor();
+        self.imageViewItem.backgroundColor = UIColor.blue;
     }
 
 }

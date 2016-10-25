@@ -29,7 +29,7 @@ internal class MiniCard : NSObject, Validatable{
         self.title = data["title"].object as! String;
 
         //non validated variables
-        if let _subTitle = data["subTitle"].object as? String where _subTitle != ""{
+        if let _subTitle = data["subTitle"].object as? String , _subTitle != ""{
             self.subTitle = _subTitle;
         }
         
@@ -54,9 +54,9 @@ internal class MiniCard : NSObject, Validatable{
             //Some recorver code
         }
         
-        if let _products = data["products"].array where _products.count > 0{
+        if let _products = data["products"].array , _products.count > 0{
             for _product in _products{
-                if let _category = _product["category"].object as? String where _category == "travel"{
+                if let _category = _product["category"].object as? String , _category == "travel"{
                     do{
                         try TravelProduct.validate(_product);
                         self.products.append(TravelProduct(data: _product));
@@ -112,21 +112,21 @@ internal class MiniCard : NSObject, Validatable{
             }
         }
         
-        if let _paginateKey = data["paginate_key"].object as? String where _paginateKey != ""{
+        if let _paginateKey = data["paginate_key"].object as? String , _paginateKey != ""{
             self.paginateKey = _paginateKey;
         }
         
         super.init();
     }
     
-    class func validate(data: JSON?) throws{
-        guard let _data = data where _data != nil else{
+    class func validate(_ data: JSON?) throws{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateMiniCardErrors.emptyData);
             return;
         }
         
         guard case let (_cardId as String, _type as String, _locale as String, _title as String) = (_data["card_id"].object, _data["type"].object, _data["locale"].object, _data["title"].object)
-            where _cardId != "" && _type != "" && _locale != "" && _title != ""  else{
+            , _cardId != "" && _type != "" && _locale != "" && _title != ""  else{
                 //Throw indavilData Error
                 try DataModelErrors.ThrowError(DataModelErrors.CreateMiniCardErrors.invalidData);
                 return;

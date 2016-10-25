@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class Target: NSObject {
+open class Target: NSObject {
     
-    private(set) var sectionId : String?;
-    private(set) var text : String?;
+    fileprivate(set) var sectionId : String?;
+    fileprivate(set) var text : String?;
 
     init(sectionId : String, text : String){
         super.init();

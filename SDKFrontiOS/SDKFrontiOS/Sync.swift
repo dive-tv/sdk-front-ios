@@ -21,15 +21,15 @@ internal class Sync : NSObject, Validatable{
         self.isSynchronizable = data["is_synchronizable"].boolValue;
         
         //non validated variables
-        if let _audioLangs = data["audio_langs"].array where _audioLangs.count > 0{
+        if let _audioLangs = data["audio_langs"].array , _audioLangs.count > 0{
             for item in _audioLangs{
-                if let _audiolang = item.object as? String where _audiolang != ""{
+                if let _audiolang = item.object as? String , _audiolang != ""{
                     self.audioLangs.append(_audiolang);
                 }
             }
         }
         
-        if let _channels = data["channels"].array where _channels.count > 0{
+        if let _channels = data["channels"].array , _channels.count > 0{
             
             for _channel in _channels{
                 do{
@@ -67,8 +67,8 @@ internal class Sync : NSObject, Validatable{
         super.init();
     }
     
-    class func validate(data: JSON?) throws{
-        guard let _data = data where _data != nil else{
+    class func validate(_ data: JSON?) throws{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateSyncErrors.emptyData);
             return;
         }

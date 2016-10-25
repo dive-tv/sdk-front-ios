@@ -23,8 +23,8 @@ class Seasons: HorizontalListModule {
         // Configure the view for the selected state
     }
     
-    override class func validate(cardDetail : CardDetail) throws {
-        guard let container = cardDetail.containers[ContainerContentType.Seasons] where container.data.count > 0 else{
+    override class func validate(_ cardDetail : CardDetail) throws {
+        guard let container = cardDetail.containers[ContainerContentType.Seasons] , container.data.count > 0 else{
             // TODO: create error
             try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.emptyData);
             return;
@@ -32,7 +32,7 @@ class Seasons: HorizontalListModule {
     }
     
     
-    override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
+    override func setCardDetail(_ _configModule: ConfigModule, _cardDetail: CardDetail) {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         
         // This is not needed because if not pass the validate this will never be call
@@ -45,8 +45,8 @@ class Seasons: HorizontalListModule {
             self.heightScrollViewConstraint.constant = 221;
             self.itemWidth = 110;
             
-            self.labelModuleTitle.text = "Temporadas".uppercaseString;
-            self.viewBackground.backgroundColor = UIColor.redColor();
+            self.labelModuleTitle.text = "Temporadas".uppercased();
+            self.viewBackground.backgroundColor = UIColor.red;
             self.addItemToScrollView(container.data as! [SeasonsContainerData]);
             
             let width = (CGFloat(container.data.count) * (self.itemWidth + 10)) + 15 + 5;
@@ -59,10 +59,10 @@ class Seasons: HorizontalListModule {
     
     
     // MARK: Private Methods
-    private func addItemToScrollView(seasons : [SeasonsContainerData]){
+    fileprivate func addItemToScrollView(_ seasons : [SeasonsContainerData]){
         for i in 0 ..< seasons.count {
             
-            let item = NSBundle.mainBundle().loadNibNamed("SeasonsView", owner: self, options: nil)![0] as? SeasonsView
+            let item = Bundle.main.loadNibNamed("SeasonsView", owner: self, options: nil)![0] as? SeasonsView
             
             self.scrollView.addSubview(item!);
             

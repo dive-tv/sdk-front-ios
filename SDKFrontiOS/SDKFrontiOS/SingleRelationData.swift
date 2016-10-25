@@ -18,9 +18,9 @@ class SingleRelationData : RelationData{
         self.card = MiniCard(data: data);
     }
     
-     override class func validate(data: JSON?) throws{
+     override class func validate(_ data: JSON?) throws{
         
-        guard let _data = data where _data != nil else{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateRelationsDataErrors.emptyData);
             return;
         }

@@ -8,20 +8,20 @@
 
 import UIKit
 
-public class PhotoModule: Module {
+open class PhotoModule: Module {
 
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override public func setSelected(selected: Bool, animated: Bool) {
+    override open func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    override func setCardDetail(_configModule : ConfigModule, _cardDetail: CardDetail) {
+    override func setCardDetail(_ _configModule : ConfigModule, _cardDetail: CardDetail) {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
     }
     

@@ -32,15 +32,15 @@ internal class Product : Validatable{
         
     }
     
-    class func validate(data: JSON?) throws {
+    class func validate(_ data: JSON?) throws {
     
-        guard let _data = data where _data != nil else{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateProductErrors.emptyData);
             return;
         }
         
         guard case let (_productId as String, _category as String, _title as String, _merchant as String, _image as String, _url as String, _price as Float, _currency as String) = (_data["product_id"].object, _data["category"].object, _data["title"].object, _data["merchant"].object, _data["image"].object, _data["url"].object, _data["price"].float, _data["currency"].object)
-            where _productId != "" && _category != "" && _title != "" && _merchant != "" && _image != "" && _url != "" && _currency != "" else{
+            , _productId != "" && _category != "" && _title != "" && _merchant != "" && _image != "" && _url != "" && _currency != "" else{
             //Throw indavilData Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateProductErrors.invalidData);
             return;

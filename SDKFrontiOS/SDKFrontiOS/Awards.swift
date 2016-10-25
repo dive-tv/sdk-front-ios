@@ -14,10 +14,10 @@ class Awards: VerticalListModule, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var heightSeparator : NSLayoutConstraint!;
     @IBOutlet weak var imageViewMore : UIImageView!;
     
-    private var data = [AwardsContainerData]();
-    private var cellIdentifier = "NativeCell";
+    fileprivate var data = [AwardsContainerData]();
+    fileprivate var cellIdentifier = "NativeCell";
     
-    private var showExpandButton = true;
+    fileprivate var showExpandButton = true;
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +25,7 @@ class Awards: VerticalListModule, UITableViewDataSource, UITableViewDelegate {
         //self.tableView.registerNib(UINib(nibName: "TwoColsCell", bundle: nil), forCellReuseIdentifier: cellIdentifier);
         //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier);
         
-        self.tableView.tableFooterView = UIView(frame: CGRectZero);
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero);
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 50;
     }
@@ -36,8 +36,8 @@ class Awards: VerticalListModule, UITableViewDataSource, UITableViewDelegate {
         // Configure the view for the selected state
     }
     
-    override class func validate(cardDetail : CardDetail) throws {
-        guard let container = cardDetail.containers[ContainerContentType.Awards] where container.data.count > 0 else{
+    override class func validate(_ cardDetail : CardDetail) throws {
+        guard let container = cardDetail.containers[ContainerContentType.Awards] , container.data.count > 0 else{
             // TODO: create error
             try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.emptyData);
             return;
@@ -45,7 +45,7 @@ class Awards: VerticalListModule, UITableViewDataSource, UITableViewDelegate {
     }
     
     
-    override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
+    override func setCardDetail(_ _configModule: ConfigModule, _cardDetail: CardDetail) {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         
         // This is not needed because if not pass the validate this will never be call
@@ -60,16 +60,16 @@ class Awards: VerticalListModule, UITableViewDataSource, UITableViewDelegate {
             if(self.showExpandButton){
                 self.heightViewExpand.constant = 50;
                 self.heightSeparator.constant = 1;
-                self.imageViewMore.hidden = false;
+                self.imageViewMore.isHidden = false;
             }
             else{
                 self.heightViewExpand.constant = 0;
                 self.heightSeparator.constant = 0;
-                self.imageViewMore.hidden = true;
+                self.imageViewMore.isHidden = true;
             }
             
             // TODO: need to put the localizable
-            self.labelTitleModule.text = "Premios".uppercaseString;
+            self.labelTitleModule.text = "Premios".uppercased();
             
             self.tableView.reloadData();
         
@@ -81,24 +81,24 @@ class Awards: VerticalListModule, UITableViewDataSource, UITableViewDelegate {
     }
     
     // MARK: UITableViewDataSource
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(showExpandButton){
             return 5;
         }
         return self.data.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         if(cell == nil){
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier);
+            cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: cellIdentifier);
         }
         
-        let awardContainerData = self.data[indexPath.row];
+        let awardContainerData = self.data[(indexPath as NSIndexPath).row];
         
         cell?.textLabel?.text = awardContainerData.title;
         cell?.textLabel?.font = UIFont(name: "Lato-Semibold", size: 15);
@@ -130,12 +130,12 @@ class Awards: VerticalListModule, UITableViewDataSource, UITableViewDelegate {
         return cell!;
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if(cell.respondsToSelector(Selector("setSeparatorInset:"))){
-            cell.separatorInset = UIEdgeInsetsZero;
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if(cell.responds(to: #selector(setter: UITableViewCell.separatorInset))){
+            cell.separatorInset = UIEdgeInsets.zero;
         }
-        if(cell.respondsToSelector(Selector("setLayoutMargins:"))){
-            cell.layoutMargins = UIEdgeInsetsZero;
+        if(cell.responds(to: #selector(setter: UIView.layoutMargins))){
+            cell.layoutMargins = UIEdgeInsets.zero;
         }
         
         self.tableView.layoutSubviews();

@@ -42,14 +42,14 @@ class LinkContainerData : ContainerData{
         super.init();
     }
     
-    override class func validate(data: JSON?) throws{
-        guard let _data = data where _data != nil else{
+    override class func validate(_ data: JSON?) throws{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.emptyData);
             return;
         }
         
         guard let _link = _data["url"].object as? String
-            where _link != "" else{
+            , _link != "" else{
                 //Throw indavilData Error
                 try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
                 return;

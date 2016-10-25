@@ -11,7 +11,7 @@ import SwiftyJSON
 
 internal class ContainerData : NSObject, Validatable{
     
-    class func validate(data: JSON?) throws{
+    class func validate(_ data: JSON?) throws{
     
     }
 }

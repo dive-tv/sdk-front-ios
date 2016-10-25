@@ -10,19 +10,19 @@ import Foundation
 import UIKit
 
 protocol CardDetailDelegate : class {
-    func createSection (_keyForSection : String) -> Section
-    func createSections (_keyForSections : [String]) -> [Section]
-    func newSection(_keyForSection : String);
+    func createSection (_ _keyForSection : String) -> Section
+    func createSections (_ _keyForSections : [String]) -> [Section]
+    func newSection(_ _keyForSection : String);
     
-    func newCard(_key : String, _type: Int)
+    func newCard(_ _key : String, _type: Int)
 }
 
-public class CardDetailRender : NSObject, CardDetailDelegate{
+open class CardDetailRender : NSObject, CardDetailDelegate{
     
-    private var sectionsData : [String:ConfigSection]!;
-    private var navigationController : UINavigationController!;
-    private var mainSectionKey : String!;
-    private var cardDetail : CardDetail!;
+    fileprivate var sectionsData : [String:ConfigSection]!;
+    fileprivate var navigationController : UINavigationController!;
+    fileprivate var mainSectionKey : String!;
+    fileprivate var cardDetail : CardDetail!;
     
     
     
@@ -53,7 +53,7 @@ public class CardDetailRender : NSObject, CardDetailDelegate{
     /**
      Pushes to the clients UINavigationViewController the main section especified by the client
      */
-    private func pushMain() {
+    fileprivate func pushMain() {
         
         if (self.sectionsData[self.mainSectionKey] != nil) {
             
@@ -69,7 +69,7 @@ public class CardDetailRender : NSObject, CardDetailDelegate{
      
      - parameter _keyForSection: the key string of teh section
      */
-    private func pushSection (_keyForSection : String) {
+    fileprivate func pushSection (_ _keyForSection : String) {
         
         if (self.mainSectionKey != _keyForSection && self.sectionsData[_keyForSection] != nil) {
             
@@ -91,7 +91,7 @@ public class CardDetailRender : NSObject, CardDetailDelegate{
      
      - returns: the section created with the delegate assigned
      */
-    func createSection (_keyForSection : String) -> Section {
+    func createSection (_ _keyForSection : String) -> Section {
         let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardDetail: self.cardDetail)
         section.cardDelegate = self;
         return section;
@@ -105,7 +105,7 @@ public class CardDetailRender : NSObject, CardDetailDelegate{
      
      - returns: array of sections created
      */
-    func createSections (_keyForSections : [String]) -> [Section] {
+    func createSections (_ _keyForSections : [String]) -> [Section] {
         
         var sections = [Section]()
         
@@ -125,7 +125,7 @@ public class CardDetailRender : NSObject, CardDetailDelegate{
      
      - parameter _keyForSection: the key of the section to push
      */
-    func newSection(_keyForSection: String) {
+    func newSection(_ _keyForSection: String) {
         self.pushSection(_keyForSection);
     }
     
@@ -136,7 +136,7 @@ public class CardDetailRender : NSObject, CardDetailDelegate{
      - parameter _key:  the id of the card to create
      - parameter _type: the type of the card to create
      */
-    func newCard(_key: String, _type: Int) {
+    func newCard(_ _key: String, _type: Int) {
         //NEED TO DO THE LOGIC
     }
     

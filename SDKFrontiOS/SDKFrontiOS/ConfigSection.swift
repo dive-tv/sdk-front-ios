@@ -8,9 +8,9 @@
 
 import Foundation
 
-public class ConfigSection : NSObject{
+open class ConfigSection : NSObject{
     
-    private(set) var arrayModules = [ConfigModule]();
+    fileprivate(set) var arrayModules = [ConfigModule]();
     var isValidSection : Bool = false;
     
     public override init() {
@@ -23,7 +23,7 @@ public class ConfigSection : NSObject{
      - parameter moduleName: The module the user wants to add.
      - parameter targets: The targets with the id of the section and the name.
      */
-    public func addModule(moduleName : String, targets : [Target]? = nil){
+    open func addModule(_ moduleName : String, targets : [Target]? = nil){
         let configModule = ConfigModule(moduleName: moduleName, targets: targets);
         self.arrayModules.append(configModule);
     }

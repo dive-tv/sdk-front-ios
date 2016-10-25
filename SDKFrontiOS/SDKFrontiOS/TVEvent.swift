@@ -52,15 +52,15 @@ internal class TVEvent : NSObject, Validatable{
         super.init();
     }
     
-    class func validate(data: JSON?) throws{
+    class func validate(_ data: JSON?) throws{
         
-        guard let _data = data where _data != nil else{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateTVEventErrors.emptyData);
             return;
         }
         
         guard case let (_tvEventId as String, _channelId as String, _channelName as String) = (_data["tv_event_id"].object, _data["channel_id"].object, _data["channel_name"].object)
-            where _tvEventId != "" && _channelId != "" && _channelName != "" && _data["start_date"].int != nil else{
+            , _tvEventId != "" && _channelId != "" && _channelName != "" && _data["start_date"].int != nil else{
                 //Throw indavilData Error
                 try DataModelErrors.ThrowError(DataModelErrors.CreateTVEventErrors.invalidData);
                 return;

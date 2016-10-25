@@ -21,19 +21,19 @@ internal class TravelProduct : Product{
     override init(data: JSON){
         
         //non validate variables
-        if let _country = data["country"].object as? String where _country != ""{
+        if let _country = data["country"].object as? String , _country != ""{
             self.country = _country;
         }
         
-        if let _region = data["region"].object as? String where _region != ""{
+        if let _region = data["region"].object as? String , _region != ""{
             self.region = _region;
         }
         
-        if let _city = data["city"].object as? String where _city != ""{
+        if let _city = data["city"].object as? String , _city != ""{
             self.city = _city;
         }
         
-        if let _address = data["address"].object as? String where _address != ""{
+        if let _address = data["address"].object as? String , _address != ""{
             self.address = _address;
         }
         
@@ -48,7 +48,7 @@ internal class TravelProduct : Product{
         super.init(data: data);
     }
     
-    override class func validate(data: JSON?) throws{
+    override class func validate(_ data: JSON?) throws{
         
         try super.validate(data);
     }

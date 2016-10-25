@@ -19,14 +19,14 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var heightCollectionViewConstraint : NSLayoutConstraint!;
     @IBOutlet weak var buttonAll : UIButton!;
     
-    private var data = [ImageContainerData]();
+    fileprivate var data = [ImageContainerData]();
     
-    private var isFirstTime = true;
+    fileprivate var isFirstTime = true;
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.collectionView.registerNib(UINib(nibName: "GalleryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GalleryCollectionViewCell");
+        self.collectionView.register(UINib(nibName: "GalleryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GalleryCollectionViewCell");
         //self.collectionView.backgroundColor = UIColor.clearColor();
         self.collectionView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0);
     }
@@ -38,8 +38,8 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     
-    override class func validate(cardDetail : CardDetail) throws {
-        guard let container = cardDetail.containers[ContainerContentType.Gallery] where container.data.count > 0 else{
+    override class func validate(_ cardDetail : CardDetail) throws {
+        guard let container = cardDetail.containers[ContainerContentType.Gallery] , container.data.count > 0 else{
             // TODO: create error
             try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.emptyData);
             return;
@@ -47,7 +47,7 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     
-    override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
+    override func setCardDetail(_ _configModule: ConfigModule, _cardDetail: CardDetail) {
         super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         
         // This is not needed because if not pass the validate this will never be call
@@ -55,16 +55,16 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
             self.data = container.data as! [ImageContainerData];
             
             // TODO: need to put the localizable string
-            self.labelModuleTitle.text = "Galería".uppercaseString;
+            self.labelModuleTitle.text = "Galería".uppercased();
             if(self.data.count > 6){
                 self.labelAll.text = "Ver todas";
-                self.imageViewNext.hidden = false;
-                self.buttonAll.hidden = false;
+                self.imageViewNext.isHidden = false;
+                self.buttonAll.isHidden = false;
             }
             else{
                 self.labelAll.text = "";
-                self.imageViewNext.hidden = true;
-                self.buttonAll.hidden = true;
+                self.imageViewNext.isHidden = true;
+                self.buttonAll.isHidden = true;
             }
             
             
@@ -86,7 +86,7 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     // MARK: UICollectionViewDataSource
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1;
     }
     
@@ -94,7 +94,7 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
      self.heightCollectionViewConstraint.constant = collectionView.contentSize.height;
      }*/
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(self.data.count > 0) {
             return min(self.data.count, 6);
         }
@@ -103,11 +103,11 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
         }
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell : UICollectionViewCell?;
-        if let galleryCell = collectionView.dequeueReusableCellWithReuseIdentifier("GalleryCollectionViewCell", forIndexPath: indexPath) as? GalleryCollectionViewCell {
+        if let galleryCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCollectionViewCell", for: indexPath) as? GalleryCollectionViewCell {
             
-            galleryCell.updateCell(self.data[indexPath.row].image);
+            galleryCell.updateCell(self.data[(indexPath as NSIndexPath).row].image);
             cell = galleryCell;
         }
         else {
@@ -118,15 +118,15 @@ class Gallery: Module, UICollectionViewDataSource, UICollectionViewDelegate {
         return cell!;
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0.0;
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(110, 110);
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 110, height: 110);
     }
 }

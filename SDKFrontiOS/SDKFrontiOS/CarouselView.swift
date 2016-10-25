@@ -21,7 +21,7 @@ class CarouselView: UIView {
      
      - parameter _data: data of the card
      */
-    func setView (_data : CarouselCard ) {
+    func setView (_ _data : CarouselCard ) {
         // NEED TO DO THE ANIMATION
     }
 
@@ -29,10 +29,10 @@ class CarouselView: UIView {
 
 
 extension CarouselView {
-    class func loadFromNibNamed(type: CarouselViewType, bundle : NSBundle? = nil) -> UIView? {
+    class func loadFromNibNamed(_ type: CarouselViewType, bundle : Bundle? = nil) -> UIView? {
         return UINib(
             nibName: type.rawValue,
             bundle: bundle
-            ).instantiateWithOwner(nil, options: nil)[0] as? UIView
+            ).instantiate(withOwner: nil, options: nil)[0] as? UIView
     }
 }

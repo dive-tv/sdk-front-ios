@@ -8,8 +8,8 @@
 
 import UIKit
 protocol CarouselTableViewDelegate : class {
-    func addCellsToTableView (_cells : [CarouselCellData]);
-    func startNewScene (_sceneId : Int);
+    func addCellsToTableView (_ _cells : [CarouselCellData]);
+    func startNewScene (_ _sceneId : Int);
 }
 internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataSource, CarouselTableViewDelegate {
 
@@ -17,8 +17,8 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var sectionsToast: UIView!
     @IBOutlet weak var sectionToastText: UILabel!
     
-    private var data = [[CarouselCellData]]();
-    private var sceneManager : SceneManager!;
+    fileprivate var data = [[CarouselCellData]]();
+    fileprivate var sceneManager : SceneManager!;
     weak var sceneManagerDelegate : CarouselCardDelegate?;
     
     
@@ -30,7 +30,7 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
      
      - parameter _delegate:      A delegate for the scene manager to lisen the events of the film.
      */
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, inout _delegate : CarouselCardDelegate?) {
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, _delegate : inout CarouselCardDelegate?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
         
         self.sceneManager = SceneManager();
@@ -54,13 +54,13 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        self.tableView.registerNib(UINib(nibName: "CarouselCell", bundle: nil), forCellReuseIdentifier: "carouselCell");
-        self.tableView.separatorStyle = .None;
-        self.tableView.sectionIndexBackgroundColor = UIColor.clearColor();
-        self.tableView.sectionIndexTrackingBackgroundColor = UIColor.blackColor();
-        self.tableView.sectionIndexColor = UIColor.whiteColor();
+        self.tableView.register(UINib(nibName: "CarouselCell", bundle: nil), forCellReuseIdentifier: "carouselCell");
+        self.tableView.separatorStyle = .none;
+        self.tableView.sectionIndexBackgroundColor = UIColor.clear;
+        self.tableView.sectionIndexTrackingBackgroundColor = UIColor.black;
+        self.tableView.sectionIndexColor = UIColor.white;
         
-        self.sectionsToast.hidden = true;
+        self.sectionsToast.isHidden = true;
         self.sectionToastText.text = "0";
     }
 
@@ -79,7 +79,7 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
      
      - parameter _cells: The data for the cell, with the number of the scene and the data for the cards shown inside the cell
      */
-    func addCellsToTableView(_cells: [CarouselCellData]) {
+    func addCellsToTableView(_ _cells: [CarouselCellData]) {
         
         if (!self.data.isEmpty && self.data.count > _cells.first!.sceneId) {
             
@@ -87,14 +87,14 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
 
             for cell in _cells {
                 
-                self.data[section].insert(cell, atIndex: 0);
+                self.data[section].insert(cell, at: 0);
             }
             
-            self.tableView.reloadSections(NSIndexSet(index: section) , withRowAnimation: .Bottom);
+            self.tableView.reloadSections(IndexSet(integer: section) , with: .bottom);
             
         } else {
             
-            self.data.insert([CarouselCellData](), atIndex: 0);
+            self.data.insert([CarouselCellData](), at: 0);
             self.tableView.reloadData();
             
             self.addCellsToTableView(_cells);
@@ -107,9 +107,9 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
      
      - parameter _sceneId: the identificator of the new scene/section
      */
-    func startNewScene(_sceneId: Int) {
+    func startNewScene(_ _sceneId: Int) {
         
-        self.data.insert([CarouselCellData](), atIndex: 0);
+        self.data.insert([CarouselCellData](), at: 0);
         self.tableView.reloadData();
     }
     
@@ -118,30 +118,30 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
     //MARK: UITableViewDataSource
     
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.data.count;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.data[section].count;
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300;
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50;
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "SCENE \(self.data.count - section)";
     }
     
-    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         
         var indexArray = [String]();
-        for idx in (0..<self.data.count).reverse() {
+        for idx in (0..<self.data.count).reversed() {
             indexArray.append("\(idx + 1)");
         }
         return indexArray;
@@ -153,15 +153,15 @@ internal class Carousel: UIViewController, UITableViewDelegate, UITableViewDataS
         return index;
     }*/
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("carouselCell")! as! CarouselCell;
-        cell.setCarouselCell(self.data[indexPath.section][indexPath.row]);
-        cell.selectionStyle = .None;
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "carouselCell")! as! CarouselCell;
+        cell.setCarouselCell(self.data[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]);
+        cell.selectionStyle = .none;
         return cell;
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = UIColor.clearColor();
-        cell.contentView.backgroundColor = UIColor.clearColor();
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear;
+        cell.contentView.backgroundColor = UIColor.clear;
     }
 }

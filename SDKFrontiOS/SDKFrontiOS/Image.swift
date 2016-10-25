@@ -46,15 +46,15 @@ internal class Image : Validatable{
         }
     }
     
-    class func validate(data: JSON?) throws{
+    class func validate(_ data: JSON?) throws{
         
-        guard let _data = data where _data != nil else{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateImageErrors.emptyData);
             return;
         }
         
         guard case let (_thumb as String, _full as String) = (_data["thumb"].object, _data["full"].object)
-            where _thumb != "" && _full != "" && _data["anchor_x"].int != nil && _data["anchor_y"].int != nil else{
+            , _thumb != "" && _full != "" && _data["anchor_x"].int != nil && _data["anchor_y"].int != nil else{
                 //Throw indavilData Error
                 try DataModelErrors.ThrowError(DataModelErrors.CreateImageErrors.invalidData);
                 return;

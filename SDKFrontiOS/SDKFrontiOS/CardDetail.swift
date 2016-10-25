@@ -57,7 +57,7 @@ internal class CardDetail : NSObject, Validatable{
         self.title = data["title"].object as! String;
         
         //non validate variables
-        if let _subtitle = data["subtitle"].object as? String where _subtitle != ""{
+        if let _subtitle = data["subtitle"].object as? String , _subtitle != ""{
             self.subtitle = _subtitle;
         }
         
@@ -84,10 +84,10 @@ internal class CardDetail : NSObject, Validatable{
         }
         
         //Create products
-        if let _products = data["products"].array where _products.count > 0{
+        if let _products = data["products"].array , _products.count > 0{
             for product in _products{
                 
-                if let _category = product["category"].object as? String where _category == "travel"{
+                if let _category = product["category"].object as? String , _category == "travel"{
                     do{
                         try TravelProduct.validate(product);
                         self.products.append(TravelProduct(data: product));
@@ -143,7 +143,7 @@ internal class CardDetail : NSObject, Validatable{
         }
         
         //Create Containers
-        if let _containers = data["info"].array where _containers.count > 0{
+        if let _containers = data["info"].array , _containers.count > 0{
             for _container in _containers{
                 do{
                     try Container.validate(_container);
@@ -176,7 +176,7 @@ internal class CardDetail : NSObject, Validatable{
         }
         
         //Create relations
-        if let _relations = data["relations"].array where _relations.count > 0{
+        if let _relations = data["relations"].array , _relations.count > 0{
             for _relation in _relations{
                 do{
                     try Relation.validate(_relation);
@@ -213,9 +213,9 @@ internal class CardDetail : NSObject, Validatable{
         
     }
     
-    class func validate(data: JSON?) throws{
+    class func validate(_ data: JSON?) throws{
         
-        guard let _data = data where _data != nil else{
+        guard let _data = data , _data != nil else{
             try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.emptyData);
             return;
         }
