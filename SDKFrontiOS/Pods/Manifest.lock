@@ -1,12 +1,15 @@
 PODS:
   - SwiftyJSON (3.0.0)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - SwiftyJSON (= 3.0.0)
+  - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC CHECKSUMS:
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 2d7f6863b430c7db4133c27ad06316d4a2ee3b89
+PODFILE CHECKSUM: db68e4f451e4712923c695d74393a44548639f63
 
 COCOAPODS: 1.0.1

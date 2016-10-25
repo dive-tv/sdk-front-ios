@@ -296,6 +296,13 @@
 		A15165251D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
 		A15165261D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
 		A15165271D89852E008AEA14 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A151650F1D89852E008AEA14 /* Section.swift */; };
+		A15FDD041DBFA88C008426E0 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15FDD021DBFA88C008426E0 /* Map.swift */; };
+		A15FDD051DBFA88C008426E0 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15FDD021DBFA88C008426E0 /* Map.swift */; };
+		A15FDD061DBFA88C008426E0 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15FDD021DBFA88C008426E0 /* Map.swift */; };
+		A15FDD071DBFA88C008426E0 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15FDD031DBFA88C008426E0 /* Map.xib */; };
+		A15FDD081DBFA88C008426E0 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15FDD031DBFA88C008426E0 /* Map.xib */; };
+		A15FDD091DBFA88C008426E0 /* Map.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15FDD031DBFA88C008426E0 /* Map.xib */; };
+		A15FDD0B1DBFB0BC008426E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15FDD0A1DBFB0BC008426E0 /* MapKit.framework */; };
 		A1718BC61DBA3B74006D9766 /* card_detail_example.json in Resources */ = {isa = PBXBuildFile; fileRef = A1718BC41DBA3B74006D9766 /* card_detail_example.json */; };
 		A1718BC71DBA3B74006D9766 /* card_detail_example.json in Resources */ = {isa = PBXBuildFile; fileRef = A1718BC41DBA3B74006D9766 /* card_detail_example.json */; };
 		A1718BC81DBA3B74006D9766 /* card_detail_example.json in Resources */ = {isa = PBXBuildFile; fileRef = A1718BC41DBA3B74006D9766 /* card_detail_example.json */; };
@@ -885,6 +892,9 @@
 		A151650D1D89852E008AEA14 /* CardDetailJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailJson.swift; sourceTree = "<group>"; };
 		A151650E1D89852E008AEA14 /* ConfigSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigSection.swift; sourceTree = "<group>"; };
 		A151650F1D89852E008AEA14 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		A15FDD021DBFA88C008426E0 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		A15FDD031DBFA88C008426E0 /* Map.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Map.xib; sourceTree = "<group>"; };
+		A15FDD0A1DBFB0BC008426E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A1718BC41DBA3B74006D9766 /* card_detail_example.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = card_detail_example.json; sourceTree = "<group>"; };
 		A1718BC51DBA3B74006D9766 /* config2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config2.json; sourceTree = "<group>"; };
 		A1CCBDD51DB36D6600A0DAE0 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
@@ -1046,6 +1056,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A15FDD0B1DBFB0BC008426E0 /* MapKit.framework in Frameworks */,
 				62B091B75B6E0C250433BC83 /* Pods_SDKFrontiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1454,6 +1465,8 @@
 				A1E42A3A1DBE67DA009A7CCB /* DescriptionNavigation.xib */,
 				A1E42A411DBE6823009A7CCB /* Carry.swift */,
 				A1E42A421DBE6823009A7CCB /* Carry.xib */,
+				A15FDD021DBFA88C008426E0 /* Map.swift */,
+				A15FDD031DBFA88C008426E0 /* Map.xib */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -1542,6 +1555,7 @@
 		EFC0A425240C8DE780BC172C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A15FDD0A1DBFB0BC008426E0 /* MapKit.framework */,
 				3F85C40EA2C1B79B69491BDE /* Pods_SDKFrontiOS.framework */,
 				0092F26BADD7C6F8BBEB3A3E /* Pods_SDKFrontiOSTests.framework */,
 				8DA2EA1464E2AC606C5E483C /* Pods_SDKFrontiOSUITests.framework */,
@@ -1627,6 +1641,11 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 6TRWRL4V99;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A15164CA1D898402008AEA14 = {
 						CreatedOnToolsVersion = 7.3;
@@ -1695,6 +1714,7 @@
 				329670DF1D9A7D0A003674D8 /* PhotoAndTitleView.xib in Resources */,
 				A1CCBE1A1DB36D6600A0DAE0 /* Lato-ThinItalic.ttf in Resources */,
 				A1E429CE1DBE55DD009A7CCB /* MusicShops.xib in Resources */,
+				A15FDD071DBFA88C008426E0 /* Map.xib in Resources */,
 				6D262B8A1DA9641700779B57 /* NavigationModule.xib in Resources */,
 				A1E42A3E1DBE67DA009A7CCB /* DescriptionNavigation.xib in Resources */,
 				A15165051D89851C008AEA14 /* PhotoModule.xib in Resources */,
@@ -1834,6 +1854,7 @@
 				A1E429271DBE40BA009A7CCB /* Seasons.xib in Resources */,
 				A1CCBE001DB36D6600A0DAE0 /* Lato-Italic.ttf in Resources */,
 				6D99569D1DB0FA4E007A8440 /* LaunchScreen.storyboard in Resources */,
+				A15FDD081DBFA88C008426E0 /* Map.xib in Resources */,
 				A1E429B71DBE51B6009A7CCB /* VerticalListModule.xib in Resources */,
 				A1CCBE031DB36D6600A0DAE0 /* Lato-Light.ttf in Resources */,
 				A1E42A1F1DBE6610009A7CCB /* Reference.xib in Resources */,
@@ -1941,6 +1962,7 @@
 				A1E429281DBE40BA009A7CCB /* Seasons.xib in Resources */,
 				A1CCBE011DB36D6600A0DAE0 /* Lato-Italic.ttf in Resources */,
 				6D99569E1DB0FA4F007A8440 /* LaunchScreen.storyboard in Resources */,
+				A15FDD091DBFA88C008426E0 /* Map.xib in Resources */,
 				A1E429B81DBE51B6009A7CCB /* VerticalListModule.xib in Resources */,
 				A1CCBE041DB36D6600A0DAE0 /* Lato-Light.ttf in Resources */,
 				A1E42A201DBE6610009A7CCB /* Reference.xib in Resources */,
@@ -2146,6 +2168,7 @@
 				A139FBF21DBF875200FEFC5A /* PlacesShownList.swift in Sources */,
 				329670EB1D9A8157003674D8 /* CarouselView.swift in Sources */,
 				A1E42A551DBE6B16009A7CCB /* AdwardsContainerData.swift in Sources */,
+				A15FDD041DBFA88C008426E0 /* Map.swift in Sources */,
 				6D0907141DBA37FB00B51333 /* Image.swift in Sources */,
 				A1E429131DBE3F50009A7CCB /* AppearsInLocation.swift in Sources */,
 				A139FBF81DBF875200FEFC5A /* SongList.swift in Sources */,
@@ -2278,6 +2301,7 @@
 				A1CCBE981DB4C66C00A0DAE0 /* SoundTrackView.swift in Sources */,
 				A139FBE71DBF875200FEFC5A /* CastList.swift in Sources */,
 				6D262B991DA9652800779B57 /* ConfigModule.swift in Sources */,
+				A15FDD051DBFA88C008426E0 /* Map.swift in Sources */,
 				A1E42A791DBE6C21009A7CCB /* RelationContentType.swift in Sources */,
 				6D262BAD1DA9659500779B57 /* AppDelegate.swift in Sources */,
 				6D763C021D916604007B3E6C /* CarouselCard.swift in Sources */,
@@ -2432,6 +2456,7 @@
 				A1CCBE991DB4C66C00A0DAE0 /* SoundTrackView.swift in Sources */,
 				A139FBE81DBF875200FEFC5A /* CastList.swift in Sources */,
 				6D262B9A1DA9652800779B57 /* ConfigModule.swift in Sources */,
+				A15FDD061DBFA88C008426E0 /* Map.swift in Sources */,
 				A1E42A7A1DBE6C22009A7CCB /* RelationContentType.swift in Sources */,
 				6D262BAE1DA9659500779B57 /* AppDelegate.swift in Sources */,
 				6D763C031D916604007B3E6C /* CarouselCard.swift in Sources */,

@@ -12,8 +12,7 @@ class VideoModule: Module {
     
     @IBOutlet weak var viewBackground : UIView!;
     @IBOutlet weak var labelTitleModule : UILabel!;
-    @IBOutlet weak var viewContainer : UIView!;
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

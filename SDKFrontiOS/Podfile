@@ -5,12 +5,15 @@ use_frameworks!
 
 target 'SDKFrontiOS' do
 	pod 'SwiftyJSON', "3.0.0"
+	pod "youtube-ios-player-helper", "~> 0.1.4"
 end
 target 'SDKFrontiOSTests' do
     pod 'SwiftyJSON', "3.0.0"
+    pod "youtube-ios-player-helper", "~> 0.1.4"
 end
 target 'SDKFrontiOSUITests' do
     pod 'SwiftyJSON', "3.0.0"
+    pod "youtube-ios-player-helper", "~> 0.1.4"
 end
 post_install do |installer|
   installer.pods_project.targets.each do |target|

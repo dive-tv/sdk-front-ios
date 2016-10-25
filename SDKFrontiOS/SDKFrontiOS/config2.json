@@ -129,6 +129,9 @@
             },
             {
                 "type":"DescriptionNavigation"
+            },
+            {
+                "type":"Map"
             }
             
 		]
