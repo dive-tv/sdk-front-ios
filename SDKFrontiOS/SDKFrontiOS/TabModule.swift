@@ -40,8 +40,8 @@ class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
      - parameter _configModule: the module configuration and sections of the tab
      - parameter _cardData:     the data to display in the sections
      */
-    override func setCardDetailData(_configModule: ConfigModule, _cardDetailData: CardDetailData) {
-        super.setCardDetailData(_configModule, _cardDetailData: _cardDetailData);
+    override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
+        super.setCardDetail(_configModule, _cardDetail: _cardDetail);
         
         self.scrollView.delegate = self;
         
@@ -117,7 +117,7 @@ class TabModule: Module, UIScrollViewDelegate, TabModuleDelegate {
             
             self.scrollView.contentSize = CGSizeMake((self.frame.width * CGFloat(self.sections.count)), 0);
             self.scrollViewHeight.constant = self.sections[self.actualPage].tableView.contentSize.height;
-            self.sectionDelegate?.reloadTable();
+            self.sectionDelegate?.reloadTableAndOffset();
         }
     }
     

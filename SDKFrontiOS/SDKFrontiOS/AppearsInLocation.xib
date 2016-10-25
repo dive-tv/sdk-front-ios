@@ -1,20 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppearsInLocation" id="KGk-i7-Jjw" customClass="AppearsIn" customModule="SDKFrontiOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppearsInLocation" rowHeight="253" id="KGk-i7-Jjw" customClass="AppearsInLocation" customModule="SDKFrontiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="253"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <frame key="frameInset" width="320" height="253"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfT-ZB-WWC">
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="g7k-8D-qY4">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTo-Nr-moF">
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_next" translatesAutoresizingMaskIntoConstraints="NO" id="VaX-LS-78y"/>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="6Ns-DH-1y6"/>
+                                    <constraint firstItem="VaX-LS-78y" firstAttribute="centerY" secondItem="g7k-8D-qY4" secondAttribute="centerY" id="7ku-8A-T7G"/>
+                                    <constraint firstItem="NTo-Nr-moF" firstAttribute="leading" secondItem="g7k-8D-qY4" secondAttribute="leading" id="Rrq-eR-XXu"/>
+                                    <constraint firstAttribute="trailing" secondItem="VaX-LS-78y" secondAttribute="trailing" id="eco-t7-MTw"/>
+                                    <constraint firstAttribute="bottom" secondItem="NTo-Nr-moF" secondAttribute="bottom" id="g4U-Q2-oxQ"/>
+                                    <constraint firstItem="NTo-Nr-moF" firstAttribute="top" secondItem="g7k-8D-qY4" secondAttribute="top" id="ud8-xC-TGR"/>
+                                    <constraint firstItem="VaX-LS-78y" firstAttribute="leading" secondItem="NTo-Nr-moF" secondAttribute="trailing" constant="3" id="yQE-BN-zAl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qe-9U-o3R">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWE-8T-y9i">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="wDG-kj-W74"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6qe-9U-o3R" firstAttribute="leading" secondItem="nfT-ZB-WWC" secondAttribute="leading" constant="15" id="7RH-nb-gkt"/>
+                            <constraint firstAttribute="trailing" secondItem="g7k-8D-qY4" secondAttribute="trailing" constant="15" id="85M-kf-pXj"/>
+                            <constraint firstItem="bWE-8T-y9i" firstAttribute="leading" secondItem="nfT-ZB-WWC" secondAttribute="leading" id="D9V-HF-SzD"/>
+                            <constraint firstItem="6qe-9U-o3R" firstAttribute="top" secondItem="nfT-ZB-WWC" secondAttribute="top" constant="15" id="LnV-B7-TdU"/>
+                            <constraint firstAttribute="bottom" secondItem="bWE-8T-y9i" secondAttribute="bottom" constant="15" id="Wyb-uy-bDl"/>
+                            <constraint firstAttribute="trailing" secondItem="bWE-8T-y9i" secondAttribute="trailing" id="Zxg-A3-bXg"/>
+                            <constraint firstItem="bWE-8T-y9i" firstAttribute="top" secondItem="6qe-9U-o3R" secondAttribute="bottom" constant="12" id="cPS-j3-zzO"/>
+                            <constraint firstItem="g7k-8D-qY4" firstAttribute="top" secondItem="nfT-ZB-WWC" secondAttribute="top" constant="15" id="jv2-69-V8J"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="nfT-ZB-WWC" secondAttribute="bottom" id="KSz-HR-NGZ"/>
+                    <constraint firstItem="nfT-ZB-WWC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="T4O-mY-z75"/>
+                    <constraint firstAttribute="trailing" secondItem="nfT-ZB-WWC" secondAttribute="trailing" id="wQi-Vd-R62"/>
+                    <constraint firstItem="nfT-ZB-WWC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wvi-E4-rIa"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="heightScrollViewConstraint" destination="wDG-kj-W74" id="nrN-rV-Zhh"/>
+                <outlet property="imageViewNext" destination="VaX-LS-78y" id="NDc-OG-bQ1"/>
+                <outlet property="labelAll" destination="NTo-Nr-moF" id="0xl-tb-AbX"/>
+                <outlet property="labelModuleTitle" destination="6qe-9U-o3R" id="HWv-Jh-aXa"/>
+                <outlet property="scrollView" destination="bWE-8T-y9i" id="SEu-if-ejN"/>
+                <outlet property="viewAll" destination="g7k-8D-qY4" id="K8K-9L-XZA"/>
+                <outlet property="viewBackground" destination="nfT-ZB-WWC" id="TCu-08-RNc"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="158.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ico_next" width="6" height="11"/>
+    </resources>
 </document>

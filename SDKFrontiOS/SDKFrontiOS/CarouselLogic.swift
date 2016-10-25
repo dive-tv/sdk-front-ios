@@ -76,6 +76,7 @@ internal class CarouselLogic : NSObject, JSONValidatable {
                 
                 //ThrowError
                 try CarruselErrors.ThrowError(CarruselErrors.CreateGrouppableTreeErrors.emptyData);
+                
                 return;
         }
         

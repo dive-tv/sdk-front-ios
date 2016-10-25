@@ -1,97 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Lato-Regular.ttf">
-            <string>Lato-Regular</string>
-        </array>
-        <array key="Lato-Semibold.ttf">
-            <string>Lato-Semibold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SingleModule" rowHeight="161" id="KGk-i7-Jjw" customClass="SingleModule" customModule="SDKFrontiOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="161"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SingleModule" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="160"/>
+                <frame key="frameInset" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTB-u8-KfM">
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTU-yH-AMc">
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                                <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rnh-kv-P6J">
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oQA-kD-bSD">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="xPG-4P-dVH"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhy-0A-hxD">
-                                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
-                                        <color key="textColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbH-mJ-DGc">
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                                        <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="0Kr-DE-9kv"/>
-                                    <constraint firstItem="vhy-0A-hxD" firstAttribute="top" secondItem="Rnh-kv-P6J" secondAttribute="top" constant="15" id="0Wd-Lx-7DK"/>
-                                    <constraint firstAttribute="trailing" secondItem="vhy-0A-hxD" secondAttribute="trailing" constant="15" id="BGN-z8-YpC"/>
-                                    <constraint firstItem="LbH-mJ-DGc" firstAttribute="top" secondItem="vhy-0A-hxD" secondAttribute="bottom" constant="1" id="ESk-yr-Eya"/>
-                                    <constraint firstItem="oQA-kD-bSD" firstAttribute="top" secondItem="Rnh-kv-P6J" secondAttribute="top" id="KCh-yP-zCB"/>
-                                    <constraint firstItem="oQA-kD-bSD" firstAttribute="leading" secondItem="Rnh-kv-P6J" secondAttribute="leading" id="OD4-Ax-V4A"/>
-                                    <constraint firstItem="vhy-0A-hxD" firstAttribute="leading" secondItem="oQA-kD-bSD" secondAttribute="trailing" constant="15" id="RNq-4r-29v"/>
-                                    <constraint firstItem="LbH-mJ-DGc" firstAttribute="leading" secondItem="oQA-kD-bSD" secondAttribute="trailing" constant="15" id="djo-Vu-09y"/>
-                                    <constraint firstAttribute="bottom" secondItem="oQA-kD-bSD" secondAttribute="bottom" id="fwQ-VQ-xGo"/>
-                                    <constraint firstAttribute="trailing" secondItem="LbH-mJ-DGc" secondAttribute="trailing" constant="15" id="qbf-Xx-Uzu"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="VTU-yH-AMc" secondAttribute="trailing" constant="15" id="Gqf-FX-ZTt"/>
-                            <constraint firstItem="VTU-yH-AMc" firstAttribute="leading" secondItem="aTB-u8-KfM" secondAttribute="leading" constant="15" id="L8Y-kh-Ii2"/>
-                            <constraint firstItem="VTU-yH-AMc" firstAttribute="top" secondItem="aTB-u8-KfM" secondAttribute="top" constant="15" id="M9A-Sm-yvm"/>
-                            <constraint firstItem="Rnh-kv-P6J" firstAttribute="leading" secondItem="aTB-u8-KfM" secondAttribute="leading" constant="15" id="NzG-0U-vVQ"/>
-                            <constraint firstAttribute="bottom" secondItem="Rnh-kv-P6J" secondAttribute="bottom" constant="15" id="ec5-fj-pv7"/>
-                            <constraint firstItem="Rnh-kv-P6J" firstAttribute="top" secondItem="VTU-yH-AMc" secondAttribute="bottom" constant="12" id="pbs-8A-Ma6"/>
-                            <constraint firstAttribute="trailing" secondItem="Rnh-kv-P6J" secondAttribute="trailing" constant="15" id="rUO-t8-yGB"/>
-                        </constraints>
-                    </view>
-                </subviews>
-                <constraints>
-                    <constraint firstItem="aTB-u8-KfM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3lU-hd-ea6"/>
-                    <constraint firstAttribute="trailing" secondItem="aTB-u8-KfM" secondAttribute="trailing" id="9gH-rJ-pYN"/>
-                    <constraint firstItem="aTB-u8-KfM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TcO-pJ-cZZ"/>
-                    <constraint firstAttribute="bottom" secondItem="aTB-u8-KfM" secondAttribute="bottom" id="q2F-KU-Aju"/>
-                </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="imageViewItem" destination="oQA-kD-bSD" id="Xhz-Me-MeY"/>
-                <outlet property="labelSubtitle" destination="LbH-mJ-DGc" id="jMP-2G-IkC"/>
-                <outlet property="labelTitle" destination="vhy-0A-hxD" id="bBM-Bk-P1l"/>
-                <outlet property="labelTitleModule" destination="VTU-yH-AMc" id="Vki-7B-n1S"/>
-                <outlet property="viewBackground" destination="aTB-u8-KfM" id="dV6-Sq-Ntz"/>
-                <outlet property="viewContainer" destination="Rnh-kv-P6J" id="9b5-B8-9Sd"/>
-                <outlet property="widthImageViewItemConstraint" destination="xPG-4P-dVH" id="8HP-Om-4ub"/>
-            </connections>
-            <point key="canvasLocation" x="34" y="112.5"/>
         </tableViewCell>
     </objects>
 </document>

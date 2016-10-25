@@ -21,8 +21,8 @@ public class CardDetailJson : BaseCardDetailBuilder{
      
      - returns: self
      */
-    override init( styleConfig : JSON? = nil, customValidator : JSON? = nil) {
-        super.init(styleConfig: styleConfig, customValidator : customValidator);
+    override init( styleConfig : JSON? = nil) {
+        super.init(styleConfig: styleConfig);
     }
     
     // MARK: Public Methods

@@ -1,14 +1,14 @@
 //
-//  AppearsIn.swift
+//  AppearsInLocation.swift
 //  SDKFrontiOS
 //
-//  Created by Sergio Girao on 16/10/16.
+//  Created by Sergio Girao on 24/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import UIKit
 
-class AppearsInLocation: RectangularImageItems {
+class AppearsInLocation: RectangularImageItems{
 
     override func awakeFromNib() {
         super.awakeFromNib()

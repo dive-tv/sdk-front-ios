@@ -1,19 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="Curiosities" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Curiosities" rowHeight="253" id="KGk-i7-Jjw" customClass="Curiosities" customModule="SDKFrontiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="253"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <frame key="frameInset" width="320" height="252"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53S-Vu-C3U">
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="vIG-33-E50">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjI-k3-SMW">
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_next" translatesAutoresizingMaskIntoConstraints="NO" id="tlh-lu-O1L"/>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tlh-lu-O1L" secondAttribute="trailing" id="EUl-Rw-qQf"/>
+                                    <constraint firstAttribute="bottom" secondItem="hjI-k3-SMW" secondAttribute="bottom" id="RPJ-la-SUB"/>
+                                    <constraint firstItem="tlh-lu-O1L" firstAttribute="centerY" secondItem="vIG-33-E50" secondAttribute="centerY" id="S20-0Z-Stb"/>
+                                    <constraint firstItem="hjI-k3-SMW" firstAttribute="top" secondItem="vIG-33-E50" secondAttribute="top" id="VtA-RK-f3g"/>
+                                    <constraint firstItem="hjI-k3-SMW" firstAttribute="leading" secondItem="vIG-33-E50" secondAttribute="leading" id="qvj-Gq-KHt"/>
+                                    <constraint firstAttribute="height" constant="16" id="sav-eR-5dA"/>
+                                    <constraint firstItem="tlh-lu-O1L" firstAttribute="leading" secondItem="hjI-k3-SMW" secondAttribute="trailing" constant="3" id="x1m-HN-B3A"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUq-La-x40">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBX-bL-pTO">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="1O9-SC-f9P"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rUq-La-x40" firstAttribute="top" secondItem="53S-Vu-C3U" secondAttribute="top" constant="15" id="Ddz-lb-uM8"/>
+                            <constraint firstItem="UBX-bL-pTO" firstAttribute="leading" secondItem="53S-Vu-C3U" secondAttribute="leading" id="MX3-lt-psT"/>
+                            <constraint firstItem="vIG-33-E50" firstAttribute="top" secondItem="53S-Vu-C3U" secondAttribute="top" constant="15" id="Tdg-ro-PC0"/>
+                            <constraint firstAttribute="trailing" secondItem="vIG-33-E50" secondAttribute="trailing" constant="15" id="ZAZ-ld-ypT"/>
+                            <constraint firstItem="rUq-La-x40" firstAttribute="leading" secondItem="53S-Vu-C3U" secondAttribute="leading" constant="15" id="adP-7P-RpH"/>
+                            <constraint firstAttribute="trailing" secondItem="UBX-bL-pTO" secondAttribute="trailing" id="gkf-QN-5Cb"/>
+                            <constraint firstAttribute="bottom" secondItem="UBX-bL-pTO" secondAttribute="bottom" constant="15" id="mat-VV-9RK"/>
+                            <constraint firstItem="UBX-bL-pTO" firstAttribute="top" secondItem="rUq-La-x40" secondAttribute="bottom" constant="12" id="rX2-nu-VSr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="53S-Vu-C3U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2OM-KK-MFd"/>
+                    <constraint firstAttribute="trailing" secondItem="53S-Vu-C3U" secondAttribute="trailing" id="JKc-Mh-YLv"/>
+                    <constraint firstItem="53S-Vu-C3U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oCh-qJ-vmj"/>
+                    <constraint firstAttribute="bottom" secondItem="53S-Vu-C3U" secondAttribute="bottom" id="vDs-4A-zGG"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="heightScrollViewConstraint" destination="1O9-SC-f9P" id="Gtu-Ok-JKD"/>
+                <outlet property="imageViewNext" destination="tlh-lu-O1L" id="PGF-Zh-Yb0"/>
+                <outlet property="labelAll" destination="hjI-k3-SMW" id="jVa-LV-bI1"/>
+                <outlet property="labelModuleTitle" destination="rUq-La-x40" id="2cx-ca-Me6"/>
+                <outlet property="scrollView" destination="UBX-bL-pTO" id="wlV-Mc-xXP"/>
+                <outlet property="viewAll" destination="vIG-33-E50" id="Ehp-FB-4rN"/>
+                <outlet property="viewBackground" destination="53S-Vu-C3U" id="45Y-k7-sJe"/>
+            </connections>
+            <point key="canvasLocation" x="11" y="0.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ico_next" width="6" height="11"/>
+    </resources>
 </document>

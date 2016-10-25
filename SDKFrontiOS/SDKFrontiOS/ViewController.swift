@@ -36,21 +36,13 @@ class ViewController: UIViewController {
 
     
     @IBAction func createCardDetail(sender: UIButton) {
-        
-        
-        if let path = NSBundle.mainBundle().pathForResource("config1", ofType: "json") {
+    
+        if let path = NSBundle.mainBundle().pathForResource("config2", ofType: "json") {
             if let data = NSData(contentsOfFile: path) {
                 let json = JSON(data: data);
                 if(json != nil && json.error == nil){
-                    if let pathCustomJSON = NSBundle.mainBundle().pathForResource("customValidator", ofType: "json") {
-                        if let dataCustom = NSData(contentsOfFile: pathCustomJSON) {
-                            let jsonCustom = JSON(data: dataCustom);
-                            if(jsonCustom != nil && jsonCustom.error == nil){
-                                let cardDetailJSON = CardDetailJson(styleConfig: nil, customValidator: jsonCustom);
-                                cardDetailJSON.loadDataConfig(json).build("", navigationController: self.navigationController!);
-                            }
-                        }
-                    }
+                    let cardDetailJSON = CardDetailJson(styleConfig: nil);
+                    cardDetailJSON.loadDataConfig(json).build("", navigationController: self.navigationController!);
                 }
             }
         }
@@ -179,13 +171,14 @@ class ViewController: UIViewController {
         let jsonData:NSData = NSData.dataWithContentsOfMappedFile(jsonFilePath as String) as! NSData;
         let json = JSON(data: jsonData);
         
-        for card in json {
+        // TODO: need to do the logic
+        /*for card in json {
             
-            let miniCardData = MiniCardData(_cardId: card.1["card_id"].stringValue, _title: card.1["title"].stringValue, _type: TypeOfCard(rawValue: card.1["type"].stringValue)!, _image : card.1["image"].stringValue);
+            let miniCardData = MiniCard(_cardId: card.1["card_id"].stringValue, _title: card.1["title"].stringValue, _type: TypeOfCard(rawValue: card.1["type"].stringValue)!, _image : card.1["image"].stringValue);
             let carouselCard = CarouselCard(_scene_id: Int(self.batchCards.count / 5) , _data: miniCardData);
             self.batchCards.insert(carouselCard, atIndex: 0);
             //self.batchCards.append(carouselCard);
-        }
+        }*/
         
         
     }

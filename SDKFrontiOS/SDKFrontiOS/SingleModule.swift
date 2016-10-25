@@ -2,23 +2,22 @@
 //  SingleModule.swift
 //  SDKFrontiOS
 //
-//  Created by Sergio Girao on 18/10/16.
+//  Created by Sergio Girao on 24/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import UIKit
 
 class SingleModule: Module {
-
-    @IBOutlet weak var viewBackground : UIView!;
+    
     @IBOutlet weak var labelTitleModule : UILabel!;
     @IBOutlet weak var labelTitle : UILabel!;
     @IBOutlet weak var labelSubtitle : UILabel!;
     @IBOutlet weak var imageViewItem : UIImageView!;
     @IBOutlet weak var viewContainer : UIView!;
-    @IBOutlet weak var widthImageViewItemConstraint : NSLayoutConstraint!;
+    @IBOutlet weak var viewBackground : UIView!;
     
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

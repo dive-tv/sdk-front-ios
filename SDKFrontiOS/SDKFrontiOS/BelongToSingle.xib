@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BelongToSingle" rowHeight="161" id="KGk-i7-Jjw" customClass="BelongToSingle" customModule="SDKFrontiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omn-Tp-sdL">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrk-xb-r0Y">
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XId-ez-vsL">
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nm1-AA-wlT">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="QxB-0q-Snu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGv-yu-NBT">
+                                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
+                                        <color key="textColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDS-v9-jG5">
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tGv-yu-NBT" secondAttribute="trailing" constant="15" id="1bh-hW-bMO"/>
+                                    <constraint firstItem="GDS-v9-jG5" firstAttribute="leading" secondItem="Nm1-AA-wlT" secondAttribute="trailing" constant="15" id="5ry-wW-pUN"/>
+                                    <constraint firstItem="Nm1-AA-wlT" firstAttribute="top" secondItem="XId-ez-vsL" secondAttribute="top" id="Bed-6j-G1p"/>
+                                    <constraint firstItem="GDS-v9-jG5" firstAttribute="top" secondItem="tGv-yu-NBT" secondAttribute="bottom" constant="1" id="Kmf-iF-oGK"/>
+                                    <constraint firstItem="Nm1-AA-wlT" firstAttribute="leading" secondItem="XId-ez-vsL" secondAttribute="leading" id="ThC-RV-NQW"/>
+                                    <constraint firstItem="tGv-yu-NBT" firstAttribute="leading" secondItem="Nm1-AA-wlT" secondAttribute="trailing" constant="15" id="dxx-CP-94T"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nm1-AA-wlT" secondAttribute="bottom" id="e4m-Ko-fgi"/>
+                                    <constraint firstItem="tGv-yu-NBT" firstAttribute="top" secondItem="XId-ez-vsL" secondAttribute="top" constant="15" id="ldN-hu-Nev"/>
+                                    <constraint firstAttribute="height" constant="90" id="twu-Il-ddi"/>
+                                    <constraint firstAttribute="trailing" secondItem="GDS-v9-jG5" secondAttribute="trailing" constant="15" id="z3w-X6-mAx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vrk-xb-r0Y" secondAttribute="trailing" constant="15" id="2bF-NP-yic"/>
+                            <constraint firstItem="XId-ez-vsL" firstAttribute="leading" secondItem="omn-Tp-sdL" secondAttribute="leading" constant="15" id="52s-ss-o9P"/>
+                            <constraint firstAttribute="trailing" secondItem="XId-ez-vsL" secondAttribute="trailing" constant="15" id="EbP-Co-5SX"/>
+                            <constraint firstItem="Vrk-xb-r0Y" firstAttribute="leading" secondItem="omn-Tp-sdL" secondAttribute="leading" constant="15" id="Hdq-YM-UYS"/>
+                            <constraint firstAttribute="bottom" secondItem="XId-ez-vsL" secondAttribute="bottom" constant="15" id="Juf-n5-ed7"/>
+                            <constraint firstItem="XId-ez-vsL" firstAttribute="top" secondItem="Vrk-xb-r0Y" secondAttribute="bottom" constant="12" id="cHp-5o-MbF"/>
+                            <constraint firstItem="Vrk-xb-r0Y" firstAttribute="top" secondItem="omn-Tp-sdL" secondAttribute="top" constant="15" id="lCX-3u-fJR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="omn-Tp-sdL" secondAttribute="trailing" id="6Qm-0C-4DC"/>
+                    <constraint firstItem="omn-Tp-sdL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Khi-I0-zHN"/>
+                    <constraint firstAttribute="bottom" secondItem="omn-Tp-sdL" secondAttribute="bottom" id="VZP-2n-ff1"/>
+                    <constraint firstItem="omn-Tp-sdL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="p6Y-ag-4tp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageViewItem" destination="Nm1-AA-wlT" id="JCa-7b-NEF"/>
+                <outlet property="labelSubtitle" destination="GDS-v9-jG5" id="WML-HX-ia1"/>
+                <outlet property="labelTitle" destination="tGv-yu-NBT" id="lGr-Uf-jQV"/>
+                <outlet property="labelTitleModule" destination="Vrk-xb-r0Y" id="1ta-ag-KZv"/>
+                <outlet property="viewBackground" destination="omn-Tp-sdL" id="bF1-EA-JW5"/>
+                <outlet property="viewContainer" destination="XId-ez-vsL" id="1wd-cH-e5I"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="112.5"/>
+        </tableViewCell>
+    </objects>
+</document>

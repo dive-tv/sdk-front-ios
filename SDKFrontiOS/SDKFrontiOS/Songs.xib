@@ -1,20 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Songs" id="KGk-i7-Jjw" customClass="Songs" customModule="SDKFrontiOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Songs" rowHeight="325" id="KGk-i7-Jjw" customClass="Songs" customModule="SDKFrontiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="325"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43"/>
+                <frame key="frameInset" width="320" height="324"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIa-c0-Z6H">
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sR6-dT-jzu">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNN-lR-0he">
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <color key="textColor" red="0.5647059083" green="0.5647059083" blue="0.5647059083" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="UNN-lR-0he" firstAttribute="leading" secondItem="sR6-dT-jzu" secondAttribute="leading" constant="15" id="Hw4-Va-QPs"/>
+                                    <constraint firstItem="UNN-lR-0he" firstAttribute="centerY" secondItem="sR6-dT-jzu" secondAttribute="centerY" id="NOc-Yq-2Zl"/>
+                                    <constraint firstAttribute="height" constant="50" id="NpC-A9-ndV"/>
+                                    <constraint firstAttribute="trailing" secondItem="UNN-lR-0he" secondAttribute="trailing" constant="15" id="wpx-Cq-al6"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kxz-8H-Iqp">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274.5" id="6wa-NY-DiD"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Kxz-8H-Iqp" secondAttribute="trailing" id="9AO-j1-jSf"/>
+                            <constraint firstItem="sR6-dT-jzu" firstAttribute="leading" secondItem="WIa-c0-Z6H" secondAttribute="leading" id="AGz-fX-qHO"/>
+                            <constraint firstItem="Kxz-8H-Iqp" firstAttribute="top" secondItem="sR6-dT-jzu" secondAttribute="bottom" id="Axt-02-ptX"/>
+                            <constraint firstItem="Kxz-8H-Iqp" firstAttribute="leading" secondItem="WIa-c0-Z6H" secondAttribute="leading" id="T9f-mS-nt0"/>
+                            <constraint firstItem="sR6-dT-jzu" firstAttribute="top" secondItem="WIa-c0-Z6H" secondAttribute="top" id="frq-32-Mvm"/>
+                            <constraint firstAttribute="bottom" secondItem="Kxz-8H-Iqp" secondAttribute="bottom" id="se2-5X-I50"/>
+                            <constraint firstAttribute="trailing" secondItem="sR6-dT-jzu" secondAttribute="trailing" id="xZC-jc-CMq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WIa-c0-Z6H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="STb-1d-dSt"/>
+                    <constraint firstAttribute="trailing" secondItem="WIa-c0-Z6H" secondAttribute="trailing" id="TbU-yP-Kyk"/>
+                    <constraint firstItem="WIa-c0-Z6H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eti-CW-cJW"/>
+                    <constraint firstAttribute="bottom" secondItem="WIa-c0-Z6H" secondAttribute="bottom" id="oTw-6G-xHr"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="heightTableViewConstraint" destination="6wa-NY-DiD" id="CJp-Js-8kH"/>
+                <outlet property="heightViewTitleModuleConstraint" destination="NpC-A9-ndV" id="A2I-bj-sPQ"/>
+                <outlet property="labelTitleModule" destination="UNN-lR-0he" id="fVS-6w-scE"/>
+                <outlet property="tableView" destination="Kxz-8H-Iqp" id="HuD-ks-UEv"/>
+                <outlet property="viewBackground" destination="WIa-c0-Z6H" id="dKM-cf-Dqp"/>
+                <outlet property="viewTitleModule" destination="sR6-dT-jzu" id="6tV-tK-QQu"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="113.5"/>
         </tableViewCell>
     </objects>
 </document>

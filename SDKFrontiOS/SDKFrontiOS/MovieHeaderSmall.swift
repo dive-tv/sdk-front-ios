@@ -2,7 +2,7 @@
 //  MovieHeaderSmall.swift
 //  SDKFrontiOS
 //
-//  Created by Carlos Bailon Perez on 17/10/16.
+//  Created by Sergio Girao on 24/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
@@ -10,22 +10,64 @@ import UIKit
 
 class MovieHeaderSmall: Module {
 
-    
-    @IBOutlet weak var cellImageView: UIImageView!
-    @IBOutlet weak var movieTitle: UILabel!
-    @IBOutlet weak var movieSubtitleBtn: UIButton!
-    @IBOutlet weak var movieGenres: UILabel!
-    
+    @IBOutlet weak var viewBackground : UIView!;
+    @IBOutlet weak var imageViewItem : UIImageView!;
+    @IBOutlet weak var labelTitle : UILabel!;
+    @IBOutlet weak var labelProducer : UILabel!;
+    @IBOutlet weak var labelGenre : UILabel!;
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected( selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
+    
+    override func setCardDetail(_configModule: ConfigModule, _cardDetail: CardDetail) {
+        super.setCardDetail(_configModule, _cardDetail: _cardDetail);
+        // TODO: need to put the color of the background
+        self.viewBackground.backgroundColor = UIColor.blueColor();
+        
+        self.labelTitle.text = self.cardDetail.title;
+        if let container = self.cardDetail.containers[ContainerContentType.Movie], catalogContainer = container.data.first as? CatalogContainerData{
+            self.labelProducer.text = catalogContainer.director;
+            self.setGenres(catalogContainer.genres);
+            
+            if(catalogContainer.backGroundImage != nil && catalogContainer.backGroundImage?.characters.count > 0){
+                // TODO: need to download the image
+            }
+            
+            self.labelTitle.text = self.labelTitle.text! + "(\(catalogContainer.year))";
+            
+        }
+        
+        
+    }
+    
+    // MARK: Private
+    private func setGenres(genres : [String]){
+        var text = "";
+        var i = 0;
+        for genre in genres{
+            // TODO: Put the localizable strings
+            //let string = "CATALOG_MOVIE_FILTER_GENRE_\(genre.uppercaseString)";
+            let string = genre;
+            if(i == genres.count - 1){
+                //text = text + NSLocalizedString(string, comment: "");
+                text = text + string;
+            }
+            else{
+                //text = text + NSLocalizedString(string, comment: "") + " · ";
+                text = text + string + ", ";
+            }
+            i += 1;
+            
+        }
+        self.labelGenre.text = text;
+    }
 }

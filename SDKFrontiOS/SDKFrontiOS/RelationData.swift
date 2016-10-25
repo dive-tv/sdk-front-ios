@@ -2,21 +2,15 @@
 //  RelationData.swift
 //  SDKFrontiOS
 //
-//  Created by Jonathan Castro Miguel on 20/09/16.
+//  Created by Jonathan Castro Miguel on 15/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import Foundation
+import SwiftyJSON
 
-internal class RelationData : NSObject {
-    
-    var relType : Int!;
-    var cards : CardDetailData!;
-    
-    init(_relType : Int, _cards : CardDetailData!) {
+internal class RelationData : NSObject, Validatable{
+    class func validate(data: JSON?) throws{
         
-        self.relType = _relType;
-        self.cards = _cards;
     }
-    
 }

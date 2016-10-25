@@ -1,5 +1,5 @@
 //
-//  CardDetail.swift
+//  CardData.swift
 //  SDKFrontiOS
 //
 //  Created by Jonathan Castro Miguel on 13/09/16.
@@ -7,136 +7,231 @@
 //
 
 import Foundation
-import UIKit
+import SwiftyJSON
 
-protocol CardDetailDelegate : class {
-    func createSection (_keyForSection : String) -> Section
-    func createSections (_keyForSections : [String]) -> [Section]
-    func newSection(_keyForSection : String);
+internal class CardDetail : NSObject, Validatable{
     
-    func newCard(_key : String, _type: Int)
-}
-
-public class CardDetail : NSObject, CardDetailDelegate{
+    var cardId : String;
+    var type : TypeOfCard;
+    var locale : String;
+    var title : String;
     
-    private var sectionsData : [String:ConfigSection]!;
-    private var navigationController : UINavigationController!;
-    private var mainSectionKey : String!;
-    private var cardDetailData : CardDetailData!;
+    var subtitle : String?;
+    var image : Image?;
+    var products = [Product]();
+    var containers = Dictionary<ContainerContentType, Container>();
+    var relations = Dictionary<RelationContentType, Relation>();
+    var user : User;
     
-    
-    
-    //MARK: INIT
-    
-    init(_sectionsData : [String:ConfigSection], _mainSectionKey : String!, _cardDetailData : CardDetailData, _navigationController : UINavigationController) {
-        super.init();
-        
-        self.sectionsData = _sectionsData;
-        self.navigationController = _navigationController;
-        self.mainSectionKey = _mainSectionKey;
-        self.cardDetailData = _cardDetailData;
-        
-        self.pushMain();
-    }
-
-    deinit {
-        print("CardDetail destroid")
-    }
-    
-    
-    
-    
-    //MARK: Private methods
-
-    
-    /**
-     Pushes to the clients UINavigationViewController the main section especified by the client
-     */
-    private func pushMain() {
-        
-        if (self.sectionsData[self.mainSectionKey] != nil) {
-            
-            let controller = self.createSection(self.mainSectionKey);
-            controller.cardDelegate = self;
-            self.navigationController.pushViewController(controller, animated: true);
+    lazy var matchProduct : ItemProduct? = {
+        for product in self.products{
+            if let matchedProduct = product as? ItemProduct{
+                if(matchedProduct.matching){
+                    return matchedProduct;
+                }
+            }
         }
-    }
+        return nil;
+    }();
     
-    
-    /**
-     Pushes to the clients UINavigationViewController the selected section especified by the client
-     
-     - parameter _keyForSection: the key string of teh section
-     */
-    private func pushSection (_keyForSection : String) {
+    init(_cardId : String, _type : String, _locale : String, _title : String, _image : Image? = nil) {
         
-        if (self.mainSectionKey != _keyForSection && self.sectionsData[_keyForSection] != nil) {
-            
-            let controller = self.createSection(_keyForSection);
-            controller.cardDelegate = self;
-            self.navigationController.pushViewController(controller, animated: true);
-        }
-    }
-    
-    
-    
-    //MARK: Card detail delegate
-    
-    
-    /**
-     Create the section and returns it
-     
-     - parameter _keyForSection: the key of the section to create
-     
-     - returns: the section created with the delegate assigned
-     */
-    func createSection (_keyForSection : String) -> Section {
-        let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[_keyForSection]!, _cardDetailData: self.cardDetailData)
-        section.cardDelegate = self;
-        return section;
-    }
-    
-    
-    /**
-     Create x sections and returns them.
-     
-     - parameter _keyForSections: array of strings with the keys of the sections
-     
-     - returns: array of sections created
-     */
-    func createSections (_keyForSections : [String]) -> [Section] {
+        self.cardId = _cardId;
+        self.type = TypeOfCard(rawValue: _type)!;
+        self.locale = _locale;
+        self.title = _title;
         
-        var sections = [Section]()
-        
-        for key in _keyForSections {
-            let section = Section(nibName: "Section", bundle: nil, _configSection: self.sectionsData[key]!, _cardDetailData: self.cardDetailData)
-            section.cardDelegate = self;
-            sections.append(section);
-            
+        if(_image != nil){
+            self.image = _image;
         }
         
-        return sections;
+        self.user = User(data: JSON(arrayLiteral: "{[\"is_liked\" : true]}"));
     }
     
-    
-    /**
-     Push a new section
-     
-     - parameter _keyForSection: the key of the section to push
-     */
-    func newSection(_keyForSection: String) {
-        self.pushSection(_keyForSection);
+    init(data:JSON){
+        
+        //validated variables
+        self.cardId = data["card_id"].object as! String;
+        self.type = TypeOfCard(rawValue: data["type"].object as! String)!;
+        self.locale = data["locale"].object as! String;
+        self.title = data["title"].object as! String;
+        
+        //non validate variables
+        if let _subtitle = data["subtitle"].object as? String where _subtitle != ""{
+            self.subtitle = _subtitle;
+        }
+        
+        //Create image
+        let _image = data["image"];
+            
+        do{
+            //validate data
+            try Image.validate(_image);
+            self.image = Image(data: _image);
+        }
+        catch DataModelErrors.CreateImageErrors.emptyData{
+            DataModelErrors.ShowError(DataModelErrors.CreateImageErrors.emptyData);
+            //Some recover code
+        }
+        catch DataModelErrors.CreateImageErrors.invalidData{
+            DataModelErrors.ShowError(DataModelErrors.CreateImageErrors.invalidData);
+            //Some recover code
+        }
+        catch{
+            //Throw error for validate
+            DataModelErrors.UnreconigzedError();
+            //Some recorver code
+        }
+        
+        //Create products
+        if let _products = data["products"].array where _products.count > 0{
+            for product in _products{
+                
+                if let _category = product["category"].object as? String where _category == "travel"{
+                    do{
+                        try TravelProduct.validate(product);
+                        self.products.append(TravelProduct(data: product));
+                    }
+                    catch DataModelErrors.CreateProductErrors.invalidCategoryOfProduct{
+                        DataModelErrors.ShowError(DataModelErrors.CreateProductErrors.invalidCategoryOfProduct);
+                        //Some recover code
+
+                    }
+                    catch DataModelErrors.CreateProductErrors.invalidData{
+                        DataModelErrors.ShowError(DataModelErrors.CreateProductErrors.invalidData);
+                        //Some recover code
+
+                    }
+                    catch DataModelErrors.CreateProductErrors.emptyData{
+                        DataModelErrors.ShowError(DataModelErrors.CreateProductErrors.emptyData);
+                        //Some recover code
+
+                    }
+                    catch{
+                        //Throw error for validate
+                        DataModelErrors.UnreconigzedError();
+                        //Some recorver code
+                    }
+                }
+                else{
+                    do{
+                        try ItemProduct.validate(product);
+                        self.products.append(ItemProduct(data: product));
+                    }
+                    catch DataModelErrors.CreateProductErrors.invalidCategoryOfProduct{
+                        DataModelErrors.ShowError(DataModelErrors.CreateProductErrors.invalidCategoryOfProduct);
+                        //Some recover code
+
+                    }
+                    catch DataModelErrors.CreateProductErrors.invalidData{
+                        DataModelErrors.ShowError(DataModelErrors.CreateProductErrors.invalidData);
+                        //Some recover code
+
+                    }
+                    catch DataModelErrors.CreateProductErrors.emptyData{
+                        DataModelErrors.ShowError(DataModelErrors.CreateProductErrors.emptyData);
+                        //Some recover code
+
+                    }
+                    catch{
+                        //Throw error for validate
+                        DataModelErrors.UnreconigzedError();
+                        //Some recorver code
+                    }
+                }
+            }
+        }
+        
+        //Create Containers
+        if let _containers = data["info"].array where _containers.count > 0{
+            for _container in _containers{
+                do{
+                    try Container.validate(_container);
+                    let _containerObject = Container(data: _container);
+                    self.containers[_containerObject.contentType] = _containerObject;
+                }
+                catch DataModelErrors.CreateContainerErrors.invalidContainerType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerErrors.invalidContainerContentType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerContentType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerErrors.invalidData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.emptyData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerDataErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.emptyData);
+                }
+                catch{
+                    DataModelErrors.UnreconigzedError();
+                }
+            }
+        }
+        
+        //Create relations
+        if let _relations = data["relations"].array where _relations.count > 0{
+            for _relation in _relations{
+                do{
+                    try Relation.validate(_relation);
+                    let _relationObject = Relation(data: _relation);
+                    self.relations[_relationObject.contentType] = _relationObject;
+                }
+                catch DataModelErrors.CreateRelationsErrors.invalidRelationType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateRelationsErrors.invalidRelationContentType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerContentType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateRelationsErrors.invalidData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateRelationsErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.emptyData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateRelationsDataErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.emptyData);
+                }
+                catch{
+                    DataModelErrors.UnreconigzedError();
+                }
+            }
+        }
+        
+        //create the user object
+        self.user = User(data: data["user"]);
+        
     }
     
-    
-    /**
-     Create a new card detail
-     
-     - parameter _key:  the id of the card to create
-     - parameter _type: the type of the card to create
-     */
-    func newCard(_key: String, _type: Int) {
-        //NEED TO DO THE LOGIC
+    class func validate(data: JSON?) throws{
+        
+        guard let _data = data where _data != nil else{
+            try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.emptyData);
+            return;
+        }
+        
+        guard case let (_ as String, _type as String, _ as String, _ as String, _user as JSON) = (_data["card_id"].object, _data["type"].object, _data["locale"].object, _data["title"].object, _data["user"]) else{
+            //Throw indavilData Error
+            try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.invalidData);
+            return;
+        }
+        
+        if(TypeOfCard(rawValue: _type) == nil){
+            //Throw invalid type of card Error
+            try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.invalidTypeOfCard);
+        }
+        
+        try User.validate(_user);
     }
     
 }

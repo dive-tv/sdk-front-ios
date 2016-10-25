@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="144" height="195"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rhc-3R-W0y">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rhc-3R-W0y">
                     <constraints>
                         <constraint firstAttribute="height" constant="144" id="stF-yd-sHb"/>
                     </constraints>
@@ -68,7 +67,7 @@
                 <outlet property="topSpaceTitleConstraint" destination="p4r-so-yDf" id="Uum-gO-QhV"/>
                 <outlet property="viewTitleAndSubtitle" destination="PfG-RB-7Mw" id="Hwp-fr-2Wf"/>
             </connections>
-            <point key="canvasLocation" x="23" y="31"/>
+            <point key="canvasLocation" x="23" y="30.5"/>
         </view>
     </objects>
 </document>

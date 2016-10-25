@@ -10,12 +10,7 @@ import Foundation
 import SwiftyJSON
 
 public class ModuleValidator : NSObject{
-    
-    init(customValidator : JSON? = nil){
-        super.init();
-    }
-    
-    
+  
     /**
      This method check if the data have all the information for a module.
      
@@ -24,16 +19,16 @@ public class ModuleValidator : NSObject{
      
      - returns: Return true if the data have the information the module needs or false if not
      */
-    func validate(data : CardDetailData, moduleType : String)->Bool{
+    func validate(data : CardDetail, moduleType : String)->Bool{
        
         //For Testing
-        let cardDetailData = CardDetailData(_cardId: "ID", _title: "title", _type: TypeOfCard.Movie);
+        //let cardDetail = CardDetail(_cardId: "ID", _type: "movie", _locale: "ES_es", _title: "title");
         
         let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
         let moduleClass = NSClassFromString(appName + "." + moduleType) as! Module.Type
         
         do{
-            try moduleClass.validate(cardDetailData);
+            try moduleClass.validate(data);
             return true;
         }
         catch{

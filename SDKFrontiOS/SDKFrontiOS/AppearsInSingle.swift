@@ -2,13 +2,13 @@
 //  AppearsInSingle.swift
 //  SDKFrontiOS
 //
-//  Created by Sergio Girao on 18/10/16.
+//  Created by Sergio Girao on 24/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import UIKit
 
-class AppearsInSingle: Module {
+class AppearsInSingle: SingleModule {
 
     override func awakeFromNib() {
         super.awakeFromNib()

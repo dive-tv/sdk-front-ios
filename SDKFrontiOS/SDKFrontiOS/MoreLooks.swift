@@ -1,14 +1,14 @@
 //
-//  Sinopsis.swift
+//  MoreLooks.swift
 //  SDKFrontiOS
 //
-//  Created by Carlos Bailon Perez on 17/10/16.
+//  Created by Sergio Girao on 24/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import UIKit
 
-class Sinopsis: TextModule {
+class MoreLooks: SquareImageItems {
 
     override func awakeFromNib() {
         super.awakeFromNib()

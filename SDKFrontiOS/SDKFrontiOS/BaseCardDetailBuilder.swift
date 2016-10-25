@@ -11,7 +11,7 @@ import UIKit
 import SwiftyJSON
 
 
-private typealias completionBlockGetCard = (CardDetailData)->Void;
+private typealias completionBlockGetCard = (CardDetail)->Void;
 
 public class BaseCardDetailBuilder : NSObject{
     
@@ -31,10 +31,10 @@ public class BaseCardDetailBuilder : NSObject{
      
      - returns: self
      */
-    init(styleConfig : JSON? = nil, customValidator : JSON? = nil){
+    init(styleConfig : JSON? = nil){
         super.init();
         self.styleConfig = styleConfig;
-        self.moduleValidator = ModuleValidator(customValidator: customValidator);
+        self.moduleValidator = ModuleValidator();
     }
     
     // MARK: Public Methods
@@ -46,7 +46,7 @@ public class BaseCardDetailBuilder : NSObject{
      - parameter navigationController: The navigation controller of the user.
      */
     public func build(cardId : String, navigationController : UINavigationController){
-        self.getCardDetailData(cardId) { (cardData : CardDetailData) in
+        self.getCardDetail(cardId) { (cardData : CardDetail) in
             
             self.validateSectionsAndModules(cardData);
             
@@ -62,7 +62,7 @@ public class BaseCardDetailBuilder : NSObject{
             }
             
             // TODO: need to do the logic
-            CardDetail(_sectionsData: validSections, _mainSectionKey: self.mainKeySection!, _cardDetailData: cardData, _navigationController: navigationController);
+            CardDetailRender(_sectionsData: validSections, _mainSectionKey: self.mainKeySection!, _cardDetail: cardData, _navigationController: navigationController);
         }
     }
     
@@ -73,9 +73,18 @@ public class BaseCardDetailBuilder : NSObject{
      - parameter cardId:          The cardId to get the information of the card
      - parameter completionBlock: The completion with the CardData.
      */
-    private func getCardDetailData(cardId : String, completionBlock : completionBlockGetCard){
+    private func getCardDetail(cardId : String, completionBlock : completionBlockGetCard){
         // TODO: need to call the sdkclient and in the response call the completion
-        completionBlock(CardDetailData(_cardId : "ID", _title : "Title", _type : TypeOfCard.Person));
+        // For test we catch a local json
+        if let path = NSBundle.mainBundle().pathForResource("card_detail_example", ofType: "json") {
+            if let data = NSData(contentsOfFile: path) {
+                let json = JSON(data: data);
+                if(json != nil && json.error == nil){
+                    completionBlock(CardDetail(data: json));
+                }
+            }
+        }
+        //completionBlock(CardDetail(_cardId : "ID", _type : "person", _locale : "ES_es", _title : "Title"));
     }
     
     /**
@@ -83,7 +92,7 @@ public class BaseCardDetailBuilder : NSObject{
      
      - parameter cardData: The data with all the info
      */
-    private func validateSectionsAndModules(cardData : CardDetailData){
+    private func validateSectionsAndModules(cardData : CardDetail){
         for key in self.dictSections.keys{
             let configSection = self.dictSections[key]!;
             for configModule in configSection.arrayModules{
