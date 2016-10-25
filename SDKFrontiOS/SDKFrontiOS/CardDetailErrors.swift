@@ -11,14 +11,14 @@ import Foundation
 internal class CardDetailErrors : ErrorManager{
     
     private static var ErrorMessages : [String : String] = [
-        "UnrecognizableError" : "ERROR: an unrecognizable error has occurredr"
+        "UnrecognizableError" : "ERROR: an unrecognizable error has occurred",
+        "CreateCardDetailRenderErrors" : "ERROR: The data for create a CardDetailRender is invalid"
     ]
     
     internal enum CreateCardDetailRenderErrors : ErrorType{
         case emptyData
         case invalidData
     }
-    
     
     //MARK: ERROR MANAGER PROTOCOL IMPLEMENTATION
     internal class func ThrowError(errorType : ErrorType) throws{
@@ -27,7 +27,7 @@ internal class CardDetailErrors : ErrorManager{
     
     internal class func ShowError(errorType : ErrorType){
         print(ErrorMessages[String(errorType.self)]);
-        print(errorType);
+        print(String(errorType.self) + "." + String(errorType));
     }
     
     internal class func UnreconigzedError(){

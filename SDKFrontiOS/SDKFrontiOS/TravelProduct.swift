@@ -15,7 +15,7 @@ internal class TravelProduct : Product{
     var city : String?;
     var address : String?
     var postalCode : Int?;
-    var rating : Int?;
+    var rating : Float?;
     
     
     override init(data: JSON){
@@ -41,7 +41,7 @@ internal class TravelProduct : Product{
             self.postalCode = _postalCode;
         }
         
-        if let _rating = data["rating"].int{
+        if let _rating = data["rating"].float{
             self.rating = _rating;
         }
         

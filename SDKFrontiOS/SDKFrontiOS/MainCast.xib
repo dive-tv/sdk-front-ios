@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainCast" rowHeight="253" id="KGk-i7-Jjw" customClass="MainCast" customModule="SDKFrontiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="253"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="252"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYv-be-OFu">
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="bzw-01-Wrt">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLC-6t-ho3">
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_next" translatesAutoresizingMaskIntoConstraints="NO" id="ixm-QF-c5c"/>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="3dk-RH-ZbV"/>
+                                    <constraint firstItem="ixm-QF-c5c" firstAttribute="leading" secondItem="MLC-6t-ho3" secondAttribute="trailing" constant="3" id="69e-pA-yw4"/>
+                                    <constraint firstItem="MLC-6t-ho3" firstAttribute="top" secondItem="bzw-01-Wrt" secondAttribute="top" id="9qV-aC-3FT"/>
+                                    <constraint firstAttribute="bottom" secondItem="MLC-6t-ho3" secondAttribute="bottom" id="C6M-XN-nhq"/>
+                                    <constraint firstItem="ixm-QF-c5c" firstAttribute="centerY" secondItem="bzw-01-Wrt" secondAttribute="centerY" id="VVt-iy-LFS"/>
+                                    <constraint firstItem="MLC-6t-ho3" firstAttribute="leading" secondItem="bzw-01-Wrt" secondAttribute="leading" id="lKd-Ap-mPZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ixm-QF-c5c" secondAttribute="trailing" id="vUz-ug-XXu"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="113-r2-M3C">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1e-Du-Sfw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="kul-tP-dXs"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V1e-Du-Sfw" firstAttribute="top" secondItem="113-r2-M3C" secondAttribute="bottom" constant="12" id="232-kH-Sgs"/>
+                            <constraint firstItem="V1e-Du-Sfw" firstAttribute="leading" secondItem="FYv-be-OFu" secondAttribute="leading" id="3E3-6j-87K"/>
+                            <constraint firstItem="bzw-01-Wrt" firstAttribute="top" secondItem="FYv-be-OFu" secondAttribute="top" constant="15" id="3mL-Dp-wst"/>
+                            <constraint firstItem="113-r2-M3C" firstAttribute="leading" secondItem="FYv-be-OFu" secondAttribute="leading" constant="15" id="7GI-0W-GhJ"/>
+                            <constraint firstItem="113-r2-M3C" firstAttribute="top" secondItem="FYv-be-OFu" secondAttribute="top" constant="15" id="Asy-h4-xOH"/>
+                            <constraint firstAttribute="trailing" secondItem="bzw-01-Wrt" secondAttribute="trailing" constant="15" id="GQJ-uw-rOY"/>
+                            <constraint firstAttribute="trailing" secondItem="V1e-Du-Sfw" secondAttribute="trailing" id="IDx-zV-rhJ"/>
+                            <constraint firstAttribute="bottom" secondItem="V1e-Du-Sfw" secondAttribute="bottom" constant="15" id="gKX-Jy-NuC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FYv-be-OFu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IJ6-Wp-ucM"/>
+                    <constraint firstAttribute="trailing" secondItem="FYv-be-OFu" secondAttribute="trailing" id="PzE-1r-LIL"/>
+                    <constraint firstItem="FYv-be-OFu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WU2-28-SGr"/>
+                    <constraint firstAttribute="bottom" secondItem="FYv-be-OFu" secondAttribute="bottom" id="sZg-pz-JVM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="heightScrollViewConstraint" destination="kul-tP-dXs" id="xdh-L9-3Ab"/>
+                <outlet property="imageViewNext" destination="ixm-QF-c5c" id="J3l-XB-wDa"/>
+                <outlet property="labelAll" destination="MLC-6t-ho3" id="L1m-8X-Bqs"/>
+                <outlet property="labelModuleTitle" destination="113-r2-M3C" id="kPz-X4-IQY"/>
+                <outlet property="scrollView" destination="V1e-Du-Sfw" id="XFo-b3-fQF"/>
+                <outlet property="viewAll" destination="bzw-01-Wrt" id="k3U-6e-ciw"/>
+                <outlet property="viewBackground" destination="FYv-be-OFu" id="ayM-PC-xhQ"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="158.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_next" width="6" height="11"/>
+    </resources>
+</document>

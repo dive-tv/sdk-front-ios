@@ -111,7 +111,7 @@ class CarouselCell: UITableViewCell {
         
         for idx in 0..<self.sections.count {
             
-            let carouselView = self.getViewForType(self.cellData.cards[idx].data.type!);
+            let carouselView = self.getViewForType(self.cellData.cards[idx].data.type);
             
             let top = NSLayoutConstraint(item: carouselView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.sections[idx], attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0);
             

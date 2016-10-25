@@ -19,8 +19,9 @@ internal class CardDetail : NSObject, Validatable{
     var subtitle : String?;
     var image : Image?;
     var products = [Product]();
-    var containers = Dictionary<ContainerContentType, ContainerData>();
-    var relations = Dictionary<ContainerContentType, ContainerData>();
+    var containers = Dictionary<ContainerContentType, Container>();
+    var relations = Dictionary<RelationContentType, Relation>();
+    var user : User;
     
     lazy var matchProduct : ItemProduct? = {
         for product in self.products{
@@ -43,6 +44,8 @@ internal class CardDetail : NSObject, Validatable{
         if(_image != nil){
             self.image = _image;
         }
+        
+        self.user = User(data: JSON(arrayLiteral: "{[\"is_liked\" : true]}"));
     }
     
     init(data:JSON){
@@ -140,8 +143,73 @@ internal class CardDetail : NSObject, Validatable{
         }
         
         //Create Containers
+        if let _containers = data["info"].array where _containers.count > 0{
+            for _container in _containers{
+                do{
+                    try Container.validate(_container);
+                    let _containerObject = Container(data: _container);
+                    self.containers[_containerObject.contentType] = _containerObject;
+                }
+                catch DataModelErrors.CreateContainerErrors.invalidContainerType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerErrors.invalidContainerContentType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerContentType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerErrors.invalidData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.emptyData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateContainerDataErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.emptyData);
+                }
+                catch{
+                    DataModelErrors.UnreconigzedError();
+                }
+            }
+        }
         
+        //Create relations
+        if let _relations = data["relations"].array where _relations.count > 0{
+            for _relation in _relations{
+                do{
+                    try Relation.validate(_relation);
+                    let _relationObject = Relation(data: _relation);
+                    self.relations[_relationObject.contentType] = _relationObject;
+                }
+                catch DataModelErrors.CreateRelationsErrors.invalidRelationType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateRelationsErrors.invalidRelationContentType{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidContainerContentType);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateRelationsErrors.invalidData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.invalidData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateRelationsErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerErrors.emptyData);
+                    //Some recover code
+                }
+                catch DataModelErrors.CreateRelationsDataErrors.emptyData{
+                    DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.emptyData);
+                }
+                catch{
+                    DataModelErrors.UnreconigzedError();
+                }
+            }
+        }
         
+        //create the user object
+        self.user = User(data: data["user"]);
         
     }
     
@@ -152,7 +220,7 @@ internal class CardDetail : NSObject, Validatable{
             return;
         }
         
-        guard case let (_ as String, _type as String, _ as String, _ as String) = (_data["card_id"].object, _data["type"].object, _data["locale"].object, _data["title"].object) else{
+        guard case let (_ as String, _type as String, _ as String, _ as String, _user as JSON) = (_data["card_id"].object, _data["type"].object, _data["locale"].object, _data["title"].object, _data["user"]) else{
             //Throw indavilData Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.invalidData);
             return;
@@ -162,6 +230,8 @@ internal class CardDetail : NSObject, Validatable{
             //Throw invalid type of card Error
             try DataModelErrors.ThrowError(DataModelErrors.CreateCardDetailErrors.invalidTypeOfCard);
         }
+        
+        try User.validate(_user);
     }
     
 }

@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 protocol SectionDelegate : class {
-    func reloadTable ();
+    func reloadTableAndOffset ();
+    func reloadTable();
 }
 
 class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableViewDataSource {
@@ -56,7 +57,11 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 100;
         
+        //let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
+        
         for module in self.configSection.arrayModules {
+            /*let moduleClass = NSClassFromString(appName + "." + module.moduleName!) as! Module.Type
+            self.tableView.registerClass(moduleClass.self, forCellReuseIdentifier: module.moduleName!);*/
             self.tableView?.registerNib(UINib(nibName: module.moduleName!, bundle: nil), forCellReuseIdentifier: module.moduleName!);
         }
     }
@@ -85,7 +90,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     /**
      Reload tableview and calls tab menu to refresh if exists.
      */
-    func reloadTable() {
+    func reloadTableAndOffset() {
         
         let offset = self.tableView.contentOffset.y;
         self.tableView.reloadData();
@@ -96,6 +101,9 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
         }
     }
     
+    func reloadTable() {
+        self.tableView.reloadData();
+    }
     
     
     // MARK: UITableViewDataSource
@@ -115,6 +123,7 @@ class Section : UIViewController, SectionDelegate, UITableViewDelegate, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
+        
         let cell = self.tableView.dequeueReusableCellWithIdentifier(self.configSection.arrayModules[indexPath.row].moduleName!) as! Module;
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.sectionDelegate = self;

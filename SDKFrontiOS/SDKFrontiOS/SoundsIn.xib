@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SoundsIn" rowHeight="161" id="KGk-i7-Jjw" customClass="SoundsIn" customModule="SDKFrontiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="161"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-Tx-fmT">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbB-Ax-tLS">
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwG-NU-Tkl">
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WPI-E8-2EM">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="zOd-Cd-jbj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-IM-aIK">
+                                        <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="15"/>
+                                        <color key="textColor" red="0.95686274510000002" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6d-oM-QbE">
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                        <color key="textColor" red="0.56470588239999997" green="0.56470588239999997" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bgF-IM-aIK" firstAttribute="leading" secondItem="WPI-E8-2EM" secondAttribute="trailing" constant="15" id="6ZS-CH-xBP"/>
+                                    <constraint firstItem="WPI-E8-2EM" firstAttribute="top" secondItem="IwG-NU-Tkl" secondAttribute="top" id="OjL-wk-W41"/>
+                                    <constraint firstAttribute="trailing" secondItem="p6d-oM-QbE" secondAttribute="trailing" constant="15" id="RoE-Qk-OrD"/>
+                                    <constraint firstAttribute="trailing" secondItem="bgF-IM-aIK" secondAttribute="trailing" constant="15" id="V7f-e8-wlm"/>
+                                    <constraint firstAttribute="bottom" secondItem="WPI-E8-2EM" secondAttribute="bottom" id="aaU-Ve-3dh"/>
+                                    <constraint firstAttribute="height" constant="90" id="brK-8N-fbl"/>
+                                    <constraint firstItem="bgF-IM-aIK" firstAttribute="top" secondItem="IwG-NU-Tkl" secondAttribute="top" constant="15" id="d0I-4f-ns2"/>
+                                    <constraint firstItem="p6d-oM-QbE" firstAttribute="top" secondItem="bgF-IM-aIK" secondAttribute="bottom" constant="1" id="drv-gD-KLU"/>
+                                    <constraint firstItem="p6d-oM-QbE" firstAttribute="leading" secondItem="WPI-E8-2EM" secondAttribute="trailing" constant="15" id="m2H-D5-vWs"/>
+                                    <constraint firstItem="WPI-E8-2EM" firstAttribute="leading" secondItem="IwG-NU-Tkl" secondAttribute="leading" id="rfh-VD-Kbb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PbB-Ax-tLS" firstAttribute="leading" secondItem="gcc-Tx-fmT" secondAttribute="leading" constant="15" id="9sO-Rr-wuL"/>
+                            <constraint firstItem="IwG-NU-Tkl" firstAttribute="leading" secondItem="gcc-Tx-fmT" secondAttribute="leading" constant="15" id="ERh-90-Qhm"/>
+                            <constraint firstAttribute="trailing" secondItem="PbB-Ax-tLS" secondAttribute="trailing" constant="15" id="LtI-fQ-Jyc"/>
+                            <constraint firstItem="IwG-NU-Tkl" firstAttribute="top" secondItem="PbB-Ax-tLS" secondAttribute="bottom" constant="12" id="Ukq-VO-S9X"/>
+                            <constraint firstItem="PbB-Ax-tLS" firstAttribute="top" secondItem="gcc-Tx-fmT" secondAttribute="top" constant="15" id="Y6Y-Ak-62G"/>
+                            <constraint firstAttribute="trailing" secondItem="IwG-NU-Tkl" secondAttribute="trailing" constant="15" id="eLh-mx-6me"/>
+                            <constraint firstAttribute="bottom" secondItem="IwG-NU-Tkl" secondAttribute="bottom" constant="15" id="nnr-ZN-B0h"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gcc-Tx-fmT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2CK-Du-iM3"/>
+                    <constraint firstAttribute="bottom" secondItem="gcc-Tx-fmT" secondAttribute="bottom" id="Q3o-AB-dxj"/>
+                    <constraint firstAttribute="trailing" secondItem="gcc-Tx-fmT" secondAttribute="trailing" id="qu4-Os-R4W"/>
+                    <constraint firstItem="gcc-Tx-fmT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="t7t-5l-XZ5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageViewItem" destination="WPI-E8-2EM" id="jRD-bY-5xL"/>
+                <outlet property="labelSubtitle" destination="p6d-oM-QbE" id="fO4-PM-U6f"/>
+                <outlet property="labelTitle" destination="bgF-IM-aIK" id="Uvc-8q-Lyd"/>
+                <outlet property="labelTitleModule" destination="PbB-Ax-tLS" id="iNf-gO-dRM"/>
+                <outlet property="viewBackground" destination="gcc-Tx-fmT" id="ZtQ-bX-Bbs"/>
+                <outlet property="viewContainer" destination="IwG-NU-Tkl" id="7Fb-wL-jBG"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="112.5"/>
+        </tableViewCell>
+    </objects>
+</document>

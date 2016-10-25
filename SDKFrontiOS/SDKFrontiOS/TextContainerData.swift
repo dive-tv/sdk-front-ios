@@ -21,18 +21,21 @@ class TextContainerData : ContainerData{
         
         let _source = data["source"];
         
-        do{
-            try Source.validate(_source);
-            self.source = Source(data: _source);
-        }
-        catch DataModelErrors.CreateSourceErrors.emptyData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.emptyData);
-        }
-        catch DataModelErrors.CreateSourceErrors.invalidData{
-            DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.invalidData);
-        }
-        catch{
-            DataModelErrors.UnreconigzedError();
+        if(_source != nil){
+        
+            do{
+                try Source.validate(_source);
+                self.source = Source(data: _source);
+            }
+            catch DataModelErrors.CreateSourceErrors.emptyData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.emptyData);
+            }
+            catch DataModelErrors.CreateSourceErrors.invalidData{
+                DataModelErrors.ShowError(DataModelErrors.CreateSourceErrors.invalidData);
+            }
+            catch{
+                DataModelErrors.UnreconigzedError();
+            }
         }
         
         super.init();
@@ -40,109 +43,13 @@ class TextContainerData : ContainerData{
     
     override class func validate(data: JSON?) throws{
         guard let _data = data where _data != nil else{
-            try DataModelErrors.ThrowError(DataModelErrors.CreateTextContainerErrors.emptyData);
+            try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.emptyData);
             return;
         }
         
-        if(_data["text"].object as? String != nil && _data["source"] != nil){
+        if(_data["text"].object as? String == nil){
             //Throw indavilData Error
-            try DataModelErrors.ThrowError(DataModelErrors.CreateImageErrors.invalidData);
+            try DataModelErrors.ThrowError(DataModelErrors.CreateContainerDataErrors.invalidData);
         }
-    }
-}
-
-class ListingContainerData : ContainerData{
-    
-    override init(){
-        
-        super.init();
-    }
-    
-    override class func validate(data: JSON?) throws{
-        
-    }
-}
-
-class RatingContainerData : ContainerData{
-    
-    override init(){
-        
-        super.init();
-    }
-    
-    override class func validate(data: JSON?) throws{
-        
-    }
-}
-
-class MapContainerData : ContainerData{
-    
-    override init(){
-        
-        super.init();
-    }
-    
-    override class func validate(data: JSON?) throws{
-        
-    }
-}
-
-class LinkContainerData : ContainerData{
-    
-    override init(){
-        
-        super.init();
-    }
-    
-    override class func validate(data: JSON?) throws{
-        
-    }
-}
-
-class AdwardsContainerData : ContainerData{
-    
-    override init(){
-        
-        super.init();
-    }
-    
-    override class func validate(data: JSON?) throws{
-        
-    }
-}
-
-class CatalogContainerData : ContainerData{
-    
-    override init(){
-        
-        super.init();
-    }
-    
-    override class func validate(data: JSON?) throws{
-        
-    }
-}
-
-class SeasonsContainerData : ContainerData{
-    
-    override init(){
-        
-        super.init();
-    }
-    
-    override class func validate(data: JSON?) throws{
-        
-    }
-}
-
-class ImageContainerData : ContainerData{
-    
-    override init(){
-        
-        super.init();
-    }
-    
-    override class func validate(data: JSON?) throws{
-        
     }
 }

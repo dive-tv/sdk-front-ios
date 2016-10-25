@@ -22,13 +22,13 @@ public class ModuleValidator : NSObject{
     func validate(data : CardDetail, moduleType : String)->Bool{
        
         //For Testing
-        let cardDetail = CardDetail(_cardId: "ID", _type: "movie", _locale: "ES_es", _title: "title");
+        //let cardDetail = CardDetail(_cardId: "ID", _type: "movie", _locale: "ES_es", _title: "title");
         
         let appName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String;
         let moduleClass = NSClassFromString(appName + "." + moduleType) as! Module.Type
         
         do{
-            try moduleClass.validate(cardDetail);
+            try moduleClass.validate(data);
             return true;
         }
         catch{

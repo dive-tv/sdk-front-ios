@@ -20,4 +20,11 @@ class ShopView: UIView {
         super.awakeFromNib();
     }
     
+    func setData(product : Product){
+        // TODO: download the image
+        
+        self.labelPrice.text = "\(product.price)€";
+        self.labelShop.text = product.merchant;
+    }
+    
 }

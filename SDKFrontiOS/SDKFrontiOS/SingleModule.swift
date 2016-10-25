@@ -2,36 +2,31 @@
 //  SingleModule.swift
 //  SDKFrontiOS
 //
-//  Created by Sergio Girao on 18/10/16.
+//  Created by Sergio Girao on 24/10/16.
 //  Copyright © 2016 Tagsonomy. All rights reserved.
 //
 
 import UIKit
 
 class SingleModule: Module {
+    
+    @IBOutlet weak var labelTitleModule : UILabel!;
+    @IBOutlet weak var labelTitle : UILabel!;
+    @IBOutlet weak var labelSubtitle : UILabel!;
+    @IBOutlet weak var imageViewItem : UIImageView!;
+    @IBOutlet weak var viewContainer : UIView!;
+    @IBOutlet weak var viewBackground : UIView!;
+    
 
-    var singleModuleView : SingleModuleView?;
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier);
-        
-        self.singleModuleView = NSBundle.mainBundle().loadNibNamed("SingleModuleView", owner: self, options: nil)?[0] as? SingleModuleView;
-        
-        self.contentView.addSubview(self.singleModuleView!);
-        self.singleModuleView?.translatesAutoresizingMaskIntoConstraints = false;
-        
-        let constraintHorizontal = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.singleModuleView!]);
-        
-        let constraintVertical = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[myView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["myView": self.singleModuleView!]);
-        
-        
-        self.contentView.addConstraints(constraintHorizontal);
-        self.contentView.addConstraints(constraintVertical);
-        
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder);
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
 }

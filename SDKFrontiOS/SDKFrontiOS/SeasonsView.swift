@@ -18,5 +18,19 @@ class SeasonsView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib();
     }
+    
+    func setData(season : SeasonsContainerData){
+        
+        self.labelYear.text = "\(season.year)";
+        self.labelSeason.text = "\(season.seasonIndex)ª Temp.";
+        
+        if(season.image != nil){
+            // TODO:need to download the image
+        }
+        else{
+            // TODO: need to do the logic
+        }
+        
+    }
 
 }
