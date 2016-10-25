@@ -42,12 +42,6 @@
                                             <constraint firstAttribute="height" constant="1" id="jUR-Gs-RpJ"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHH-SF-KcU">
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.36470589040000001" green="0.76862746479999999" blue="0.71372550729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R22-Tg-yea">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqw-Wg-N2m">
@@ -93,7 +87,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XHH-SF-KcU" secondAttribute="trailing" constant="15" id="2Sb-HD-CdD"/>
                                     <constraint firstItem="ZrX-kk-PtT" firstAttribute="leading" secondItem="hw9-yH-Mye" secondAttribute="leading" constant="15" id="4Ce-Zf-ZZk"/>
                                     <constraint firstAttribute="trailing" secondItem="R22-Tg-yea" secondAttribute="trailing" constant="15" id="82A-QG-taZ"/>
                                     <constraint firstItem="STl-bW-Mvd" firstAttribute="leading" secondItem="hw9-yH-Mye" secondAttribute="leading" constant="15" id="9eh-j6-JjV"/>
@@ -102,14 +95,11 @@
                                     <constraint firstAttribute="bottom" secondItem="R22-Tg-yea" secondAttribute="bottom" constant="15.5" id="I4x-cC-2dZ"/>
                                     <constraint firstAttribute="trailing" secondItem="STl-bW-Mvd" secondAttribute="trailing" constant="15" id="Kvl-S3-8WK"/>
                                     <constraint firstItem="R22-Tg-yea" firstAttribute="top" secondItem="STl-bW-Mvd" secondAttribute="bottom" id="RhL-Wa-nFb"/>
-                                    <constraint firstItem="STl-bW-Mvd" firstAttribute="top" secondItem="ZrX-kk-PtT" secondAttribute="bottom" constant="66" id="Tu0-7g-EPS"/>
+                                    <constraint firstItem="STl-bW-Mvd" firstAttribute="top" secondItem="ZrX-kk-PtT" secondAttribute="bottom" constant="15" id="Tu0-7g-EPS"/>
                                     <constraint firstAttribute="trailing" secondItem="ZrX-kk-PtT" secondAttribute="trailing" constant="15" id="WLH-pH-acH"/>
-                                    <constraint firstItem="XHH-SF-KcU" firstAttribute="top" secondItem="ZrX-kk-PtT" secondAttribute="bottom" constant="14" id="aMm-qw-8AZ"/>
-                                    <constraint firstItem="STl-bW-Mvd" firstAttribute="top" secondItem="XHH-SF-KcU" secondAttribute="bottom" constant="24" id="hGH-V4-gbI"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dtQ-M7-b4D" secondAttribute="trailing" constant="15" id="j4V-4f-8fE"/>
                                     <constraint firstItem="R22-Tg-yea" firstAttribute="leading" secondItem="hw9-yH-Mye" secondAttribute="leading" constant="15" id="kAH-zp-xq6"/>
                                     <constraint firstItem="dtQ-M7-b4D" firstAttribute="top" secondItem="hw9-yH-Mye" secondAttribute="top" constant="15" id="nCa-yB-Jm2"/>
-                                    <constraint firstItem="XHH-SF-KcU" firstAttribute="leading" secondItem="hw9-yH-Mye" secondAttribute="leading" constant="15" id="y6Y-QM-g5X"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -132,12 +122,12 @@
             <connections>
                 <outlet property="bottomDistanceConstraint" destination="2mP-3e-VAg" id="9ST-Xq-ddF"/>
                 <outlet property="bottomDistanceDisclaimerSubtitleConstraint" destination="h8G-i0-Uow" id="yRe-B2-7A0"/>
+                <outlet property="bottomDistanceDisclaimerView" destination="I4x-cC-2dZ" id="dpn-uE-4Xy"/>
                 <outlet property="contentLabel" destination="ZrX-kk-PtT" id="bwp-3I-Miv"/>
                 <outlet property="disclaimerBtn" destination="iR0-UA-9SC" id="BEu-7S-lOx"/>
                 <outlet property="disclaimerImage" destination="3CJ-PP-kJH" id="h6s-Xw-INU"/>
                 <outlet property="disclaimerSubtitle" destination="brJ-ra-Xgj" id="BHb-hH-pTd"/>
                 <outlet property="disclaimerTitle" destination="Gqw-Wg-N2m" id="obj-PO-8pN"/>
-                <outlet property="expandOpenBtn" destination="XHH-SF-KcU" id="hG4-Le-om2"/>
                 <outlet property="headerLabel" destination="dtQ-M7-b4D" id="0x4-Xz-3sR"/>
                 <outlet property="heightDisclaimerBtnConstraint" destination="Cie-9u-KTz" id="PfV-c7-mj7"/>
                 <outlet property="heightDisclaimerImageConstraint" destination="6dx-RD-uMv" id="Va0-KF-YSf"/>

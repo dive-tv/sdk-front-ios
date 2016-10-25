@@ -42,12 +42,6 @@
                                             <constraint firstAttribute="height" constant="1" id="Woi-cl-4p4"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mW7-RW-rle">
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.36470589040000001" green="0.76862746479999999" blue="0.71372550729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8s-xY-fDa">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dj3-w7-m13">
@@ -93,15 +87,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="eIX-nH-6uq" firstAttribute="top" secondItem="LBo-Bn-9Yt" secondAttribute="bottom" constant="66" id="2jR-mk-NqE"/>
-                                    <constraint firstItem="eIX-nH-6uq" firstAttribute="top" secondItem="mW7-RW-rle" secondAttribute="bottom" constant="24" id="A0y-CA-l3L"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mW7-RW-rle" secondAttribute="trailing" constant="15" id="EfH-5r-Ogc"/>
-                                    <constraint firstItem="mW7-RW-rle" firstAttribute="leading" secondItem="iGW-dU-k0X" secondAttribute="leading" constant="15" id="H4C-m4-MfF"/>
+                                    <constraint firstItem="eIX-nH-6uq" firstAttribute="top" secondItem="LBo-Bn-9Yt" secondAttribute="bottom" constant="15" id="2jR-mk-NqE"/>
                                     <constraint firstAttribute="trailing" secondItem="LBo-Bn-9Yt" secondAttribute="trailing" constant="15" id="IvD-gS-66E"/>
                                     <constraint firstItem="FWy-mY-oJ2" firstAttribute="leading" secondItem="iGW-dU-k0X" secondAttribute="leading" constant="15" id="MaJ-q2-nh9"/>
                                     <constraint firstItem="FWy-mY-oJ2" firstAttribute="top" secondItem="iGW-dU-k0X" secondAttribute="top" constant="15" id="R6l-Nm-hNv"/>
                                     <constraint firstAttribute="trailing" secondItem="i8s-xY-fDa" secondAttribute="trailing" constant="15" id="h6u-4O-9cc"/>
-                                    <constraint firstItem="mW7-RW-rle" firstAttribute="top" secondItem="LBo-Bn-9Yt" secondAttribute="bottom" constant="14" id="ih5-gw-cod"/>
                                     <constraint firstItem="LBo-Bn-9Yt" firstAttribute="top" secondItem="FWy-mY-oJ2" secondAttribute="bottom" constant="18" id="ikd-e7-TlD"/>
                                     <constraint firstAttribute="trailing" secondItem="eIX-nH-6uq" secondAttribute="trailing" constant="15" id="jNq-dO-CE7"/>
                                     <constraint firstItem="i8s-xY-fDa" firstAttribute="leading" secondItem="iGW-dU-k0X" secondAttribute="leading" constant="15" id="jij-Ab-Fym"/>
@@ -132,12 +122,12 @@
             <connections>
                 <outlet property="bottomDistanceConstraint" destination="w8w-DW-YIs" id="bvR-Zo-v2F"/>
                 <outlet property="bottomDistanceDisclaimerSubtitleConstraint" destination="9ZG-uP-MLZ" id="dU6-BU-gfR"/>
+                <outlet property="bottomDistanceDisclaimerView" destination="meG-we-uKO" id="BaC-7U-tlb"/>
                 <outlet property="contentLabel" destination="LBo-Bn-9Yt" id="WUy-aw-jYI"/>
                 <outlet property="disclaimerBtn" destination="4EB-38-ehG" id="if5-Da-fhc"/>
                 <outlet property="disclaimerImage" destination="cWL-Pe-k03" id="ZQT-fm-crP"/>
                 <outlet property="disclaimerSubtitle" destination="YPN-OE-juQ" id="w4Y-pq-VJT"/>
                 <outlet property="disclaimerTitle" destination="dj3-w7-m13" id="xtt-Xx-y2L"/>
-                <outlet property="expandOpenBtn" destination="mW7-RW-rle" id="gAP-Gv-D6V"/>
                 <outlet property="headerLabel" destination="FWy-mY-oJ2" id="wZd-IF-U8H"/>
                 <outlet property="heightDisclaimerBtnConstraint" destination="3xO-7O-lAJ" id="Vgp-wZ-rzX"/>
                 <outlet property="heightDisclaimerImageConstraint" destination="XgG-bD-aDL" id="Hfo-hl-JXb"/>

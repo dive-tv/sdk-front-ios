@@ -42,12 +42,6 @@
                                             <constraint firstAttribute="height" constant="1" id="WMU-kt-P5e"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-GL-Tfo">
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" red="0.36470589040000001" green="0.76862746479999999" blue="0.71372550729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyX-Zt-cD9">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLx-ef-Glu">
@@ -93,21 +87,17 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="VBD-bp-15p" firstAttribute="top" secondItem="Lvh-GL-Tfo" secondAttribute="bottom" constant="24" id="1Kk-5F-rjS"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lvh-GL-Tfo" secondAttribute="trailing" constant="15" id="6gw-pW-jJI"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VQ7-zn-2CT" secondAttribute="trailing" constant="15" id="6my-T6-WLH"/>
                                     <constraint firstItem="VBD-bp-15p" firstAttribute="leading" secondItem="7IK-uy-Ph7" secondAttribute="leading" constant="15" id="A4G-Bg-Nay"/>
-                                    <constraint firstItem="Lvh-GL-Tfo" firstAttribute="top" secondItem="AFs-Xv-UxP" secondAttribute="bottom" constant="14" id="GOK-XU-Jud"/>
                                     <constraint firstAttribute="trailing" secondItem="VBD-bp-15p" secondAttribute="trailing" constant="15" id="Ht3-6Y-wPk"/>
                                     <constraint firstItem="VQ7-zn-2CT" firstAttribute="leading" secondItem="7IK-uy-Ph7" secondAttribute="leading" constant="15" id="I4g-m3-2Ga"/>
-                                    <constraint firstItem="Lvh-GL-Tfo" firstAttribute="leading" secondItem="7IK-uy-Ph7" secondAttribute="leading" constant="15" id="Lwk-5N-pJU"/>
                                     <constraint firstAttribute="trailing" secondItem="lyX-Zt-cD9" secondAttribute="trailing" constant="15" id="MOo-3K-EiY"/>
                                     <constraint firstItem="VQ7-zn-2CT" firstAttribute="top" secondItem="7IK-uy-Ph7" secondAttribute="top" constant="15" id="O2d-GY-pMU"/>
                                     <constraint firstItem="AFs-Xv-UxP" firstAttribute="top" secondItem="VQ7-zn-2CT" secondAttribute="bottom" constant="18" id="XVT-cL-jiu"/>
                                     <constraint firstItem="lyX-Zt-cD9" firstAttribute="leading" secondItem="7IK-uy-Ph7" secondAttribute="leading" constant="15" id="ZaD-dJ-XPz"/>
                                     <constraint firstItem="lyX-Zt-cD9" firstAttribute="top" secondItem="VBD-bp-15p" secondAttribute="bottom" id="Zrv-yj-jN6"/>
                                     <constraint firstAttribute="bottom" secondItem="lyX-Zt-cD9" secondAttribute="bottom" constant="15.5" id="ctU-jm-FOq"/>
-                                    <constraint firstItem="VBD-bp-15p" firstAttribute="top" secondItem="AFs-Xv-UxP" secondAttribute="bottom" constant="66" id="fbr-ss-Xef"/>
+                                    <constraint firstItem="VBD-bp-15p" firstAttribute="top" secondItem="AFs-Xv-UxP" secondAttribute="bottom" constant="15" id="fbr-ss-Xef"/>
                                     <constraint firstItem="AFs-Xv-UxP" firstAttribute="leading" secondItem="7IK-uy-Ph7" secondAttribute="leading" constant="15" id="i7w-WP-qzf"/>
                                     <constraint firstAttribute="trailing" secondItem="AFs-Xv-UxP" secondAttribute="trailing" constant="15" id="uGy-yY-PBX"/>
                                 </constraints>
@@ -132,12 +122,12 @@
             <connections>
                 <outlet property="bottomDistanceConstraint" destination="f66-3e-UHn" id="exj-5i-wmg"/>
                 <outlet property="bottomDistanceDisclaimerSubtitleConstraint" destination="G3s-0z-7lq" id="VRi-h5-Fcp"/>
+                <outlet property="bottomDistanceDisclaimerView" destination="ctU-jm-FOq" id="f4C-kb-pZd"/>
                 <outlet property="contentLabel" destination="AFs-Xv-UxP" id="ujs-oO-3Ky"/>
                 <outlet property="disclaimerBtn" destination="VOP-J6-0fk" id="4wq-wh-EqF"/>
                 <outlet property="disclaimerImage" destination="N5Y-Xr-fkt" id="9az-Jh-TL6"/>
                 <outlet property="disclaimerSubtitle" destination="arR-az-fd4" id="RGY-EO-01J"/>
                 <outlet property="disclaimerTitle" destination="lLx-ef-Glu" id="OcE-gp-sBr"/>
-                <outlet property="expandOpenBtn" destination="Lvh-GL-Tfo" id="wiw-3c-f0I"/>
                 <outlet property="headerLabel" destination="VQ7-zn-2CT" id="WX1-b4-Z3I"/>
                 <outlet property="heightDisclaimerBtnConstraint" destination="tAj-gf-M0V" id="cps-aW-BpC"/>
                 <outlet property="heightDisclaimerImageConstraint" destination="auV-Zr-hk4" id="nhA-8Q-fuH"/>

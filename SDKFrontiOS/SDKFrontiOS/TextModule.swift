@@ -17,6 +17,7 @@ class TextModule: Module {
     @IBOutlet weak var topDistanceDisclaimerSubtitleConstraint : NSLayoutConstraint!;
     @IBOutlet weak var bottomDistanceDisclaimerSubtitleConstraint : NSLayoutConstraint!;
     @IBOutlet weak var heightSeparatorViewConstraint : NSLayoutConstraint!;
+    @IBOutlet weak var bottomDistanceDisclaimerView : NSLayoutConstraint!;
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
@@ -89,6 +90,7 @@ class TextModule: Module {
             self.heightDisclaimerImageConstraint.constant = 0;
             self.bottomDistanceDisclaimerSubtitleConstraint.constant = 0;
             self.heightSeparatorViewConstraint.constant = 0;
+            self.bottomDistanceDisclaimerView.constant = 0;
         }
     }
     
