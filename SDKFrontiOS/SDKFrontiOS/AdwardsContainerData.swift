@@ -43,7 +43,7 @@ class AwardsContainerData : ContainerData{
         for _item in _winner{
             do{
                 try AdwardItemContainerData.validate(_item);
-                self.nominee.append(AdwardItemContainerData(data: _item));
+                self.winner.append(AdwardItemContainerData(data: _item));
             }
             catch DataModelErrors.CreateContainerDataErrors.emptyData{
                 DataModelErrors.ShowError(DataModelErrors.CreateContainerDataErrors.emptyData);
